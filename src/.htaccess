@@ -1,12 +1,16 @@
+# Generated with ngx-htaccess-generator v1.0.3
+# https://julianpoemp.github.io/ngx-htaccess-generator/
+
 <IfModule mod_rewrite.c>
-    RewriteEngine on
+  RewriteEngine On
 
-    # Don't rewrite files or directories
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-
-    # Rewrite everything else to index.html
-    # to allow html5 state links
-    RewriteRule ^ index.html [L]
+  # Redirection to HTTPS:
+  RewriteCond %{HTTPS} !on
+  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+  
+  # Redirection of requests to index.html
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^.*$ - [NC,L]
+  RewriteRule ^(.*) index.html [NC,L]
 </IfModule>
