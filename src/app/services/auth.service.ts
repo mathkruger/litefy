@@ -42,6 +42,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem(keyAuth);
     localStorage.removeItem(keyExpiration);
+    localStorage.removeItem(keyUser);
     this.userService.setUser(null);
   }
 

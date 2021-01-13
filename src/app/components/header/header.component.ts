@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 import { UserService } from './../../services/user.service';
 import { User } from './../../models/user';
 import { Component, OnInit } from '@angular/core';
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, public auth: AuthService, private router: Router) { }
 
   dados: User;
 
@@ -20,5 +22,11 @@ export class HeaderComponent implements OnInit {
   }
 
   userMenuAberto = false;
+
+  sair() {
+    this.userMenuAberto = false;
+    this.auth.logout();
+    this.router.navigate(['login']);
+  }
 
 }

@@ -4,7 +4,7 @@
     Litefy
   </a>
 
-  <div class="user-area">
+  <div class="user-area" *ngIf="auth.Autenticado()">
     <div class="cabecalho" (click)="userMenuAberto = !userMenuAberto">
       <img class="mr-2" [src]="dados.images[0].url" [alt]="dados.display_name" />
       
@@ -50,7 +50,7 @@
           <path d="M7 12h14l-3 -3m0 6l3 -3" />
         </svg>
 
-        <a href="">Sair</a>
+        <a (click)="sair()">Sair</a>
       </li>
     </ul>
   </div>

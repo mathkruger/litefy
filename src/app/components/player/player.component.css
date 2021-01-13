@@ -30,11 +30,11 @@
 }
 
 .tracking {
-    width: 80%;
+    width: 75%;
 }
 
 .tempos {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (max-width: 1796px) {
@@ -61,6 +61,6 @@
     }
 
     .tempos {
-        display: flex;
+        display: flex !important;
     }
 }
