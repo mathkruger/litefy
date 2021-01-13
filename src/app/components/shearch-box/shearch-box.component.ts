@@ -11,8 +11,11 @@ export class ShearchBoxComponent implements OnInit {
 
   constructor(private service: ServiceBase, private playerService: SpotifyPlayerService) { }
 
-  resultados: any[];
-  apiLink: string = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track&offset=0&limit=20';
+  resultadosTracks: any[];
+  resultadosPlaylists: any[];
+  resultadosAlbums: any[];
+
+  apiLink: string = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist&offset=0&limit=20';
 
   device_id: string;
 
@@ -25,7 +28,9 @@ export class ShearchBoxComponent implements OnInit {
   buscar(termo: string) {
     this.service.Get<any>(this.apiLink.replace('$CUSTOM_QUERY$', termo))
       .subscribe(items => {
-        this.resultados = items.tracks.items;
+        this.resultadosTracks = items.tracks.items;
+        this.resultadosPlaylists = items.playlists.items;
+        this.resultadosAlbums = items.albums.items;
       });
   }
 
@@ -40,7 +45,7 @@ export class ShearchBoxComponent implements OnInit {
   }
 
   add(itemSelecionado) {
-    this.playerService.add(this.device_id, itemSelecionado)
+    this.playerService.add(itemSelecionado, this.device_id)
     .subscribe(item => {
       this.playerService.getCurrentState()
       .subscribe(item => {

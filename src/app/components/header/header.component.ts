@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { User } from './../../models/user';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   dados: User;
 
   ngOnInit() {
-    this.dados = JSON.parse(localStorage.getItem('user')) as User;
+    this.userService.getUser().subscribe(item => {
+      this.dados = item;
+    })
   }
 
 }

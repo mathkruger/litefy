@@ -1,27 +1,27 @@
 import { User } from './../models/user';
 import { Injectable } from '@angular/core';
+import { UserService } from './user.service';
 
 const keyAuth: string = 'auth';
 const keyExpiration: string = 'authExpiration';
-const keyUser: string = 'user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   Autenticar(token: string, token_expiration: number) {
     let date = new Date();
-    date.setSeconds(date.getSeconds() + token_expiration);
+    date.setSeconds(token_expiration);
 
     localStorage.setItem(keyAuth, token);
     localStorage.setItem(keyExpiration, JSON.stringify(date));
   }
 
   setUser(user: User) {
-    localStorage.setItem(keyUser, JSON.stringify(user));
+    this.userService.setUser(user);
   }
 
   Autenticado(): boolean {
@@ -39,7 +39,7 @@ export class AuthService {
   logout() {
     localStorage.removeItem(keyAuth);
     localStorage.removeItem(keyExpiration);
-    localStorage.removeItem(keyUser);
+    this.userService.setUser(null);
   }
 
 }

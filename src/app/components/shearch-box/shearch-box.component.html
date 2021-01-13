@@ -11,7 +11,13 @@
 </div>
 
 <div class="list-group mt-2">
-  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngFor="let item of resultados">
+  <div *ngIf="resultadosTracks" class="list-group-item list-group-item-action">
+    <div class="titulo">
+      <strong>Músicas</strong>
+    </div>
+  </div>
+
+  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngFor="let item of resultadosTracks">
     <div class="titulo">
       {{ item.name }} - {{ item.album.name }} - {{ item.album.artists[0].name }}
     </div>
@@ -25,6 +31,52 @@
             <line x1="5" y1="12" x2="19" y2="12" />
           </svg>
         </button>
+        <button class="btn btn-dark" (click)="selecionar(item.uri)">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 4v16l13 -8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="resultadosPlaylists" class="list-group-item list-group-item-action">
+    <div class="titulo">
+      <strong>Playlists</strong>
+    </div>
+  </div>
+
+  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngFor="let item of resultadosPlaylists">
+    <div class="titulo">
+      {{ item.description }} - {{ item.owner.display_name }} - {{ item.tracks.total }} músicas
+    </div>
+
+    <div class="opcoes">
+      <div class="btn-group" role="group">
+        <button class="btn btn-dark" (click)="selecionar(item.uri)">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 4v16l13 -8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="resultadosAlbums" class="list-group-item list-group-item-action">
+    <div class="titulo">
+      <strong>Albums</strong>
+    </div>
+  </div>
+
+  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngFor="let item of resultadosAlbums">
+    <div class="titulo">
+      {{ item.name }} - {{ item.artists[0].name }} - {{ item.total_tracks }} músicas
+    </div>
+
+    <div class="opcoes">
+      <div class="btn-group" role="group">
         <button class="btn btn-dark" (click)="selecionar(item.uri)">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
