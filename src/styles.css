@@ -5,3 +5,15 @@
     --spt-black: #191414;
     --spt-green: #1DB954;
 }
+
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    .hide-mobile {
+        display: none;
+    }
+}
