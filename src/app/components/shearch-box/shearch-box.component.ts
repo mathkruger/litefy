@@ -36,22 +36,40 @@ export class ShearchBoxComponent implements OnInit {
 
   selecionar(itemSelecionado) {
     this.playerService.play(this.device_id, itemSelecionado)
-    .subscribe(item => {
-      this.playerService.getCurrentState()
       .subscribe(item => {
-        this.playerService.setPlayerStatus(item);
-      })
-    });
+        this.playerService.getCurrentState()
+          .subscribe(item => {
+            this.playerService.setPlayerStatus(item);
+          })
+      });
   }
 
   add(itemSelecionado) {
     this.playerService.add(itemSelecionado, this.device_id)
-    .subscribe(item => {
-      this.playerService.getCurrentState()
       .subscribe(item => {
-        this.playerService.setPlayerStatus(item);
-      })
+        this.playerService.getCurrentState()
+          .subscribe(item => {
+            this.playerService.setPlayerStatus(item);
+          })
+      });
+  }
+
+  playAlbum(id) {
+    let uris = [];
+    this.playerService.getAlbumTracks(id).subscribe(items => {
+      items.items.forEach((track) => {
+        uris.push(track.uri);
+      });
+
+      this.playerService.play(this.device_id, null, uris)
+        .subscribe(item => {
+          this.playerService.getCurrentState()
+            .subscribe(item => {
+              this.playerService.setPlayerStatus(item);
+            })
+        });
     });
+
   }
 
 }
