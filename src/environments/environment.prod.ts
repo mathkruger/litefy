@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  client_id: 'd2efaa241b0140e1b3cec365631430a7',
-  redirect_uri: 'http://localhost:4200/login/callback/'
+  client_id: '547fd8656e964ef1bacb47b20971ae02',
+  redirect_uri: 'https://mathkruger.github.io/litefy/login/callback/'
 };
