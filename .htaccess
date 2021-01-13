@@ -1,0 +1,16 @@
+# Generated with ngx-htaccess-generator v1.0.3
+# https://julianpoemp.github.io/ngx-htaccess-generator/
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirection to HTTPS:
+  RewriteCond %{HTTPS} !on
+  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+  
+  # Redirection of requests to index.html
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^.*$ - [NC,L]
+  RewriteRule ^(.*) index.html [NC,L]
+</IfModule>
