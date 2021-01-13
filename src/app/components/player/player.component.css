@@ -28,15 +28,3 @@
 .button-custom:hover {
     opacity: .7;
 }
-
-@media screen and (max-width: 360px) {
-    .player {
-        font-size: 75%;
-    }
-}
-
-@media screen and (max-width: 260px) {
-    .hide-mobile {
-        display: none;
-    }
-}

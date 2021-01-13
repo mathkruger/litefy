@@ -1,6 +1,7 @@
 import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 declare var Spotify: any;
 
@@ -10,7 +11,7 @@ declare var Spotify: any;
   styleUrls: ['./player.component.css'],
 })
 export class PlayerComponent implements OnInit, OnChanges {
-  constructor(private auth: AuthService, private playerService: SpotifyPlayerService) { }
+  constructor(private auth: AuthService, private playerService: SpotifyPlayerService, private toastr: ToastrService) { }
 
   player: any;
   playerStatus: any;
@@ -37,6 +38,11 @@ export class PlayerComponent implements OnInit, OnChanges {
       this.player = new Spotify.Player({
         name: 'Litefy Player',
         getOAuthToken: cb => { cb(token); }
+      });
+
+      this.player.addListener('player_state_changed', state => {
+        var someLink = document.querySelector('.click-inicial');
+        this.simulateClick(someLink);
       });
 
       this.player.addListener('ready', ({ device_id }) => {
@@ -73,28 +79,32 @@ export class PlayerComponent implements OnInit, OnChanges {
   play() {
     this.playerService.play(this.device_id)
       .subscribe(item => {
-        this.getCurrentState();
+        // this.getCurrentState();
+        this.toastr.success('Tocando');
       })
   }
 
   pause() {
     this.playerService.pause(this.device_id)
       .subscribe(item => {
-        this.getCurrentState();
+        // this.getCurrentState();
+        this.toastr.success('Pausado');
       })
   }
 
   previous() {
     this.playerService.previous(this.device_id)
       .subscribe(item => {
-        this.getCurrentState();
+        // this.getCurrentState();
+        this.toastr.success('Faixa anterior');
       })
   }
 
   next() {
     this.playerService.next(this.device_id)
       .subscribe(item => {
-        this.getCurrentState();
+        // this.getCurrentState();
+        this.toastr.success('Próxima faixa');
       })
   }
 
@@ -106,7 +116,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       })
   }
 
-  simulateClick (elem) {
+  simulateClick(elem) {
     // Create our event (with options)
     var evt = new MouseEvent('click', {
       bubbles: true,
