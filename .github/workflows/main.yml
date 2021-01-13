@@ -41,4 +41,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: deploy_dist
+          FOLDER: deploy_dist/spotify-client
