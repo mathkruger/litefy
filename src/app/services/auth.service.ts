@@ -4,6 +4,7 @@ import { UserService } from './user.service';
 
 const keyAuth: string = 'auth';
 const keyExpiration: string = 'authExpiration';
+const keyUser: string = 'user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,16 @@ export class AuthService {
 
   Autenticar(token: string, token_expiration: number) {
     let date = new Date();
-    date.setSeconds(token_expiration);
+    let d = new Date();
+    d = new Date(d.getTime() + token_expiration * 1000);
 
     localStorage.setItem(keyAuth, token);
-    localStorage.setItem(keyExpiration, JSON.stringify(date));
+    localStorage.setItem(keyExpiration, JSON.stringify(d));
   }
 
   setUser(user: User) {
     this.userService.setUser(user);
+    localStorage.setItem(keyUser, JSON.stringify(user));
   }
 
   Autenticado(): boolean {
