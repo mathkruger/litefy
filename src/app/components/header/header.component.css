@@ -1,3 +1,57 @@
 .custom-bg {
     background: var(--spt-black);
 }
+
+.user-area .cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-area .cabecalho img {
+    max-width: 48px;
+    border-radius: 50%;
+}
+
+.user-area .cabecalho .textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-area .user-menu {
+    position: absolute;
+    top: 57px;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--spt-black);
+    padding: 1rem;
+    max-width: 240px;
+    width: 100%;
+    transition: .2s all;
+    right: 0;
+}
+
+.user-area .user-menu.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.user-area .user-menu li {
+    list-style: none;
+    transition: .2s all;
+}
+
+.user-area .user-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-area .user-menu li:hover {
+    opacity: .7;
+}
+
+.user-area .user-menu li svg {
+    margin-right: 5px;
+}

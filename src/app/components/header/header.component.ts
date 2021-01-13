@@ -19,4 +19,6 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  userMenuAberto = false;
+
 }
