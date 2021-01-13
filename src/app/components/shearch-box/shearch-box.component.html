@@ -1,0 +1,37 @@
+<div class="input-group">
+  <label style="width: 100%;">
+    <strong>Busque uma música</strong>
+  </label>
+  <input type="text" #link class="form-control" />
+  <div class="input-group-append">
+    <button type="button" (click)="buscar(link.value)" class="btn btn-secondary">
+      <span>Buscar</span>
+    </button>
+  </div>
+</div>
+
+<div class="list-group mt-2">
+  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" *ngFor="let item of resultados">
+    <div class="titulo">
+      {{ item.name }} - {{ item.album.name }} - {{ item.album.artists[0].name }}
+    </div>
+
+    <div class="opcoes">
+      <div class="btn-group" role="group">
+        <button class="btn btn-dark" (click)="add(item.uri)">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+        <button class="btn btn-dark" (click)="selecionar(item.uri)">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 4v16l13 -8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

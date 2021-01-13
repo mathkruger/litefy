@@ -1,0 +1,42 @@
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: .5rem;
+    background: var(--spt-black);
+}
+
+.button-custom {
+    border: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    margin: 0 0.3125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spt-green);
+
+    transition: .2s all;
+}
+
+.button-custom[disabled] {
+    background: var(--grey);
+}
+
+.button-custom:hover {
+    opacity: .7;
+}
+
+@media screen and (max-width: 360px) {
+    .player {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    .hide-mobile {
+        display: none;
+    }
+}

@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+
+:root {
+    --spt-black: #191414;
+    --spt-green: #1DB954;
+}
