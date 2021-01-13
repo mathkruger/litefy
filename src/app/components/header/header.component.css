@@ -25,12 +25,13 @@
     top: 57px;
     opacity: 0;
     pointer-events: none;
-    background: var(--spt-black);
+    background: var(--spt-grey);
     padding: 1rem;
     max-width: 240px;
     width: 100%;
     transition: .2s all;
     right: 0;
+    z-index: 100;
 }
 
 .user-area .user-menu.open {

@@ -3,6 +3,7 @@
 
 :root {
     --spt-black: #191414;
+    --spt-grey: #1d1a1a;
     --spt-green: #1DB954;
 }
 
@@ -10,10 +11,8 @@
     body {
         font-size: 75%;
     }
-}
 
-@media screen and (max-width: 260px) {
     .hide-mobile {
-        display: none;
+        display: none !important;
     }
 }

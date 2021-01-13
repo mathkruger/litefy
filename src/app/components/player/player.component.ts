@@ -20,6 +20,7 @@ export class PlayerComponent implements OnInit, OnChanges {
   previous_tracks: any[];
 
   mostraPlayer: boolean = false;
+  seekPlayerInterval: any = null;
 
 
   ngOnInit() {
@@ -81,6 +82,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Tocando');
+        this.createSeekInterval();
       })
   }
 
@@ -89,6 +91,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Pausado');
+        this.clearSeekInterval();
       })
   }
 
@@ -97,6 +100,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Faixa anterior');
+        this.createSeekInterval();
       })
   }
 
@@ -105,6 +109,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Próxima faixa');
+        this.createSeekInterval();
       })
   }
 
@@ -125,6 +130,36 @@ export class PlayerComponent implements OnInit, OnChanges {
     });
     // If cancelled, don't dispatch our event
     var canceled = !elem.dispatchEvent(evt);
-  };
+  }
 
+  convertMsToTimeString(ms) {
+    let dateObj = new Date(ms);
+    let hours = dateObj.getUTCHours();
+    let minutes = dateObj.getUTCMinutes();
+    let seconds = dateObj.getSeconds();
+
+    let hourString = hours.toString().padStart(2, '0') + ':';
+    let timeString =
+      minutes.toString().padStart(2, '0') + ':' +
+      seconds.toString().padStart(2, '0');
+
+    return hourString != '00:' ? hourString + timeString : timeString;
+  }
+
+  createSeekInterval() {
+    this.seekPlayerInterval = setInterval(() => {
+      this.getCurrentState();
+    }, 1000);
+  }
+
+  clearSeekInterval() {
+    clearInterval(this.seekPlayerInterval);
+  }
+  
+  seekToPosition(ms: number) {
+    this.playerService.seekToPosition(this.device_id, ms)
+    .subscribe(item => {
+      this.getCurrentState();
+    });
+  }
 }

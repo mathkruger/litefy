@@ -84,4 +84,8 @@ export class SpotifyPlayerService {
     getAlbumTracks(id) {
         return this.service.Get<any>(`https://api.spotify.com/v1/albums/${id}/tracks`);
     }
+
+    seekToPosition(device_id: string, ms: number) {
+        return this.service.Put<any>(`https://api.spotify.com/v1/me/player/seek?device_id=${device_id}&position_ms=${ms}`, null);
+    }
 }

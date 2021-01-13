@@ -28,3 +28,39 @@
 .button-custom:hover {
     opacity: .7;
 }
+
+.tracking {
+    width: 80%;
+}
+
+.tempos {
+    display: none;
+}
+
+@media screen and (max-width: 1796px) {
+    .tracking {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 922px) {
+    .tracking {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 733px) {
+    .tracking {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .tracking {
+        display: none;
+    }
+
+    .tempos {
+        display: flex;
+    }
+}
