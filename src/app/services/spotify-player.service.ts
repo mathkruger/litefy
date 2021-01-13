@@ -49,12 +49,18 @@ export class SpotifyPlayerService {
         //   });
     }
 
-    play(device_id: string, content: string = null) {
+    play(device_id: string, content: string = null, lista: string[] = null) {
         let model: any = {};
 
-        if (content) {
-            model['uris'] = [content];
+        if(lista != null) {
+            model['uris'] = lista;
         }
+        else {
+            if (content != null) {
+                model['uris'] = [content];
+            }
+        }
+
 
         return this.service.Put('https://api.spotify.com/v1/me/player/play?device_id=' + device_id, JSON.stringify(model));
     }
@@ -75,4 +81,7 @@ export class SpotifyPlayerService {
         return this.service.Get('https://api.spotify.com/v1/me/player');
     }
 
+    getAlbumTracks(id) {
+        return this.service.Get<any>(`https://api.spotify.com/v1/albums/${id}/tracks`);
+    }
 }
