@@ -1,0 +1,20 @@
+.search-container {
+    position: relative;
+}
+
+.search-btn {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 8;
+}
+
+.search-field {
+    border-radius: 30px !important;
+    border: 0;
+    height: 50px;
+    padding: 6px 20px;
+}
