@@ -1,3 +1,4 @@
+import { SearchComponent } from './pages/search/search.component';
 import { LoginCallbackComponent } from './pages/login/login-callback/login-callback.component';
 import { LoginAuthenticateComponent } from './pages/login/login-authenticate/login-authenticate.component';
 import { LoginGuardService } from './services/login-guard.service';
@@ -10,6 +11,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
     canActivate: [LoginGuardService]
   },
   {

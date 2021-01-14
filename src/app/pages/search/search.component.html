@@ -1,0 +1,26 @@
+<div class="app container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <app-shearch-box [exportaResultados]="true" (resultadosBusca)="obterResultados($event)"></app-shearch-box>
+    </div>
+  </div>
+
+  <ng-container *ngIf="resultadosTracks.length > 0 || resultadosPlaylists.length > 0 || resultadosAlbums.length > 0">
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <app-content-list titulo="Playlists" tipo="playlist" [lista]="resultadosPlaylists"></app-content-list>
+      </div>
+
+      <div class="col-md-6">
+        <app-content-list titulo="Albuns" tipo="album" [lista]="resultadosAlbums"></app-content-list>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md-12">
+        <app-content-list titulo="Músicas" tipo="track" [lista]="resultadosTracks"></app-content-list>
+      </div>
+    </div>
+  </ng-container>
+
+</div>

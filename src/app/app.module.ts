@@ -18,6 +18,9 @@ import { NgProgressHttpModule } from 'ngx-progressbar/http';
 import { NgProgressRouterModule } from 'ngx-progressbar/router';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchComponent } from './pages/search/search.component';
+import { TokenVerificationInterceptorService } from './services/interceptors/token-verification.interceptor';
+import { ContentListComponent } from './components/content-list/content-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     HeaderComponent,
     ShearchBoxComponent,
-    PlayerComponent
+    PlayerComponent,
+    SearchComponent,
+    ContentListComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +47,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
