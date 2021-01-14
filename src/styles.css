@@ -4,7 +4,16 @@
 :root {
     --spt-black: #191414;
     --spt-grey: #1d1a1a;
+    --spt-light-grey: #312d2d;
     --spt-green: #1DB954;
+}
+
+body {
+    background: var(--spt-grey);
+}
+
+.app {
+    padding-bottom: 100px;
 }
 
 @media screen and (max-width: 360px) {
