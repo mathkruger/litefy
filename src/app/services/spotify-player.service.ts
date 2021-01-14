@@ -1,6 +1,7 @@
 import { ServiceBase } from './service.base';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -11,6 +12,21 @@ export class SpotifyPlayerService {
 
     deviceIdSubject: BehaviorSubject<string> = new BehaviorSubject<string>(null);
     playerStatusSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+
+    seekPlayerInterval: any = null;
+
+    private createSeekInterval() {
+        this.seekPlayerInterval = setInterval(() => {
+            this.getCurrentState()
+            .subscribe(item => {
+                this.setPlayerStatus(item);
+            })
+        }, 1000);
+    }
+
+    private clearSeekInterval() {
+        clearInterval(this.seekPlayerInterval);
+    }
 
     setPlayerStatus(status: any) {
         this.playerStatusSubject.next(status);
@@ -52,7 +68,7 @@ export class SpotifyPlayerService {
     play(device_id: string, content: string = null, lista: string[] = null) {
         let model: any = {};
 
-        if(lista != null) {
+        if (lista != null) {
             model['uris'] = lista;
         }
         else {
@@ -62,19 +78,32 @@ export class SpotifyPlayerService {
         }
 
 
-        return this.service.Put('https://api.spotify.com/v1/me/player/play?device_id=' + device_id, JSON.stringify(model));
+        return this.service.Put('https://api.spotify.com/v1/me/player/play?device_id=' + device_id, JSON.stringify(model))
+        .pipe(map(item => {
+            console.log('ENTROU')
+            this.createSeekInterval();
+        }));
     }
 
     pause(device_id: string) {
-        return this.service.Put('https://api.spotify.com/v1/me/player/pause?device_id=' + device_id, {});
+        return this.service.Put('https://api.spotify.com/v1/me/player/pause?device_id=' + device_id, {})
+        .pipe(map(item => {
+            this.clearSeekInterval();
+        }));
     }
 
     next(device_id: string) {
-        return this.service.Post('https://api.spotify.com/v1/me/player/next?device_id=' + device_id, {});
+        return this.service.Post('https://api.spotify.com/v1/me/player/next?device_id=' + device_id, {})
+        .pipe(map(item => {
+            this.createSeekInterval();
+        }));
     }
 
     previous(device_id: string) {
-        return this.service.Post('https://api.spotify.com/v1/me/player/previous?device_id=' + device_id, {});
+        return this.service.Post('https://api.spotify.com/v1/me/player/previous?device_id=' + device_id, {})
+        .pipe(map(item => {
+            this.createSeekInterval();
+        }));
     }
 
     getCurrentState() {
@@ -87,5 +116,9 @@ export class SpotifyPlayerService {
 
     seekToPosition(device_id: string, ms: number) {
         return this.service.Put<any>(`https://api.spotify.com/v1/me/player/seek?device_id=${device_id}&position_ms=${ms}`, null);
+    }
+
+    setVolume(device_id: string, volume: number) {
+        return this.service.Put<any>(`https://api.spotify.com/v1/me/player/volume?device_id=${device_id}&volume_percent=${volume}`, null);
     }
 }
