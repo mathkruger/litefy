@@ -1,5 +1,5 @@
 <div class="player">
-  <div class="d-flex justify-content-between align-items-center">
+  <div *ngIf="playerStatus" class="d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center text-white">
       <img *ngIf="playerStatus" [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
 
@@ -46,25 +46,37 @@
     </div>
 
     <div class="tracking">
-      <input
-        #playerSeek
-        type="range"
-        [value]="playerStatus.progress_ms / 1000"
-        min="0"
-        [max]="playerStatus.item.duration_ms / 1000"
-        class="form-control-range"
-        (change)="seekToPosition(playerSeek.value * 1000)"
-      >
+      <input #playerSeek type="range" [value]="playerStatus.progress_ms / 1000" min="0"
+        [max]="playerStatus.item.duration_ms / 1000" class="form-control-range"
+        (change)="seekToPosition(playerSeek.value * 1000)">
 
       <div class="d-flex justify-content-between align-items-center text-white mt-2">
-        <span>00:00</span>
         <span>{{ convertMsToTimeString(playerStatus.progress_ms) }}</span>
         <span>{{ convertMsToTimeString(playerStatus.item.duration_ms) }}</span>
       </div>
     </div>
 
     <div class="botoes-contole">
-      <div class="btn-group" role="group">
+      <div class="btn-group volume-btn" role="group">
+        <button [disabled]="!playerStatus" type="button" (click)="mostraVolume = !mostraVolume" class="button-custom">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume" width="32" height="32"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 8a5 5 0 0 1 0 8" />
+            <path d="M17.7 5a9 9 0 0 1 0 14" />
+            <path
+              d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a0.8 .8 0 0 1 1.5 .5v14a0.8 .8 0 0 1 -1.5 .5l-3.5 -4.5" />
+          </svg>
+
+        </button>
+        
+        <div class="volume-box" [ngClass]="{'open': mostraVolume}">
+          <input #volume type="range" [value]="playerStatus.device.volume_percent" min="0"
+            [max]="100" class="form-control-range"
+            (change)="setVolume(volume.value)">
+        </div>
+
         <button [disabled]="!playerStatus" type="button" (click)="previous()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-back" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -74,11 +86,10 @@
             <line x1="4" y1="5" x2="4" y2="19" />
           </svg>
         </button>
-  
         <button [disabled]="!playerStatus" *ngIf="!playerStatus.is_playing" type="button" (click)="play()"
           class="button-custom">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24"
-            viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M7 4v16l13 -8z" />
@@ -86,15 +97,15 @@
         </button>
         <button [disabled]="!playerStatus" *ngIf="playerStatus.is_playing" type="button" (click)="pause()"
           class="button-custom">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24" height="24"
-            viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <rect x="6" y="5" width="4" height="14" rx="1" />
             <rect x="14" y="5" width="4" height="14" rx="1" />
           </svg>
         </button>
-  
+
         <button [disabled]="!playerStatus" type="button" (click)="next()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-forward" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -107,7 +118,6 @@
       </div>
 
       <div class="tempos d-flex justify-content-between align-items-center text-white mt-2">
-        <span>00:00</span>
         <span>{{ convertMsToTimeString(playerStatus.progress_ms) }}</span>
         <span>{{ convertMsToTimeString(playerStatus.item.duration_ms) }}</span>
       </div>

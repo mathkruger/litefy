@@ -5,6 +5,7 @@
     left: 0;
     padding: .5rem;
     background: var(--spt-black);
+    z-index: 9999;
 }
 
 .button-custom {
@@ -35,6 +36,25 @@
 
 .tempos {
     display: none !important;
+}
+
+.volume-btn {
+    position: relative;
+}
+
+.volume-box {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background: white;
+    padding: 20px;
+    max-width: 200px;
+    width: 100%;
+    opacity: 1 !important;
+}
+
+.volume-box.open {
+    display: block;
 }
 
 @media screen and (max-width: 1796px) {

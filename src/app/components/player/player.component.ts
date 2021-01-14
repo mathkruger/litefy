@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ declare var Spotify: any;
   styleUrls: ['./player.component.css'],
 })
 export class PlayerComponent implements OnInit, OnChanges {
-  constructor(private auth: AuthService, private playerService: SpotifyPlayerService, private toastr: ToastrService) { }
+  constructor(private auth: AuthService, private playerService: SpotifyPlayerService, private toastr: ToastrService, private router: Router) { }
 
   player: any;
   playerStatus: any;
@@ -20,8 +21,7 @@ export class PlayerComponent implements OnInit, OnChanges {
   previous_tracks: any[];
 
   mostraPlayer: boolean = false;
-  seekPlayerInterval: any = null;
-
+  mostraVolume: boolean = false;
 
   ngOnInit() {
     this.initPlayer();
@@ -40,6 +40,15 @@ export class PlayerComponent implements OnInit, OnChanges {
         name: 'Litefy Player',
         getOAuthToken: cb => { cb(token); }
       });
+
+      this.player.addListener('initialization_error', ({ message }) => { console.error(message); });
+      this.player.addListener('authentication_error', ({ message }) => {
+        console.error(message);
+        this.auth.logout();
+        this.router.navigate(['login']);
+      });
+      this.player.addListener('account_error', ({ message }) => { console.error(message); });
+      this.player.addListener('playback_error', ({ message }) => { console.error(message); });
 
       this.player.addListener('player_state_changed', state => {
         var someLink = document.querySelector('.click-inicial');
@@ -82,7 +91,6 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Tocando');
-        this.createSeekInterval();
       })
   }
 
@@ -91,7 +99,6 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Pausado');
-        this.clearSeekInterval();
       })
   }
 
@@ -100,7 +107,6 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Faixa anterior');
-        this.createSeekInterval();
       })
   }
 
@@ -109,7 +115,6 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.toastr.success('Próxima faixa');
-        this.createSeekInterval();
       })
   }
 
@@ -146,18 +151,15 @@ export class PlayerComponent implements OnInit, OnChanges {
     return hourString != '00:' ? hourString + timeString : timeString;
   }
 
-  createSeekInterval() {
-    this.seekPlayerInterval = setInterval(() => {
-      this.getCurrentState();
-    }, 1000);
-  }
-
-  clearSeekInterval() {
-    clearInterval(this.seekPlayerInterval);
-  }
-  
   seekToPosition(ms: number) {
     this.playerService.seekToPosition(this.device_id, ms)
+    .subscribe(item => {
+      this.getCurrentState();
+    });
+  }
+
+  setVolume(volume: number) {
+    this.playerService.setVolume(this.device_id, volume)
     .subscribe(item => {
       this.getCurrentState();
     });
