@@ -1,0 +1,110 @@
+{
+  "configVersion": 1,
+  "timestamp": 1610728360329,
+  "index": "/litefy/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/litefy/favicon.ico",
+        "/litefy/index.html",
+        "/litefy/main-es2015.7b2ac27efdd351182524.js",
+        "/litefy/main-es5.7b2ac27efdd351182524.js",
+        "/litefy/manifest.webmanifest",
+        "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js",
+        "/litefy/polyfills-es5.13fd59473aceee12cf77.js",
+        "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js",
+        "/litefy/runtime-es5.66c79b9d36e7169e27b0.js",
+        "/litefy/styles.c2c15f86b3dd67bc418e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/litefy/assets/icons/android/android-launchericon-144-144.png",
+        "/litefy/assets/icons/android/android-launchericon-192-192.png",
+        "/litefy/assets/icons/android/android-launchericon-48-48.png",
+        "/litefy/assets/icons/android/android-launchericon-512-512.png",
+        "/litefy/assets/icons/android/android-launchericon-72-72.png",
+        "/litefy/assets/icons/android/android-launchericon-96-96.png",
+        "/litefy/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png",
+        "/litefy/assets/icons/chrome/chrome-favicon-16-16.png",
+        "/litefy/assets/icons/chrome/chrome-installprocess-128-128.png",
+        "/litefy/assets/icons/firefox/firefox-general-128-128.png",
+        "/litefy/assets/icons/firefox/firefox-general-16-16.png",
+        "/litefy/assets/icons/firefox/firefox-general-256-256.png",
+        "/litefy/assets/icons/firefox/firefox-general-32-32.png",
+        "/litefy/assets/icons/firefox/firefox-general-48-48.png",
+        "/litefy/assets/icons/firefox/firefox-general-64-64.png",
+        "/litefy/assets/icons/firefox/firefox-general-90-90.png",
+        "/litefy/assets/icons/firefox/firefox-marketplace-128-128.png",
+        "/litefy/assets/icons/firefox/firefox-marketplace-512-512.png",
+        "/litefy/assets/logo.png",
+        "/litefy/assets/standart-album-icon.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/litefy/assets/icons/android/android-launchericon-144-144.png": "e25ad29ca4ba26001abd12db5b02851f68ddab3a",
+    "/litefy/assets/icons/android/android-launchericon-192-192.png": "7b54bed54f32d432aec04bc29605cf326080dab7",
+    "/litefy/assets/icons/android/android-launchericon-48-48.png": "a2aa1e6e6e4270a8892f9c57817af009851e9462",
+    "/litefy/assets/icons/android/android-launchericon-512-512.png": "91cd12ab553f23f8af6ab7a5917923dd187ee573",
+    "/litefy/assets/icons/android/android-launchericon-72-72.png": "d5b32df2b7df7ba038cfe3ec95a57211a6333356",
+    "/litefy/assets/icons/android/android-launchericon-96-96.png": "abdd600eaf2cd9dbde44229747b0bd93c22c9e14",
+    "/litefy/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png": "a2aa1e6e6e4270a8892f9c57817af009851e9462",
+    "/litefy/assets/icons/chrome/chrome-favicon-16-16.png": "6a2f3649a787cfd005eb7630920acf3b2a0457b7",
+    "/litefy/assets/icons/chrome/chrome-installprocess-128-128.png": "0e260d3d9a5c5ed68a3e498a20b801596acf3059",
+    "/litefy/assets/icons/firefox/firefox-general-128-128.png": "0e260d3d9a5c5ed68a3e498a20b801596acf3059",
+    "/litefy/assets/icons/firefox/firefox-general-16-16.png": "6a2f3649a787cfd005eb7630920acf3b2a0457b7",
+    "/litefy/assets/icons/firefox/firefox-general-256-256.png": "6a794c3631cc26dcb8cda8f524350baac9b81a0c",
+    "/litefy/assets/icons/firefox/firefox-general-32-32.png": "b256215fb1f7acac4ac5c9ac01de9964fa72a77b",
+    "/litefy/assets/icons/firefox/firefox-general-48-48.png": "a2aa1e6e6e4270a8892f9c57817af009851e9462",
+    "/litefy/assets/icons/firefox/firefox-general-64-64.png": "741c76d2ecd02974bfc44aeec0f204f995d9a408",
+    "/litefy/assets/icons/firefox/firefox-general-90-90.png": "ca12aebf7bdfc4154b3c60d9cb850c801e62391f",
+    "/litefy/assets/icons/firefox/firefox-marketplace-128-128.png": "0e260d3d9a5c5ed68a3e498a20b801596acf3059",
+    "/litefy/assets/icons/firefox/firefox-marketplace-512-512.png": "91cd12ab553f23f8af6ab7a5917923dd187ee573",
+    "/litefy/assets/logo.png": "03b243be1741d5bfb39eb31f6aa0cfca265add97",
+    "/litefy/assets/standart-album-icon.png": "51d1a571b46808e79cdf5d777f517940e8561ec0",
+    "/litefy/favicon.ico": "3fb827672b7b297c539bd27bab391669e46e0c67",
+    "/litefy/index.html": "d49b018eb46dd3a39d76532a696b27631c5e541b",
+    "/litefy/main-es2015.7b2ac27efdd351182524.js": "269692ec584656ffef20376dec6ea47f016f32e4",
+    "/litefy/main-es5.7b2ac27efdd351182524.js": "4de5999b4929ea4b0ca3825c30c7a9b0a644d7c1",
+    "/litefy/manifest.webmanifest": "416515aff15e6eca3a0fcc9efb94b2fbd4650e83",
+    "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
+    "/litefy/polyfills-es5.13fd59473aceee12cf77.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
+    "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/litefy/runtime-es5.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/litefy/styles.c2c15f86b3dd67bc418e.css": "7e623c097c63ad6336195a5a4a41556ada7cdfe9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
