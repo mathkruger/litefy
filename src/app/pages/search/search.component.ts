@@ -12,6 +12,7 @@ export class SearchComponent implements OnInit {
   resultadosTracks: any[] = [];
   resultadosPlaylists: any[] = [];
   resultadosAlbums: any[] = [];
+  resultadosArtistas: any[] = [];
 
   ngOnInit() {
   }
@@ -20,6 +21,7 @@ export class SearchComponent implements OnInit {
     this.resultadosTracks = items.tracks.items;
     this.resultadosPlaylists = items.playlists.items;
     this.resultadosAlbums = items.albums.items;
+    this.resultadosArtistas = items.artists.items;
   }
 
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ServiceBase } from './../../services/service.base';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -9,10 +10,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContentListComponent implements OnInit {
 
-  constructor(private playerService: SpotifyPlayerService, private service: ServiceBase) { }
+  constructor(private playerService: SpotifyPlayerService, private service: ServiceBase, private router: Router) { }
 
   @Input() titulo: string;
-  @Input() tipo: 'track' | 'playlist' | 'album';
+  @Input() tipo: 'track' | 'playlist' | 'album' | 'artist';
   @Input() lista: any[];
   @Input() rootItem: string = null;
 
@@ -30,6 +31,12 @@ export class ContentListComponent implements OnInit {
     }
 
     return item;
+  }
+
+  abrirArtista(id) {
+    if(id != null) {
+      this.router.navigate(['/artist/' + id]);
+    }
   }
 
   selecionar(itemSelecionado) {

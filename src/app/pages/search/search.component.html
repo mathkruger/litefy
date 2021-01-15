@@ -8,6 +8,17 @@
   <ng-container *ngIf="resultadosTracks.length > 0 || resultadosPlaylists.length > 0 || resultadosAlbums.length > 0">
     <div class="row mt-4">
       <div class="col-md-6">
+        <app-content-list titulo="Artistas" tipo="artist" [lista]="resultadosArtistas"></app-content-list>
+      </div>
+      
+      <div class="col-md-6">
+        <app-content-list titulo="Músicas" tipo="track" [lista]="resultadosTracks"></app-content-list>
+      </div>
+
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md-6">
         <app-content-list titulo="Playlists" tipo="playlist" [lista]="resultadosPlaylists"></app-content-list>
       </div>
 
@@ -16,11 +27,6 @@
       </div>
     </div>
 
-    <div class="row mt-2">
-      <div class="col-md-12">
-        <app-content-list titulo="Músicas" tipo="track" [lista]="resultadosTracks"></app-content-list>
-      </div>
-    </div>
   </ng-container>
 
 </div>
