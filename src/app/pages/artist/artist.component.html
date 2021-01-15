@@ -1,0 +1,51 @@
+<div class="app container mt-4" *ngIf="artist">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="artist-header" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
+        <div class="img" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
+        </div>
+        <h1>
+          {{ artist.name }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <app-content-list titulo="Músicas mais tocadas" tipo="track" [lista]="topTracks.tracks"></app-content-list>
+      </div>
+
+      <div class="col-md-6">
+        <app-content-list titulo="Álbuns" tipo="album" [lista]="albums.items"></app-content-list>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <h2>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="32" height="32"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+        </svg>
+
+        Artistas relacionados
+      </h2>
+
+      <div class="related-artists-grid">
+        <a *ngFor="let item of related.artists" [routerLink]="['/artist/' + item.id]" class="artist">
+          <div class="img" [ngStyle]="{'background-image': 'url(' + item.images[0].url + ')'}">
+          </div>
+          <strong class="mt-2">{{ item.name }}</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

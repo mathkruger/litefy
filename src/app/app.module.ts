@@ -23,6 +23,7 @@ import { TokenVerificationInterceptorService } from './services/interceptors/tok
 import { ContentListComponent } from './components/content-list/content-list.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ArtistComponent } from './pages/artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { environment } from '../environments/environment';
     ShearchBoxComponent,
     PlayerComponent,
     SearchComponent,
-    ContentListComponent
+    ContentListComponent,
+    ArtistComponent
   ],
   imports: [
     CommonModule,
@@ -46,8 +48,9 @@ import { environment } from '../environments/environment';
     NgProgressModule,
     NgProgressHttpModule,
     NgProgressRouterModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // ToastrModule added
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true }

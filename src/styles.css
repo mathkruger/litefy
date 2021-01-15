@@ -16,6 +16,16 @@ body {
     padding-bottom: 100px;
 }
 
+a {
+    text-decoration: none !important;
+    color: white !important;
+    transition: .2s all;
+}
+
+a:hover {
+    opacity: .7;
+}
+
 @media screen and (max-width: 360px) {
     body {
         font-size: 75%;

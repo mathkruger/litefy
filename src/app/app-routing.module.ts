@@ -1,3 +1,4 @@
+import { ArtistComponent } from './pages/artist/artist.component';
 import { SearchComponent } from './pages/search/search.component';
 import { LoginCallbackComponent } from './pages/login/login-callback/login-callback.component';
 import { LoginAuthenticateComponent } from './pages/login/login-authenticate/login-authenticate.component';
@@ -18,6 +19,12 @@ const routes: Routes = [
     component: SearchComponent,
     canActivate: [LoginGuardService]
   },
+  {
+    path: 'artist/:id',
+    component: ArtistComponent,
+    canActivate: [LoginGuardService]
+  },
+
   {
     path: 'login',
     component: LoginAuthenticateComponent,

@@ -46,8 +46,8 @@
     </div>
   
     <div class="titulo">
-      <span *ngIf="tipo == 'track'">{{ getRootItem(item).name }} - {{ getRootItem(item).album.name }} - {{ getRootItem(item).album.artists[0].name }}</span>
-      <span *ngIf="tipo == 'album'">{{ getRootItem(item).name }} - {{ getRootItem(item).artists[0].name }} - {{ getRootItem(item).total_tracks }} músicas</span>
+      <span *ngIf="tipo == 'track'">{{ getRootItem(item).name }} - {{ getRootItem(item).album.name }} - <a [routerLink]="['artist/' + getRootItem(item).album.artists[0].id]">{{ getRootItem(item).album.artists[0].name }}</a></span>
+      <span *ngIf="tipo == 'album'">{{ getRootItem(item).name }} - <a [routerLink]="['artist/' + getRootItem(item).artists[0].id]">{{ getRootItem(item).artists[0].name }}</a> - {{ getRootItem(item).total_tracks }} músicas</span>
       <span *ngIf="tipo == 'playlist'">{{ getRootItem(item).name }} - {{ getRootItem(item).owner.display_name }} - {{ getRootItem(item).tracks.total }}
         músicas</span>
     </div>
