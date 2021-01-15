@@ -23,8 +23,13 @@ export class PlayerComponent implements OnInit, OnChanges {
   mostraPlayer: boolean = false;
   mostraVolume: boolean = false;
 
+  progress: number = 0;
+
   ngOnInit() {
     this.initPlayer();
+    this.playerService.getPlayerProgress().subscribe(item => {
+      this.progress = item;
+    });
   }
 
   ngOnChanges() {
@@ -122,6 +127,8 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.getCurrentState()
       .subscribe(item => {
         this.playerStatus = item;
+
+        this.playerService.setPlayerProgress(this.playerStatus.progress_ms);
         this.playerService.setPlayerStatus(this.playerStatus);
       })
   }

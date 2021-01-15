@@ -46,12 +46,12 @@
     </div>
 
     <div class="tracking">
-      <input #playerSeek type="range" [value]="playerStatus.progress_ms / 1000" min="0"
+      <input #playerSeek type="range" [value]="progress / 1000" min="0"
         [max]="playerStatus.item.duration_ms / 1000" class="form-control-range"
         (change)="seekToPosition(playerSeek.value * 1000)">
 
       <div class="d-flex justify-content-between align-items-center text-white mt-2">
-        <span>{{ convertMsToTimeString(playerStatus.progress_ms) }}</span>
+        <span>{{ convertMsToTimeString(progress) }}</span>
         <span>{{ convertMsToTimeString(playerStatus.item.duration_ms) }}</span>
       </div>
     </div>

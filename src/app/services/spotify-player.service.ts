@@ -12,20 +12,37 @@ export class SpotifyPlayerService {
 
     deviceIdSubject: BehaviorSubject<string> = new BehaviorSubject<string>(null);
     playerStatusSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+    playerProgressSubject: BehaviorSubject<number> = new BehaviorSubject<number>(null);
 
     seekPlayerInterval: any = null;
+    interval_ms: number;
 
     private createSeekInterval() {
         this.seekPlayerInterval = setInterval(() => {
-            this.getCurrentState()
-            .subscribe(item => {
-                this.setPlayerStatus(item);
-            })
+            if (this.interval_ms == null) {
+                this.getPlayerStatus().subscribe(status => {
+                    this.interval_ms = status.progress_ms;
+                    this.setPlayerProgress(this.interval_ms + 1000);
+                });
+            }
+            else {
+                this.setPlayerProgress(this.interval_ms + 1000);
+            }
         }, 1000);
     }
 
     private clearSeekInterval() {
+        this.interval_ms == null;
         clearInterval(this.seekPlayerInterval);
+    }
+
+    setPlayerProgress(progress: number) {
+        this.interval_ms = progress;
+        this.playerProgressSubject.next(progress);
+    }
+
+    getPlayerProgress() {
+        return this.playerProgressSubject.asObservable();
     }
 
     setPlayerStatus(status: any) {
@@ -53,16 +70,10 @@ export class SpotifyPlayerService {
 
     recentes() {
         return this.service.Get<any>('https://api.spotify.com/v1/me/player/recently-played?limit=1');
-        //   .subscribe(item => {
-        //     this.play(item.items[0].track.uri);
-        //   });
     }
 
     add(uri: string, device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/queue?device_id=' + device_id + '&uri=' + uri, {});
-        //   .subscribe(item => {
-        //     console.log('Added!');
-        //   });
     }
 
     play(device_id: string, content: string = null, lista: string[] = null) {
@@ -79,31 +90,30 @@ export class SpotifyPlayerService {
 
 
         return this.service.Put('https://api.spotify.com/v1/me/player/play?device_id=' + device_id, JSON.stringify(model))
-        .pipe(map(item => {
-            console.log('ENTROU')
-            this.createSeekInterval();
-        }));
+            .pipe(map(item => {
+                this.createSeekInterval();
+            }));
     }
 
     pause(device_id: string) {
         return this.service.Put('https://api.spotify.com/v1/me/player/pause?device_id=' + device_id, {})
-        .pipe(map(item => {
-            this.clearSeekInterval();
-        }));
+            .pipe(map(item => {
+                this.clearSeekInterval();
+            }));
     }
 
     next(device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/next?device_id=' + device_id, {})
-        .pipe(map(item => {
-            this.createSeekInterval();
-        }));
+            .pipe(map(item => {
+                this.createSeekInterval();
+            }));
     }
 
     previous(device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/previous?device_id=' + device_id, {})
-        .pipe(map(item => {
-            this.createSeekInterval();
-        }));
+            .pipe(map(item => {
+                this.createSeekInterval();
+            }));
     }
 
     getCurrentState() {
@@ -115,7 +125,11 @@ export class SpotifyPlayerService {
     }
 
     seekToPosition(device_id: string, ms: number) {
-        return this.service.Put<any>(`https://api.spotify.com/v1/me/player/seek?device_id=${device_id}&position_ms=${ms}`, null);
+        return this.service.Put<any>(`https://api.spotify.com/v1/me/player/seek?device_id=${device_id}&position_ms=${ms}`, null)
+        .pipe(map(item => {
+            this.clearSeekInterval();
+            this.createSeekInterval();
+        }));
     }
 
     setVolume(device_id: string, volume: number) {
