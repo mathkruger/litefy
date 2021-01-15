@@ -54,7 +54,9 @@ export class ContentListComponent implements OnInit {
 
   playAlbum(id) {
     let uris = [];
+
     this.playerService.getAlbumTracks(id).subscribe(items => {
+      
       items.items.forEach((track) => {
         uris.push(track.uri);
       });
@@ -71,10 +73,10 @@ export class ContentListComponent implements OnInit {
   }
 
   playPlaylist(item) {
-    console.log(item);
     let uris = [];
+
+    
     this.service.Get<any>(item.tracks.href).subscribe(items => {
-      console.log(items);
       items.items.forEach((track) => {
         uris.push(track.track.uri);
       });

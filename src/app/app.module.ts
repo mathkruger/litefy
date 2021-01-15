@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './pages/search/search.component';
 import { TokenVerificationInterceptorService } from './services/interceptors/token-verification.interceptor';
 import { ContentListComponent } from './components/content-list/content-list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { ContentListComponent } from './components/content-list/content-list.com
     NgProgressHttpModule,
     NgProgressRouterModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot(), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // ToastrModule added
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true }

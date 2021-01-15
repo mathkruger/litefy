@@ -91,6 +91,7 @@ export class SpotifyPlayerService {
 
         return this.service.Put('https://api.spotify.com/v1/me/player/play?device_id=' + device_id, JSON.stringify(model))
             .pipe(map(item => {
+                this.clearSeekInterval();
                 this.createSeekInterval();
             }));
     }
@@ -105,6 +106,7 @@ export class SpotifyPlayerService {
     next(device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/next?device_id=' + device_id, {})
             .pipe(map(item => {
+                this.clearSeekInterval();
                 this.createSeekInterval();
             }));
     }
@@ -112,6 +114,7 @@ export class SpotifyPlayerService {
     previous(device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/previous?device_id=' + device_id, {})
             .pipe(map(item => {
+                this.clearSeekInterval();
                 this.createSeekInterval();
             }));
     }
@@ -126,13 +129,29 @@ export class SpotifyPlayerService {
 
     seekToPosition(device_id: string, ms: number) {
         return this.service.Put<any>(`https://api.spotify.com/v1/me/player/seek?device_id=${device_id}&position_ms=${ms}`, null)
-        .pipe(map(item => {
-            this.clearSeekInterval();
-            this.createSeekInterval();
-        }));
+            .pipe(map(item => {
+                this.clearSeekInterval();
+                this.createSeekInterval();
+            }));
     }
 
     setVolume(device_id: string, volume: number) {
         return this.service.Put<any>(`https://api.spotify.com/v1/me/player/volume?device_id=${device_id}&volume_percent=${volume}`, null);
+    }
+
+    clearQueue(id, device_id) { //Recursive
+        this.getCurrentState()
+        .subscribe((state: any) => {
+            let tId = state.item.id;
+
+            if (tId != id) {
+                this.next(device_id)
+                .subscribe(item => {
+                    setTimeout(() => {
+                        this.clearQueue(id, device_id);
+                    }, 1000);
+                });
+            }
+        });
     }
 }
