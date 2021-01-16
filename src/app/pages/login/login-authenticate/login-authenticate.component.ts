@@ -27,7 +27,7 @@ export class LoginAuthenticateComponent implements OnInit {
     let client_id = environment.client_id; // Your client id
     let redirect_uri = environment.redirect_uri; // Your redirect uri
 
-    let scope = 'user-read-currently-playing user-read-playback-state user-read-recently-played user-modify-playback-state streaming user-read-private user-read-email user-library-read';
+    let scope = 'user-top-read user-read-currently-playing user-read-playback-state user-read-recently-played user-modify-playback-state streaming user-read-private user-read-email user-library-read';
     let state = this.generateRandomString(16);
 
     let url = 'https://accounts.spotify.com/authorize';

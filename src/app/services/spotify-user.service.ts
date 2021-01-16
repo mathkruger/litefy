@@ -21,4 +21,8 @@ export class SpotifyUserService {
     getUserTracks() {
         return this.service.Get('https://api.spotify.com/v1/me/tracks?limit=50');
     }
+
+    getUserTop(tipo: 'artists' | 'tracks') {
+        return this.service.Get('https://api.spotify.com/v1/me/top/' + tipo);
+    }
 }

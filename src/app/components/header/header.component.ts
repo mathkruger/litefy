@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor(private userService: UserService, public auth: AuthService, private router: Router) { }
 
   dados: User;
+  menuAberto: boolean = false;
 
   ngOnInit() {
     this.userService.getUser().subscribe(item => {

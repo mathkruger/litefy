@@ -1,13 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-bg d-flex justify-content-between align-items-center">
-  <div class="navegacao d-flex">
-    <a class="navbar-brand" href="#">
-      <img style="max-width: 38px;" src="assets/logo.png" alt="Litefy Logo">
+  <div class="navegacao d-flex align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img style="max-width: 38px; margin-right: .5em;" src="assets/logo.png" alt="Litefy Logo">
       Litefy
     </a>
-    
-    <ul *ngIf="auth.Autenticado()" class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['search']">
+
+    <div class="menu-button" (click)="menuAberto = !menuAberto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="4" y1="6" x2="20" y2="6" />
+        <line x1="4" y1="12" x2="20" y2="12" />
+        <line x1="4" y1="18" x2="20" y2="18" />
+      </svg>
+    </div>
+
+    <ul *ngIf="auth.Autenticado()" class="menu navbar-nav mr-auto" [ngClass]="{'open': menuAberto}">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/search']" (click)="menuAberto = false">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32"
             viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
@@ -17,6 +26,20 @@
           </svg>
 
           Pesquisar
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/library']" (click)="menuAberto = false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="32" height="32"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
+            <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
+          </svg>
+
+          Biblioteca
         </a>
       </li>
     </ul>

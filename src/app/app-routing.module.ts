@@ -1,3 +1,4 @@
+import { LibraryComponent } from './pages/library/library.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { AlbumComponent } from './pages/album/album.component';
 import { ArtistComponent } from './pages/artist/artist.component';
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'library',
+    component: LibraryComponent,
     canActivate: [LoginGuardService]
   },
   {

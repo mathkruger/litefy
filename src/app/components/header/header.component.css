@@ -56,3 +56,26 @@
 .user-area .user-menu li svg {
     margin-right: 5px;
 }
+
+.menu-button {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    .menu-button {
+        display: block;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 64px;
+        background: var(--spt-light-grey);
+        z-index: 99;
+        width: 100%;
+        left: 0;
+        padding: .5rem;
+    }
+    .menu.open {
+        display: flex;
+    }
+}

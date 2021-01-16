@@ -1,3 +1,4 @@
+import { SpotifyBrowseService } from './../../services/spotify-browse.service';
 import { User } from './../../models/user';
 import { UserService } from './../../services/user.service';
 import { SpotifyUserService } from './../../services/spotify-user.service';
@@ -13,28 +14,39 @@ import { forkJoin } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private serviceUsuario: SpotifyUserService, private usuario: UserService) { }
+  constructor(private serviceUsuario: SpotifyUserService, private usuario: UserService, private browseService: SpotifyBrowseService) { }
 
-  userPlaylists: any[] = [];
-  userAlbums: any[] = [];
-  userTracks: any[] = [];
+  topArtists: any[] = [];
+  topTracks: any[] = [];
 
-  usuarioLogado: User;
+  newAlbuns: any[] = [];
+  featuredPlaylists: any[] = [];
+
+  featuredMessage: string;
+
+  requisicoesCompletas = false;
+
 
   ngOnInit() {
     let requests = [];
 
-    requests.push(this.serviceUsuario.getUserPlaylists(), this.serviceUsuario.getUserAlbums(), this.serviceUsuario.getUserTracks());
-    this.usuario.getUser()
-      .subscribe(item => {
-        this.usuarioLogado = item;
-      });
+    requests.push(
+      this.serviceUsuario.getUserTop('artists'),
+      this.serviceUsuario.getUserTop('tracks'),
+      this.browseService.getNewAlbuns(),
+      this.browseService.getFeaturedPlaylists()
+    );
 
     forkJoin(requests)
       .subscribe((items: any[]) => {
-        this.userPlaylists = items[0].items;
-        this.userAlbums = items[1].items;
-        this.userTracks = items[2].items;
+        this.topArtists = items[0].items;
+        this.topTracks = items[1].items;
+        
+        this.newAlbuns = items[2].albums.items;
+        this.featuredPlaylists = items[3].playlists.items;
+        this.featuredMessage = items[3].message;
+
+        this.requisicoesCompletas = true;
       });
   }
 }
