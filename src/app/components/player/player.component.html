@@ -53,8 +53,8 @@
         (change)="seekToPosition(playerSeek.value * 1000)">
 
       <div class="d-flex justify-content-between align-items-center text-white mt-2">
-        <span>{{ convertMsToTimeString(progress) }}</span>
-        <span>{{ convertMsToTimeString(playerStatus.item.duration_ms) }}</span>
+        <span>{{ progress | msToString }}</span>
+        <span>{{ playerStatus.item.duration_ms | msToString }}</span>
       </div>
     </div>
 
@@ -120,8 +120,8 @@
       </div>
 
       <div class="tempos d-flex justify-content-between align-items-center text-white mt-2">
-        <span>{{ convertMsToTimeString(playerStatus.progress_ms) }}</span>
-        <span>{{ convertMsToTimeString(playerStatus.item.duration_ms) }}</span>
+        <span>{{ progress | msToString }}</span>
+        <span>{{ playerStatus.item.duration_ms | msToString }}</span>
       </div>
     </div>
 

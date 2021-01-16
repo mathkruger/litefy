@@ -8,28 +8,6 @@
     z-index: 9999;
 }
 
-.button-custom {
-    border: 0;
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    margin: 0 0.3125em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--spt-green);
-
-    transition: .2s all;
-}
-
-.button-custom[disabled] {
-    background: var(--grey);
-}
-
-.button-custom:hover {
-    opacity: .7;
-}
-
 .tracking {
     width: 70%;
 }

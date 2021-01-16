@@ -3,6 +3,7 @@ import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { MsToStringPipe } from '../../pipes/ms-to-string.pipe';
 
 declare var Spotify: any;
 

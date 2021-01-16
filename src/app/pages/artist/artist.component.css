@@ -46,19 +46,6 @@ a.artist {
     align-items: center;
 }
 
-.img {
-    height: 200px;
-    max-width: 200px;
-    overflow: hidden;
-    margin: 0;
-    width: 100%;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 2;
-}
-
 @media screen and (max-width: 991px) {
     a.artist {
         width: calc(50% - 20px);

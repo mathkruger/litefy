@@ -1,12 +1,13 @@
+import { AlbumComponent } from './pages/album/album.component';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { SearchComponent } from './pages/search/search.component';
 import { LoginCallbackComponent } from './pages/login/login-callback/login-callback.component';
 import { LoginAuthenticateComponent } from './pages/login/login-authenticate/login-authenticate.component';
-import { LoginGuardService } from './services/login-guard.service';
+import { LoginGuardService } from './services/guardians/login-guard.service';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NaoLoginGuardService } from './services/nao-logino-guard.service';
+import { NaoLoginGuardService } from './services/guardians/nao-logino-guard.service';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
   {
     path: 'artist/:id',
     component: ArtistComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'album/:id',
+    component: AlbumComponent,
     canActivate: [LoginGuardService]
   },
 

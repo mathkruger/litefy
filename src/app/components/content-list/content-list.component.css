@@ -1,3 +1,10 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
 .titulo a {
     color: #495057 !important;
 }

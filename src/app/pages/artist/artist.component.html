@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="artist-header" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
-        <div class="img" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
+        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
         </div>
         <h1>
           {{ artist.name }}
@@ -39,7 +39,7 @@
 
       <div class="related-artists-grid">
         <a *ngFor="let item of related.artists" [routerLink]="['/artist/' + item.id]" class="artist">
-          <div class="img" [ngStyle]="{'background-image': 'url(' + item.images[0].url + ')'}">
+          <div class="img-circle" [ngStyle]="{'background-image': 'url(' + item.images[0].url + ')'}">
           </div>
           <strong class="mt-2">{{ item.name }}</strong>
         </a>

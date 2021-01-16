@@ -24,6 +24,8 @@ import { ContentListComponent } from './components/content-list/content-list.com
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ArtistComponent } from './pages/artist/artist.component';
+import { PipesModule } from './pipes/pipes.module';
+import { AlbumComponent } from './pages/album/album.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ArtistComponent } from './pages/artist/artist.component';
     PlayerComponent,
     SearchComponent,
     ContentListComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +48,7 @@ import { ArtistComponent } from './pages/artist/artist.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
+    PipesModule,
     NgProgressModule,
     NgProgressHttpModule,
     NgProgressRouterModule,
@@ -53,7 +57,8 @@ import { ArtistComponent } from './pages/artist/artist.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true },
+    PipesModule
   ],
   bootstrap: [AppComponent]
 })

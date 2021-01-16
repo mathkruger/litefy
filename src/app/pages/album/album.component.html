@@ -1,0 +1,48 @@
+<div class="app container mt-4" *ngIf="album">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="album-header" [ngStyle]="{'background-image': 'url(' + album.images[0].url + ')'}">
+        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + album.images[0].url + ')'}">
+        </div>
+        <h1>
+          {{ album.name }}
+        </h1>
+        <h2>
+          <a *ngFor="let item of album.artists" [routerLink]="['/artist/' + item.id]">
+            {{ item.name }}
+          </a>
+        </h2>
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-event" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="4" y="5" width="16" height="16" rx="2" />
+            <line x1="16" y1="3" x2="16" y2="7" />
+            <line x1="8" y1="3" x2="8" y2="7" />
+            <line x1="4" y1="11" x2="20" y2="11" />
+            <rect x="8" y="15" width="2" height="2" />
+          </svg>
+
+          {{ album.release_date | date: getDateFormat() }}
+
+          |
+
+          {{ album.total_tracks }} faixas
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <app-content-list titulo="Faixas" tipo="track" [lista]="album.tracks.items" [album]="album"></app-content-list>
+    </div>
+  </div>
+
+  <div class="row m-2 d-flex justify-content-between">
+    <p class="text-muted mb-0">{{ album.label }}</p>
+
+    <p class="text-muted mb-0" *ngFor="let item of album.copyrights">
+      {{ item.text }}
+    </p>
+  </div>
+</div>
