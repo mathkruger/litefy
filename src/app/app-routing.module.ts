@@ -1,3 +1,4 @@
+import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { AlbumComponent } from './pages/album/album.component';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { SearchComponent } from './pages/search/search.component';
@@ -28,6 +29,11 @@ const routes: Routes = [
   {
     path: 'album/:id',
     component: AlbumComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'playlist/:id',
+    component: PlaylistComponent,
     canActivate: [LoginGuardService]
   },
 

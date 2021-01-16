@@ -94,9 +94,15 @@
         {{ getRootItem(item).total_tracks }} músicas
       </span>
 
-      <span *ngIf="tipo == 'playlist'">{{ getRootItem(item).name }} - {{ getRootItem(item).owner.display_name }} - {{
+      <span *ngIf="tipo == 'playlist'">
+        <a [routerLink]="['/playlist/' + getRootItem(item).id]">
+          {{ getRootItem(item).name }}
+        </a>
+        -
+        {{ getRootItem(item).owner.display_name }} - {{
         getRootItem(item).tracks.total }}
         músicas</span>
+
       <span *ngIf="tipo == 'artist'">{{ getRootItem(item).name }} - {{
         getRootItem(item).followers.total }}
         seguidores</span>

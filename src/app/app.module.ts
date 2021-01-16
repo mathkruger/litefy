@@ -26,6 +26,7 @@ import { environment } from '../environments/environment';
 import { ArtistComponent } from './pages/artist/artist.component';
 import { PipesModule } from './pipes/pipes.module';
 import { AlbumComponent } from './pages/album/album.component';
+import { PlaylistComponent } from './pages/playlist/playlist.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AlbumComponent } from './pages/album/album.component';
     SearchComponent,
     ContentListComponent,
     ArtistComponent,
-    AlbumComponent
+    AlbumComponent,
+    PlaylistComponent
   ],
   imports: [
     CommonModule,

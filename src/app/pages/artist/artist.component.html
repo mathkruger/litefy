@@ -39,7 +39,7 @@
 
       <div class="related-artists-grid">
         <a *ngFor="let item of related.artists" [routerLink]="['/artist/' + item.id]" class="artist">
-          <div class="img-circle" [ngStyle]="{'background-image': 'url(' + item.images[0].url + ')'}">
+          <div class="img-circle" [ngStyle]="{'background-image': 'url(' + (item.images.length > 0 ? item.images[0].url : 'assets/standart-artist-icon.png') + ')'}">
           </div>
           <strong class="mt-2">{{ item.name }}</strong>
         </a>

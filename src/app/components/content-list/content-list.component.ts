@@ -103,7 +103,7 @@ export class ContentListComponent implements OnInit {
   }
 
   tocarTodas() {
-    this.playerService.play(this.device_id, null, this.lista.map(item => item.uri))
+    this.playerService.play(this.device_id, null, this.lista.map(item => this.getRootItem(item).uri))
       .subscribe(item => {
         this.playerService.getCurrentState()
           .subscribe(item => {
