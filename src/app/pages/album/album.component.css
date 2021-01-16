@@ -9,7 +9,7 @@
     align-items: center;
     border-radius: 10px;
     flex-direction: column;
-    padding: 0 1em;
+    padding: .5em 1em;
 }
 
 .album-header h1 {
@@ -19,7 +19,7 @@
 
 .album-header h3 {
     font-size: 1em;
-    margin-top: 1rem !important;
+    margin-top: 1em !important;
 }
 
 .album-header h1,

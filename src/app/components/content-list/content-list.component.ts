@@ -18,6 +18,7 @@ export class ContentListComponent implements OnInit {
   @Input() lista: any[];
   @Input() rootItem: string = null;
   @Input() album: any = null;
+  @Input() modoMobile: boolean = true;
 
   device_id: string;
   playerState: any;

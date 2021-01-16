@@ -57,7 +57,7 @@
   </div>
 </div>
 
-<div class="list-group" style="max-height: 500px; overflow: auto;">
+<div class="listagem-conteudo list-group" [ngClass]="{'mobile-mode': modoMobile}">
   <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
     *ngFor="let item of lista" (click)="abrirArtista(tipo == 'artist' ? getRootItem(item).id : null)">
 

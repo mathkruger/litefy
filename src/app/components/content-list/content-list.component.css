@@ -5,6 +5,38 @@
     margin-bottom: .5em;
 }
 
+h2 {
+    font-size: 2em;
+}
+
 .titulo a {
     color: #495057 !important;
+}
+
+.listagem-conteudo {
+    max-height: 500px;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 480px) {
+    .listagem-conteudo.mobile-mode {
+        flex-direction: row;
+    }
+
+    .listagem-conteudo .list-group-item {
+        min-width: 240px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around !important;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .titulo span {
+        height: 45px;
+        overflow: hidden;
+        display: block;
+        margin-bottom: .5em;
+    }
 }
