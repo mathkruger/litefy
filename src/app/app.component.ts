@@ -1,5 +1,6 @@
 import { AuthService } from './services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   
-  constructor(public auth: AuthService) {
-
+  constructor(public auth: AuthService, public translate: TranslateService) {
+    translate.addLangs(['pt', 'en', 'es']);
+    translate.setDefaultLang('pt');
   }
 
   ngOnInit(): void {

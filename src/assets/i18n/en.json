@@ -1,0 +1,34 @@
+{
+    "LoginDescriptionText": "Click on the button down below to authenticate",
+    "LoginButtonText": "Login with Spotify",
+
+    "SearchPlaceholderText": "Tracks, album, artist, playlist ...",
+
+    "MenuSearchText": "Search",
+    "MenuLibraryText": "Library",
+
+    "HomeArtistsText": "Your favorite artists",
+    "HomeMusicsText": "Your favorite songs",
+    "HomeAlbumsText": "New Albums",
+    "HomePlaylistsText": "Recommended playlists",
+
+    "ArtistTracksText": "Most played tracks",
+    "ArtistAlbumsText": "Albums",
+    "ArtistRelatedText": "Related Artists",
+
+    "Hello": "Howdy",
+    "LibraryTracksText": "Tracks",
+    "LibraryAlbumsText": "Albums",
+    "LibraryPlaylistsText": "Playlists",
+
+    "MusicListTracks": "Track",
+    "MusicListTracksPlural": "s",
+    "MusicListFollowers": "Follower",
+    "MusicListFollowersPlural": "s",
+    "DescriptionText": "Description",
+
+    "PlayingText": "Playing",
+    "PausedText": "Paused",
+    "NextText": "Next track",
+    "PreviousText": "Previous track"
+}

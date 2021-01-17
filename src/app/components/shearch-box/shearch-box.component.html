@@ -1,5 +1,5 @@
 <div class="search-container input-group">
-  <input type="text" placeholder="Música, album, artista, playlist ..." [(ngModel)]="termo" class="form-control search-field" />
+  <input type="text" [placeholder]="'SearchPlaceholderText' | translate" [(ngModel)]="termo" class="form-control search-field" />
 
   <button type="button" (click)="buscar()" class="search-btn">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -1,24 +1,24 @@
 <div *ngIf="usuarioLogado" class="app container mt-4">
   <div class="row">
     <div class="col-12">
-      <h2>Oi, {{ usuarioLogado.display_name }}. 😁</h2>
+      <h2>{{ 'Hello' | translate }}, {{ usuarioLogado.display_name }}. 😁</h2>
     </div>
   </div>
 
   <ng-container *ngIf="userPlaylists.length > 0 || userAlbums.length > 0 || userTracks.length > 0">
     <div class="row mt-4">
       <div class="col-md-6">
-        <app-content-list titulo="Playlists" tipo="playlist" [lista]="userPlaylists"></app-content-list>
+        <app-content-list [titulo]="'LibraryPlaylistsText' | translate" tipo="playlist" [lista]="userPlaylists"></app-content-list>
       </div>
 
       <div class="col-md-6">
-        <app-content-list titulo="Albuns" tipo="album" [lista]="userAlbums" rootItem="album"></app-content-list>
+        <app-content-list [titulo]="'LibraryAlbumsText' | translate" tipo="album" [lista]="userAlbums" rootItem="album"></app-content-list>
       </div>
     </div>
 
     <div class="row mt-2">
       <div class="col-md-12">
-        <app-content-list titulo="Músicas" tipo="track" [lista]="userTracks" rootItem="track"></app-content-list>
+        <app-content-list [titulo]="'LibraryTracksText' | translate" tipo="track" [lista]="userTracks" rootItem="track"></app-content-list>
       </div>
     </div>
   </ng-container>

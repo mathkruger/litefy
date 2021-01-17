@@ -4,6 +4,7 @@ import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { MsToStringPipe } from '../../pipes/ms-to-string.pipe';
+import { TranslateService } from '@ngx-translate/core';
 
 declare var Spotify: any;
 
@@ -13,7 +14,13 @@ declare var Spotify: any;
   styleUrls: ['./player.component.css'],
 })
 export class PlayerComponent implements OnInit, OnChanges {
-  constructor(private auth: AuthService, private playerService: SpotifyPlayerService, private toastr: ToastrService, private router: Router) { }
+  constructor(
+    private auth: AuthService,
+    private playerService: SpotifyPlayerService,
+    private toastr: ToastrService,
+    private router: Router,
+    public translate: TranslateService
+  ) { }
 
   player: any;
   playerStatus: any;
@@ -96,7 +103,11 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.play(this.device_id)
       .subscribe(item => {
         // this.getCurrentState();
-        this.toastr.success('Tocando');
+        this.translate.get('PlayingText')
+        .subscribe(item => {
+          this.toastr.success(item);
+        })
+        
       })
   }
 
@@ -104,7 +115,10 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.pause(this.device_id)
       .subscribe(item => {
         // this.getCurrentState();
-        this.toastr.success('Pausado');
+        this.translate.get('PausedText')
+        .subscribe(item => {
+          this.toastr.success(item);
+        })
       })
   }
 
@@ -112,7 +126,10 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.previous(this.device_id)
       .subscribe(item => {
         // this.getCurrentState();
-        this.toastr.success('Faixa anterior');
+        this.translate.get('PreviousText')
+        .subscribe(item => {
+          this.toastr.success(item);
+        })
       })
   }
 
@@ -120,7 +137,10 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.next(this.device_id)
       .subscribe(item => {
         // this.getCurrentState();
-        this.toastr.success('Próxima faixa');
+        this.translate.get('NextText')
+        .subscribe(item => {
+          this.toastr.success(item);
+        })
       })
   }
 

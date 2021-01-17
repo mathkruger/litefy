@@ -1,0 +1,34 @@
+{
+    "LoginDescriptionText": "Clique no botão abaixo para se autenticar",
+    "LoginButtonText": "Login com Spotify",
+
+    "SearchPlaceholderText": "Música, álbum, artista, playlist ...",
+
+    "MenuSearchText": "Pesquisar",
+    "MenuLibraryText": "Biblioteca",
+
+    "HomeArtistsText": "Seus artistas preferidos",
+    "HomeMusicsText": "Suas músicas preferidas",
+    "HomeAlbumsText": "Novos álbuns",
+    "HomePlaylistsText": "Playlists recomendadas",
+
+    "ArtistTracksText": "Músicas mais tocadas",
+    "ArtistAlbumsText": "Álbuns",
+    "ArtistRelatedText": "Artistas relacionados",
+
+    "Hello": "Oi",
+    "LibraryTracksText": "Músicas",
+    "LibraryAlbumsText": "Álbuns",
+    "LibraryPlaylistsText": "Playlists",
+
+    "MusicListTracks": "Faixa",
+    "MusicListTracksPlural": "s",
+    "MusicListFollowers": "Seguidor",
+    "MusicListFollowersPlural": "es",
+    "DescriptionText": "Descrição",
+
+    "PlayingText": "Tocando",
+    "PausedText": "Pausado",
+    "NextText": "Próxima faixa",
+    "PreviousText": "Faixa anterior"
+}

@@ -13,11 +13,11 @@
 
   <div class="row mt-4">
     <div class="col-md-6">
-      <app-content-list titulo="Músicas mais tocadas" tipo="track" [lista]="topTracks.tracks"></app-content-list>
+      <app-content-list [titulo]="'ArtistTracksText' | translate" tipo="track" [lista]="topTracks.tracks"></app-content-list>
     </div>
 
     <div class="col-md-6">
-      <app-content-list titulo="Álbuns" tipo="album" [lista]="albums.items"></app-content-list>
+      <app-content-list [titulo]="'ArtistAlbumsText' | translate" tipo="album" [lista]="albums.items"></app-content-list>
     </div>
   </div>
 
@@ -34,7 +34,7 @@
           <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
         </svg>
 
-        Artistas relacionados
+        {{ 'ArtistRelatedText' | translate }}
       </h2>
 
       <div class="related-artists-grid">

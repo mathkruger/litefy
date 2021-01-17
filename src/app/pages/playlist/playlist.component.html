@@ -19,7 +19,7 @@
             <path d="M12 17a5 5 0 0 0 5 -5" />
           </svg>
 
-          {{ playlist.tracks.total }} faixa{{ playlist.tracks.total > 1 || playlist.tracks.total == 0 ? 's' : '' }}
+          {{ playlist.tracks.total }} <span style="text-transform: lowercase;">{{ 'MusicListTracks' | translate }}{{ playlist.tracks.total > 1 || playlist.tracks.total == 0 ? ('MusicListTracksPlural' | translate) : '' }}</span>
 
           |
 
@@ -31,7 +31,7 @@
             <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
           </svg>
 
-          {{ playlist.followers.total }} seguidor{{ playlist.followers.total > 1 || playlist.followers.total == 0 ? 'es' : '' }}
+          {{ playlist.followers.total }} <span style="text-transform: lowercase;">{{ 'MusicListFollowers' | translate }}{{ playlist.followers.total > 1 || playlist.followers.total == 0 ? ('MusicListFollowersPlural' | translate) : '' }}</span>
         </h3>
       </div>
     </div>
@@ -47,7 +47,7 @@
           <line x1="4" y1="18" x2="18" y2="18" />
         </svg>
 
-        Descrição
+        {{ 'DescriptionText' | translate }}
       </h2>
       <p>
         {{ playlist.description }}
@@ -57,7 +57,7 @@
 
   <div class="row mt-4">
     <div class="col-md-12">
-      <app-content-list titulo="Faixas" tipo="track" [lista]="playlist.tracks.items" rootItem="track" [modoMobile]="false"></app-content-list>
+      <app-content-list [titulo]="'MusicListTracks' | translate" tipo="track" [lista]="playlist.tracks.items" rootItem="track" [modoMobile]="false"></app-content-list>
     </div>
   </div>
 </div>

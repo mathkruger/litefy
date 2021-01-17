@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms/';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
 import { NgProgressRouterModule } from 'ngx-progressbar/router';
@@ -28,6 +28,9 @@ import { PipesModule } from './pipes/pipes.module';
 import { AlbumComponent } from './pages/album/album.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { LibraryComponent } from './pages/library/library.component';
     ArtistComponent,
     AlbumComponent,
     PlaylistComponent,
-    LibraryComponent
+    LibraryComponent,
+    LanguageSwitcherComponent
   ],
   imports: [
     CommonModule,
@@ -59,6 +63,13 @@ import { LibraryComponent } from './pages/library/library.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true },
@@ -67,3 +78,8 @@ import { LibraryComponent } from './pages/library/library.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
