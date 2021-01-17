@@ -27,6 +27,20 @@ export class ContentListComponent implements OnInit {
     this.playerService.getDeviceId().subscribe(deviceId => {
       this.device_id = deviceId;
     });
+
+    this.getPlayerStatus();
+  }
+
+  getPlayerStatus() {
+    this.playerService.getPlayerStatus().subscribe(item => {
+      this.playerState = item;
+      console.log(this.playerState);
+    })
+  }
+
+  pausar() {
+    this.playerService.pause(this.device_id)
+    .subscribe();
   }
 
   getRootItem(item: any) {

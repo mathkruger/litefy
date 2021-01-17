@@ -17,19 +17,22 @@
 
           {{ playerStatus ? playerStatus.item.name : '--' }}
         </strong>
-        <small>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-disc" width="12" height="12"
-            viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <circle cx="12" cy="12" r="9" />
-            <circle cx="12" cy="12" r="1" />
-            <path d="M7 12a5 5 0 0 1 5 -5" />
-            <path d="M12 17a5 5 0 0 0 5 -5" />
-          </svg>
+        
+        <a [routerLink]="['album/' + playerStatus.item.album.id]">
+          <small>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-disc" width="12" height="12"
+              viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="1" />
+              <path d="M7 12a5 5 0 0 1 5 -5" />
+              <path d="M12 17a5 5 0 0 0 5 -5" />
+            </svg>
 
-          {{ playerStatus ? playerStatus.item.album.name : '--' }}
-        </small>
+            {{ playerStatus ? playerStatus.item.album.name : '--' }}
+          </small>
+        </a>
 
         <a [routerLink]="['artist/' + playerStatus.item.album.artists[0]?.id]">
           <small>
@@ -40,7 +43,7 @@
               <circle cx="12" cy="7" r="4" />
               <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg>
-  
+
             {{ playerStatus ? playerStatus.item.album.artists[0]?.name : '--' }}
           </small>
         </a>
@@ -48,9 +51,8 @@
     </div>
 
     <div class="tracking">
-      <input #playerSeek type="range" [value]="progress / 1000" min="0"
-        [max]="playerStatus.item.duration_ms / 1000" class="form-control-range"
-        (change)="seekToPosition(playerSeek.value * 1000)">
+      <input #playerSeek type="range" [value]="progress / 1000" min="0" [max]="playerStatus.item.duration_ms / 1000"
+        class="form-control-range" (change)="seekToPosition(playerSeek.value * 1000)">
 
       <div class="d-flex justify-content-between align-items-center text-white mt-2">
         <span>{{ progress | msToString }}</span>
@@ -72,11 +74,10 @@
           </svg>
 
         </button>
-        
+
         <div class="volume-box" [ngClass]="{'open': mostraVolume}">
-          <input #volume type="range" [value]="playerStatus.device.volume_percent" min="0"
-            [max]="100" class="form-control-range"
-            (change)="setVolume(volume.value)">
+          <input #volume type="range" [value]="playerStatus.device.volume_percent" min="0" [max]="100"
+            class="form-control-range" (change)="setVolume(volume.value)">
         </div>
 
         <button [disabled]="!playerStatus" type="button" (click)="previous()" class="button-custom">

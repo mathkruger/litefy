@@ -18,6 +18,16 @@ h2 {
     overflow: auto;
 }
 
+.listagem-conteudo .list-group-item.active {
+    background-color: var(--spt-green) !important;
+    border-color: var(--spt-green) !important;
+}
+
+.listagem-conteudo .list-group-item.active .titulo span,
+.listagem-conteudo .list-group-item.active .titulo a {
+    color: white !important;
+}
+
 
 @media screen and (max-width: 480px) {
     .listagem-conteudo.mobile-mode {

@@ -58,7 +58,8 @@
 </div>
 
 <div class="listagem-conteudo list-group" [ngClass]="{'mobile-mode': modoMobile}">
-  <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+  <div [ngClass]="{'active': (tipo == 'track' || tipo == 'album') && (playerState?.item.id == getRootItem(item).id || playerState?.item.album.id == getRootItem(item).id)}"
+  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
     *ngFor="let item of lista" (click)="abrirArtista(tipo == 'artist' ? getRootItem(item).id : null)">
 
     <div class="img mr-1">
@@ -120,13 +121,31 @@
           </svg>
         </button>
 
-        <button *ngIf="tipo != 'artist'" class="btn btn-dark"
-          (click)="tipo == 'track' ? selecionar(getRootItem(item).uri) : tipo == 'album' ? playAlbum(getRootItem(item).id) : playPlaylist(getRootItem(item))">
+        <button *ngIf="tipo != 'artist' && tipo != 'track'" class="btn btn-dark"
+          (click)="tipo == 'album' ? playAlbum(getRootItem(item).id) : playPlaylist(getRootItem(item))">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M7 4v16l13 -8z" />
+          </svg>
+        </button>
+
+        <button *ngIf="tipo == 'track'"
+          class="btn btn-dark" (click)="playerState?.item.id == getRootItem(item).id ? (!playerState?.is_playing ? selecionar(getRootItem(item).uri) : pausar()) : selecionar(getRootItem(item).uri)">
+          <svg *ngIf="playerState?.item.id == getRootItem(item).id ? !playerState?.is_playing : true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 4v16l13 -8z" />
+          </svg>
+
+          <svg *ngIf="playerState?.item.id == getRootItem(item).id && playerState?.is_playing" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="6" y="5" width="4" height="14" rx="1" />
+            <rect x="14" y="5" width="4" height="14" rx="1" />
           </svg>
         </button>
       </div>
