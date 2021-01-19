@@ -1,6 +1,6 @@
 <select class="language custom-select custom-select-sm" #selectedLang (change)="switchLang(selectedLang.value)">
   <option *ngFor="let language of translate.getLangs()" [value]="language"
-    [selected]="language === translate.currentLang">
+    [selected]="language === currentLang">
     {{ language }}
   </option>
 </select>

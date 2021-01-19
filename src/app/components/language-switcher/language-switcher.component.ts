@@ -10,10 +10,15 @@ export class LanguageSwitcherComponent implements OnInit {
 
   constructor(public translate: TranslateService) { }
 
+  currentLang: string;
+
   ngOnInit() {
+    this.currentLang = window.localStorage.getItem('languageSelected') || this.translate.currentLang;
   }
 
   switchLang(lang: string) {
+    this.currentLang = lang;
     this.translate.use(lang);
+    window.localStorage.setItem('languageSelected', lang);
   }
 }
