@@ -30,5 +30,11 @@
     "PlayingText": "Playing",
     "PausedText": "Paused",
     "NextText": "Next track",
-    "PreviousText": "Previous track"
+    "PreviousText": "Previous track",
+
+    "ExitText": "Exit",
+    "ProfileText": "Profile",
+    "SettingsText": "Settings",
+
+    "SearchArtists": "Artists"
 }

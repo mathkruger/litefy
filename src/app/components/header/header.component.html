@@ -69,7 +69,7 @@
             <line x1="7" y1="16" x2="17" y2="16" />
           </svg>
   
-          <a href="">Perfil</a>
+          <a href="">{{ 'ProfileText' | translate }}</a>
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments" width="16" height="16"
@@ -87,7 +87,7 @@
             <line x1="18" y1="9" x2="18" y2="20" />
           </svg>
   
-          <a href="">Configurações</a>
+          <a href="">{{ 'SettingsText' | translate }}</a>
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16" height="16"
@@ -98,7 +98,7 @@
             <path d="M7 12h14l-3 -3m0 6l3 -3" />
           </svg>
   
-          <a (click)="sair()">Sair</a>
+          <a (click)="sair()">{{ 'ExitText' | translate }}</a>
         </li>
       </ul>
     </div>
