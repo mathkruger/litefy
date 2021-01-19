@@ -30,5 +30,11 @@
     "PlayingText": "Jugando",
     "PausedText": "Pausado",
     "NextText": "Siguiente pista",
-    "PreviousText": "Pista anterior"
+    "PreviousText": "Pista anterior",
+
+    "ExitText": "Salir",
+    "ProfileText": "Perfil",
+    "SettingsText": "Ajustes",
+
+    "SearchArtists": "Artistas"
 }

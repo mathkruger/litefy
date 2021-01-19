@@ -30,5 +30,11 @@
     "PlayingText": "Tocando",
     "PausedText": "Pausado",
     "NextText": "Próxima faixa",
-    "PreviousText": "Faixa anterior"
+    "PreviousText": "Faixa anterior",
+
+    "ExitText": "Sair",
+    "ProfileText": "Perfil",
+    "SettingsText": "Configurações",
+
+    "SearchArtists": "Artistas"
 }
