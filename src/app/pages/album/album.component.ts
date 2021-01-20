@@ -17,10 +17,13 @@ export class AlbumComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(item => {
       this.id = item.id;
-
-      this.albumService.getAlbum(this.id)
-      .subscribe(item => this.album = item);
+      this.getAlbum(this.id);
     })
+  }
+
+  getAlbum(id) {
+    this.albumService.getAlbum(id)
+      .subscribe(item => this.album = item);
   }
 
   getDateFormat() {

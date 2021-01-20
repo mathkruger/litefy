@@ -28,11 +28,15 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+    this.getAllHomeData();
+  }
+
+  getAllHomeData() {
     let requests = [];
 
     requests.push(
-      this.serviceUsuario.getUserTop('artists'),
-      this.serviceUsuario.getUserTop('tracks'),
+      this.serviceUsuario.getUserTopArtists(),
+      this.serviceUsuario.getUserTopTracks(),
       this.browseService.getNewAlbuns(),
       this.browseService.getFeaturedPlaylists()
     );
@@ -41,7 +45,7 @@ export class HomeComponent implements OnInit {
       .subscribe((items: any[]) => {
         this.topArtists = items[0].items;
         this.topTracks = items[1].items;
-        
+
         this.newAlbuns = items[2].albums.items;
         this.featuredPlaylists = items[3].playlists.items;
         this.featuredMessage = items[3].message;

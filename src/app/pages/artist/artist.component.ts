@@ -22,17 +22,21 @@ export class ArtistComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(item => {
       this.id = item.id;
+      this.getAllInfoFromArtist();
+    });
+  }
 
-      let requests = [];
-      
-      requests.push(
-        this.artistService.getArtist(this.id),
-        this.artistService.getArtistTopTracks(this.id),
-        this.artistService.getArtistRelated(this.id),
-        this.artistService.getArtistAlbums(this.id),
-      );
-  
-      forkJoin(requests)
+  getAllInfoFromArtist() {
+    let requests = [];
+
+    requests.push(
+      this.getArtist(),
+      this.getArtistTopTracks(),
+      this.getArtistRelated(),
+      this.getArtistAlbums(),
+    );
+
+    forkJoin(requests)
       .subscribe((items: any[]) => {
         this.artist = items[0];
         this.topTracks = items[1];
@@ -41,7 +45,21 @@ export class ArtistComponent implements OnInit {
 
         window.scrollTo(0, 0);
       });
-    })
   }
 
+  getArtist() {
+    return this.artistService.getArtist(this.id);
+  }
+
+  getArtistTopTracks() {
+    return this.artistService.getArtistTopTracks(this.id);
+  }
+
+  getArtistRelated() {
+    return this.artistService.getArtistRelated(this.id);
+  }
+
+  getArtistAlbums() {
+    return this.artistService.getArtistAlbums(this.id);
+  }
 }

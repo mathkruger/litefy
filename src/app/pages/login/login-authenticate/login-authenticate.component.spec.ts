@@ -1,3 +1,4 @@
+import { AppModule } from './../../../app.module';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -11,7 +12,8 @@ describe('LoginAuthenticateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginAuthenticateComponent ]
+      declarations: [ LoginAuthenticateComponent ],
+      imports: [AppModule]
     })
     .compileComponents();
   }));
@@ -25,4 +27,8 @@ describe('LoginAuthenticateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should be redirect to spotify authorization poge', () => {
+  //   expect(component.login()).toBeTruthy();
+  // });
 });
