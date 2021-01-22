@@ -1,4 +1,22 @@
 <div class="container">
-  <h1>{{ 'LoginDescriptionText' | translate }}</h1>
-  <button (click)="login()" class="btn btn-primary">{{ 'LoginButtonText' | translate }}</button>
+  <div class="mt-4 text-center d-flex align-items-center justify-content-center flex-column">
+    <h1>{{ 'LoginDescriptionText' | translate }}</h1>
+    <p class="my-4">
+      {{ 'LoginText' | translate }}
+    </p>
+    <div id="soundbars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <button (click)="login()" class="btn-login">{{ 'LoginButtonText' | translate }}</button>
+  </div>
 </div>
