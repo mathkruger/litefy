@@ -1,5 +1,11 @@
 <img src="src/assets/logo.png" alt="drawing" width="200"/>
 
+![Coverity Scan](https://img.shields.io/coverity/scan/22499)
+![GitHub language count](https://img.shields.io/github/languages/count/mathkruger/litefy)
+![Depfu](https://img.shields.io/depfu/mathkruger/litefy)
+[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
+[![Open Source Helpers](https://www.codetriage.com/mathkruger/litefy/badges/users.svg)](https://www.codetriage.com/mathkruger/litefy)
+
 # Litefy
 
 A lighweight Spotify client for low-end smatphones (KaiOS included [not yet]) and computers.
