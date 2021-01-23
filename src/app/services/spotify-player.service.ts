@@ -111,6 +111,10 @@ export class SpotifyPlayerService {
             }));
     }
 
+    suffle(state: boolean, device_id: string) {
+        return this.service.Put("https://api.spotify.com/v1/me/player/shuffle?" + "state=" + state + "&device_id=" + device_id);
+    }
+
     previous(device_id: string) {
         return this.service.Post('https://api.spotify.com/v1/me/player/previous?device_id=' + device_id, {})
             .pipe(map(item => {
