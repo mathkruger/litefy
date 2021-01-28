@@ -33,10 +33,16 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   progress: number = 0;
 
+  seekStyle = {};
+
   ngOnInit() {
     this.initPlayer();
     this.playerService.getPlayerProgress().subscribe(item => {
       this.progress = item;
+      const procentagem = (this.progress / (this.playerStatus?.item?.duration_ms || 0)) * 100;
+      this.seekStyle = {
+        'background': `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`
+      }
     });
   }
 

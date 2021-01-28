@@ -13,7 +13,7 @@ body {
 }
 
 .app {
-    padding-bottom: 100px;
+    padding-bottom: 170px;
 }
 
 a {
@@ -51,6 +51,7 @@ a:hover {
     background: var(--spt-green);
 
     transition: .2s all;
+    font-size: 130%;
 }
 
 .button-custom[disabled] {
