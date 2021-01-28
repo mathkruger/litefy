@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611450060254,
+  "timestamp": 1611856389075,
   "index": "/litefy/index.html",
   "assetGroups": [
     {
@@ -13,14 +13,14 @@
       "urls": [
         "/litefy/favicon.ico",
         "/litefy/index.html",
-        "/litefy/main-es2015.0404866d35e2e0a84a0f.js",
-        "/litefy/main-es5.0404866d35e2e0a84a0f.js",
+        "/litefy/main-es2015.83aaa0cbd7d797b11b8f.js",
+        "/litefy/main-es5.83aaa0cbd7d797b11b8f.js",
         "/litefy/manifest.webmanifest",
         "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js",
         "/litefy/polyfills-es5.13fd59473aceee12cf77.js",
         "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js",
         "/litefy/runtime-es5.66c79b9d36e7169e27b0.js",
-        "/litefy/styles.d630ffd72ac525d42928.css"
+        "/litefy/styles.c844b4bdb4afce30040f.css"
       ],
       "patterns": []
     },
@@ -87,15 +87,15 @@
     "/litefy/assets/standart-album-icon.png": "51d1a571b46808e79cdf5d777f517940e8561ec0",
     "/litefy/assets/standart-artist-icon.png": "c91919dcdad26585be29be0a74a6ff4e018e1b26",
     "/litefy/favicon.ico": "3fb827672b7b297c539bd27bab391669e46e0c67",
-    "/litefy/index.html": "ec184283e99e72e2e7bc775269715cfd213312d9",
-    "/litefy/main-es2015.0404866d35e2e0a84a0f.js": "964658a6b752b94960beae26665fbedad87c7be3",
-    "/litefy/main-es5.0404866d35e2e0a84a0f.js": "8a65ae8faac2f2f07af1f90e4b4077723b8af148",
+    "/litefy/index.html": "6ae93100c97de669f82a1492f3ad56ab39b7bf47",
+    "/litefy/main-es2015.83aaa0cbd7d797b11b8f.js": "037944f1e36b937c218118352dfe511d2dc72e29",
+    "/litefy/main-es5.83aaa0cbd7d797b11b8f.js": "7cbac2f7a6e84514b1fa9a46689c689e294c2229",
     "/litefy/manifest.webmanifest": "416515aff15e6eca3a0fcc9efb94b2fbd4650e83",
     "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/litefy/polyfills-es5.13fd59473aceee12cf77.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/litefy/runtime-es5.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/litefy/styles.d630ffd72ac525d42928.css": "4dcb5b2be011d463e19dbbdf4cb84ea54ccf9aaa"
+    "/litefy/styles.c844b4bdb4afce30040f.css": "7c2afc548be5b536201c0c37a5a2d7141709a913"
   },
   "navigationUrls": [
     {
