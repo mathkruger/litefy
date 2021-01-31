@@ -111,7 +111,7 @@ export class SpotifyPlayerService {
             }));
     }
 
-    suffle(state: boolean, device_id: string) {
+    shuffle(state: boolean, device_id: string) {
         return this.service.Put("https://api.spotify.com/v1/me/player/shuffle?" + "state=" + state + "&device_id=" + device_id, {});
     }
 

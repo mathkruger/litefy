@@ -32,6 +32,8 @@
     "PausedText": "Pausado",
     "NextText": "Próxima faixa",
     "PreviousText": "Faixa anterior",
+    "ShuffleOnText": "Modo aleatório ligado",
+    "ShuffleOffText": "Modo aleatório desligado",
 
     "ExitText": "Sair",
     "ProfileText": "Perfil",

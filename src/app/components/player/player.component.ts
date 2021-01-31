@@ -32,7 +32,8 @@ export class PlayerComponent implements OnInit, OnChanges {
   mostraVolume: boolean = false;
 
   progress: number = 0;
-
+  shuffle: boolean = false;
+  
   seekStyle = {};
 
   ngOnInit() {
@@ -196,6 +197,19 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.playerService.setVolume(this.device_id, volume)
     .subscribe(item => {
       this.getCurrentState();
+    });
+  }
+  
+  toggleShuffle() {
+    this.shuffle = !this.shuffle;
+    
+    this.playerService.shuffle(this.shuffle, this.device_id)
+    .subscribe(item => {
+      let stringTranslate = this.shuffle ? 'ShuffleOnText' : 'ShuffleOffText'
+      this.translate.get(stringTranslate)
+      .subscribe(item => {
+        this.toastr.success(item);
+      })
     });
   }
 }
