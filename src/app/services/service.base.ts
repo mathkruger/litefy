@@ -17,7 +17,7 @@ export class ServiceBase {
             headers: {
                 'Authorization': 'Bearer ' + this.auth.getAuth()
             }
-        })
+        });
     }
 
     Post<Tretorno>(url, model) {
@@ -27,7 +27,7 @@ export class ServiceBase {
             headers: {
                 'Authorization': 'Bearer ' + this.auth.getAuth()
             }
-        })
+        });
     }
 
     Put<Tretorno>(url, model) {
@@ -37,7 +37,7 @@ export class ServiceBase {
             headers: {
                 'Authorization': 'Bearer ' + this.auth.getAuth()
             }
-        })
+        });
     }
 
     Delete<Tretorno>(url) {
@@ -47,7 +47,7 @@ export class ServiceBase {
             headers: {
                 'Authorization': 'Bearer ' + this.auth.getAuth()
             }
-        })
+        });
     }
 
     private checkExpiration() {

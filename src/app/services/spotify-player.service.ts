@@ -19,20 +19,19 @@ export class SpotifyPlayerService {
 
     private createSeekInterval() {
         this.seekPlayerInterval = setInterval(() => {
-            if (this.interval_ms == null) {
+            if (this.interval_ms === null) {
                 this.getPlayerStatus().subscribe(status => {
                     this.interval_ms = status.progress_ms;
                     this.setPlayerProgress(this.interval_ms + 1000);
                 });
-            }
-            else {
+            } else {
                 this.setPlayerProgress(this.interval_ms + 1000);
             }
         }, 1000);
     }
 
-    private clearSeekInterval() {
-        this.interval_ms == null;
+    private clearSeekInterval(): void {
+        this.interval_ms = 0;
         clearInterval(this.seekPlayerInterval);
     }
 
@@ -77,12 +76,11 @@ export class SpotifyPlayerService {
     }
 
     play(device_id: string, content: string = null, lista: string[] = null) {
-        let model: any = {};
+        const model: any = {};
 
         if (lista != null) {
             model['uris'] = lista;
-        }
-        else {
+        } else {
             if (content != null) {
                 model['uris'] = [content];
             }
@@ -139,19 +137,19 @@ export class SpotifyPlayerService {
         return this.service.Put<any>(`https://api.spotify.com/v1/me/player/volume?device_id=${device_id}&volume_percent=${volume}`, null);
     }
 
-    clearQueue(id, device_id) { //Recursive
+    clearQueue(id, device_id) { // Recursive
         this.getCurrentState()
-        .subscribe((state: any) => {
-            let tId = state.item.id;
+            .subscribe((state: any) => {
+                const tId = state.item.id;
 
-            if (tId != id) {
-                this.next(device_id)
-                .subscribe(item => {
-                    setTimeout(() => {
-                        this.clearQueue(id, device_id);
-                    }, 1000);
-                });
-            }
-        });
+                if (tId !== id) {
+                    this.next(device_id)
+                        .subscribe(item => {
+                            setTimeout(() => {
+                                this.clearQueue(id, device_id);
+                            }, 1000);
+                        });
+                }
+            });
     }
 }

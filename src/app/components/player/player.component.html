@@ -1,7 +1,7 @@
 <div class="player">
   <div *ngIf="playerStatus" class="d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center text-white">
-      <img *ngIf="playerStatus" [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
+      <img *ngIf="playerStatus" [src]="playerStatus.item.album?.images[2].url" class="img-responsive mr-2 hide-mobile" />
 
       <div class="d-flex flex-column">
         <strong class="mb-1">

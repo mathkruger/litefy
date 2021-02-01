@@ -1,8 +1,8 @@
 <div class="app container mt-4" *ngIf="playlist">
   <div class="row">
     <div class="col-md-12">
-      <div class="playlist-header" [ngStyle]="{'background-image': 'url(' + (playlist.images.length > 0 ? playlist.images[0].url : 'assets/standart-album-icon.png') + ')'}">
-        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + (playlist.images.length > 0 ? playlist.images[0].url : 'assets/standart-album-icon.png') + ')'}">
+      <div class="playlist-header" [ngStyle]="{'background-image': 'url(' + (playlist?.images.length > 0 ? playlist.images[0].url : 'assets/standart-album-icon.png') + ')'}">
+        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + (playlist?.images.length > 0 ? playlist.images[0].url : 'assets/standart-album-icon.png') + ')'}">
         </div>
         <h1>
           {{ playlist.name }}

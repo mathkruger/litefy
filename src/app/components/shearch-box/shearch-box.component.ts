@@ -15,14 +15,14 @@ export class ShearchBoxComponent implements OnInit {
   @Output() resultadosBusca = new EventEmitter<any>();
 
   termo: string;
-  apiLink: string = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist&offset=0&limit=50';
+  apiLink = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist&offset=0&limit=50';
 
   ngOnInit() {
   }
 
   @HostListener('document:keydown', ['$event'])
   pressEnter(event: KeyboardEvent) {
-    if (event.key == 'Enter') {
+    if (event.key === 'Enter') {
       this.buscar();
     }
   }

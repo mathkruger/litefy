@@ -1,10 +1,9 @@
-import { TestBed, async } from '@angular/core/testing';
-import { TranslateService } from '@ngx-translate/core';
+import { TestBed,  waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         AppModule

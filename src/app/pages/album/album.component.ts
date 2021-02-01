@@ -18,7 +18,7 @@ export class AlbumComponent implements OnInit {
     this.activatedRoute.params.subscribe(item => {
       this.id = item.id;
       this.getAlbum(this.id);
-    })
+    });
   }
 
   getAlbum(id) {
@@ -27,10 +27,10 @@ export class AlbumComponent implements OnInit {
   }
 
   getDateFormat() {
-    switch(this.album.release_date_precision) {
+    switch (this.album.release_date_precision) {
       case 'day':
         return 'dd/MM/yyy';
-      
+
       case 'month':
         return 'MM/yyyy';
 

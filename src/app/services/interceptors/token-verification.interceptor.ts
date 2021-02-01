@@ -12,7 +12,7 @@ export class TokenVerificationInterceptorService implements HttpInterceptor {
 
   constructor(private authService: AuthService, private router: Router) { }
 
-  lastUrl: string = '/';
+  lastUrl = '/';
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(

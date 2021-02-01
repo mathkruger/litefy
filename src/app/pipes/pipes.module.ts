@@ -1,6 +1,6 @@
 import { MsToStringPipe } from './ms-to-string.pipe';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [

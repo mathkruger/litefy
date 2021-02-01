@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   getAllHomeData() {
-    let requests = [];
+    const requests = [];
 
     requests.push(
       this.serviceUsuario.getUserTopArtists(),

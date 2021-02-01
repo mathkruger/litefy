@@ -18,7 +18,7 @@ export class ContentListComponent implements OnInit {
   @Input() lista: any[];
   @Input() rootItem: string = null;
   @Input() album: any = null;
-  @Input() modoMobile: boolean = true;
+  @Input() modoMobile = true;
 
   device_id: string;
   playerState: any;
@@ -35,7 +35,7 @@ export class ContentListComponent implements OnInit {
     this.playerService.getPlayerStatus().subscribe(item => {
       this.playerState = item;
       console.log(this.playerState);
-    })
+    });
   }
 
   pausar() {
@@ -63,7 +63,7 @@ export class ContentListComponent implements OnInit {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);
-          })
+          });
       });
   }
 
@@ -73,12 +73,12 @@ export class ContentListComponent implements OnInit {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);
-          })
+          });
       });
   }
 
   playAlbum(id) {
-    let uris = [];
+    const uris = [];
 
     this.playerService.getAlbumTracks(id).subscribe(items => {
 
@@ -91,14 +91,14 @@ export class ContentListComponent implements OnInit {
           this.playerService.getCurrentState()
             .subscribe(item => {
               this.playerService.setPlayerStatus(item);
-            })
+            });
         });
     });
 
   }
 
   playPlaylist(item) {
-    let uris = [];
+    const uris = [];
 
 
     this.service.Get<any>(item.tracks.href).subscribe(items => {
@@ -111,7 +111,7 @@ export class ContentListComponent implements OnInit {
           this.playerService.getCurrentState()
             .subscribe(item => {
               this.playerService.setPlayerStatus(item);
-            })
+            });
         });
     });
 
@@ -123,7 +123,7 @@ export class ContentListComponent implements OnInit {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);
-          })
+          });
       });
   }
 }
