@@ -28,8 +28,8 @@ export class PlayerComponent implements OnInit, OnChanges {
   next_tracks: any[];
   previous_tracks: any[];
 
-  mostraPlayer: boolean = false;
-  mostraVolume: boolean = false;
+  mostraPlayer = false;
+  mostraVolume = false;
 
   progress: number = 0;
   shuffle: boolean = false;
@@ -71,7 +71,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       this.player.addListener('playback_error', ({ message }) => { console.error(message); });
 
       this.player.addListener('player_state_changed', state => {
-        var someLink = document.querySelector('.click-inicial');
+        const someLink = document.querySelector('.click-inicial');
         this.simulateClick(someLink);
       });
 
@@ -86,7 +86,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
     this.playerService.getPlayerStatus().subscribe(item => {
       this.playerStatus = item;
-    })
+    });
   }
 
   transferirPlayer() {
@@ -99,7 +99,7 @@ export class PlayerComponent implements OnInit, OnChanges {
             this.playerService.add(this.playerStatus.item.uri, this.device_id)
               .subscribe(item => {
                 // HACK PRA FUNCIONAR NO ANGULAR
-                var someLink = document.querySelector('.click-inicial');
+                const someLink = document.querySelector('.click-inicial');
                 this.simulateClick(someLink);
               });
           });
@@ -111,11 +111,11 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.translate.get('PlayingText')
-        .subscribe(item => {
-          this.toastr.success(item);
-        })
-        
-      })
+          .subscribe(item => {
+            this.toastr.success(item);
+          });
+
+      });
   }
 
   pause() {
@@ -123,10 +123,10 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.translate.get('PausedText')
-        .subscribe(item => {
-          this.toastr.success(item);
-        })
-      })
+          .subscribe(item => {
+            this.toastr.success(item);
+          });
+      });
   }
 
   previous() {
@@ -134,10 +134,10 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.translate.get('PreviousText')
-        .subscribe(item => {
-          this.toastr.success(item);
-        })
-      })
+          .subscribe(item => {
+            this.toastr.success(item);
+          });
+      });
   }
 
   next() {
@@ -145,10 +145,10 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         // this.getCurrentState();
         this.translate.get('NextText')
-        .subscribe(item => {
-          this.toastr.success(item);
-        })
-      })
+          .subscribe(item => {
+            this.toastr.success(item);
+          });
+      });
   }
 
   getCurrentState() {
@@ -158,46 +158,46 @@ export class PlayerComponent implements OnInit, OnChanges {
 
         this.playerService.setPlayerProgress(this.playerStatus.progress_ms);
         this.playerService.setPlayerStatus(this.playerStatus);
-      })
+      });
   }
 
   simulateClick(elem) {
     // Create our event (with options)
-    var evt = new MouseEvent('click', {
+    const evt = new MouseEvent('click', {
       bubbles: true,
       cancelable: true,
       view: window
     });
     // If cancelled, don't dispatch our event
-    var canceled = !elem.dispatchEvent(evt);
+    const canceled = !elem.dispatchEvent(evt);
   }
 
   convertMsToTimeString(ms) {
-    let dateObj = new Date(ms);
-    let hours = dateObj.getUTCHours();
-    let minutes = dateObj.getUTCMinutes();
-    let seconds = dateObj.getSeconds();
+    const dateObj = new Date(ms);
+    const hours = dateObj.getUTCHours();
+    const minutes = dateObj.getUTCMinutes();
+    const seconds = dateObj.getSeconds();
 
-    let hourString = hours.toString().padStart(2, '0') + ':';
-    let timeString =
+    const hourString = hours.toString().padStart(2, '0') + ':';
+    const timeString =
       minutes.toString().padStart(2, '0') + ':' +
       seconds.toString().padStart(2, '0');
 
-    return hourString != '00:' ? hourString + timeString : timeString;
+    return hourString !== '00:' ? hourString + timeString : timeString;
   }
 
   seekToPosition(ms: number) {
     this.playerService.seekToPosition(this.device_id, ms)
-    .subscribe(item => {
-      this.getCurrentState();
-    });
+      .subscribe(item => {
+        this.getCurrentState();
+      });
   }
 
   setVolume(volume: number) {
     this.playerService.setVolume(this.device_id, volume)
-    .subscribe(item => {
-      this.getCurrentState();
-    });
+      .subscribe(item => {
+        this.getCurrentState();
+      });
   }
   
   toggleShuffle() {

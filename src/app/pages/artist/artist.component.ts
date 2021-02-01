@@ -27,7 +27,7 @@ export class ArtistComponent implements OnInit {
   }
 
   getAllInfoFromArtist() {
-    let requests = [];
+    const requests = [];
 
     requests.push(
       this.getArtist(),

@@ -23,16 +23,13 @@ export class LoginCallbackComponent implements OnInit {
       if (params) {
         const token = params['access_token'];
         const expires_in = params['expires_in'];
-  
         this.auth.Autenticar(token, parseInt(expires_in));
-  
         this.service.Get<User>('https://api.spotify.com/v1/me')
           .subscribe(item => {
             this.auth.setUser(item);
           });
-  
         this.router.navigate(['']);
-  
+
       }
     });
   }

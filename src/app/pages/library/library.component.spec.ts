@@ -1,7 +1,6 @@
 import { User } from './../../models/user';
 import { AppModule } from './../../app.module';
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LibraryComponent } from './library.component';
 import { SpotifyUserService } from 'src/app/services/spotify-user.service';
@@ -14,12 +13,12 @@ describe('LibraryComponent', () => {
   let userService;
   let usuarioLogadoService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LibraryComponent ],
+      declarations: [LibraryComponent],
       imports: [AppModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(inject([SpotifyUserService, UserService], (s, l) => {

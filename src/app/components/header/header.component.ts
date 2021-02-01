@@ -14,15 +14,15 @@ export class HeaderComponent implements OnInit {
   constructor(private userService: UserService, public auth: AuthService, private router: Router) { }
 
   dados: User;
-  menuAberto: boolean = false;
+  menuAberto = false;
+
+  userMenuAberto = false;
 
   ngOnInit() {
     this.userService.getUser().subscribe(item => {
       this.dados = item;
-    })
+    });
   }
-
-  userMenuAberto = false;
 
   sair() {
     this.userMenuAberto = false;

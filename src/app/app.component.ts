@@ -8,16 +8,16 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
+
   constructor(public auth: AuthService, public translate: TranslateService) {
-    let defaultLanguage = window.localStorage.getItem('languageSelected');
+    const defaultLanguage = window.localStorage.getItem('languageSelected');
     translate.addLangs(['pt', 'en', 'es']);
     translate.setDefaultLang(defaultLanguage || 'pt');
   }
 
+  title = 'spotify-client';
+
   ngOnInit(): void {
     this.auth.setUser(JSON.parse(window.localStorage.getItem('user')));
   }
-
-  title = 'spotify-client';
 }

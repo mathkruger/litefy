@@ -2,9 +2,9 @@ import { User } from './../models/user';
 import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
 
-const keyAuth: string = 'auth';
-const keyExpiration: string = 'authExpiration';
-const keyUser: string = 'user';
+const keyAuth = 'auth';
+const keyExpiration = 'authExpiration';
+const keyUser = 'user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private userService: UserService) {}
 
   Autenticar(token: string, token_expiration: number) {
-    let date = new Date();
+    const date = new Date();
     let d = new Date();
     d = new Date(d.getTime() + token_expiration * 1000);
 

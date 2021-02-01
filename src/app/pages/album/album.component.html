@@ -1,8 +1,8 @@
 <div class="app container mt-4" *ngIf="album">
   <div class="row">
     <div class="col-md-12">
-      <div class="album-header" [ngStyle]="{'background-image': 'url(' + album.images[0].url + ')'}">
-        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + album.images[0].url + ')'}">
+      <div class="album-header" [ngStyle]="{'background-image': 'url(' + album?.images[0].url + ')'}">
+        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + album?.images[0].url + ')'}">
         </div>
         <h1>
           {{ album.name }}

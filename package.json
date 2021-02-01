@@ -10,6 +10,12 @@
     "e2e": "ng e2e",
     "build:ci": "ng build --prod --sourceMap=false --base-href /litefy/"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint",
+      "pre-push": "ng test --watch=false"
+    }
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^10.2.4",
@@ -24,6 +30,7 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "core-js": "^2.5.4",
+    "husky": "^4.3.8",
     "ngx-progressbar": "^6.1.0",
     "ngx-toastr": "^13.2.0",
     "rxjs": "~6.6.3",

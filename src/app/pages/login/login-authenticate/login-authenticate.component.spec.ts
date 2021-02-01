@@ -1,21 +1,17 @@
 import { AppModule } from './../../../app.module';
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LoginAuthenticateComponent } from './login-authenticate.component';
 
 describe('LoginAuthenticateComponent', () => {
   let component: LoginAuthenticateComponent;
   let fixture: ComponentFixture<LoginAuthenticateComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginAuthenticateComponent ],
+      declarations: [LoginAuthenticateComponent],
       imports: [AppModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
