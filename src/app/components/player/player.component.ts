@@ -31,12 +31,19 @@ export class PlayerComponent implements OnInit, OnChanges {
   mostraPlayer = false;
   mostraVolume = false;
 
-  progress = 0;
+  progress: number = 0;
+  shuffle: boolean = false;
+  
+  seekStyle = {};
 
   ngOnInit() {
     this.initPlayer();
     this.playerService.getPlayerProgress().subscribe(item => {
       this.progress = item;
+      const procentagem = (this.progress / (this.playerStatus?.item?.duration_ms || 0)) * 100;
+      this.seekStyle = {
+        'background': `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`
+      }
     });
   }
 
@@ -191,5 +198,18 @@ export class PlayerComponent implements OnInit, OnChanges {
       .subscribe(item => {
         this.getCurrentState();
       });
+  }
+  
+  toggleShuffle() {
+    this.shuffle = !this.shuffle;
+    
+    this.playerService.shuffle(this.shuffle, this.device_id)
+    .subscribe(item => {
+      let stringTranslate = this.shuffle ? 'ShuffleOnText' : 'ShuffleOffText'
+      this.translate.get(stringTranslate)
+      .subscribe(item => {
+        this.toastr.success(item);
+      })
+    });
   }
 }

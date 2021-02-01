@@ -1,5 +1,6 @@
 {
-    "LoginDescriptionText": "Haga clic en el botón de abajo para autenticarse",
+    "LoginDescriptionText": "Litefy. Un cliente de Spotify para dispositivos de gama baja",
+    "LoginText": "Creemos que no necesitas un súper dispositivo para disfrutar de tu música. Creemos que no necesita estar al día con todas las nuevas tecnologías para entretenerse. Por eso existe Litefy.",
     "LoginButtonText": "Iniciar sesión con Spotify",
 
     "SearchPlaceholderText": "Canción, álbum, artista, lista de reproducción ...",
@@ -31,6 +32,8 @@
     "PausedText": "Pausado",
     "NextText": "Siguiente pista",
     "PreviousText": "Pista anterior",
+    "ShuffleOnText": "Modo aleatorio activado",
+    "ShuffleOffText": "Modo aleatorio desactivado",
 
     "ExitText": "Salir",
     "ProfileText": "Perfil",

@@ -20,13 +20,21 @@ export class LibraryComponent implements OnInit {
   usuarioLogado: User;
 
   ngOnInit() {
-    const requests = [];
+    this.getLoggedUser();
+    this.getUserLibrary();
+  }
 
-    requests.push(this.serviceUsuario.getUserPlaylists(), this.serviceUsuario.getUserAlbums(), this.serviceUsuario.getUserTracks());
+  getLoggedUser() {
     this.usuario.getUser()
       .subscribe(item => {
         this.usuarioLogado = item;
       });
+  }
+
+  getUserLibrary() {
+    let requests = [];
+
+    requests.push(this.serviceUsuario.getUserPlaylists(), this.serviceUsuario.getUserAlbums(), this.serviceUsuario.getUserTracks());
 
     forkJoin(requests)
       .subscribe((items: any[]) => {
