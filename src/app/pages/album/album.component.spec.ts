@@ -81,7 +81,6 @@ describe('AlbumComponent', () => {
       'popularity': 51,
       'release_date': '2004-11-15',
       'release_date_precision': 'day',
-      'total_tracks': 13,
       'tracks': {
         'href': 'https://api.spotify.com/v1/albums/2J1e7x33Aejx7KFmVbgoGW/tracks?offset=0&limit=50',
         'items': [{
