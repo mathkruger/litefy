@@ -30,7 +30,7 @@ describe('ArtistComponent', () => {
   });
 
   it('should get all info from artist', () => {
-    const responseArtist = {
+    const responseArtist: SpotifyApi.SingleArtistResponse = {
       'external_urls': {
         'spotify': 'https://open.spotify.com/artist/7IAXZaLTb6nkJr8RmVPn5y'
       },

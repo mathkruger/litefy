@@ -31,7 +31,7 @@ describe('AlbumComponent', () => {
   });
 
   it('should get an album', () => {
-    const response = {
+    const response: SpotifyApi.SingleAlbumResponse = {
       'album_type': 'album',
       'artists': [{
         'external_urls': {
@@ -53,9 +53,6 @@ describe('AlbumComponent', () => {
       'copyrights': [{
         'text': '2016 Angra',
         'type': 'C'
-      }, {
-        'text': '2016 Angra',
-        'type': 'P'
       }],
       'external_ids': {
         'upc': '191061558569'
@@ -113,7 +110,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/5eYkFRuIHGaZZXUnBbsF0D',
           'id': '5eYkFRuIHGaZZXUnBbsF0D',
-          'is_local': false,
           'name': 'Deus Le Volt!',
           'preview_url': 'https://p.scdn.co/mp3-preview/2482dd4b523629361040c032abb11513abde5cac?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 1,
@@ -139,7 +135,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/4I9j55n6CXUTfcV6RfcX5A',
           'id': '4I9j55n6CXUTfcV6RfcX5A',
-          'is_local': false,
           'name': 'Spread Your Fire',
           'preview_url': 'https://p.scdn.co/mp3-preview/8a62fade1987d9d469a9230464a307f80e5943ee?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 2,
@@ -165,7 +160,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/07Wh8AHhvJssF7Sn7X6aQP',
           'id': '07Wh8AHhvJssF7Sn7X6aQP',
-          'is_local': false,
           'name': 'Angels and Demons',
           'preview_url': 'https://p.scdn.co/mp3-preview/22522c47b78d352815563c58b85864e5adcd4ee9?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 3,
@@ -191,7 +185,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/0zliAIq64I0K68Jpy2uCga',
           'id': '0zliAIq64I0K68Jpy2uCga',
-          'is_local': false,
           'name': 'Waiting Silence',
           'preview_url': 'https://p.scdn.co/mp3-preview/a131edf24379d1ff2ec29e274e3dd2a78f60b1e1?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 4,
@@ -217,7 +210,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/5DrkawyIGaFlnWqDqZwuEe',
           'id': '5DrkawyIGaFlnWqDqZwuEe',
-          'is_local': false,
           'name': 'Wishing Well',
           'preview_url': 'https://p.scdn.co/mp3-preview/e6d3088e53a2f9de67b7a4dfd3ea5abd7acd4b47?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 5,
@@ -243,7 +235,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/02fRcwuJ1JGrthFULV03th',
           'id': '02fRcwuJ1JGrthFULV03th',
-          'is_local': false,
           'name': 'The Temple of Hate',
           'preview_url': 'https://p.scdn.co/mp3-preview/1919823ea2881f80cb013de208bc1006d9a13a20?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 6,
@@ -269,7 +260,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/3tMOHXczJyzFCitFAjLUY7',
           'id': '3tMOHXczJyzFCitFAjLUY7',
-          'is_local': false,
           'name': 'The Shadow Hunter',
           'preview_url': 'https://p.scdn.co/mp3-preview/0ef5ba6109f76f57483a758a5aa25c393fe707b5?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 7,
@@ -295,7 +285,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/4c32lu5t3cEcXDl0sbbkbn',
           'id': '4c32lu5t3cEcXDl0sbbkbn',
-          'is_local': false,
           'name': 'No Pain for the Dead',
           'preview_url': 'https://p.scdn.co/mp3-preview/2df4a1b59021be2b73784a05f88448249db2fffb?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 8,
@@ -321,7 +310,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/2yWl2rW3ews5FmruYnVIOZ',
           'id': '2yWl2rW3ews5FmruYnVIOZ',
-          'is_local': false,
           'name': 'Winds of Destination',
           'preview_url': 'https://p.scdn.co/mp3-preview/15a0d406c3df973547e19bdda4c6e4cf24cc6b28?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 9,
@@ -347,7 +335,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/2CJpGsBc0YVXNhJFF9pOXW',
           'id': '2CJpGsBc0YVXNhJFF9pOXW',
-          'is_local': false,
           'name': 'Sprouts of Time',
           'preview_url': 'https://p.scdn.co/mp3-preview/e818152e636eca490b8b177bfb6a6207ba9df310?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 10,
@@ -373,7 +360,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/5EEMizxBSufXnb4Lbr5w1i',
           'id': '5EEMizxBSufXnb4Lbr5w1i',
-          'is_local': false,
           'name': 'Morning Star',
           'preview_url': 'https://p.scdn.co/mp3-preview/01c64e5514f8bc6d2d8d8c02936f33741f1319c5?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 11,
@@ -399,7 +385,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/5t1QeMUH5z0mzTUZM79inL',
           'id': '5t1QeMUH5z0mzTUZM79inL',
-          'is_local': false,
           'name': 'Late Redemption',
           'preview_url': 'https://p.scdn.co/mp3-preview/ae42dc7a188fce75d872ab718fc7d4a7e02f7aa4?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 12,
@@ -425,7 +410,6 @@ describe('AlbumComponent', () => {
           },
           'href': 'https://api.spotify.com/v1/tracks/0pNv82mKuhd0FtziticHSa',
           'id': '0pNv82mKuhd0FtziticHSa',
-          'is_local': false,
           'name': 'Gate XIII',
           'preview_url': 'https://p.scdn.co/mp3-preview/7e20cf77a76397ca3fbae4ecc75e641484dff50f?cid=d2efaa241b0140e1b3cec365631430a7',
           'track_number': 13,
