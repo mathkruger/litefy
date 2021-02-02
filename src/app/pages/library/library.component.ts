@@ -34,7 +34,7 @@ export class LibraryComponent implements OnInit {
   }
 
   getUserLibrary() {
-    let requests = [];
+    const requests = [];
 
     requests.push(this.serviceUsuario.getUserPlaylists(), this.serviceUsuario.getUserAlbums(), this.serviceUsuario.getUserTracks());
 
