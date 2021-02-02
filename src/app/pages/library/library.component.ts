@@ -1,3 +1,5 @@
+/// <reference path="../../../../node_modules/@types/spotify-api/index.d.ts" />
+
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import { User } from 'src/app/models/user';
@@ -13,9 +15,9 @@ export class LibraryComponent implements OnInit {
 
   constructor(private serviceUsuario: SpotifyUserService, private usuario: UserService) { }
 
-  userPlaylists: any[] = [];
-  userAlbums: any[] = [];
-  userTracks: any[] = [];
+  userPlaylists: SpotifyApi.PagingObject<SpotifyApi.PlaylistObjectSimplified>;
+  userAlbums: SpotifyApi.PagingObject<SpotifyApi.SavedAlbumObject>;
+  userTracks: SpotifyApi.PagingObject<SpotifyApi.SavedTrackObject>;
 
   usuarioLogado: User;
 

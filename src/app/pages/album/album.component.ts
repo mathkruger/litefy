@@ -1,3 +1,5 @@
+/// <reference path="../../../../node_modules/@types/spotify-api/index.d.ts" />
+
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyAlbumService } from './../../services/spotify-album.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +13,7 @@ export class AlbumComponent implements OnInit {
 
   constructor(private albumService: SpotifyAlbumService, private activatedRoute: ActivatedRoute) { }
 
-  album: any;
+  album: SpotifyApi.SingleAlbumResponse;
   id: string;
 
   ngOnInit() {

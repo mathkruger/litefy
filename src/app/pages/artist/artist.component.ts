@@ -1,3 +1,5 @@
+/// <reference path="../../../../node_modules/@types/spotify-api/index.d.ts" />
+
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { SpotifyArtistService } from './../../services/spotify-artist.service';
@@ -12,10 +14,10 @@ export class ArtistComponent implements OnInit {
 
   constructor(private artistService: SpotifyArtistService, private activatedRoute: ActivatedRoute) { }
 
-  artist: any;
-  topTracks: any[] = [];
-  related: any[] = [];
-  albums: any[] = [];
+  artist: SpotifyApi.SingleArtistResponse;
+  topTracks: SpotifyApi.ArtistsTopTracksResponse;
+  related: SpotifyApi.ArtistsRelatedArtistsResponse;
+  albums: SpotifyApi.ArtistsAlbumsResponse;
 
   id: string;
 

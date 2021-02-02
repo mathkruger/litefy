@@ -1,9 +1,8 @@
+/// <reference path="../../../../node_modules/@types/spotify-api/index.d.ts" />
+
 import { SpotifyBrowseService } from './../../services/spotify-browse.service';
-import { User } from './../../models/user';
 import { UserService } from './../../services/user.service';
 import { SpotifyUserService } from './../../services/spotify-user.service';
-import { ServiceBase } from './../../services/service.base';
-import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
 
@@ -16,14 +15,11 @@ export class HomeComponent implements OnInit {
 
   constructor(private serviceUsuario: SpotifyUserService, private usuario: UserService, private browseService: SpotifyBrowseService) { }
 
-  topArtists: any[] = [];
-  topTracks: any[] = [];
+  topArtists: SpotifyApi.PagingObject<SpotifyApi.ArtistObjectFull>;
+  topTracks: SpotifyApi.PagingObject<SpotifyApi.TrackObjectFull>;
 
-  newAlbuns: any[] = [];
-  featuredPlaylists: any[] = [];
-
-  featuredMessage: string;
-
+  newAlbuns: SpotifyApi.PagingObject<SpotifyApi.AlbumObjectSimplified>;
+  featuredPlaylists: SpotifyApi.PagingObject<SpotifyApi.PlaylistObjectSimplified>;
   requisicoesCompletas = false;
 
 
@@ -48,7 +44,6 @@ export class HomeComponent implements OnInit {
 
         this.newAlbuns = items[2].albums.items;
         this.featuredPlaylists = items[3].playlists.items;
-        this.featuredMessage = items[3].message;
 
         this.requisicoesCompletas = true;
       });

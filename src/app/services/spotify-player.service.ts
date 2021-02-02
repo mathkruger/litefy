@@ -1,14 +1,17 @@
+/// <reference path="../../../node_modules/@types/spotify-api/index.d.ts" />
+
 import { ServiceBase } from './service.base';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { SpotifyAlbumService } from './spotify-album.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class SpotifyPlayerService {
 
-    constructor(private service: ServiceBase) { }
+    constructor(private service: ServiceBase, private albumService: SpotifyAlbumService) { }
 
     deviceIdSubject: BehaviorSubject<string> = new BehaviorSubject<string>(null);
     playerStatusSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
@@ -125,8 +128,8 @@ export class SpotifyPlayerService {
         return this.service.Get('https://api.spotify.com/v1/me/player');
     }
 
-    getAlbumTracks(id) {
-        return this.service.Get<any>(`https://api.spotify.com/v1/albums/${id}/tracks`);
+    getAlbumTracks(id: string): Observable<SpotifyApi.AlbumTracksResponse> {
+        return this.albumService.getAlbumTracks(id);
     }
 
     seekToPosition(device_id: string, ms: number) {
