@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
-
+import { EMPTY } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -37,7 +38,13 @@ export class ServiceBase {
             headers: {
                 'Authorization': 'Bearer ' + this.auth.getAuth()
             }
-        });
+        }).pipe(
+          catchError(error => {
+            if (error?.status === 403 && error?.error?.error?.reason === 'PREMIUM_REQUIRED') {
+                return EMPTY;
+            }
+          })
+        );
     }
 
     Delete<Tretorno>(url) {
