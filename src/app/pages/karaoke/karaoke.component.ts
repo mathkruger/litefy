@@ -22,7 +22,7 @@ export class KaraokeComponent implements OnInit {
   ngOnInit() {
     this.playerService.getPlayerStatus()
       .subscribe(item => {
-        if(item != undefined) {
+        if (item !== undefined) {
           this.lastStatus = this.playerStatus ? JSON.parse(JSON.stringify(this.playerStatus)) : item;
           this.playerStatus = item;
           this.getLyrics();
@@ -31,13 +31,14 @@ export class KaraokeComponent implements OnInit {
   }
 
   getLyrics() {
-    if(this.lastStatus && this.playerStatus) {
-      if((this.lastStatus.item.album.artists[0]?.name != this.playerStatus.item.album.artists[0]?.name && this.lastStatus.item.name != this.playerStatus.item.name) || this.firstRequest) {
+    if (this.lastStatus && this.playerStatus) {
+      if ((this.lastStatus.item.album.artists[0]?.name !== this.playerStatus.item.album.artists[0]?.name
+            && this.lastStatus.item.name !== this.playerStatus.item.name) || this.firstRequest) {
         this.lyricsService.getLyrics(this.playerStatus.item.album.artists[0]?.name, this.playerStatus.item.name)
-        .subscribe(item => {
-          this.lyrics = item;
-          this.firstRequest = false;
-        });
+          .subscribe(item => {
+            this.lyrics = item;
+            this.firstRequest = false;
+          });
       }
     }
   }

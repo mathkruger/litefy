@@ -1,7 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { KaraokeComponent } from './karaoke.component';
 
@@ -9,7 +7,7 @@ describe('KaraokeComponent', () => {
   let component: KaraokeComponent;
   let fixture: ComponentFixture<KaraokeComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ KaraokeComponent ]
     })
@@ -20,9 +18,5 @@ describe('KaraokeComponent', () => {
     fixture = TestBed.createComponent(KaraokeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });
