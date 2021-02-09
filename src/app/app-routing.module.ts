@@ -1,3 +1,4 @@
+import { KaraokeComponent } from './pages/karaoke/karaoke.component';
 import { LibraryComponent } from './pages/library/library.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { AlbumComponent } from './pages/album/album.component';
@@ -42,7 +43,11 @@ const routes: Routes = [
     component: PlaylistComponent,
     canActivate: [LoginGuardService]
   },
-
+  {
+    path: 'karaoke',
+    component: KaraokeComponent,
+    canActivate: [LoginGuardService]
+  },
   {
     path: 'login',
     component: LoginAuthenticateComponent,
@@ -52,7 +57,7 @@ const routes: Routes = [
     path: 'login/callback',
     component: LoginCallbackComponent,
     canActivate: [NaoLoginGuardService]
-  }
+  },
 ];
 
 @NgModule({

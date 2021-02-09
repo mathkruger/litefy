@@ -1,3 +1,4 @@
+import { KaraokeComponent } from './pages/karaoke/karaoke.component';
 import { PlayerComponent } from './components/player/player.component';
 import { ShearchBoxComponent } from './components/shearch-box/shearch-box.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -47,7 +48,8 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
     AlbumComponent,
     PlaylistComponent,
     LibraryComponent,
-    LanguageSwitcherComponent
+    LanguageSwitcherComponent,
+    KaraokeComponent
   ],
   imports: [
     CommonModule,

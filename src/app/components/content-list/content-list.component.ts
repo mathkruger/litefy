@@ -34,7 +34,6 @@ export class ContentListComponent implements OnInit {
   getPlayerStatus() {
     this.playerService.getPlayerStatus().subscribe(item => {
       this.playerState = item;
-      console.log(this.playerState);
     });
   }
 
