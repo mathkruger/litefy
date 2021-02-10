@@ -1,9 +1,19 @@
 <ng-container *ngIf="lyrics && playerStatus">
   <div class="app container text-center mt-4">
     <h2 class="mb-3">{{ playerStatus.item.name }} - {{ playerStatus.item.album.artists[0]?.name }}</h2>
-    
-    <p [innerHTML]="lyrics.mus[0].text">
+
+    <p *ngIf="notFound === false" [innerHTML]="lyrics.mus[0].text">
     </p>
+
+    <ng-container *ngIf="notFound === true">
+      <p>
+        {{ 'KaraokeNotFoundText' | translate }}
+      </p>
+      <a target="blank"
+        [href]="'https://www.google.com/search?q=' + playerStatus.item.name + ' ' + playerStatus.item.album.artists[0]?.name + ' lyrics'"
+        class="btn btn-success btn-lg">
+        {{ 'KaraokeSearchText' | translate }}
+      </a>
+    </ng-container>
   </div>
 </ng-container>
-

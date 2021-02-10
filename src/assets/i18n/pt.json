@@ -40,5 +40,8 @@
     "ProfileText": "Perfil",
     "SettingsText": "Configurações",
 
-    "SearchArtists": "Artistas"
+    "SearchArtists": "Artistas",
+
+    "KaraokeNotFoundText": "Nenhuma letra encontrada, mas você pode tentar buscar manualmente através do botão abaixo.",
+    "KaraokeSearchText": "Buscar"
 }
