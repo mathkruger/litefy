@@ -34,8 +34,7 @@ export class KaraokeComponent implements OnInit {
 
   getLyrics(id: string = null) {
     if (this.lastStatus && this.playerStatus) {
-      if ((this.lastStatus.item.album.artists[0]?.name !== this.playerStatus.item.album.artists[0]?.name
-        && this.lastStatus.item.name !== this.playerStatus.item.name) || this.firstRequest) {
+      if ((this.lastStatus.item.id !== this.playerStatus.item.id) || this.firstRequest) {
         if (id === null) {
           this.lyricsService.getLyrics(this.playerStatus.item.album.artists[0]?.name, this.playerStatus.item.name)
             .subscribe(item => {
