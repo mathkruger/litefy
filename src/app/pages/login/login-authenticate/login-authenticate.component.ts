@@ -1,18 +1,12 @@
 import { environment } from './../../../../environments/environment';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login-authenticate',
   templateUrl: './login-authenticate.component.html',
   styleUrls: ['./login-authenticate.component.css']
 })
-export class LoginAuthenticateComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class LoginAuthenticateComponent {
   generateRandomString(length) {
     let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

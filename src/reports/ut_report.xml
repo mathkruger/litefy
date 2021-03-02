@@ -1,46 +1,47 @@
 <testExecutions version="1">
-  <file path="src/app/pages/search/search.component.spec.ts">
-    <testCase name="SearchComponent should create" duration="234"/>
-  </file>
-  <file path="src/app/pages/album/album.component.spec.ts">
-    <testCase name="AlbumComponent should get an album" duration="67"/>
-    <testCase name="AlbumComponent should create" duration="13"/>
-  </file>
-  <file path="src/app/components/shearch-box/shearch-box.component.spec.ts">
-    <testCase name="ShearchBoxComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/components/language-switcher/language-switcher.component.spec.ts">
-    <testCase name="LanguageSwitcherComponent should create" duration="8"/>
-  </file>
-  <file path="src/app/pages/artist/artist.component.spec.ts">
-    <testCase name="ArtistComponent should get all info from artist" duration="81"/>
-    <testCase name="ArtistComponent should create" duration="23"/>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="223"/>
   </file>
   <file path="src/app/components/header/header.component.spec.ts">
     <testCase name="HeaderComponent should create" duration="13"/>
   </file>
+  <file path="src/app/components/content-list/content-list.component.spec.ts">
+    <testCase name="ContentListComponent should create" duration="14"/>
+    <testCase name="ContentListComponent testing getRootItem method" duration="9"/>
+  </file>
+  <file path="src/app/pages/artist/artist.component.spec.ts">
+    <testCase name="ArtistComponent should create" duration="21"/>
+    <testCase name="ArtistComponent should get all info from artist" duration="92"/>
+  </file>
+  <file path="src/app/components/language-switcher/language-switcher.component.spec.ts">
+    <testCase name="LanguageSwitcherComponent should create" duration="11"/>
+  </file>
+  <file path="src/app/pages/album/album.component.spec.ts">
+    <testCase name="AlbumComponent should create" duration="13"/>
+    <testCase name="AlbumComponent should get an album" duration="58"/>
+  </file>
+  <file path="src/app/components/shearch-box/shearch-box.component.spec.ts">
+    <testCase name="ShearchBoxComponent should create" duration="25"/>
+  </file>
   <file path="src/app/pages/home/home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="15"/>
+    <testCase name="HomeComponent should create" duration="18"/>
   </file>
   <file path="src/app/components/player/player.component.spec.ts">
-    <testCase name="PlayerComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/pages/playlist/playlist.component.spec.ts">
-    <testCase name="PlaylistComponent should create" duration="14"/>
-  </file>
-  <file path="src/app/pages/login/login-callback/login-callback.component.spec.ts">
-    <testCase name="LoginCallbackComponent should create" duration="15"/>
+    <testCase name="PlayerComponent should create" duration="15"/>
   </file>
   <file path="src/app/pages/login/login-authenticate/login-authenticate.component.spec.ts">
-    <testCase name="LoginAuthenticateComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/components/content-list/content-list.component.spec.ts">
-    <testCase name="ContentListComponent should create" duration="9"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="15"/>
+    <testCase name="LoginAuthenticateComponent should create" duration="13"/>
   </file>
   <file path="src/app/pages/library/library.component.spec.ts">
-    <testCase name="LibraryComponent should create" duration="17"/>
+    <testCase name="LibraryComponent should create" duration="18"/>
+  </file>
+  <file path="src/app/pages/playlist/playlist.component.spec.ts">
+    <testCase name="PlaylistComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/pages/login/login-callback/login-callback.component.spec.ts">
+    <testCase name="LoginCallbackComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/pages/search/search.component.spec.ts">
+    <testCase name="SearchComponent should create" duration="13"/>
   </file>
 </testExecutions>

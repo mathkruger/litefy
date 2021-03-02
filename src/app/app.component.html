@@ -1,4 +1,6 @@
 <ng-progress [spinner]="false" color="#1DB954"></ng-progress>
 <app-header></app-header>
+
 <router-outlet></router-outlet>
+
 <app-player *ngIf="auth.Autenticado()"></app-player>

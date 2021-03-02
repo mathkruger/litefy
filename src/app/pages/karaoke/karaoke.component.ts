@@ -2,7 +2,6 @@ import { LyricsResult } from './../../models/lyrics-result';
 import { LyricsService } from './../../services/lyrics.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { Component, OnInit } from '@angular/core';
-import { last } from 'rxjs/operators';
 
 @Component({
   selector: 'app-karaoke',

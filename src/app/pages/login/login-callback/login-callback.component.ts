@@ -1,4 +1,3 @@
-import { environment } from './../../../../environments/environment';
 import { User } from './../../../models/user';
 import { ServiceBase } from './../../../services/service.base';
 import { ActivatedRoute, Router } from '@angular/router';

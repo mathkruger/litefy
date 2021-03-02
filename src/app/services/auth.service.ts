@@ -14,7 +14,6 @@ export class AuthService {
   constructor(private userService: UserService) {}
 
   Autenticar(token: string, token_expiration: number) {
-    const date = new Date();
     let d = new Date();
     d = new Date(d.getTime() + token_expiration * 1000);
 

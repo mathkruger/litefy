@@ -2,7 +2,6 @@ import { Router } from '@angular/router';
 import { ServiceBase } from './../../services/service.base';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { MsToStringPipe } from '../../pipes/ms-to-string.pipe';
 
 @Component({
   selector: 'app-content-list',
@@ -58,7 +57,7 @@ export class ContentListComponent implements OnInit {
 
   selecionar(itemSelecionado) {
     this.playerService.play(this.device_id, itemSelecionado)
-      .subscribe(item => {
+      .subscribe(() => {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);
@@ -68,7 +67,7 @@ export class ContentListComponent implements OnInit {
 
   add(itemSelecionado) {
     this.playerService.add(itemSelecionado, this.device_id)
-      .subscribe(item => {
+      .subscribe(() => {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);
@@ -86,10 +85,10 @@ export class ContentListComponent implements OnInit {
       });
 
       this.playerService.play(this.device_id, null, uris)
-        .subscribe(item => {
+        .subscribe(() => {
           this.playerService.getCurrentState()
-            .subscribe(item => {
-              this.playerService.setPlayerStatus(item);
+            .subscribe(state => {
+              this.playerService.setPlayerStatus(state);
             });
         });
     });
@@ -106,7 +105,7 @@ export class ContentListComponent implements OnInit {
       });
 
       this.playerService.play(this.device_id, null, uris)
-        .subscribe(item => {
+        .subscribe(() => {
           this.playerService.getCurrentState()
             .subscribe(item => {
               this.playerService.setPlayerStatus(item);
@@ -118,7 +117,7 @@ export class ContentListComponent implements OnInit {
 
   tocarTodas() {
     this.playerService.play(this.device_id, null, this.lista.map(item => this.getRootItem(item).uri))
-      .subscribe(item => {
+      .subscribe(() => {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerService.setPlayerStatus(item);

@@ -1,13 +1,13 @@
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
 import { ServiceBase } from './../../services/service.base';
-import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-shearch-box',
   templateUrl: './shearch-box.component.html',
   styleUrls: ['./shearch-box.component.css']
 })
-export class ShearchBoxComponent implements OnInit {
+export class ShearchBoxComponent {
 
   constructor(private service: ServiceBase, private playerService: SpotifyPlayerService) { }
 
@@ -16,9 +16,6 @@ export class ShearchBoxComponent implements OnInit {
 
   termo: string;
   apiLink = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist&offset=0&limit=50';
-
-  ngOnInit() {
-  }
 
   @HostListener('document:keydown', ['$event'])
   pressEnter(event: KeyboardEvent) {

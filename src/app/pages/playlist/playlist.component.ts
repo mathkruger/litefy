@@ -21,8 +21,8 @@ export class PlaylistComponent implements OnInit {
       this.id = item.id;
 
       this.playlistService.getPlaylist(this.id)
-      .subscribe(item => {
-        this.playlist = item;
+      .subscribe(playlist => {
+        this.playlist = playlist;
       });
     });
   }

@@ -1,9 +1,8 @@
 import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { MsToStringPipe } from '../../pipes/ms-to-string.pipe';
 import { TranslateService } from '@ngx-translate/core';
 
 declare var Spotify: any;
@@ -69,7 +68,7 @@ export class PlayerComponent implements OnInit, OnChanges {
       this.player.addListener('account_error', ({ message }) => { console.error(message); });
       this.player.addListener('playback_error', ({ message }) => { console.error(message); });
 
-      this.player.addListener('player_state_changed', state => {
+      this.player.addListener('player_state_changed', () => {
         const someLink = document.querySelector('.click-inicial');
         this.simulateClick(someLink);
       });
@@ -90,13 +89,13 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   transferirPlayer() {
     this.playerService.transferPlayback(this.device_id)
-      .subscribe((data) => {
+      .subscribe(() => {
         this.playerService.getCurrentState()
           .subscribe(item => {
             this.playerStatus = item;
 
             this.playerService.add(this.playerStatus.item.uri, this.device_id)
-              .subscribe(item => {
+              .subscribe(() => {
                 // HACK PRA FUNCIONAR NO ANGULAR
                 const someLink = document.querySelector('.click-inicial');
                 this.simulateClick(someLink);
@@ -107,8 +106,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   play() {
     this.playerService.play(this.device_id)
-      .subscribe(item => {
-        // this.getCurrentState();
+      .subscribe(() => {
         this.translate.get('PlayingText')
           .subscribe(item => {
             this.toastr.success(item);
@@ -119,8 +117,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   pause() {
     this.playerService.pause(this.device_id)
-      .subscribe(item => {
-        // this.getCurrentState();
+      .subscribe(() => {
         this.translate.get('PausedText')
           .subscribe(item => {
             this.toastr.success(item);
@@ -130,8 +127,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   previous() {
     this.playerService.previous(this.device_id)
-      .subscribe(item => {
-        // this.getCurrentState();
+      .subscribe(() => {
         this.translate.get('PreviousText')
           .subscribe(item => {
             this.toastr.success(item);
@@ -141,8 +137,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   next() {
     this.playerService.next(this.device_id)
-      .subscribe(item => {
-        // this.getCurrentState();
+      .subscribe(() => {
         this.translate.get('NextText')
           .subscribe(item => {
             this.toastr.success(item);
@@ -161,14 +156,13 @@ export class PlayerComponent implements OnInit, OnChanges {
   }
 
   simulateClick(elem) {
-    // Create our event (with options)
-    const evt = new MouseEvent('click', {
+    const click = new MouseEvent('click', {
       bubbles: true,
       cancelable: true,
       view: window
     });
-    // If cancelled, don't dispatch our event
-    const canceled = !elem.dispatchEvent(evt);
+
+    return click;
   }
 
   convertMsToTimeString(ms) {
@@ -187,14 +181,14 @@ export class PlayerComponent implements OnInit, OnChanges {
 
   seekToPosition(ms: number) {
     this.playerService.seekToPosition(this.device_id, ms)
-      .subscribe(item => {
+      .subscribe(() => {
         this.getCurrentState();
       });
   }
 
   setVolume(volume: number) {
     this.playerService.setVolume(this.device_id, volume)
-      .subscribe(item => {
+      .subscribe(() => {
         this.getCurrentState();
       });
   }
@@ -203,7 +197,7 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.shuffle = !this.shuffle;
 
     this.playerService.shuffle(this.shuffle, this.device_id)
-      .subscribe(item => {
+      .subscribe(() => {
         const stringTranslate = this.shuffle ? 'ShuffleOnText' : 'ShuffleOffText';
         this.translate.get(stringTranslate)
           .subscribe(item => {
