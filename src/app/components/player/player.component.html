@@ -1,18 +1,15 @@
 <div class="player">
   <div *ngIf="playerStatus" class="player-wrapper d-flex justify-content-between align-items-center">
     <div class="tracking">
-      <input id="playerSeek" #playerSeek [ngStyle]="seekStyle" type="range" [value]="progress / 1000" min="0" [max]="playerStatus.item.duration_ms / 1000"
-        class="form-control-range range-player" (change)="seekToPosition(playerSeek.value * 1000)">
-
-      <!-- <div class="d-flex justify-content-between align-items-center text-white mt-2">
-        <span>{{ progress | msToString }}</span>
-        <span>{{ playerStatus.item.duration_ms | msToString }}</span>
-      </div> -->
+      <input id="playerSeek" #playerSeek [ngStyle]="seekStyle" type="range" [value]="progress / 1000" min="0"
+        [max]="playerStatus.item.duration_ms / 1000" class="form-control-range range-player"
+        (change)="seekToPosition(playerSeek.value * 1000)">
     </div>
 
     <div class="d-flex align-items-center text-white">
       <a *ngIf="playerStatus" [routerLink]="['album/' + playerStatus.item.album.id]">
-        <img [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
+        <img [alt]="playerStatus.item.album.name" [title]="playerStatus.item.album.name"
+          [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
       </a>
 
       <div class="d-flex flex-column">
@@ -127,10 +124,12 @@
           <input #volume type="range" [value]="playerStatus.device.volume_percent" min="0" [max]="100"
             class="form-control-range" (change)="setVolume(volume.value)">
         </div>
-        
+
         <button [disabled]="!playerStatus" type="button" (click)="toggleShuffle();" class="button-custom">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-2" width="32" height="32"
+            viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M3 17h5l1.67 -2.386m3.66 -5.227l1.67 -2.387h6" />
             <path d="M18 4l3 3l-3 3" />
             <path d="M3 7h5l7 10h6" />

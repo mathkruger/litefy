@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:ci": "ng build --prod --sourceMap=false --base-href /litefy/"
+    "build:ci": "ng build --prod --sourceMap=false --base-href /litefy/",
+    "sonar":"sonar-scanner"
   },
   "husky": {
     "hooks": {
@@ -43,9 +44,9 @@
     "@angular/cli": "~10.2.1",
     "@angular/compiler-cli": "~10.2.4",
     "@angular/language-service": "~10.2.4",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -54,7 +55,9 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-sonarqube-unit-reporter": "^0.0.23",
     "protractor": "~7.0.0",
+    "sonar-scanner": "^3.1.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.5"
