@@ -32,6 +32,7 @@ import { LibraryComponent } from './pages/library/library.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
+import { VolumeBoxComponent } from './components/volume-box/volume-box.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
     PlaylistComponent,
     LibraryComponent,
     LanguageSwitcherComponent,
-    KaraokeComponent
+    KaraokeComponent,
+    VolumeBoxComponent
   ],
   imports: [
     CommonModule,

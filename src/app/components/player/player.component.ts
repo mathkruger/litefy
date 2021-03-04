@@ -34,6 +34,8 @@ export class PlayerComponent implements OnInit, OnChanges {
   shuffle = false;
   seekStyle = {};
 
+  shufflemodeKey = 'shuffle';
+
   ngOnInit() {
     this.initPlayer();
     this.playerService.getPlayerProgress().subscribe(item => {
@@ -43,6 +45,11 @@ export class PlayerComponent implements OnInit, OnChanges {
         'background': `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`
       };
     });
+
+    const shuffleStatusSaved = localStorage.getItem(this.shufflemodeKey);
+    if (shuffleStatusSaved === 'true') {
+      this.toggleShuffle();
+    }
   }
 
   ngOnChanges() {
@@ -162,6 +169,8 @@ export class PlayerComponent implements OnInit, OnChanges {
       view: window
     });
 
+    elem.click();
+
     return click;
   }
 
@@ -198,6 +207,7 @@ export class PlayerComponent implements OnInit, OnChanges {
 
     this.playerService.shuffle(this.shuffle, this.device_id)
       .subscribe(() => {
+        localStorage.setItem(this.shufflemodeKey, `${this.shuffle}`);
         const stringTranslate = this.shuffle ? 'ShuffleOnText' : 'ShuffleOffText';
         this.translate.get(stringTranslate)
           .subscribe(item => {
