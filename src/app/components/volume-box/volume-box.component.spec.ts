@@ -1,9 +1,7 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { VolumeBoxComponent } from './volume-box.component';
+import { HttpClient } from '@angular/common/http';
 
 describe('VolumeBoxComponent', () => {
   let component: VolumeBoxComponent;
@@ -11,7 +9,8 @@ describe('VolumeBoxComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VolumeBoxComponent ]
+      declarations: [ VolumeBoxComponent ],
+      imports: [HttpClient]
     })
     .compileComponents();
   }));
