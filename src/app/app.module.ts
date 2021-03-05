@@ -33,6 +33,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 import { VolumeBoxComponent } from './components/volume-box/volume-box.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { VolumeBoxComponent } from './components/volume-box/volume-box.component
     LibraryComponent,
     LanguageSwitcherComponent,
     KaraokeComponent,
-    VolumeBoxComponent
+    VolumeBoxComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,

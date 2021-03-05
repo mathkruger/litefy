@@ -61,7 +61,7 @@
   <div class="d-flex justify-content-between align-items-center">
     <div class="user-area mr-2" *ngIf="auth.Autenticado()">
       <div class="cabecalho" (click)="userMenuAberto = !userMenuAberto">
-        <img class="mr-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
+        <img *ngIf="canLoadImage()" class="mr-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
   
         <div class="textos text-white hide-mobile">
           <strong class="mb-0">{{ dados?.display_name }}</strong>
@@ -99,8 +99,8 @@
             <line x1="18" y1="4" x2="18" y2="5" />
             <line x1="18" y1="9" x2="18" y2="20" />
           </svg>
-  
-          <a href="">{{ 'SettingsText' | translate }}</a>
+          
+          <a [routerLink]="['/settings']">{{ 'SettingsText' | translate }}</a>
         </li>
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16" height="16"

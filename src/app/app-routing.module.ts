@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NaoLoginGuardService } from './services/guardians/nao-logino-guard.service';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,11 @@ const routes: Routes = [
   {
     path: 'karaoke',
     component: KaraokeComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
     canActivate: [LoginGuardService]
   },
   {

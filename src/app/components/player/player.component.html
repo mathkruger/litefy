@@ -7,7 +7,7 @@
     </div>
 
     <div class="d-flex align-items-center text-white">
-      <a *ngIf="playerStatus" [routerLink]="['album/' + playerStatus.item.album.id]">
+      <a *ngIf="playerStatus && canLoadImage()" [routerLink]="['album/' + playerStatus.item.album.id]">
         <img [alt]="playerStatus.item.album.name" [title]="playerStatus.item.album.name"
           [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
       </a>

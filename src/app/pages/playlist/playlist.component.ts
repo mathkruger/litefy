@@ -2,16 +2,19 @@
 
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyPlaylistService } from './../../services/spotify-playlist.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { SettingsBase } from 'src/app/models/base/settings-base';
 
 @Component({
   selector: 'app-playlist',
   templateUrl: './playlist.component.html',
   styleUrls: ['./playlist.component.css']
 })
-export class PlaylistComponent implements OnInit {
+export class PlaylistComponent extends SettingsBase implements OnInit {
 
-  constructor(private playlistService: SpotifyPlaylistService, private activatedRoute: ActivatedRoute) { }
+  constructor(private playlistService: SpotifyPlaylistService, private activatedRoute: ActivatedRoute, injector: Injector) {
+    super(injector);
+  }
 
   playlist: SpotifyApi.SinglePlaylistResponse;
   id: string;
@@ -25,6 +28,8 @@ export class PlaylistComponent implements OnInit {
         this.playlist = playlist;
       });
     });
+
+    super.init();
   }
 
 }

@@ -2,16 +2,19 @@
 
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyAlbumService } from './../../services/spotify-album.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { SettingsBase } from 'src/app/models/base/settings-base';
 
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
   styleUrls: ['./album.component.css']
 })
-export class AlbumComponent implements OnInit {
+export class AlbumComponent extends SettingsBase implements OnInit {
 
-  constructor(private albumService: SpotifyAlbumService, private activatedRoute: ActivatedRoute) { }
+  constructor(private albumService: SpotifyAlbumService, private activatedRoute: ActivatedRoute, injector: Injector) {
+    super(injector);
+  }
 
   album: SpotifyApi.SingleAlbumResponse;
   id: string;
@@ -21,6 +24,8 @@ export class AlbumComponent implements OnInit {
       this.id = item.id;
       this.getAlbum(this.id);
     });
+
+    super.init();
   }
 
   getAlbum(id) {

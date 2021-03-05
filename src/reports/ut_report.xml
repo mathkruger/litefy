@@ -1,73 +1,69 @@
 <testExecutions version="1">
   <file path="src/app/pages/login/login-callback/login-callback.component.spec.ts">
-    <testCase name="LoginCallbackComponent should create" duration="205"/>
+    <testCase name="LoginCallbackComponent should create" duration="214"/>
+  </file>
+  <file path="src/app/pages/login/login-authenticate/login-authenticate.component.spec.ts">
+    <testCase name="LoginAuthenticateComponent should create" duration="13"/>
+  </file>
+  <file path="src/app/pages/search/search.component.spec.ts">
+    <testCase name="SearchComponent should create" duration="23"/>
   </file>
   <file path="src/app/pages/playlist/playlist.component.spec.ts">
     <testCase name="PlaylistComponent should create" duration="12"/>
   </file>
-  <file path="src/app/pages/library/library.component.spec.ts">
-    <testCase name="LibraryComponent should create" duration="12"/>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="24"/>
   </file>
-  <file path="src/app/pages/login/login-authenticate/login-authenticate.component.spec.ts">
-    <testCase name="LoginAuthenticateComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/pages/album/album.component.spec.ts">
-    <testCase name="AlbumComponent should create" duration="9"/>
-    <testCase name="AlbumComponent should get an album" duration="70"/>
-  </file>
-  <file path="src/app/pages/home/home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="11"/>
-  </file>
-  <file path="src/app/pages/artist/artist.component.spec.ts">
-    <testCase name="ArtistComponent should create" duration="14"/>
-    <testCase name="ArtistComponent should get all info from artist" duration="82"/>
+  <file path="src/app/components/content-list/content-list.component.spec.ts">
+    <testCase name="ContentListComponent should create" duration="12"/>
+    <testCase name="ContentListComponent testing getRootItem method" duration="13"/>
   </file>
   <file path="src/app/components/language-switcher/language-switcher.component.spec.ts">
-    <testCase name="LanguageSwitcherComponent should create" duration="32"/>
+    <testCase name="LanguageSwitcherComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/components/header/header.component.spec.ts">
+    <testCase name="HeaderComponent should create" duration="32"/>
+  </file>
+  <file path="src/app/pages/home/home.component.spec.ts">
+    <testCase name="HomeComponent should create" duration="15"/>
+  </file>
+  <file path="src/app/components/shearch-box/shearch-box.component.spec.ts">
+    <testCase name="ShearchBoxComponent should create" duration="10"/>
   </file>
   <file path="src/app/components/player/player.component.spec.ts">
     <testCase name="PlayerComponent should create" duration="12"/>
   </file>
-  <file path="src/app/components/shearch-box/shearch-box.component.spec.ts">
-    <testCase name="ShearchBoxComponent should create" duration="17"/>
+  <file path="src/app/pages/album/album.component.spec.ts">
+    <testCase name="AlbumComponent should create" duration="11"/>
+    <testCase name="AlbumComponent should get an album" duration="65"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="22"/>
+  <file path="src/app/pages/library/library.component.spec.ts">
+    <testCase name="LibraryComponent should create" duration="16"/>
   </file>
   <file path="src/app/components/volume-box/volume-box.component.spec.ts">
-    <testCase name="VolumeBoxComponent should create" duration="76">
-      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[SpotifyPlayerService -&gt; ServiceBase -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'SpotifyPlayerService', 'ServiceBase', 'HttpClient', 'HttpClient' ] })
-NullInjectorError: R3InjectorError(DynamicTestModule)[SpotifyPlayerService -&gt; ServiceBase -&gt; HttpClient -&gt; HttpClient]: 
-  NullInjectorError: No provider for HttpClient!
-    at NullInjector.get (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:1013:1)
-    at R3Injector.get (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11173:1)
-    at R3Injector.get (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11173:1)
-    at injectInjectorOnly (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:899:1)
-    at ɵɵinject (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:903:1)
-    at Object.ServiceBase_Factory [as factory] (ng:///ServiceBase/ɵfac.js:5:39)
-    at R3Injector.hydrate (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11341:1)
-    at R3Injector.get (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:11162:1)
-    at injectInjectorOnly (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:899:1)
-    at ɵɵinject (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:903:1)
+    <testCase name="VolumeBoxComponent should create" duration="108">
+      <failure message="Error">Error: Unexpected value 'HttpClient' imported by the module 'DynamicTestModule'. Please add an @NgModule annotation.
+    at verifySemanticsOfNgModuleDef (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:25971:1)
+    at http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:25982:1
+    at &lt;Jasmine&gt;
+    at verifySemanticsOfNgModuleDef (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:25980:1)
+    at Function.get (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js:25943:1)
+    at R3TestBedCompiler.applyProviderOverridesToModule (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/testing.js:1331:1)
+    at R3TestBedCompiler.compileTestModule (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/testing.js:1576:1)
+    at R3TestBedCompiler.finalize (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/testing.js:1185:1)
+    at TestBedRender3.get testModuleRef [as testModuleRef] (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/testing.js:2019:1)
+    at TestBedRender3.inject (http://localhost:9876/_karma_webpack_/node_modules/@angular/core/__ivy_ngcc__/fesm2015/testing.js:1943:1)
 
 Error: Expected undefined to be truthy.
     at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/src/app/components/volume-box/volume-box.component.spec.ts:26:23)
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/src/app/components/volume-box/volume-box.component.spec.ts:25:23)
     at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:364:1)
     at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-testing.js:292:1)
 </failure>
     </testCase>
   </file>
-  <file path="src/app/components/content-list/content-list.component.spec.ts">
-    <testCase name="ContentListComponent should create" duration="10"/>
-    <testCase name="ContentListComponent testing getRootItem method" duration="11"/>
-  </file>
-  <file path="src/app/components/header/header.component.spec.ts">
-    <testCase name="HeaderComponent should create" duration="12"/>
-  </file>
-  <file path="src/app/pages/search/search.component.spec.ts">
-    <testCase name="SearchComponent should create" duration="23"/>
+  <file path="src/app/pages/artist/artist.component.spec.ts">
+    <testCase name="ArtistComponent should create" duration="15"/>
+    <testCase name="ArtistComponent should get all info from artist" duration="85"/>
   </file>
 </testExecutions>

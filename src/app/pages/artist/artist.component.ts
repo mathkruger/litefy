@@ -3,16 +3,25 @@
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { SpotifyArtistService } from './../../services/spotify-artist.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { SettingsService } from 'src/app/services/settings.service';
+import { Settings } from 'src/app/models/settings';
+import { SettingsBase } from 'src/app/models/base/settings-base';
 
 @Component({
   selector: 'app-artist',
   templateUrl: './artist.component.html',
   styleUrls: ['./artist.component.css']
 })
-export class ArtistComponent implements OnInit {
+export class ArtistComponent extends SettingsBase implements OnInit {
 
-  constructor(private artistService: SpotifyArtistService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private artistService: SpotifyArtistService,
+    private activatedRoute: ActivatedRoute,
+    injector: Injector
+  ) {
+    super(injector);
+  }
 
   artist: SpotifyApi.SingleArtistResponse;
   topTracks: SpotifyApi.ArtistsTopTracksResponse;
@@ -21,11 +30,15 @@ export class ArtistComponent implements OnInit {
 
   id: string;
 
+  settings: Settings[];
+
   ngOnInit() {
     this.activatedRoute.params.subscribe(item => {
       this.id = item.id;
       this.getAllInfoFromArtist();
     });
+
+    super.init();
   }
 
   getAllInfoFromArtist() {

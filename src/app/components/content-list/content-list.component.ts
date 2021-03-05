@@ -1,16 +1,28 @@
 import { Router } from '@angular/router';
 import { ServiceBase } from './../../services/service.base';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnInit } from '@angular/core';
+import { SettingsService } from 'src/app/services/settings.service';
+import { Settings } from 'src/app/models/settings';
+import { SettingsBase } from 'src/app/models/base/settings-base';
 
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.css']
 })
-export class ContentListComponent implements OnInit {
+export class ContentListComponent extends SettingsBase implements OnInit {
 
-  constructor(private playerService: SpotifyPlayerService, private service: ServiceBase, private router: Router) { }
+  constructor(
+    private playerService: SpotifyPlayerService,
+    private service: ServiceBase,
+    private router: Router,
+    injector: Injector
+  ) {
+    super(injector);
+  }
+
+  settings: Settings[];
 
   @Input() titulo: string;
   @Input() tipo: 'track' | 'playlist' | 'album' | 'artist';
@@ -28,6 +40,8 @@ export class ContentListComponent implements OnInit {
     });
 
     this.getPlayerStatus();
+
+    super.init();
   }
 
   getPlayerStatus() {
@@ -38,7 +52,7 @@ export class ContentListComponent implements OnInit {
 
   pausar() {
     this.playerService.pause(this.device_id)
-    .subscribe();
+      .subscribe();
   }
 
   getRootItem(item: any) {

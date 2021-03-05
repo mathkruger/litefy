@@ -1,8 +1,8 @@
 <div class="app container mt-4" *ngIf="artist">
   <div class="row">
     <div class="col-md-12">
-      <div class="artist-header" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
-        <div class="img-circle" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
+      <div class="artist-header" [ngStyle]="{'background-image': canLoadImage() ? 'url(' + artist.images[0].url + ')' : ''}">
+        <div *ngIf="canLoadImage()" class="img-circle" [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')'}">
         </div>
         <h1>
           {{ artist.name }}
@@ -39,7 +39,7 @@
       <div class="related-artists-grid">
         <a *ngFor="let item of related['artists']" [routerLink]="['/artist/' + item.id]" class="artist">
           <div class="img-circle"
-            [ngStyle]="{'background-image': 'url(' + (item.images.length > 0 ? item.images[0].url : 'assets/standart-artist-icon.png') + ')'}">
+            [ngStyle]="{'background-image': 'url(' + (item.images.length > 0 && canLoadImage() ? item.images[0].url : 'assets/standart-artist-icon.png') + ')'}">
           </div>
           <strong class="mt-2">{{ item.name }}</strong>
         </a>

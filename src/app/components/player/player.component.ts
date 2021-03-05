@@ -1,9 +1,10 @@
 import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, Injector, OnChanges, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+import { SettingsBase } from 'src/app/models/base/settings-base';
 
 declare var Spotify: any;
 
@@ -12,14 +13,17 @@ declare var Spotify: any;
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css'],
 })
-export class PlayerComponent implements OnInit, OnChanges {
+export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
   constructor(
     private auth: AuthService,
     private playerService: SpotifyPlayerService,
     private toastr: ToastrService,
     private router: Router,
-    public translate: TranslateService
-  ) { }
+    public translate: TranslateService,
+    injector: Injector
+  ) {
+    super(injector);
+  }
 
   player: any;
   playerStatus: any;
@@ -50,6 +54,8 @@ export class PlayerComponent implements OnInit, OnChanges {
     if (shuffleStatusSaved === 'true') {
       this.toggleShuffle();
     }
+
+    super.init();
   }
 
   ngOnChanges() {
