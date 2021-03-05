@@ -43,5 +43,8 @@
     "SearchArtists": "Artistas",
 
     "KaraokeNotFoundText": "Nenhuma letra encontrada, mas você pode tentar buscar manualmente através do botão abaixo.",
-    "KaraokeSearchText": "Buscar"
+    "KaraokeSearchText": "Buscar",
+
+    "SettingsPageTitle": "Configurações",
+    "SettingsImageText": "Carregar imagens (album, artistas, playlists, etc.)"
 }
