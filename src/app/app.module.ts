@@ -35,6 +35,7 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
 import { VolumeBoxComponent } from './components/volume-box/volume-box.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { YoutubePlayerComponent } from './components/youtube-player/youtube-play
     KaraokeComponent,
     VolumeBoxComponent,
     SettingsComponent,
-    YoutubePlayerComponent
+    YoutubePlayerComponent,
+    UserProfileComponent
   ],
   imports: [
     CommonModule,

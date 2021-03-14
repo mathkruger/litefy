@@ -1,0 +1,22 @@
+  <div class="app container mt-4">
+    <h2 class="mb-3">👤 {{ 'ProfileText' | translate }}</h2>
+
+    <div class="row">
+      <div *ngIf="canLoadImage()" class="col-md-4">
+        <div class="profile-pic">
+          <div *ngIf="canLoadImage()" class="img-circle" [ngStyle]="{'background-image': 'url(' + (activeUser?.images.length > 0 ? activeUser.images[0].url : 'assets/standart-artist-icon.png') + ')'}">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="list-group">
+          <span> {{ activeUser.display_name }} </span>
+          <span> {{ activeUser.id }} </span>
+          <span> {{ activeUser.followers.total }} {{ 'FollowersText' | translate | lowercase }} </span>
+          <span> {{ activeUser.email }} </span>
+          <span> {{ activeUser.country }} </span>
+          <span> {{ activeUser.product }} </span>
+        </div>
+      </div>
+    </div>
+  </div>

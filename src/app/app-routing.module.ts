@@ -12,6 +12,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NaoLoginGuardService } from './services/guardians/nao-logino-guard.service';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,11 @@ const routes: Routes = [
     component: LoginCallbackComponent,
     canActivate: [NaoLoginGuardService]
   },
+  {
+    path: 'profile',
+    component: UserProfileComponent,
+    canActivate: [LoginGuardService]
+  }
 ];
 
 @NgModule({
