@@ -34,6 +34,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 import { VolumeBoxComponent } from './components/volume-box/volume-box.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
     LanguageSwitcherComponent,
     KaraokeComponent,
     VolumeBoxComponent,
-    SettingsComponent
+    SettingsComponent,
+    YoutubePlayerComponent
   ],
   imports: [
     CommonModule,

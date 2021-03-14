@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { SpotifyPlayerService } from './../../services/spotify-player.service';
-import { Component, Injector, OnChanges, OnInit } from '@angular/core';
+import { Component, Injector, Input, OnChanges, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 import { SettingsBase } from 'src/app/models/base/settings-base';
@@ -40,26 +40,34 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
 
   shufflemodeKey = 'shuffle';
 
+  @Input() premium = true;
+
   ngOnInit() {
-    this.initPlayer();
-    this.playerService.getPlayerProgress().subscribe(item => {
-      this.progress = item;
-      const procentagem = (this.progress / (this.playerStatus?.item?.duration_ms || 0)) * 100;
-      this.seekStyle = {
-        'background': `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`
-      };
-    });
+    if(this.premium) {
+      this.initPlayer();
 
-    const shuffleStatusSaved = localStorage.getItem(this.shufflemodeKey);
-    if (shuffleStatusSaved === 'true') {
-      this.toggleShuffle();
+      this.playerService.getPlayerProgress().subscribe(item => {
+        this.progress = item;
+        const procentagem = (this.progress / (this.playerStatus?.item?.duration_ms || 0)) * 100;
+        this.seekStyle = {
+          'background': `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`
+        };
+      });
+
+      const shuffleStatusSaved = localStorage.getItem(this.shufflemodeKey);
+      if (shuffleStatusSaved === 'true') {
+        this.toggleShuffle();
+      }
+
+      super.init();
     }
-
-    super.init();
+    
   }
 
   ngOnChanges() {
-    this.transferirPlayer();
+    if(this.premium) {
+      this.transferirPlayer();
+    }
   }
 
   initPlayer() {

@@ -1,0 +1,16 @@
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: .5rem;
+    background: var(--spt-black);
+    z-index: 9999;
+}
+
+
+@media screen and (max-width: 507px) {
+    .player-wrapper {
+        flex-direction: column-reverse;
+    }
+}

@@ -61,7 +61,7 @@
   <div class="d-flex justify-content-between align-items-center">
     <div class="user-area mr-2" *ngIf="auth.Autenticado()">
       <div class="cabecalho" (click)="userMenuAberto = !userMenuAberto">
-        <img *ngIf="canLoadImage()" class="mr-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
+        <img *ngIf="canLoadImage()" onerror="this.src = 'assets/standart-artist-icon.png'" class="mr-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
   
         <div class="textos text-white hide-mobile">
           <strong class="mb-0">{{ dados?.display_name }}</strong>

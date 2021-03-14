@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:ci": "ng build --prod --sourceMap=false --base-href /litefy/",
-    "sonar":"sonar-scanner"
+    "sonar": "sonar-scanner"
   },
   "husky": {
     "hooks": {

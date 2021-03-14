@@ -3,4 +3,5 @@
 
 <router-outlet></router-outlet>
 
-<app-player *ngIf="auth.Autenticado()"></app-player>
+<app-player *ngIf="auth.Autenticado() && user?.product === 'premium'"></app-player>
+<app-youtube-player *ngIf="auth.Autenticado() && user.product !== 'premium'"></app-youtube-player>

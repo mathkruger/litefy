@@ -5,6 +5,11 @@ import { Component, Injector, Input, OnInit } from '@angular/core';
 import { SettingsService } from 'src/app/services/settings.service';
 import { Settings } from 'src/app/models/settings';
 import { SettingsBase } from 'src/app/models/base/settings-base';
+import { YoutubeService } from 'src/app/services/youtube/youtube.service';
+import { YoutubePlayerService } from 'src/app/services/youtube/youtube-player.service';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-content-list',
@@ -17,11 +22,15 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     private playerService: SpotifyPlayerService,
     private service: ServiceBase,
     private router: Router,
+    private youtubeService: YoutubeService,
+    private youtubePlayerService: YoutubePlayerService,
+    private userService: UserService,
     injector: Injector
   ) {
     super(injector);
   }
 
+  user: User;
   settings: Settings[];
 
   @Input() titulo: string;
@@ -33,15 +42,23 @@ export class ContentListComponent extends SettingsBase implements OnInit {
 
   device_id: string;
   playerState: any;
+  premium = true;
 
   ngOnInit() {
-    this.playerService.getDeviceId().subscribe(deviceId => {
-      this.device_id = deviceId;
+    this.userService.getUser().subscribe(item => {
+      this.user = item;
+      this.premium = this.user.product === 'premium';
+
+      if (this.premium) {
+        this.playerService.getDeviceId().subscribe(deviceId => {
+          this.device_id = deviceId;
+        });
+
+        this.getPlayerStatus();
+      }
+
+      super.init();
     });
-
-    this.getPlayerStatus();
-
-    super.init();
   }
 
   getPlayerStatus() {
@@ -69,6 +86,30 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     }
   }
 
+  playTrack(itemSelecionado) {
+    if (this.premium) {
+      if (this.playerState?.item.id == this.getRootItem(itemSelecionado).id) {
+        if (!this.playerState?.is_playing) {
+          this.selecionar(this.getRootItem(itemSelecionado).uri);
+        }
+        else {
+          this.pausar()
+        }
+      }
+      else {
+        this.selecionar(this.getRootItem(itemSelecionado).uri);
+      }
+    }
+    else {
+      this.youtubeService.getVideo(this.album ? this.album.artists[0].name : this.getRootItem(itemSelecionado).album.artists[0].name, this.getRootItem(itemSelecionado).name)
+        .subscribe(id => {
+          console.log(id);
+          this.youtubePlayerService.openOne(id);
+          this.youtubePlayerService.play();
+        });
+    }
+  }
+
   selecionar(itemSelecionado) {
     this.playerService.play(this.device_id, itemSelecionado)
       .subscribe(() => {
@@ -80,7 +121,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
   }
 
   add(itemSelecionado) {
-    this.playerService.add(itemSelecionado, this.device_id)
+    this.playerService.add(this.getRootItem(itemSelecionado).uri, this.device_id)
       .subscribe(() => {
         this.playerService.getCurrentState()
           .subscribe(item => {
@@ -93,18 +134,22 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     const uris = [];
 
     this.playerService.getAlbumTracks(id).subscribe(items => {
-
-      items.items.forEach((track) => {
-        uris.push(track.uri);
-      });
-
-      this.playerService.play(this.device_id, null, uris)
-        .subscribe(() => {
-          this.playerService.getCurrentState()
-            .subscribe(state => {
-              this.playerService.setPlayerStatus(state);
-            });
+      if (this.premium) {
+        items.items.forEach((track) => {
+          uris.push(track.uri);
         });
+
+        this.playerService.play(this.device_id, null, uris)
+          .subscribe(() => {
+            this.playerService.getCurrentState()
+              .subscribe(state => {
+                this.playerService.setPlayerStatus(state);
+              });
+          });
+      }
+      else {
+        this.youtubePlayMultiple(items.items);
+      }
     });
 
   }
@@ -114,28 +159,59 @@ export class ContentListComponent extends SettingsBase implements OnInit {
 
 
     this.service.Get<any>(item.tracks.href).subscribe(items => {
-      items.items.forEach((track) => {
-        uris.push(track.track.uri);
-      });
+      if (this.premium) {
+        items.items.forEach((track) => {
+          uris.push(track.track.uri);
+        });
 
-      this.playerService.play(this.device_id, null, uris)
+        this.playerService.play(this.device_id, null, uris)
+          .subscribe(() => {
+            this.playerService.getCurrentState()
+              .subscribe(item => {
+                this.playerService.setPlayerStatus(item);
+              });
+          });
+      }
+      else {
+        this.youtubePlayMultiple(items.items, false, true);
+      }
+    });
+
+  }
+
+  tocarTodas() {
+    if (this.premium) {
+      this.playerService.play(this.device_id, null, this.lista.map(item => this.getRootItem(item).uri))
         .subscribe(() => {
           this.playerService.getCurrentState()
             .subscribe(item => {
               this.playerService.setPlayerStatus(item);
             });
         });
-    });
-
+    }
+    else {
+      this.youtubePlayMultiple(this.lista, true);
+    }
   }
 
-  tocarTodas() {
-    this.playerService.play(this.device_id, null, this.lista.map(item => this.getRootItem(item).uri))
-      .subscribe(() => {
-        this.playerService.getCurrentState()
-          .subscribe(item => {
-            this.playerService.setPlayerStatus(item);
-          });
+  youtubePlayMultiple(list, useDifferentRoot = false, isPlaylist = false) {
+    const reqs = [];
+
+    list.forEach((track) => {
+      if (useDifferentRoot) {
+        reqs.push(this.youtubeService.getVideo(this.getRootItem(track).artists[0].name, this.getRootItem(track).name));
+      }
+      else if (isPlaylist) {
+        reqs.push(this.youtubeService.getVideo(track.track.artists[0].name, track.track.name));
+      }
+      else {
+        reqs.push(this.youtubeService.getVideo(track.artists[0].name, track.name));
+      }
+    });
+
+    forkJoin(reqs)
+      .subscribe(ids => {
+        this.youtubePlayerService.openMultiple(ids as string[]);
       });
   }
 }

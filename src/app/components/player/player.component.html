@@ -1,15 +1,15 @@
 <div class="player">
-  <div *ngIf="playerStatus" class="player-wrapper d-flex justify-content-between align-items-center">
-    <div class="tracking">
+  <div *ngIf="premium ? playerStatus : true" class="player-wrapper d-flex justify-content-between align-items-center">
+    <div class="tracking" *ngIf="premium">
       <input id="playerSeek" #playerSeek [ngStyle]="seekStyle" type="range" [value]="progress / 1000" min="0"
-        [max]="playerStatus.item.duration_ms / 1000" class="form-control-range range-player"
+        [max]="playerStatus?.item.duration_ms / 1000" class="form-control-range range-player"
         (change)="seekToPosition(playerSeek.value * 1000)">
     </div>
 
     <div class="d-flex align-items-center text-white">
-      <a *ngIf="playerStatus && canLoadImage()" [routerLink]="['album/' + playerStatus.item.album.id]">
-        <img [alt]="playerStatus.item.album.name" [title]="playerStatus.item.album.name"
-          [src]="playerStatus.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
+      <a *ngIf="playerStatus && canLoadImage()" [routerLink]="['album/' + playerStatus?.item.album.id]">
+        <img [alt]="playerStatus?.item.album.name" [title]="playerStatus?.item.album.name"
+          [src]="playerStatus?.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
       </a>
 
       <div class="d-flex flex-column">
@@ -25,14 +25,14 @@
               <line x1="9" y1="8" x2="19" y2="8" />
             </svg>
 
-            {{ playerStatus ? playerStatus.item.name : '--' }}
+            {{ playerStatus ? playerStatus?.item.name : '--' }}
           </span>
-          <span>
-            ({{ progress | msToString }} - {{ playerStatus.item.duration_ms | msToString }})
+          <span *ngIf="premium">
+            ({{ progress | msToString }} - {{ playerStatus?.item.duration_ms | msToString }})
           </span>
         </strong>
 
-        <a [routerLink]="['album/' + playerStatus.item.album.id]">
+        <a [routerLink]="['album/' + playerStatus?.item.album.id]">
           <small class="string-limited small">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-disc" width="12" height="12"
               viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -44,11 +44,11 @@
               <path d="M12 17a5 5 0 0 0 5 -5" />
             </svg>
 
-            {{ playerStatus ? playerStatus.item.album.name : '--' }}
+            {{ playerStatus ? playerStatus?.item.album.name : '--' }}
           </small>
         </a>
 
-        <a [routerLink]="['artist/' + playerStatus.item.album.artists[0]?.id]">
+        <a [routerLink]="['artist/' + playerStatus?.item.album.artists[0]?.id]">
           <small>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="12" height="12"
               viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -58,7 +58,7 @@
               <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
             </svg>
 
-            {{ playerStatus ? playerStatus.item.album.artists[0]?.name : '--' }}
+            {{ playerStatus ? playerStatus?.item.album.artists[0]?.name : '--' }}
           </small>
         </a>
       </div>
@@ -66,7 +66,7 @@
 
     <div class="botoes-contole">
       <div class="btn-group volume-btn" role="group">
-        <button [disabled]="!playerStatus" type="button" (click)="previous()" class="button-custom">
+        <button [disabled]="premium ? !playerStatus : false" type="button" (click)="previous()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-back" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
@@ -75,7 +75,7 @@
             <line x1="4" y1="5" x2="4" y2="19" />
           </svg>
         </button>
-        <button [disabled]="!playerStatus" *ngIf="!playerStatus.is_playing" type="button" (click)="play()"
+        <button [disabled]="premium ? !playerStatus : false" *ngIf="!playerStatus?.is_playing" type="button" (click)="play()"
           class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -84,7 +84,7 @@
             <path d="M7 4v16l13 -8z" />
           </svg>
         </button>
-        <button [disabled]="!playerStatus" *ngIf="playerStatus.is_playing" type="button" (click)="pause()"
+        <button [disabled]="premium ? !playerStatus : false" *ngIf="playerStatus?.is_playing" type="button" (click)="pause()"
           class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -95,7 +95,7 @@
           </svg>
         </button>
 
-        <button [disabled]="!playerStatus" type="button" (click)="next()" class="button-custom">
+        <button [disabled]="premium ? !playerStatus : false" type="button" (click)="next()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-forward" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
@@ -105,23 +105,27 @@
           </svg>
         </button>
 
-        <div class="separator"></div>
+        <ng-container *ngIf="premium">
+          <div class="separator"></div>
+  
+          <app-volume-box [disabled]="!playerStatus" [device_id]="device_id" [value]="playerStatus?.device.volume_percent"
+            (change)="getCurrentState()">
+          </app-volume-box>
+  
+          <button [disabled]="!playerStatus" type="button" (click)="toggleShuffle();" class="button-custom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-2" width="32" height="32"
+              viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 17h5l1.67 -2.386m3.66 -5.227l1.67 -2.387h6" />
+              <path d="M18 4l3 3l-3 3" />
+              <path d="M3 7h5l7 10h6" />
+              <path d="M18 20l3 -3l-3 -3" />
+            </svg>
+          </button>
+        </ng-container>
+        
 
-        <app-volume-box [disabled]="!playerStatus" [device_id]="device_id" [value]="playerStatus.device.volume_percent"
-          (change)="getCurrentState()">
-        </app-volume-box>
-
-        <button [disabled]="!playerStatus" type="button" (click)="toggleShuffle();" class="button-custom">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-switch-2" width="32" height="32"
-            viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 17h5l1.67 -2.386m3.66 -5.227l1.67 -2.387h6" />
-            <path d="M18 4l3 3l-3 3" />
-            <path d="M3 7h5l7 10h6" />
-            <path d="M18 20l3 -3l-3 -3" />
-          </svg>
-        </button>
       </div>
     </div>
   </div>

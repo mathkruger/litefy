@@ -113,7 +113,7 @@
 
     <div class="opcoes">
       <div class="btn-group" role="group">
-        <button *ngIf="tipo == 'track'" class="btn btn-dark" (click)="add(getRootItem(item).uri)">
+        <button *ngIf="tipo == 'track' && premium" class="btn btn-dark" (click)="add(item)">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="24"
             viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
@@ -134,7 +134,7 @@
         </button>
 
         <button *ngIf="tipo == 'track'"
-          class="btn btn-dark" (click)="playerState?.item.id == getRootItem(item).id ? (!playerState?.is_playing ? selecionar(getRootItem(item).uri) : pausar()) : selecionar(getRootItem(item).uri)">
+          class="btn btn-dark" (click)="playTrack(item)">
           <svg *ngIf="playerState?.item.id == getRootItem(item).id ? !playerState?.is_playing : true" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
