@@ -23,19 +23,16 @@ export class YoutubeService {
     }
 
     getVideo(artist: string, trackName: string) {
-        const searchLink = `https://html.duckduckgo.com/html/?q=${artist} - ${trackName}`;
-
+        const searchLink = `https://html.duckduckgo.com/html/?q=${artist} - ${trackName} youtube`;
+        
         return this.http.get<any>(`https://api.allorigins.win/get?url=${encodeURIComponent(searchLink)}`)
         .pipe(map(item => {
             const text = item.contents;
             const parser = new DOMParser();
             const doc = parser.parseFromString(text, "text/html");
             const resultArray = Array.from(doc.querySelectorAll('.links_main'));
-            const result = resultArray.filter(x => {
-                return x.querySelector('.result__snippet').getAttribute('href').includes('youtube');
-            })[0].querySelector('.result__snippet');
 
-            return decodeURIComponent(result.getAttribute('href')).split('?v=')[1];
+            return decodeURIComponent(resultArray[0].querySelector('.result__snippet').getAttribute('href')).split('?v=')[1];
         }));
     }
 }

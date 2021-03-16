@@ -10,6 +10,7 @@ import { YoutubePlayerService } from 'src/app/services/youtube/youtube-player.se
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
 import { forkJoin } from 'rxjs';
+import { YoutubePlayerStatus } from 'src/app/models/youtube-player-status';
 
 @Component({
   selector: 'app-content-list',
@@ -101,9 +102,17 @@ export class ContentListComponent extends SettingsBase implements OnInit {
       }
     }
     else {
-      this.youtubeService.getVideo(this.album ? this.album.artists[0].name : this.getRootItem(itemSelecionado).album.artists[0].name, this.getRootItem(itemSelecionado).name)
+      const artist = this.album ? this.album.artists[0].name : this.getRootItem(itemSelecionado).album.artists[0].name;
+      const track = this.getRootItem(itemSelecionado).name;
+      this.youtubeService.getVideo(artist, track)
         .subscribe(id => {
-          console.log(id);
+          const aux = new YoutubePlayerStatus();
+          
+          aux.artistName = artist;
+          aux.trackName = track;
+
+          this.youtubePlayerService.setPlayerStatus(aux);
+
           this.youtubePlayerService.openOne(id);
           this.youtubePlayerService.play();
         });
@@ -196,17 +205,30 @@ export class ContentListComponent extends SettingsBase implements OnInit {
 
   youtubePlayMultiple(list, useDifferentRoot = false, isPlaylist = false) {
     const reqs = [];
+    this.youtubePlayerService.currentPlaylist = [];
+    const aux = new YoutubePlayerStatus();
 
     list.forEach((track) => {
       if (useDifferentRoot) {
         reqs.push(this.youtubeService.getVideo(this.getRootItem(track).artists[0].name, this.getRootItem(track).name));
+        
+        aux.artistName = this.getRootItem(track).artists[0].name;
+        aux.trackName = this.getRootItem(track).name;
       }
       else if (isPlaylist) {
         reqs.push(this.youtubeService.getVideo(track.track.artists[0].name, track.track.name));
+
+        aux.artistName = track.track.artists[0].name;
+        aux.trackName = track.track.name;
       }
       else {
         reqs.push(this.youtubeService.getVideo(track.artists[0].name, track.name));
+
+        aux.artistName = track.artists[0].name
+        aux.trackName = track.name;
       }
+
+      this.youtubePlayerService.currentPlaylist.push(JSON.parse(JSON.stringify(aux)));
     });
 
     forkJoin(reqs)

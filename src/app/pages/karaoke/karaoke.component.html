@@ -1,6 +1,7 @@
 <ng-container *ngIf="lyrics && playerStatus">
   <div class="app container text-center mt-4">
-    <h2 class="mb-3">{{ playerStatus.item.name }} - {{ playerStatus.item.album.artists[0]?.name }}</h2>
+    <h2 *ngIf="premium" class="mb-3">{{ playerStatus.item.name }} - {{ playerStatus.item.album.artists[0]?.name }}</h2>
+    <h2 *ngIf="!premium" class="mb-3">{{ playerStatus.trackName }} - {{ playerStatus.artistName }}</h2>
 
     <p *ngIf="notFound === false" [innerHTML]="lyrics.mus[0].text">
     </p>
@@ -10,7 +11,8 @@
         {{ 'KaraokeNotFoundText' | translate }}
       </p>
       <a target="blank"
-        [href]="'https://www.google.com/search?q=' + playerStatus.item.name + ' ' + playerStatus.item.album.artists[0]?.name + ' lyrics'"
+        [href]="'https://www.google.com/search?q=' + premium ? playerStatus.item.name : playerStatus.trackName + ' ' +
+        premium ? playerStatus.item.album.artists[0]?.name : playerStatus.artistName + ' lyrics'"
         class="btn btn-success btn-lg">
         {{ 'KaraokeSearchText' | translate }}
       </a>
