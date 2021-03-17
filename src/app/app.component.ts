@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(public auth: AuthService, public translate: TranslateService, private settingsService: SettingsService) {
     const defaultLanguage = window.localStorage.getItem('languageSelected');
-    translate.addLangs(['pt', 'en', 'es']);
+    translate.addLangs(['pt', 'en', 'es', 'fr']);
     translate.setDefaultLang(defaultLanguage || 'pt');
   }
 

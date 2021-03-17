@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:ci": "ng build --prod --sourceMap=false --base-href /litefy/",
-    "sonar":"sonar-scanner"
+    "sonar": "sonar-scanner"
   },
   "husky": {
     "hooks": {
@@ -40,7 +40,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1002.1",
+    "@angular-devkit/build-angular": "^0.1002.3",
     "@angular/cli": "~10.2.1",
     "@angular/compiler-cli": "~10.2.4",
     "@angular/language-service": "~10.2.4",

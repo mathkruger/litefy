@@ -1,0 +1,50 @@
+{
+    "LoginDescriptionText": "Litefy. Un client Spotify pour les appareils bas de gamme",
+    "LoginText": "Nous pensons que vous n'avez pas besoin d'un super appareil pour profiter de votre musique. Nous pensons que vous n'avez pas besoin de suivre toutes les nouvelles technologies pour vous divertir. C'est pourquoi Litefy existe.",
+    "LoginButtonText": "Connectez-vous avec Spotify",
+
+    "SearchPlaceholderText": "Pistes, album, artiste, playlist ...",
+
+    "MenuSearchText": "Recherche",
+    "MenuLibraryText": "Bibliothèque",
+    "MenuKaraokeText": "Mode karaoké",
+
+    "HomeArtistsText": "Artistes favoris",
+    "HomeMusicsText": "Pistes favories",
+    "HomeAlbumsText": "Nouveautés",
+    "HomePlaylistsText": "Listes de lecture recommandées",
+
+    "ArtistTracksText": "Pistes les plus consultées",
+    "ArtistAlbumsText": "Albums",
+    "ArtistRelatedText": "Artistes liés",
+
+    "Hello": "Bienvenue",
+    "LibraryTracksText": "Pistes",
+    "LibraryAlbumsText": "Albums",
+    "LibraryPlaylistsText": "Listes de lecture",
+
+    "MusicListTracks": "Piste",
+    "MusicListTracksPlural": "s",
+    "MusicListFollowers": "Abonné",
+    "MusicListFollowersPlural": "s",
+    "DescriptionText": "Description",
+
+    "PlayingText": "En lecture",
+    "PausedText": "En pause",
+    "NextText": "Piste suivante",
+    "PreviousText": "Piste précédente",
+    "ShuffleOnText": "Mode aléatoire activé",
+    "ShuffleOffText": "Mode aléatoire désactivé",
+
+    "ExitText": "Quitter",
+    "ProfileText": "Profile",
+    "SettingsText": "Paramètres",
+
+    "SearchArtists": "Artists",
+
+    "KaraokeNotFoundText": "Les paroles sont indisponibles, mais vous pouvez essayer de rechercher manuellement en utilisant le bouton ci-dessous",
+    "KaraokeSearchText": "Recherche",
+
+	"SettingsPageTitle": "Paramètres",
+    "SettingsImageText": "Chargement des images(album, artists, Listes de lecture, etc.)"
+}
