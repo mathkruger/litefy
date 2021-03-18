@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { YoutubePlayerStatus } from 'src/app/models/youtube-player-status';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
+import { YoutubePlayerStatus } from "src/app/models/youtube-player-status";
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: "root",
 })
 export class YoutubePlayerService {
     videoContainerId: string;
@@ -25,35 +25,35 @@ export class YoutubePlayerService {
     isRestricted = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     init() {
-        if (window['YT']) {
+        if (window["YT"]) {
             this.startVideo();
             return;
         }
 
-        var tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        var firstScriptTag = document.getElementsByTagName('script')[0];
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName("script")[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        window['onYouTubeIframeAPIReady'] = () => this.startVideo();
+        window["onYouTubeIframeAPIReady"] = () => this.startVideo();
     }
 
     toggleVideo() {
-        if (this.showVideo)
+        if (this.showVideo) {
             this.showVideo = false;
-        else {
+        } else {
             this.showVideo = true;
             setTimeout(() => {
-                this.init()
-            })
+                this.init();
+            });
         }
     }
 
     startVideo() {
         this.reframed = false;
-        this.player = new window['YT'].Player(this.videoContainerId, {
-            height: '100',
-            width: '100',
+        this.player = new window["YT"].Player(this.videoContainerId, {
+            height: "100",
+            width: "100",
             playerVars: {
                 autoplay: 0,
                 modestbranding: 0,
@@ -63,13 +63,13 @@ export class YoutubePlayerService {
                 showinfo: 0,
                 fs: 0,
                 playsinline: 1,
-                playlist: ''
+                playlist: "",
             },
             events: {
-                'onStateChange': this.onPlayerStateChange.bind(this),
-                'onError': this.onPlayerError.bind(this),
-                'onReady': this.onPlayerReady.bind(this),
-            }
+                onStateChange: this.onPlayerStateChange.bind(this),
+                onError: this.onPlayerError.bind(this),
+                onReady: this.onPlayerReady.bind(this),
+            },
         });
     }
 
@@ -79,40 +79,43 @@ export class YoutubePlayerService {
 
     onPlayerStateChange(event) {
         switch (event.data) {
-            case window['YT'].PlayerState.PLAYING:
-                if(this.currentPlaylist != null && this.currentPlaylist.length > 0) {
+            case window["YT"].PlayerState.PLAYING:
+                if (
+                    this.currentPlaylist != null &&
+                    this.currentPlaylist.length > 0
+                ) {
                     const index = this.player.getPlaylistIndex();
                     this.playerStatus = this.currentPlaylist[index];
                 }
                 this.playerStatus.isPlaying = true;
                 this.setPlayerStatus(this.playerStatus);
                 break;
-            case window['YT'].PlayerState.PAUSED:
+            case window["YT"].PlayerState.PAUSED:
                 this.playerStatus.isPlaying = false;
                 this.setPlayerStatus(this.playerStatus);
                 break;
-            case window['YT'].PlayerState.ENDED:
+            case window["YT"].PlayerState.ENDED:
                 this.playerStatus.isPlaying = false;
                 this.setPlayerStatus(this.playerStatus);
                 break;
-        };
-    };
+        }
+    }
 
     cleanTime() {
-        return Math.round(this.player.getCurrentTime())
-    };
+        return Math.round(this.player.getCurrentTime());
+    }
 
     onPlayerError(event) {
         switch (event.data) {
             case 2:
-                console.log('' + this.video)
+                console.log("" + this.video);
                 break;
             case 100:
                 break;
             case 101 || 150:
                 break;
-        };
-    };
+        }
+    }
 
     setPlayerItem(item: any) {
         if (item !== undefined) {

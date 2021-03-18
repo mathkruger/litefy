@@ -9,16 +9,16 @@ export class SettingsBase {
         this.settingsService = injector.get(SettingsService);
     }
 
-
     settings: Settings[];
 
     init() {
-        this.settingsService.getSettings().subscribe(item => {
+        this.settingsService.getSettings().subscribe((item) => {
             this.settings = item;
         });
     }
 
     canLoadImage() {
-        return this.settings.find(x => x.description == 'SettingsImageText').active;
+        return this.settings.find((x) => x.description === "SettingsImageText")
+            .active;
     }
 }
