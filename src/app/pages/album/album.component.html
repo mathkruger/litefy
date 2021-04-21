@@ -26,7 +26,7 @@
 
           |
 
-          {{ album.total_tracks }} <span style="text-transform: lowercase;">{{ 'MusicListTracks' | translate }}{{ album.total_tracks > 1 || album.total_tracks == 0 ? ('MusicListTracksPlural' | translate) : '' }}</span>
+          {{ album.total_tracks }} <span style="text-transform: lowercase;">{{ album.total_tracks > 1 || album.total_tracks == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span>
         </h3>
       </div>
     </div>
