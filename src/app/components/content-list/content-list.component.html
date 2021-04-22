@@ -92,7 +92,7 @@
           {{ getRootItem(item).artists[0].name }}
         </a>
         -
-        {{ getRootItem(item).total_tracks }} <span style="text-transform: lowercase;">{{ 'MusicListTracks' | translate }}{{ getRootItem(item).total_tracks > 1 || getRootItem(item).total_tracks == 0 ? ('MusicListTracksPlural' | translate) : '' }}</span>
+        {{ getRootItem(item).total_tracks }} <span style="text-transform: lowercase;">{{ getRootItem(item).total_tracks > 1 || getRootItem(item).total_tracks == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span>
       </span>
 
       <span *ngIf="tipo == 'playlist'">
@@ -102,12 +102,12 @@
         -
         {{ getRootItem(item).owner.display_name }} - {{
         getRootItem(item).tracks.total }}
-        <span style="text-transform: lowercase;">{{ 'MusicListTracks' | translate }}{{ getRootItem(item).tracks.total > 1 || getRootItem(item).tracks.total == 0 ? ('MusicListTracksPlural' | translate) : '' }}</span></span>
+        <span style="text-transform: lowercase;">{{ getRootItem(item).tracks.total > 1 || getRootItem(item).tracks.total == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span></span>
 
       <span *ngIf="tipo == 'artist'">{{ getRootItem(item).name }} - {{
         getRootItem(item).followers.total }}
         
-        <span style="text-transform: lowercase;">{{ 'MusicListFollowers' | translate }}{{ getRootItem(item).followers.total > 1 || getRootItem(item).followers.total == 0 ? ('MusicListFollowersPlural' | translate) : '' }}</span>
+        <span style="text-transform: lowercase;">{{ getRootItem(item).followers.total > 1 || getRootItem(item).followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
       </span>
     </div>
 
