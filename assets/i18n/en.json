@@ -1,4 +1,6 @@
 {
+    "direction": "ltr",
+    
     "LoginDescriptionText": "Litefy. A spotify client for low-end devices",
     "LoginText": "We believe that you don't need a super device to enjoy your music. We believe you don't need to keep up with all new tech to get entertained. That's why Litefy exists.",
     "LoginButtonText": "Login with Spotify",
@@ -24,9 +26,9 @@
     "LibraryPlaylistsText": "Playlists",
 
     "MusicListTracks": "Track",
-    "MusicListTracksPlural": "s",
+    "MusicListTracksPlural": "Tracks",
     "MusicListFollowers": "Follower",
-    "MusicListFollowersPlural": "s",
+    "MusicListFollowersPlural": "Followers",
     "DescriptionText": "Description",
 
     "PlayingText": "Playing",

@@ -1,0 +1,53 @@
+{
+    "direction": "rtl",
+    
+    "LoginDescriptionText": "לייטפיי. לקוח ספוטיפיי להתקני קצה חלשים",
+    "LoginText": "אנו מאמינים שאינך צריך מכשיר סופר-חזק על מנת להנות מהמוזיקה שלך. אנו מאמינים שאינך צריך לעמוד בקצב של כל הטכנולוגיות החדשות כדי להתבדר. זו סיבת הקיום של לייטפי.",
+    "LoginButtonText": "התחבר עם ספוטיפיי",
+
+    "SearchPlaceholderText": "רצועות, אלבום, אמן, פלייליסט ...",
+
+    "MenuSearchText": "חיפוש",
+    "MenuLibraryText": "ספרייה",
+    "MenuKaraokeText": "מצב קריוקי",
+
+    "HomeArtistsText": "האמנים האהובים עליך",
+    "HomeMusicsText": "השירים האהובים עליך",
+    "HomeAlbumsText": "אלבומים חדשים",
+    "HomePlaylistsText": "פלייליסטים מומלצים",
+
+    "ArtistTracksText": "הרוצועות המושמעות ביותר",
+    "ArtistAlbumsText": "אלבומים",
+    "ArtistRelatedText": "אמנים קשורים",
+
+    "Hello": "שלום",
+    "LibraryTracksText": "רצועות",
+    "LibraryAlbumsText": "אלבומים",
+    "LibraryPlaylistsText": "פלייליסטים",
+
+    "MusicListTracks": "רצועה",
+    "MusicListTracksPlural": "רצועות",
+    "MusicListFollowers": "עוקב",
+    "MusicListFollowersPlural": "עוקבים",
+    "DescriptionText": "תיאור",
+
+    "PlayingText": "מנגן",
+    "PausedText": "מושהה",
+    "NextText": "רצועה באה",
+    "PreviousText": "רצועה קודמת",
+    "ShuffleOnText": "מצב ערבוב פעיל",
+    "ShuffleOffText": "מצב ערבוב כבוי",
+
+    "ExitText": "יציאה",
+    "FollowersText": "עוקבים",
+    "ProfileText": "פרופיל",
+    "SettingsText": "הגדרות",
+
+    "SearchArtists": "אמנים",
+
+    "KaraokeNotFoundText": "לא נמצאו מילים, אך תוכלו לנסות לחפש ידנית בעזרת הכפתור למטה.",
+    "KaraokeSearchText": "חיפוש",
+
+    "SettingsPageTitle": "הגדרות",
+    "SettingsImageText": "טען תמונות (אלבום, אמנים, פלייליסטים וכו')"
+}
