@@ -10,6 +10,7 @@ import { UserService } from "src/app/services/user.service";
 import { User } from "src/app/models/user";
 import { forkJoin } from "rxjs";
 import { YoutubePlayerStatus } from "src/app/models/youtube-player-status";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
     selector: "app-content-list",
@@ -24,6 +25,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         private youtubeService: YoutubeService,
         private youtubePlayerService: YoutubePlayerService,
         private userService: UserService,
+        public translateService: TranslateService,
         injector: Injector
     ) {
         super(injector);
