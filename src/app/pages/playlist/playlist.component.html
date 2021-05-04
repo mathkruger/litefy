@@ -31,7 +31,7 @@
             <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
           </svg>
 
-          {{ playlist.followers.total }} <span style="text-transform: lowercase;">{{ playlist.followers.total > 1 || playlist.followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
+          {{ playlist.followers.total | numberLocale:this.translateService.currentLang }} <span style="text-transform: lowercase;">{{ playlist.followers.total > 1 || playlist.followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
         </h3>
       </div>
     </div>

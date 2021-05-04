@@ -12,7 +12,7 @@
         <div class="list-group">
           <span> {{ activeUser.display_name }} </span>
           <span> {{ activeUser.id }} </span>
-          <span> {{ activeUser.followers.total }} {{ 'FollowersText' | translate | lowercase }} </span>
+          <span> {{ activeUser.followers.total | numberLocale:this.translateService.currentLang }} {{ 'FollowersText' | translate | lowercase }} </span>
           <span> {{ activeUser.email }} </span>
           <span> {{ activeUser.country }} </span>
           <span> {{ activeUser.product }} </span>

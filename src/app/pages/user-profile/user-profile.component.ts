@@ -2,6 +2,7 @@ import { Component, Injector, OnInit } from '@angular/core';
 import { SettingsBase } from 'src/app/models/base/settings-base';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,7 @@ import { User } from 'src/app/models/user';
 })
 export class UserProfileComponent extends SettingsBase implements OnInit {
 
-  constructor(private userService: UserService, injector: Injector) {
+  constructor(private userService: UserService, public translateService: TranslateService, injector: Injector) {
     super(injector);
   }
 

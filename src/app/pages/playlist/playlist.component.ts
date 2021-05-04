@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { SpotifyPlaylistService } from './../../services/spotify-playlist.service';
 import { Component, Injector, OnInit } from '@angular/core';
 import { SettingsBase } from 'src/app/models/base/settings-base';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-playlist',
@@ -12,7 +13,7 @@ import { SettingsBase } from 'src/app/models/base/settings-base';
 })
 export class PlaylistComponent extends SettingsBase implements OnInit {
 
-  constructor(private playlistService: SpotifyPlaylistService, private activatedRoute: ActivatedRoute, injector: Injector) {
+  constructor(private playlistService: SpotifyPlaylistService, private activatedRoute: ActivatedRoute, injector: Injector, public translateService: TranslateService,) {
     super(injector);
   }
 

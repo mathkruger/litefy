@@ -101,11 +101,11 @@
         </a>
         -
         {{ getRootItem(item).owner.display_name }} - {{
-        getRootItem(item).tracks.total }}
+        getRootItem(item).tracks.total | numberLocale:this.translateService.currentLang }}
         <span style="text-transform: lowercase;">{{ getRootItem(item).tracks.total > 1 || getRootItem(item).tracks.total == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span></span>
 
       <span *ngIf="tipo == 'artist'">{{ getRootItem(item).name }} - {{
-        getRootItem(item).followers.total }}
+        getRootItem(item).followers.total | numberLocale:this.translateService.currentLang }}
         
         <span style="text-transform: lowercase;">{{ getRootItem(item).followers.total > 1 || getRootItem(item).followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
       </span>
