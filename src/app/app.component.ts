@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     ) {
         const defaultLanguage = window.localStorage.getItem("languageSelected");
         translate.addLangs(["pt", "en", "es", "he"]);
-        translate.setDefaultLang(defaultLanguage || "pt");
+        translate.use(defaultLanguage || "pt");
     }
 
     user: User;
