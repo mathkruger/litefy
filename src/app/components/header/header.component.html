@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark custom-bg d-flex justify-content-between align-items-center">
+<nav class="navbar navbar-expand-lg navbar-dark custom-bg d-flex justify-content-between align-items-center {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <div class="navegacao d-flex align-items-center">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img style="max-width: 38px; margin-right: .5em;" src="assets/logo.png" alt="Litefy Logo">
+      <img class="me-2" style="max-width: 38px;" src="assets/logo.png" alt="Litefy Logo">
       Litefy
     </a>
 
@@ -14,7 +14,7 @@
       </svg>
     </div>
 
-    <ul *ngIf="auth.Autenticado()" class="menu navbar-nav mr-auto" [ngClass]="{'open': menuAberto}">
+    <ul *ngIf="auth.Autenticado()" class="menu navbar-nav me-auto" [ngClass]="{'open': menuAberto}">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/search']" (click)="menuAberto = false">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32"
@@ -59,9 +59,9 @@
   </div>
 
   <div class="d-flex justify-content-between align-items-center">
-    <div class="user-area mr-2" *ngIf="auth.Autenticado()">
+    <div class="user-area me-2" *ngIf="auth.Autenticado()">
       <div class="cabecalho" (click)="userMenuAberto = !userMenuAberto">
-        <img *ngIf="canLoadImage()" onerror="this.src = 'assets/standart-artist-icon.png'" class="mr-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
+        <img *ngIf="canLoadImage()" onerror="this.src = 'assets/standart-artist-icon.png'" class="me-2" [src]="dados?.images[0]?.url" [alt]="dados?.display_name" />
   
         <div class="textos text-white hide-mobile">
           <strong class="mb-0">{{ dados?.display_name }}</strong>

@@ -30,7 +30,7 @@
     max-width: 240px;
     width: 100%;
     transition: .2s all;
-    right: 0;
+    inset-inline-end: 0;
     z-index: 100;
 }
 

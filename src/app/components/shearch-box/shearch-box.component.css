@@ -6,7 +6,7 @@
     background: transparent;
     border: 0;
     position: absolute;
-    right: 10px;
+    inset-inline-end: 10px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 8;

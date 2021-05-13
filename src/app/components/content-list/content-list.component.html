@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <h2>
     <svg *ngIf="tipo == 'playlist'" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list"
       width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -57,12 +57,12 @@
   </div>
 </div>
 
-<div class="listagem-conteudo list-group" [ngClass]="{'mobile-mode': modoMobile}">
+<div class="listagem-conteudo list-group {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [ngClass]="{'mobile-mode': modoMobile}">
   <div [ngClass]="{'active': (tipo == 'track' || tipo == 'album') && (playerState?.item.id == getRootItem(item).id || playerState?.item.album.id == getRootItem(item).id)}"
   class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
     *ngFor="let item of lista" (click)="abrirArtista(tipo == 'artist' ? getRootItem(item).id : null)">
 
-    <div class="img mr-1" *ngIf="canLoadImage()">
+    <div class="img me-1" *ngIf="canLoadImage()">
       <img *ngIf="tipo == 'track'" style="max-width: 60px" onerror="this.src = 'assets/standart-album-icon.png'"
         [src]="album ? album.images[0].url : getRootItem(item).album.images[0]?.url"
         alt="getRootItem(item).album.name" />
@@ -77,37 +77,40 @@
         <a [routerLink]="['/album/' + ( album ? album.id : getRootItem(item).album.id)]">
           {{ album ? album.name : getRootItem(item).album.name }}
         </a>
-        -
+        <span> - </span>
         <a [routerLink]="['/artist/' + (album != null ? album.artists[0].id : getRootItem(item).album.artists[0].id)]">
           {{ album ? album.artists[0].name : getRootItem(item).album.artists[0].name }}
         </a>
       </span>
 
-      <span *ngIf="tipo == 'album'">
+      <span *ngIf="tipo == 'album'" class="d-flex flex-row flex-wrap">
         <a [routerLink]="['/album/' + getRootItem(item).id]">
           {{ getRootItem(item).name }}
         </a>
-        -
+        &nbsp;-&nbsp;
         <a [routerLink]="['/artist/' + getRootItem(item).artists[0].id]">
           {{ getRootItem(item).artists[0].name }}
-        </a>
-        -
-        {{ getRootItem(item).total_tracks }} <span style="text-transform: lowercase;">{{ getRootItem(item).total_tracks > 1 || getRootItem(item).total_tracks == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span>
+        </a>&nbsp;-&nbsp;<span>{{
+        getRootItem(item).total_tracks }}&nbsp;<span style="text-transform: lowercase;">{{ getRootItem(item).total_tracks > 1 || getRootItem(item).total_tracks == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span></span>
       </span>
 
-      <span *ngIf="tipo == 'playlist'">
+      <span *ngIf="tipo == 'playlist'" class="d-flex flex-row flex-wrap">
         <a [routerLink]="['/playlist/' + getRootItem(item).id]">
           {{ getRootItem(item).name }}
         </a>
-        -
-        {{ getRootItem(item).owner.display_name }} - {{
-        getRootItem(item).tracks.total }}
-        <span style="text-transform: lowercase;">{{ getRootItem(item).tracks.total > 1 || getRootItem(item).tracks.total == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span></span>
+        &nbsp;-&nbsp;
+        {{ getRootItem(item).owner.display_name }}&nbsp;-&nbsp;
+        <span>{{
+            getRootItem(item).tracks.total
+          }}&nbsp;<span style="text-transform: lowercase;">{{ getRootItem(item).tracks.total > 1 || getRootItem(item).tracks.total == 0 ? ('MusicListTracksPlural' | translate) : ('MusicListTracks' | translate) }}</span>
+        </span>
+      </span>
 
-      <span *ngIf="tipo == 'artist'">{{ getRootItem(item).name }} - {{
-        getRootItem(item).followers.total }}
-        
-        <span style="text-transform: lowercase;">{{ getRootItem(item).followers.total > 1 || getRootItem(item).followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
+      <span *ngIf="tipo == 'artist'" class="d-flex flex-row flex-wrap">{{ getRootItem(item).name }}&nbsp;-&nbsp;
+        <span>{{
+          getRootItem(item).followers.total 
+          }}&nbsp;<span style="text-transform: lowercase;">{{ getRootItem(item).followers.total > 1 || getRootItem(item).followers.total == 0 ? ('MusicListFollowersPlural' | translate) : ('MusicListFollowers' | translate) }}</span>
+        </span>
       </span>
     </div>
 

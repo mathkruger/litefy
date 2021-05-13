@@ -1,5 +1,5 @@
 <ng-container *ngIf="lyrics && playerStatus">
-  <div class="app container text-center mt-4">
+  <div class="app container text-center mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
     <h2 *ngIf="premium" class="mb-3">{{ playerStatus.item.name }} - {{ playerStatus.item.album.artists[0]?.name }}</h2>
     <h2 *ngIf="!premium" class="mb-3">{{ playerStatus.trackName }} - {{ playerStatus.artistName }}</h2>
 

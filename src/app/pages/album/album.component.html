@@ -1,4 +1,4 @@
-<div class="app container mt-4" *ngIf="album">
+<div class="app container mt-4 {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" *ngIf="album">
   <div class="row">
     <div class="col-md-12">
       <div class="album-header" [ngStyle]="{'background-image': canLoadImage() ? 'url(' + album?.images[0].url + ')' : ''}">

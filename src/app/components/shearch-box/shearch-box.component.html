@@ -1,4 +1,4 @@
-<div class="search-container input-group">
+<div class="search-container input-group {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <input type="text" [placeholder]="'SearchPlaceholderText' | translate" [(ngModel)]="termo" class="form-control search-field" />
 
   <button type="button" (click)="buscar()" class="search-btn">
