@@ -1,4 +1,4 @@
-<div class="app container mt-4" *ngIf="artist">
+<div class="app container mt-4 {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" *ngIf="artist">
   <div class="row">
     <div class="col-md-12">
       <div class="artist-header" [ngStyle]="{'background-image': canLoadImage() ? 'url(' + artist.images[0].url + ')' : ''}">

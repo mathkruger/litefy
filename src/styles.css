@@ -71,3 +71,57 @@ a:hover {
         display: none !important;
     }
 }
+
+/* support of RTL and LTR */
+.rtl-custom{
+    direction: rtl;
+    text-align: right;
+}
+.ltr-custom{
+    direction: ltr;
+    text-align: left;
+}
+/* please consider using Bootsrap 5 (https://getbootstrap.com/docs/5.0/utilities/spacing/) */
+.ms-auto{
+    margin-inline-start: auto!important;
+}
+.ms-0{
+    margin-inline-start: 0!important;
+}
+.ms-1{
+    margin-inline-start: .25rem!important;
+}
+.ms-2{
+    margin-inline-start: .5rem!important;
+}
+.ms-3{
+    margin-inline-start: 1rem!important;
+}
+.ms-4{
+    margin-inline-start: 1.5rem!important;
+}
+.ms-5{
+    margin-inline-start: 3rem!important;
+}
+
+.me-auto{
+    margin-inline-end: auto!important;
+}
+.me-0{
+    margin-inline-end: 0!important;
+}
+.me-1{
+    margin-inline-end: .25rem!important;
+}
+.me-2{
+    margin-inline-end: .5rem!important;
+}
+.me-3{
+    margin-inline-end: 1rem!important;
+}
+.me-4{
+    margin-inline-end: 1.5rem!important;
+}
+.me-5{
+    margin-inline-end: 3rem!important;
+}

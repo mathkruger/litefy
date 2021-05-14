@@ -1,4 +1,4 @@
-<div class="app container mt-4" *ngIf="playlist">
+<div class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" *ngIf="playlist">
   <div class="row">
     <div class="col-md-12">
       <div class="playlist-header" [ngStyle]="{'background-image': canLoadImage() ? 'url(' + (playlist?.images.length > 0 ? playlist.images[0].url : 'assets/standart-album-icon.png') + ')' : ''}">

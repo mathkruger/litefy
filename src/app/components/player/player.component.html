@@ -1,4 +1,4 @@
-<div class="player">
+<div class="player {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <div *ngIf="premium ? playerStatus : true" class="player-wrapper d-flex justify-content-between align-items-center">
     <div class="tracking" *ngIf="premium">
       <input id="playerSeek" #playerSeek [ngStyle]="seekStyle" type="range" [value]="progress / 1000" min="0"
@@ -9,7 +9,7 @@
     <div class="d-flex align-items-center text-white">
       <a *ngIf="playerStatus && canLoadImage()" [routerLink]="['album/' + playerStatus?.item.album.id]">
         <img [alt]="playerStatus?.item.album.name" [title]="playerStatus?.item.album.name"
-          [src]="playerStatus?.item.album.images[2].url" class="img-responsive mr-2 hide-mobile" />
+          [src]="playerStatus?.item.album.images[2].url" class="img-responsive me-2 hide-mobile" />
       </a>
 
       <div class="d-flex flex-column">
@@ -65,7 +65,7 @@
     </div>
 
     <div class="botoes-contole">
-      <div class="btn-group volume-btn" role="group">
+      <div class="btn-group volume-btn" role="group" dir="ltr">
         <button [disabled]="premium ? !playerStatus : false" type="button" (click)="previous()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-back" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"

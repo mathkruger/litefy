@@ -23,7 +23,7 @@
 #soundbars span {
     width: 1.25em;
     height: 1.875em;
-    margin-left: 1px;
+    margin-inline-start: 1px;
     background-color: #00c36f;
     display: inline-block;
     transform-style: preserve-3d;

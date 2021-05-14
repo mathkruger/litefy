@@ -1,4 +1,4 @@
-<div class="app container mt-4">
+<div class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <h2 class="mb-3">⚙ {{ 'SettingsPageTitle' | translate }}</h2>
 
   <div class="list-group">

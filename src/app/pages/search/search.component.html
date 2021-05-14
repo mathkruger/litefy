@@ -1,4 +1,4 @@
-<div class="app container mt-4">
+<div class="app container mt-4 {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <div class="row">
     <div class="col-12">
       <app-shearch-box [exportaResultados]="true" (resultadosBusca)="obterResultados($event)"></app-shearch-box>

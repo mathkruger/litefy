@@ -1,7 +1,7 @@
-<div class="player">
+<div class="player {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
   <div *ngIf="playerService.showVideo" class="player-wrapper d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center text-white">
-      <div class="video-wrapper" [ngClass]="{'hidden-video': !playerStatus}" class="mr-2">
+      <div class="video-wrapper" [ngClass]="{'hidden-video': !playerStatus}" class="me-2">
         <div id="player-video"></div>
       </div>
 
@@ -39,7 +39,7 @@
     </div>
 
     <div class="botoes-contole">
-      <div class="btn-group volume-btn" role="group">
+      <div class="btn-group volume-btn" role="group" dir="ltr">
         <button [disabled]="!playerStatus" type="button" (click)="previous()" class="button-custom">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-skip-back" width="24"
             height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
