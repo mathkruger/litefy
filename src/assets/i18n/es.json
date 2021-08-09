@@ -49,5 +49,9 @@
     "KaraokeSearchText": "Buscar",
 
     "SettingsPageTitle": "Ajustes",
-    "SettingsImageText": "Cargue imágenes (álbum, artistas, listas de reproducción, etc.)"
+    "SettingsImageText": "Cargue imágenes (álbum, artistas, listas de reproducción, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Espectáculos",
+    "PodcastsEpisodesText": "Episodios"
 }

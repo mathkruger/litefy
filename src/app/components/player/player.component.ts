@@ -40,6 +40,15 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
     progress = 0;
     shuffle = false;
     seekStyle = {};
+    
+    trackTitle = "";
+    trackAlbum = "";
+    trackAuthor = "";
+    trackImage = "";
+    trackId = "";
+    albumId = "";
+    artistId = "";
+    
 
     shufflemodeKey = "shuffle";
 
@@ -173,10 +182,38 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         });
     }
 
+
+
     getCurrentState() {
         this.playerService.getCurrentState().subscribe((item) => {
             this.playerStatus = item;
 
+            if (this.playerStatus?.item.type == "track") {
+                this.trackTitle = this.playerStatus?.item.name;
+                this.trackAlbum = this.playerStatus?.item.album.name;
+                this.trackAuthor = this.playerStatus?.item.album.artists[0]?.name;
+                this.trackImage = this.playerStatus?.item.album.images[2].url;
+                this.trackId = this.playerStatus?.item.id;
+                this.albumId = 'album/' + this.playerStatus?.item.album.id;
+                this.artistId = 'artist/' + this.playerStatus?.item.album.artists[0]?.id;
+            } else if (this.playerStatus?.item.type == "episode") {
+                this.trackTitle = this.playerStatus?.item.name;
+                this.trackAlbum = this.playerStatus?.item.show.name;
+                this.trackAuthor = this.playerStatus?.item.show.publisher;;
+                this.trackImage = this.playerStatus?.item.images[2].url;
+                this.trackId = this.playerStatus?.item.id;
+                this.albumId = 'show/' + this.playerStatus?.item.show.id;
+                this.artistId = 'show/' + this.playerStatus?.item.show.id;
+            } else {
+                this.trackTitle = "";
+                this.trackAlbum = "";
+                this.trackAuthor = "";
+                this.trackImage = "";
+                this.trackId = "";
+                this.albumId = "";
+                this.artistId = "";
+            }
+                
             this.playerService.setPlayerProgress(this.playerStatus.progress_ms);
             this.playerService.setPlayerStatus(this.playerStatus);
         });

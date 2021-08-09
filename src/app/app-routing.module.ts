@@ -1,8 +1,10 @@
 import { KaraokeComponent } from './pages/karaoke/karaoke.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { AlbumComponent } from './pages/album/album.component';
 import { ArtistComponent } from './pages/artist/artist.component';
+import { ShowComponent } from './pages/show/show.component';
 import { SearchComponent } from './pages/search/search.component';
 import { LoginCallbackComponent } from './pages/login/login-callback/login-callback.component';
 import { LoginAuthenticateComponent } from './pages/login/login-authenticate/login-authenticate.component';
@@ -31,8 +33,18 @@ const routes: Routes = [
     canActivate: [LoginGuardService]
   },
   {
+    path: 'podcasts',
+    component: PodcastsComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
     path: 'artist/:id',
     component: ArtistComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'show/:id',
+    component: ShowComponent,
     canActivate: [LoginGuardService]
   },
   {

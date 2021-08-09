@@ -12,6 +12,7 @@ import { forkJoin } from "rxjs";
 import { YoutubePlayerStatus } from "src/app/models/youtube-player-status";
 import { TranslateService } from "@ngx-translate/core";
 
+
 @Component({
     selector: "app-content-list",
     templateUrl: "./content-list.component.html",
@@ -35,7 +36,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     settings: Settings[];
 
     @Input() titulo: string;
-    @Input() tipo: "track" | "playlist" | "album" | "artist";
+    @Input() tipo: "track" | "playlist" | "album" | "artist" | "show" | "podcast";
     @Input() lista: any[];
     @Input() rootItem: string = null;
     @Input() album: any = null;
@@ -44,6 +45,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     device_id: string;
     playerState: any;
     premium = true;
+    currentAlbum = "";
 
     ngOnInit() {
         this.userService.getUser().subscribe((item) => {
@@ -65,6 +67,13 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     getPlayerStatus() {
         this.playerService.getPlayerStatus().subscribe((item) => {
             this.playerState = item;
+            if (this.playerState?.item.type == "track") {
+                this.currentAlbum = this.playerState?.item.album.id
+            } else if (this.playerState?.item.type == "episode") {
+                this.currentAlbum = this.playerState?.item.show.id
+            } else {
+                this.currentAlbum = "";
+            }
         });
     }
 
@@ -161,6 +170,62 @@ export class ContentListComponent extends SettingsBase implements OnInit {
                 this.youtubePlayMultiple(items.items);
             }
         });
+    }
+
+    playShow(id) {
+        const uris = [];
+
+        this.playerService.getShowEpisodes(id).subscribe((items) => {
+            if (this.premium) {
+                items.items.forEach((track) => {
+                    uris.push(track.uri);
+                });
+
+                this.playerService
+                    .play(this.device_id, null, uris)
+                    .subscribe(() => {
+                        this.playerService
+                            .getCurrentState()
+                            .subscribe((state) => {
+                                this.playerService.setPlayerStatus(state);
+                            });
+                    });
+            } else {
+                this.youtubePlayMultiple(items.items);
+            }
+        });
+    }
+    playEpisode(itemSelecionado) {
+        if (this.premium) {
+            if (
+                this.playerState?.item.id ===
+                this.getRootItem(itemSelecionado).id
+            ) {
+                if (!this.playerState?.is_playing) {
+                    this.selecionar(this.getRootItem(itemSelecionado).uri);
+                } else {
+                    this.pausar();
+                }
+            } else {
+                this.selecionar(this.getRootItem(itemSelecionado).uri);
+            }
+        } else {
+            const artist = this.album
+                ? this.album.artists[0].name
+                : this.getRootItem(itemSelecionado).album.artists[0].name;
+            const track = this.getRootItem(itemSelecionado).name;
+            this.youtubeService.getVideo(artist, track).subscribe((id) => {
+                const aux = new YoutubePlayerStatus();
+
+                aux.artistName = artist;
+                aux.trackName = track;
+
+                this.youtubePlayerService.setPlayerStatus(aux);
+
+                this.youtubePlayerService.openOne(id);
+                this.youtubePlayerService.play();
+            });
+        }
     }
 
     playPlaylist(item) {

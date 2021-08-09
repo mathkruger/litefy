@@ -125,11 +125,15 @@ export class SpotifyPlayerService {
     }
 
     getCurrentState() {
-        return this.service.Get('https://api.spotify.com/v1/me/player');
+        return this.service.Get('https://api.spotify.com/v1/me/player?type=episode,track');
     }
 
     getAlbumTracks(id: string): Observable<SpotifyApi.AlbumTracksResponse> {
         return this.albumService.getAlbumTracks(id);
+    }
+
+    getShowEpisodes(id: string): Observable<SpotifyApi.ShowEpisodesResponse> {
+        return this.service.Get(`https://api.spotify.com/v1/shows/${id}/episodes?limit=50`);
     }
 
     seekToPosition(device_id: string, ms: number) {
