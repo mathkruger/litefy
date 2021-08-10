@@ -15,7 +15,7 @@ export class ShearchBoxComponent {
   @Output() resultadosBusca = new EventEmitter<any>();
 
   termo: string;
-  apiLink = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist&offset=0&limit=50';
+  apiLink = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist,show,episode&offset=0&limit=50';
 
   @HostListener('document:keydown', ['$event'])
   pressEnter(event: KeyboardEvent) {

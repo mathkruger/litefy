@@ -1,6 +1,6 @@
 {
     "direction": "rtl",
-    
+
     "LoginDescriptionText": "לייטפיי. לקוח ספוטיפיי להתקני קצה חלשים",
     "LoginText": "אנו מאמינים שאינך צריך מכשיר סופר-חזק על מנת להנות מהמוזיקה שלך. אנו מאמינים שאינך צריך לעמוד בקצב של כל הטכנולוגיות החדשות כדי להתבדר. זו סיבת הקיום של לייטפי.",
     "LoginButtonText": "התחבר עם ספוטיפיי",
@@ -49,5 +49,9 @@
     "KaraokeSearchText": "חיפוש",
 
     "SettingsPageTitle": "הגדרות",
-    "SettingsImageText": "טען תמונות (אלבום, אמנים, פלייליסטים וכו')"
+    "SettingsImageText": "טען תמונות (אלבום, אמנים, פלייליסטים וכו')",
+
+    "MenuPodcastText": "פודקאסטים",
+    "PodcastsShowsText": "מופעים",
+    "PodcastsEpisodesText": "פרקים"
 }

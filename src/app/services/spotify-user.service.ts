@@ -30,4 +30,12 @@ export class SpotifyUserService {
     getUserTopTracks(): Observable<SpotifyApi.UsersTopTracksResponse> {
         return this.service.Get('https://api.spotify.com/v1/me/top/tracks');
     }
+
+    getUserShows(): Observable<SpotifyApi.ShowObjectFull> {
+        return this.service.Get('https://api.spotify.com/v1/me/shows');
+    }
+
+    getUserEpisodes(): Observable<SpotifyApi.EpisodeObjectFull> {
+        return this.service.Get('https://api.spotify.com/v1/me/episodes');
+    }
 }

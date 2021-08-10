@@ -25,10 +25,12 @@ import { ContentListComponent } from './components/content-list/content-list.com
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ArtistComponent } from './pages/artist/artist.component';
+import { ShowComponent } from './pages/show/show.component';
 import { PipesModule } from './pipes/pipes.module';
 import { AlbumComponent } from './pages/album/album.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
@@ -49,9 +51,11 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     SearchComponent,
     ContentListComponent,
     ArtistComponent,
+    ShowComponent,
     AlbumComponent,
     PlaylistComponent,
     LibraryComponent,
+    PodcastsComponent,
     LanguageSwitcherComponent,
     KaraokeComponent,
     VolumeBoxComponent,
