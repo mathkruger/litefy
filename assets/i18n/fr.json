@@ -1,6 +1,6 @@
 {
     "direction": "ltr",
-    
+
     "LoginDescriptionText": "Litefy. Un client Spotify pour les appareils bas de gamme.",
     "LoginText": "Nous pensons que vous n'avez pas besoin d'un super appareil pour profiter de votre musique. Nous pensons que vous n'avez pas besoin de rester à jour de toutes les technologies pour vous détendre. C'est pour ça que Litefy existe.",
     "LoginButtonText": "Se connecter avec Spotify",
@@ -49,5 +49,9 @@
     "KaraokeSearchText": "Rechercher",
 
     "SettingsPageTitle": "Parametres",
-    "SettingsImageText": "Charger des images (albums, artistes, playlists, etc.)"
+    "SettingsImageText": "Charger des images (albums, artistes, playlists, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Spectacles",
+    "PodcastsEpisodesText": "Épisodes"
 }

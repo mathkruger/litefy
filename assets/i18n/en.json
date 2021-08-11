@@ -1,11 +1,11 @@
 {
     "direction": "ltr",
-    
+
     "LoginDescriptionText": "Litefy. A spotify client for low-end devices",
     "LoginText": "We believe that you don't need a super device to enjoy your music. We believe you don't need to keep up with all new tech to get entertained. That's why Litefy exists.",
     "LoginButtonText": "Login with Spotify",
 
-    "SearchPlaceholderText": "Tracks, album, artist, playlist ...",
+    "SearchPlaceholderText": "Tracks, album, artist, playlist, shows, episodes ...",
 
     "MenuSearchText": "Search",
     "MenuLibraryText": "Library",
@@ -49,5 +49,9 @@
     "KaraokeSearchText": "Search",
 
     "SettingsPageTitle": "Settings",
-    "SettingsImageText": "Load images (album, artists, playlists, etc.)"
+    "SettingsImageText": "Load images (album, artists, playlists, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Shows",
+    "PodcastsEpisodesText": "Episodes"
 }
