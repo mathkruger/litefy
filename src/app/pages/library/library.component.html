@@ -8,19 +8,19 @@
     <ng-container *ngIf="userPlaylists.length > 0 || userAlbums.length > 0 || userTracks.length > 0">
         <div class="row mt-4">
             <div class="col-md-6">
-                <app-content-list [titulo]="'LibraryPlaylistsText' | translate" tipo="playlist" [lista]="userPlaylists">
+                <app-content-list [title]="'LibraryPlaylistsText' | translate" type="playlist" [list]="userPlaylists">
                 </app-content-list>
             </div>
 
             <div class="col-md-6">
-                <app-content-list [titulo]="'LibraryAlbumsText' | translate" tipo="album" [lista]="userAlbums" rootItem="album">
+                <app-content-list [title]="'LibraryAlbumsText' | translate" type="album" [list]="userAlbums" rootItem="album">
                 </app-content-list>
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col-md-12">
-                <app-content-list [titulo]="'LibraryTracksText' | translate" tipo="track" [lista]="userTracks" rootItem="track">
+                <app-content-list [title]="'LibraryTracksText' | translate" type="track" [list]="userTracks" rootItem="track">
                 </app-content-list>
             </div>
         </div>

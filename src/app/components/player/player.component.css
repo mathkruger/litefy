@@ -83,7 +83,7 @@
     .player-wrapper {
         flex-direction: column-reverse;
     }
-    .botoes-contole {
+    .control-buttons {
         margin: .5rem 0;
     }
     .separator {

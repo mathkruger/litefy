@@ -34,8 +34,8 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
     next_tracks: any[];
     previous_tracks: any[];
 
-    mostraPlayer = false;
-    mostraVolume = false;
+    showPlayer = false;
+    showVolume = false;
 
     progress = 0;
     shuffle = false;
@@ -82,13 +82,13 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
 
     ngOnChanges() {
         if (this.premium) {
-            this.transferirPlayer();
+            this.transferPlayer();
         }
     }
 
     initPlayer() {
         (<any>window).onSpotifyWebPlaybackSDKReady = () => {
-            this.mostraPlayer = true;
+            this.showPlayer = true;
             const token = this.auth.getAuth();
 
             this.player = new Spotify.Player({
@@ -121,7 +121,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
             this.player.addListener("ready", ({ device_id }) => {
                 this.device_id = device_id;
                 this.playerService.setDeviceId(device_id);
-                this.transferirPlayer();
+                this.transferPlayer();
             });
 
             this.player.connect();
@@ -132,7 +132,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         });
     }
 
-    transferirPlayer() {
+    transferPlayer() {
         this.playerService.transferPlayback(this.device_id).subscribe(() => {
             this.playerService.getCurrentState().subscribe((item) => {
                 this.playerStatus = item;
