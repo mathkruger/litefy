@@ -1,7 +1,7 @@
 <div class="search-container input-group {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-  <input type="text" [placeholder]="'SearchPlaceholderText' | translate" [(ngModel)]="termo" class="form-control search-field" />
+  <input type="text" [placeholder]="'SearchPlaceholderText' | translate" [(ngModel)]="term" class="form-control search-field" />
 
-  <button type="button" (click)="buscar()" class="search-btn">
+  <button type="button" (click)="search()" class="search-btn">
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="10" cy="10" r="7" />

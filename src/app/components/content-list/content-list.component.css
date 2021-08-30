@@ -9,32 +9,32 @@ h2 {
     font-size: 2em;
 }
 
-.titulo a {
+.title a {
     color: #495057 !important;
 }
 
-.listagem-conteudo {
+.content-listing {
     max-height: 500px;
     overflow: auto;
 }
 
-.listagem-conteudo .list-group-item.active {
+.content-listing .list-group-item.active {
     background-color: var(--spt-green) !important;
     border-color: var(--spt-green) !important;
 }
 
-.listagem-conteudo .list-group-item.active .titulo span,
-.listagem-conteudo .list-group-item.active .titulo a {
+.content-listing .list-group-item.active .title span,
+.content-listing .list-group-item.active .title a {
     color: white !important;
 }
 
 
 @media screen and (max-width: 480px) {
-    .listagem-conteudo.mobile-mode {
+    .content-listing.mobile-mode {
         flex-direction: row;
     }
 
-    .listagem-conteudo .list-group-item {
+    .content-listing .list-group-item {
         min-width: 240px;
         width: 100%;
         flex-direction: column;
@@ -43,7 +43,7 @@ h2 {
         text-align: center;
     }
 
-    .titulo span {
+    .title span {
         height: 45px;
         overflow: hidden;
         display: block;

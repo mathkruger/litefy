@@ -2,7 +2,7 @@
     background: var(--spt-black);
 }
 
-.user-area .cabecalho {
+.user-area .header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,12 +10,12 @@
     cursor: pointer;
 }
 
-.user-area .cabecalho img {
+.user-area .header img {
     max-width: 48px;
     border-radius: 50%;
 }
 
-.user-area .cabecalho .textos {
+.user-area .header .text {
     display: flex;
     flex-direction: column;
 }

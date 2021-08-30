@@ -1,19 +1,19 @@
 <div class="app container mt-4 {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
     <div class="row">
         <div class="col-12">
-            <app-shearch-box [exportaResultados]="true" (resultadosBusca)="obterResultados($event)"></app-shearch-box>
+            <app-shearch-box [exportResults]="true" (searchResults)="getResults($event)"></app-shearch-box>
         </div>
     </div>
 
     <ng-container *ngIf="resultadosTracks.length > 0 || resultadosPlaylists.length > 0 || resultadosAlbums.length > 0">
         <div class="row mt-4">
             <div class="col-md-6">
-                <app-content-list [titulo]="'SearchArtists' | translate" tipo="artist" [lista]="resultadosArtistas">
+                <app-content-list [title]="'SearchArtists' | translate" type="artist" [list]="resultadosArtistas">
                 </app-content-list>
             </div>
 
             <div class="col-md-6">
-                <app-content-list [titulo]="'LibraryTracksText' | translate" tipo="track" [lista]="resultadosTracks">
+                <app-content-list [title]="'LibraryTracksText' | translate" type="track" [list]="resultadosTracks">
                 </app-content-list>
             </div>
 
@@ -21,24 +21,24 @@
 
         <div class="row mt-2">
             <div class="col-md-6">
-                <app-content-list [titulo]="'LibraryPlaylistsText' | translate" tipo="playlist" [lista]="resultadosPlaylists">
+                <app-content-list [title]="'LibraryPlaylistsText' | translate" type="playlist" [list]="resultadosPlaylists">
                 </app-content-list>
             </div>
 
             <div class="col-md-6">
-                <app-content-list [titulo]="'LibraryAlbumsText' | translate" tipo="album" [lista]="resultadosAlbums">
+                <app-content-list [title]="'LibraryAlbumsText' | translate" type="album" [list]="resultadosAlbums">
                 </app-content-list>
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col-md-6">
-                <app-content-list [titulo]="'Shows' | translate" tipo="podcastSearch" [lista]="resultadosShows">
+                <app-content-list [title]="'Shows' | translate" type="podcastSearch" [list]="resultadosShows">
                 </app-content-list>
             </div>
 
             <div class="col-md-6">
-                <app-content-list [titulo]="'Episodes' | translate" tipo="podcastPage" [lista]="resultadosEpisodes">
+                <app-content-list [title]="'Episodes' | translate" type="podcastPage" [list]="resultadosEpisodes">
                 </app-content-list>
             </div>
         </div>

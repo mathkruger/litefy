@@ -16,21 +16,21 @@ export class HeaderComponent extends SettingsBase implements OnInit {
     super(injector);
   }
 
-  dados: User;
-  menuAberto = false;
+  user: User;
+  openMenu = false;
 
-  userMenuAberto = false;
+  userOpenMenu = false;
 
   ngOnInit() {
     this.userService.getUser().subscribe(item => {
-      this.dados = item;
+      this.user = item;
     });
 
     super.init();
   }
 
   sair() {
-    this.userMenuAberto = false;
+    this.userOpenMenu = false;
     this.auth.logout();
     this.router.navigate(['login']);
   }

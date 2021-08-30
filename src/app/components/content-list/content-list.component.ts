@@ -35,12 +35,12 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     user: User;
     settings: Settings[];
 
-    @Input() titulo: string;
-    @Input() tipo: "track" | "playlist" | "album" | "artist" | "show" | "podcast";
-    @Input() lista: any[];
+    @Input() title: string;
+    @Input() type: "track" | "playlist" | "album" | "artist" | "show" | "podcast";
+    @Input() list: any[];
     @Input() rootItem: string = null;
     @Input() album: any = null;
-    @Input() modoMobile = true;
+    @Input() mobileMode = true;
 
     device_id: string;
     playerState: any;
@@ -77,7 +77,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         });
     }
 
-    pausar() {
+    pause() {
         this.playerService.pause(this.device_id).subscribe();
     }
 
@@ -89,31 +89,31 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         return item;
     }
 
-    abrirArtista(id) {
+    openArtist(id) {
         if (id != null) {
             this.router.navigate(["/artist/" + id]);
         }
     }
 
-    playTrack(itemSelecionado) {
+    playTrack(selectItem) {
         if (this.premium) {
             if (
                 this.playerState?.item.id ===
-                this.getRootItem(itemSelecionado).id
+                this.getRootItem(selectItem).id
             ) {
                 if (!this.playerState?.is_playing) {
-                    this.selecionar(this.getRootItem(itemSelecionado).uri);
+                    this.select(this.getRootItem(selectItem).uri);
                 } else {
-                    this.pausar();
+                    this.pause();
                 }
             } else {
-                this.selecionar(this.getRootItem(itemSelecionado).uri);
+                this.select(this.getRootItem(selectItem).uri);
             }
         } else {
             const artist = this.album
                 ? this.album.artists[0].name
-                : this.getRootItem(itemSelecionado).album.artists[0].name;
-            const track = this.getRootItem(itemSelecionado).name;
+                : this.getRootItem(selectItem).album.artists[0].name;
+            const track = this.getRootItem(selectItem).name;
             this.youtubeService.getVideo(artist, track).subscribe((id) => {
                 const aux = new YoutubePlayerStatus();
 
@@ -128,9 +128,9 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         }
     }
 
-    selecionar(itemSelecionado) {
+    select(selectItem) {
         this.playerService
-            .play(this.device_id, itemSelecionado)
+            .play(this.device_id, selectItem)
             .subscribe(() => {
                 this.playerService.getCurrentState().subscribe((item) => {
                     this.playerService.setPlayerStatus(item);
@@ -138,9 +138,9 @@ export class ContentListComponent extends SettingsBase implements OnInit {
             });
     }
 
-    add(itemSelecionado) {
+    add(selectItem) {
         this.playerService
-            .add(this.getRootItem(itemSelecionado).uri, this.device_id)
+            .add(this.getRootItem(selectItem).uri, this.device_id)
             .subscribe(() => {
                 this.playerService.getCurrentState().subscribe((item) => {
                     this.playerService.setPlayerStatus(item);
@@ -195,25 +195,25 @@ export class ContentListComponent extends SettingsBase implements OnInit {
             }
         });
     }
-    playEpisode(itemSelecionado) {
+    playEpisode(selectItem) {
         if (this.premium) {
             if (
                 this.playerState?.item.id ===
-                this.getRootItem(itemSelecionado).id
+                this.getRootItem(selectItem).id
             ) {
                 if (!this.playerState?.is_playing) {
-                    this.selecionar(this.getRootItem(itemSelecionado).uri);
+                    this.select(this.getRootItem(selectItem).uri);
                 } else {
-                    this.pausar();
+                    this.pause();
                 }
             } else {
-                this.selecionar(this.getRootItem(itemSelecionado).uri);
+                this.select(this.getRootItem(selectItem).uri);
             }
         } else {
             const artist = this.album
                 ? this.album.artists[0].name
-                : this.getRootItem(itemSelecionado).album.artists[0].name;
-            const track = this.getRootItem(itemSelecionado).name;
+                : this.getRootItem(selectItem).album.artists[0].name;
+            const track = this.getRootItem(selectItem).name;
             this.youtubeService.getVideo(artist, track).subscribe((id) => {
                 const aux = new YoutubePlayerStatus();
 
@@ -252,13 +252,13 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         });
     }
 
-    tocarTodas() {
+    playAll() {
         if (this.premium) {
             this.playerService
                 .play(
                     this.device_id,
                     null,
-                    this.lista.map((item) => this.getRootItem(item).uri)
+                    this.list.map((item) => this.getRootItem(item).uri)
                 )
                 .subscribe(() => {
                     this.playerService.getCurrentState().subscribe((item) => {
@@ -266,7 +266,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
                     });
                 });
         } else {
-            this.youtubePlayMultiple(this.lista, true);
+            this.youtubePlayMultiple(this.list, true);
         }
     }
 

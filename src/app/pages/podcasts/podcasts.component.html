@@ -8,12 +8,12 @@
     <ng-container *ngIf="userShows.length > 0 || userEpisodes.length > 0">
         <div class="row mt-4">
             <div class="col-md-6">
-                <app-content-list [titulo]="'PodcastsShowsText' | translate" tipo="show" [lista]="userShows">
+                <app-content-list [title]="'PodcastsShowsText' | translate" type="show" [list]="userShows">
                 </app-content-list>
             </div>
 
             <div class="col-md-6">
-                <app-content-list [titulo]="'PodcastsEpisodesText' | translate" tipo="podcast" [lista]="userEpisodes">
+                <app-content-list [title]="'PodcastsEpisodesText' | translate" type="podcast" [list]="userEpisodes">
                 </app-content-list>
             </div>
         </div>

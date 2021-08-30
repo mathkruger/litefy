@@ -14,7 +14,7 @@ export class SearchComponent {
   resultadosShows: any[] = [];
   resultadosEpisodes: any[] = [];
 
-  obterResultados(items) {
+  getResults(items) {
     this.resultadosTracks = items.tracks.items;
     this.resultadosPlaylists = items.playlists.items;
     this.resultadosAlbums = items.albums.items;

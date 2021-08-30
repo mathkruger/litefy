@@ -11,23 +11,23 @@ export class ShearchBoxComponent {
 
   constructor(private service: ServiceBase, private playerService: SpotifyPlayerService) { }
 
-  @Input() exportaResultados = true;
-  @Output() resultadosBusca = new EventEmitter<any>();
+  @Input() exportResults = true;
+  @Output() searchResults = new EventEmitter<any>();
 
-  termo: string;
+  term: string;
   apiLink = 'https://api.spotify.com/v1/search?query=$CUSTOM_QUERY$&type=track,album,playlist,artist,show,episode&offset=0&limit=50';
 
   @HostListener('document:keydown', ['$event'])
   pressEnter(event: KeyboardEvent) {
     if (event.key === 'Enter') {
-      this.buscar();
+      this.search();
     }
   }
 
-  buscar() {
-    this.service.Get<any>(this.apiLink.replace('$CUSTOM_QUERY$', this.termo))
+  search() {
+    this.service.Get<any>(this.apiLink.replace('$CUSTOM_QUERY$', this.term))
       .subscribe(items => {
-        this.resultadosBusca.emit(items);
+        this.searchResults.emit(items);
       });
   }
 }
