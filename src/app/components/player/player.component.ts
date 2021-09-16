@@ -23,11 +23,12 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         injector: Injector
     ) {
         super(injector);
-        const defaultLanguage = window.localStorage.getItem("languageSelected");
+        this.defaultLanguage = window.localStorage.getItem("languageSelected");
         translate.addLangs(["pt", "en", "es", "he"]);
-        translate.setDefaultLang(defaultLanguage || "pt");
+        translate.setDefaultLang(this.defaultLanguage || "pt");
     }
 
+    defaultLanguage: string;
     player: any;
     playerStatus: any;
     device_id: string;
@@ -40,7 +41,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
     progress = 0;
     shuffle = false;
     seekStyle = {};
-    
+
     trackTitle = "";
     trackAlbum = "";
     trackAuthor = "";
@@ -48,7 +49,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
     trackId = "";
     albumId = "";
     artistId = "";
-    
+
 
     shufflemodeKey = "shuffle";
 
@@ -60,18 +61,18 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
 
             this.playerService.getPlayerProgress().subscribe((item) => {
                 this.progress = item;
-                const procentagem =
-                    (this.progress /
-                        (this.playerStatus?.item?.duration_ms || 0)) *
-                    100;
-                this.seekStyle = {
-                    background: `linear-gradient(to right, var(--spt-green) 0%, var(--spt-green) ${procentagem}%, #343a40 ${procentagem}%, #343a40 100%)`,
-                };
+                this.setProgressBar();
+            });
+
+            this.translate.onLangChange.subscribe(item => {
+                this.defaultLanguage = item.lang;
+                this.setProgressBar();
             });
 
             const shuffleStatusSaved = localStorage.getItem(
                 this.shufflemodeKey
             );
+
             if (shuffleStatusSaved === "true") {
                 this.toggleShuffle();
             }
@@ -84,6 +85,16 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         if (this.premium) {
             this.transferPlayer();
         }
+    }
+
+    setProgressBar() {
+        const progressPercentage =
+            (this.progress /
+                (this.playerStatus?.item?.duration_ms || 0)) *
+            100;
+        this.seekStyle = {
+            background: `linear-gradient(to ${this.defaultLanguage != 'he' ? 'right' : 'left'}, var(--spt-green) 0%, var(--spt-green) ${progressPercentage}%, #343a40 ${progressPercentage}%, #343a40 100%)`,
+        };
     }
 
     initPlayer() {
@@ -213,7 +224,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
                 this.albumId = "";
                 this.artistId = "";
             }
-                
+
             this.playerService.setPlayerProgress(this.playerStatus.progress_ms);
             this.playerService.setPlayerStatus(this.playerStatus);
         });
