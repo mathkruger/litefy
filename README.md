@@ -6,8 +6,8 @@
 
 # Litefy
 
-A lighweight Spotify client for low-end smartphones (KaiOS included [not yet]) and computers.
-The project is being designed with Angular 10, using the [Spotify API](https://developer.spotify.com/documentation/web-api/reference-beta/) and [Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/)
+A lightweight Spotify client for low-end smartphones (KaiOS included [not yet]) and computers.
+The project is being designed with Angular 10, using the [Spotify API](https://developer.spotify.com/documentation/web-api/reference-beta/) and [Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/quick-start/).
 
 ## Development server
 
