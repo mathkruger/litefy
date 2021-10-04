@@ -46,6 +46,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     playerState: any;
     premium = true;
     currentAlbum = "";
+    lastItem = 9;
 
     ngOnInit() {
         this.userService.getUser().subscribe((item) => {
@@ -316,5 +317,14 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         forkJoin(reqs).subscribe((ids) => {
             this.youtubePlayerService.openMultiple(ids as string[]);
         });
+    }
+
+    doScroll($event: HTMLInputElement & { target: HTMLInputElement}) {
+        const scrollOffset = $event.target.scrollTop;
+        const scrollMax = $event.target.scrollHeight - $event.target.clientHeight;
+
+        if (scrollOffset === scrollMax && this.lastItem < (this.list.length - 1)) {
+            this.lastItem += 10;
+        }
     }
 }
