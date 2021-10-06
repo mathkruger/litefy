@@ -1,8 +1,27 @@
 .profile-pic {
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .list-group {
     margin-top: 12px;
     font-size: large;
+    font-family: "Arial", sans-serif;
+    letter-spacing: 1px;
+}
+
+.username {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: "Arial", sans-serif;
+    font-style: bold;
+    letter-spacing: 3px;
+}
+
+.mb-3 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Arial", sans-serif;
+    letter-spacing: 1px;
 }

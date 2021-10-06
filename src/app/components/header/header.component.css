@@ -79,3 +79,8 @@
         display: flex;
     }
 }
+
+.nav-item {
+    padding-top: 5px;
+    padding-left: 30px;
+}
