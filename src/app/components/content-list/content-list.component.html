@@ -66,9 +66,9 @@
 
 
 
-<div class="content-listing list-group {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [ngClass]="{'mobile-mode': mobileMode}">
+<div class="content-listing list-group {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [ngClass]="{'mobile-mode': mobileMode}" (scroll)="doScroll($event)">
     <div [ngClass]="{'active': (type == 'track' || type == 'album' ) && (playerState?.item.id == getRootItem(item).id || currentAlbum == getRootItem(item).id)}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-        *ngFor="let item of list" (click)="openArtist(type == 'artist' ? getRootItem(item).id : null)">
+        *ngFor="let item of list | slice:0:lastItem" (click)="openArtist(type == 'artist' ? getRootItem(item).id : null)">
 
         <div class="img me-1" *ngIf="canLoadImage()">
             <img *ngIf="type == 'track'" style="max-width: 60px" onerror="this.src = 'assets/standart-album-icon.png'" [src]="album ? album.images[0].url : getRootItem(item).album.images[0]?.url" alt="getRootItem(item).album.name" />
