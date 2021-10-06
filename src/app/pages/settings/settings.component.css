@@ -4,3 +4,10 @@
     background-color: var(--spt-green);
     border-color: var(--spt-green);
 }
+
+.mb-3 {
+    margin-top: 5px;
+    font-size: 34ox;
+    font-family: "Arial", sans-serif;
+    letter-spacing: 2px;
+}

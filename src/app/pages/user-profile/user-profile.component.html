@@ -1,5 +1,5 @@
   <div class="app container mt-4 {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-    <h2 class="mb-3">👤 {{ 'ProfileText' | translate }}</h2>
+    <!--<h2 class="mb-3">👤 {{ 'ProfileText' | translate }}</h2>-->
 
     <div class="row">
       <div *ngIf="canLoadImage()" class="col-md-4">
@@ -9,13 +9,14 @@
         </div>
       </div>
       <div class="col-md-8">
+        <div class="mb-3">👤 {{ 'ProfileText' | translate }}</div>
+        <div class = "username"> {{ activeUser.display_name }} </div>
         <div class="list-group">
-          <span> {{ activeUser.display_name }} </span>
           <span> {{ activeUser.id }} </span>
           <span> {{ activeUser.followers.total | numberLocale:this.translateService.currentLang }} {{ 'FollowersText' | translate | lowercase }} </span>
           <span> {{ activeUser.email }} </span>
           <span> {{ activeUser.country }} </span>
-          <span> {{ activeUser.product }} </span>
+          <span> {{ activeUser.product }} </span> <!--Should this word be translated?-->
         </div>
       </div>
     </div>
