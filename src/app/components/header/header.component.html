@@ -1,58 +1,69 @@
-<nav class="navbar navbar-expand-lg navbar-dark custom-bg d-flex justify-content-between align-items-center {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
+<nav
+    class="navbar navbar-expand-lg navbar-dark custom-bg d-flex justify-content-between align-items-center {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
     <div class="navegacao d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img class="me-2" style="max-width: 38px;" src="assets/logo.png" alt="Litefy Logo"> Litefy
         </a>
 
         <div class="menu-button" (click)="openMenu = !openMenu">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="18" x2="20" y2="18" />
-      </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="4" y1="6" x2="20" y2="6" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
         </div>
 
         <ul *ngIf="auth.Autenticado()" class="menu navbar-nav me-auto" [ngClass]="{'open': openMenu}">
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/search']" (click)="openMenu = false">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <circle cx="10" cy="10" r="7" />
-            <line x1="21" y1="21" x2="15" y2="15" />
-          </svg> {{ 'MenuSearchText' | translate }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="10" cy="10" r="7" />
+                        <line x1="21" y1="21" x2="15" y2="15" />
+                    </svg> {{ 'MenuSearchText' | translate }}
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/library']" (click)="openMenu = false">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
-            <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
-          </svg> {{ 'MenuLibraryText' | translate }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
+                        <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
+                    </svg> {{ 'MenuLibraryText' | translate }}
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/podcasts']" (click)="openMenu = false">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
-            <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
-          </svg> {{ 'MenuPodcastText' | translate }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
+                        <path d="M9.265 4a2 2 0 0 1 1.735 -1h6a2 2 0 0 1 2 2v12l-1 -.6" />
+                    </svg> {{ 'MenuPodcastText' | translate }}
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/karaoke']" (click)="openMenu = false">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M18 8a3 3 0 0 1 0 6" />
-            <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
-            <path
-              d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
-          </svg> {{ 'MenuKaraokeText' | translate }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 8a3 3 0 0 1 0 6" />
+                        <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+                        <path
+                            d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+                    </svg> {{ 'MenuKaraokeText' | translate }}
                 </a>
             </li>
         </ul>
@@ -61,7 +72,9 @@
     <div class="d-flex justify-content-between align-items-center">
         <div class="user-area me-2" *ngIf="auth.Autenticado()">
             <div class="header" (click)="userOpenMenu = !userOpenMenu">
-                <img *ngIf="canLoadImage()" onerror="this.src = 'assets/standart-artist-icon.png'" class="me-2" [src]="user?.images[0]?.url" [alt]="user?.display_name" />
+                <div *ngIf="canLoadImage()" class="user-image"
+                    [ngStyle]="{'background-image': 'url(' + user?.images[0]?.url + ')'}">
+                </div>
 
                 <div class="text text-white hide-mobile">
                     <strong class="mb-0">{{ user?.display_name }}</strong>
@@ -71,39 +84,45 @@
 
             <ul class="user-menu text-white" [ngClass]="{'open': userOpenMenu}">
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-id" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <rect x="3" y="4" width="18" height="16" rx="3" />
-            <circle cx="9" cy="10" r="2" />
-            <line x1="15" y1="8" x2="17" y2="8" />
-            <line x1="15" y1="12" x2="17" y2="12" />
-            <line x1="7" y1="16" x2="17" y2="16" />
-          </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-id" width="16"
+                        height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="3" y="4" width="18" height="16" rx="3" />
+                        <circle cx="9" cy="10" r="2" />
+                        <line x1="15" y1="8" x2="17" y2="8" />
+                        <line x1="15" y1="12" x2="17" y2="12" />
+                        <line x1="7" y1="16" x2="17" y2="16" />
+                    </svg>
 
                     <a [routerLink]="['/profile']">{{ 'ProfileText' | translate }}</a>
                 </li>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <circle cx="6" cy="10" r="2" />
-            <line x1="6" y1="4" x2="6" y2="8" />
-            <line x1="6" y1="12" x2="6" y2="20" />
-            <circle cx="12" cy="16" r="2" />
-            <line x1="12" y1="4" x2="12" y2="14" />
-            <line x1="12" y1="18" x2="12" y2="20" />
-            <circle cx="18" cy="7" r="2" />
-            <line x1="18" y1="4" x2="18" y2="5" />
-            <line x1="18" y1="9" x2="18" y2="20" />
-          </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments" width="16"
+                        height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <circle cx="6" cy="10" r="2" />
+                        <line x1="6" y1="4" x2="6" y2="8" />
+                        <line x1="6" y1="12" x2="6" y2="20" />
+                        <circle cx="12" cy="16" r="2" />
+                        <line x1="12" y1="4" x2="12" y2="14" />
+                        <line x1="12" y1="18" x2="12" y2="20" />
+                        <circle cx="18" cy="7" r="2" />
+                        <line x1="18" y1="4" x2="18" y2="5" />
+                        <line x1="18" y1="9" x2="18" y2="20" />
+                    </svg>
 
                     <a [routerLink]="['/settings']">{{ 'SettingsText' | translate }}</a>
                 </li>
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-            <path d="M7 12h14l-3 -3m0 6l3 -3" />
-          </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="16"
+                        height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                    </svg>
 
                     <a (click)="sair()">{{ 'ExitText' | translate }}</a>
                 </li>
