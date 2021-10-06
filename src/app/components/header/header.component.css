@@ -45,7 +45,7 @@
 }
 
 .user-area .user-menu li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -78,4 +78,9 @@
     .menu.open {
         display: flex;
     }
+}
+
+.nav-item {
+    padding-top: 5px;
+    padding-left: 30px;
 }
