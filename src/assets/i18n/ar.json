@@ -1,0 +1,57 @@
+{
+    "direction": "rtl",
+
+	"LoginDescriptionText": "شرعي. عميل سبوتيفي للأجهزة المنخفضة النهاية",
+	"LoginText": "نعتقد أنك لست بحاجة إلى جهاز فائق للاستمتاع بموسيقاك. نعتقد أنك لست بحاجة إلى مواكبة كل التقنيات الجديدة للحصول على الترفيه. هذا هو سبب وجود Litefy.",
+    "LoginButtonText": "تسجيل الدخول مع سبوتيفي",
+
+    "SearchPlaceholderText": "المسارات والألبوم والفنان وقائمة التشغيل والعروض والحلقات ...",
+
+	"MenuSearchText": "بحث",
+    "MenuLibraryText": "مكتبة",
+    "MenuKaraokeText": "وضع الكاريوكي",
+
+    "HomeArtistsText": "الفنانين المفضلين لديك",
+    "HomeMusicsText": "أغانيك المفضلة",
+    "HomeAlbumsText": "ألبومات جديدة",
+	"HomePlaylistsText": "قوائم التشغيل الموصى بها",
+
+    "ArtistTracksText": "أكثر المسارات تشغيلًا",
+	"ArtistAlbumsText": "ألبومات",
+	"ArtistRelatedText": "فنانون ذوو صلة",
+
+    "Hello": "مرحبا",
+    "LibraryTracksText": "المسارات",
+    "LibraryAlbumsText": "ألبومات",
+	"LibraryPlaylistsText": "قوائم التشغيل",
+
+    "MusicListTracks": "مسار",
+	"MusicListTracksPlural": "المسارات",
+    "MusicListFollowers": "تابع",
+	"MusicListFollowersPlural": "متابعون",
+	"DescriptionText": "وصف",
+
+    "PlayingText": "تلعب",
+    "PausedText": "توقف",
+    "NextText": "الأغنية التالية",
+    "PreviousText": "المسار السابق",
+    "ShuffleOnText": "وضع التشغيل العشوائي قيد التشغيل",
+    "ShuffleOffText": "إيقاف تشغيل الوضع العشوائي",
+
+    "ExitText": "ىخرج",
+	"FollowersText": "متابعون",
+	"ProfileText": "الملف الشخصي",
+	"SettingsText": "الإعدادات",
+
+    "SearchArtists": "الفنانين",
+
+    "KaraokeNotFoundText": "لم يتم العثور على كلمات ، ولكن يمكنك محاولة البحث يدويًا باستخدام الزر أدناه.",
+	"KaraokeSearchText": "بحث",
+
+    "SettingsImageText": "تحميل الصور (الألبوم والفنانين وقوائم التشغيل وما إلى ذلك)",
+    "SettingsPageTitle": "الإعدادات",
+
+    "MenuPodcastText": "المدونة الصوتية",
+    "PodcastsShowsText": "عروض",
+    "PodcastsEpisodesText": "الحلقات"
+}
