@@ -1,0 +1,57 @@
+{
+    "direction": "ltr",
+
+    "LoginDescriptionText": "Litefy. Spotify klijent za low-end uređaje",
+    "LoginText": "Mi Vjerujemo da vam nije potreban super uređaj za uživanje u glazbi. Vjerujemo da ne morate pratiti sve nove tehnologije da biste se zabavili. Zato Litefy postoji.",
+    "LoginButtonText": "Prijavite se putem Spotifyja",
+
+    "SearchPlaceholderText": "Pjesme, albumi, izvođači, playliste, emisije, epizode...",
+
+    "MenuSearchText": "Traži",
+    "MenuLibraryText": "Biblioteka",
+    "MenuKaraokeText": "Karaoke modus",
+
+    "HomeArtistsText": "Vaši omiljeni izvođači",
+    "HomeMusicsText": "Vaše omiljene pjesme",
+    "HomeAlbumsText": "Novi albumi",
+    "HomePlaylistsText": "Preporučeni popisi za reprodukciju",
+
+    "ArtistTracksText": "Najčešće reproducirane pjesme",
+    "ArtistAlbumsText": "Albumi",
+    "ArtistRelatedText": "Slični izvođači",
+
+    "Hello": "Bok",
+    "LibraryTracksText": "Pjesme",
+    "LibraryAlbumsText": "Albumi",
+    "LibraryPlaylistsText": "Popisi za reprodukciju",
+
+    "MusicListTracks": "Pjesma",
+    "MusicListTracksPlural": "Pjesme",
+    "MusicListFollowers": "Pratilac",
+    "MusicListFollowersPlural": "Pratioci",
+    "DescriptionText": "Opis",
+
+    "PlayingText": "Svira",
+    "PausedText": "Zaustavljeno",
+    "NextText": "Sljedeća pjesma",
+    "PreviousText": "Prethodna pjesma",
+    "ShuffleOnText": "Sviraj nasumično uključeno",
+    "ShuffleOffText": "Sviraj nasumično isključeno",
+
+    "ExitText": "Izlaz",
+    "FollowersText": "Pratioci",
+    "ProfileText": "Profil",
+    "SettingsText": "Podešavanja",
+
+    "SearchArtists": "Izvođači",
+
+    "KaraokeNotFoundText": "Nije pronađen nijedan tekst, ali možete pokušati ručno pretraživati ​​pomoću gumba koji se nalazi dolje.",
+    "KaraokeSearchText": "Traži",
+
+    "SettingsPageTitle": "Podešavanja",
+    "SettingsImageText": "Učitaj slike (album, izvođač, popisi za reprodukciju, itd.)",
+
+    "MenuPodcastText": "Podcasti",
+    "PodcastsShowsText": "Emisije",
+    "PodcastsEpisodesText": "Epizode"
+}
