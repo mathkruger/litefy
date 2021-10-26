@@ -8,6 +8,16 @@
     --spt-green: #1DB954;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:  #8a8787;  
+    border-radius: 5px;
+  }
+
 body {
     background: var(--spt-grey);
 }
