@@ -1,0 +1,57 @@
+{
+    "direction": "ltr",
+
+	"LoginDescriptionText": "Letify! निचले स्तर वाले उपकरणों के लिए Spotify क्लाइंट",
+	"LoginText": "हम मानते  हैं कि आपको अपने संगीत का आनंद लेने के लिए किसी अत्याधुनिक उपकरण की आवश्यकता नहीं है। हमारा मानना ​​है कि मनोरंजन के लिए आपको सभी नई तकनीकों को अपनाने की आवश्यकता नहीं है। इसलिए Litefy मौजूद है।",
+    "LoginButtonText": "Spotify के साथ लॉगिन करें",
+
+    "SearchPlaceholderText": "नज़र रखे एल्बम, कलाकार, प्लेलिस्ट, शो, एपिसोड .... ",
+
+	"MenuSearchText": "खोजें",
+    "MenuLibraryText": "लाइब्रेरी",
+    "MenuKaraokeText": "कराओके मोड",
+
+    "HomeArtistsText": "आपके पसंदीदा कलाकार",
+    "HomeMusicsText": "आपके पसंदीदा गाने",
+    "HomeAlbumsText": "नए एल्बम",
+	"HomePlaylistsText": "संस्तुत प्लेलिस्ट",
+
+    "ArtistTracksText": "सबसे ज्यादा बजने वाले गाने",
+	"ArtistAlbumsText": "एल्बम",
+	"ArtistRelatedText": "संबंधित कलाकार",
+
+    "Hello": "नमस्कार",
+    "LibraryTracksText": "गाने",
+    "LibraryAlbumsText": "एल्बम",
+	"LibraryPlaylistsText": "पसंदीदा संग्रह",
+
+    "MusicListTracks": "गाना",
+	"MusicListTracksPlural": "गाने",
+    "MusicListFollowers": "समर्थक",
+	"MusicListFollowersPlural": "समर्थक",
+	"DescriptionText": "विवरण",
+
+    "PlayingText": "बज रहा है",
+    "PausedText": "रोक रखा है",
+    "NextText": "अगला गाना",
+    "PreviousText": "पिछला गाना",
+    "ShuffleOnText": "मिश्रण मोड चालू",
+    "ShuffleOffText": "मिश्रण मोड बंद",
+
+    "ExitText": "बाहर जाएं",
+	"FollowersText": "समर्थक",
+	"ProfileText": "प्रोफ़ाइल",
+	"SettingsText": "सेटिंग्स",
+
+    "SearchArtists": "कलाकार",
+
+    "KaraokeNotFoundText": "कोई गीत नहीं मिला, लेकिन आप नीचे दिए गए बटन का उपयोग करके मैन्युअल रूप से खोजने का प्रयास कर सकते हैं।",
+	"KaraokeSearchText": "खोजें",
+
+    "SettingsPageTitle": "सेटिंग्स",
+    "SettingsImageText": "छवियों को लोड करें (एल्बम, कलाकार, प्लेलिस्ट, आदि)",
+
+    "MenuPodcastText": "पॉडकास्ट",
+    "PodcastsShowsText": "दर्शवितें",
+    "PodcastsEpisodesText": "एपिसोड"
+}
