@@ -1,5 +1,56 @@
 .language {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.language .dropdown-toggle {
     border-radius: 15px;
     border: 0;
-    text-transform: uppercase;
+}
+
+.language .dropdown-toggle img {
+    margin: 0 8px;
+}
+
+.language .dropdown-menu {
+    display: block;
+    left: unset;
+    right: 0;
+    top: 110%;
+}
+
+.language .dropdown-menu.rtl-custom {
+    right: unset;
+    left: 0;
+}
+
+.language .dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.language .dropdown-menu .dropdown-item span {
+    width: 100%;
+}
+
+.language .dropdown-menu .dropdown-item span strong {
+    text-transform: capitalize;
+}
+
+.language .dropdown-menu .dropdown-item:not(.active):hover {
+    color: black;
+}
+
+.language-selector-shadow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
 }

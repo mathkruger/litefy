@@ -1,6 +1,16 @@
-<select class="language custom-select custom-select-sm" #selectedLang (change)="switchLang(selectedLang.value)">
-  <option *ngFor="let language of translate.getLangs()" [value]="language"
-    [selected]="language === currentLang">
-    {{ language }}
-  </option>
-</select>
+<div class="language" *ngIf="currentLang">
+  <button (click)="hidden = !hidden" type="button" class="btn btn-dark dropdown-toggle" aria-expanded="false">
+    <img src="https://www.countryflagicons.com/FLAT/32/{{ currentLang.flag }}.png">
+  </button>
+  <div class="dropdown-menu bg-dark {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [hidden]="hidden">
+    <p *ngFor="let language of languages" class="dropdown-item"
+      (click)="switchLang(language)"
+      [ngClass]="{'active': language.code === currentLang.code}">
+      <img src="https://www.countryflagicons.com/FLAT/16/{{ language.flag }}.png">
+      <span [ngClass]="{'rtl-custom': language.direction === 'rtl'}">
+        <strong>{{ language.name }}</strong>
+      </span>
+    </p>
+  </div>
+</div>
+<div *ngIf="!hidden" (click)="hidden = true" class="language-selector-shadow"></div>

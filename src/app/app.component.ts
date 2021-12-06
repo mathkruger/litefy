@@ -17,12 +17,7 @@ export class AppComponent implements OnInit {
         public translate: TranslateService,
         private settingsService: SettingsService,
         private userService: UserService
-    ) {
-        const defaultLanguage = window.localStorage.getItem("languageSelected");
-        const languages = ["pt", "en", "es", "he", "fr", "ru", "ar", "hr", "hi"].sort();
-        translate.addLangs(languages);
-        translate.use(defaultLanguage || "pt");
-    }
+    ) {}
 
     user: User;
 
@@ -30,6 +25,10 @@ export class AppComponent implements OnInit {
     defaultSettings = [new Settings(1, "SettingsImageText", true)];
 
     ngOnInit(): void {
+        const languages = ["pt-BR", "en", "es", "he", "fr", "ru", "ar", "hr", "hi"].sort();
+        this.translate.addLangs(languages);
+        this.translate.setDefaultLang(languages.includes(navigator.language) ? navigator.language : "en");
+
         this.auth.setUser(JSON.parse(window.localStorage.getItem("user")));
 
         if (!this.settingsService.hasLocalstorageData()) {

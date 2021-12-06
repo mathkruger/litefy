@@ -91,7 +91,7 @@ a:hover {
     direction: ltr;
     text-align: left;
 }
-/* please consider using Bootsrap 5 (https://getbootstrap.com/docs/5.0/utilities/spacing/) */
+
 .ms-auto{
     margin-inline-start: auto!important;
 }
