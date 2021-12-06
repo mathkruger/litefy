@@ -9,10 +9,15 @@
     border: 0;
 }
 
+.language .dropdown-toggle img {
+    margin: 0 8px;
+}
+
 .language .dropdown-menu {
     display: block;
     left: unset;
     right: 0;
+    top: 110%;
 }
 
 .language .dropdown-menu.rtl-custom {
@@ -25,6 +30,19 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    color: white;
+}
+
+.language .dropdown-menu .dropdown-item span {
+    width: 100%;
+}
+
+.language .dropdown-menu .dropdown-item span strong {
+    text-transform: capitalize;
+}
+
+.language .dropdown-menu .dropdown-item:not(.active):hover {
+    color: black;
 }
 
 .language-selector-shadow {
