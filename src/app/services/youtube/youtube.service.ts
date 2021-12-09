@@ -30,7 +30,7 @@ export class YoutubeService {
     }
 
     getVideo(artist: string, trackName: string) {
-        const searchLink = `https://html.duckduckgo.com/html/?q=${artist} - ${trackName} youtube`;
+        const searchLink = `https://html.duckduckgo.com/html/?q=${artist} - ${trackName} site:youtube.com`;
 
         return this.http
             .get<any>(
@@ -47,11 +47,17 @@ export class YoutubeService {
                         doc.querySelectorAll(".links_main")
                     );
 
-                    return decodeURIComponent(
+                    let videoId = decodeURIComponent(
                         resultArray[0]
                             .querySelector(".result__snippet")
                             .getAttribute("href")
                     ).split("?v=")[1];
+
+                    if (videoId.includes("&")) {
+                        videoId = videoId.split("&")[0]
+                    }
+
+                    return videoId;
                 })
             );
     }
