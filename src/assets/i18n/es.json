@@ -41,7 +41,8 @@
     "ShuffleOffText": "Modo aleatorio desactivado",
 
     "ExitText": "Salir",
-    "FollowersText": "Seguidores",
+    "FollowersText": "Seguidor",
+    "FollowersTextPlural": "Seguidores",
     "ProfileText": "Perfil",
     "SettingsText": "Ajustes",
 

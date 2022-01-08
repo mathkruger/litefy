@@ -1,0 +1,60 @@
+{
+    "direction": "ltr",
+    "FlagCode": "UA",
+    "LanguageName": "Українська",
+
+    "LoginDescriptionText": "Litefy. Spotify клієнт для бюджетних пристроїв",
+    "LoginText": "Ми вважаємо, що для насолодження музикою вам не слід використовувати дорогий пристрій. Ми вважаємо, що вам не потрібно завжди бути на часі у технологіях, аби розважатись. Саме тому Litefy існує.",
+    "LoginButtonText": "Увійти через Spotify",
+
+    "SearchPlaceholderText": "Треки, альбоми, виконавці, плейлисти, шоу, епізоди ...",
+
+    "MenuSearchText": "Пошук",
+    "MenuLibraryText": "Бібліотека",
+    "MenuKaraokeText": "Режим караоке",
+
+    "HomeArtistsText": "Твої улюблені виконавці",
+    "HomeMusicsText": "Твої улюблені пісні",
+    "HomeAlbumsText": "Нові альбоми",
+    "HomePlaylistsText": "Рекомендовані плейлисти",
+
+    "ArtistTracksText": "Найбільш програвані треки",
+    "ArtistAlbumsText": "Альбоми",
+    "ArtistRelatedText": "Пов'язані виконавці",
+
+    "Hello": "Привіт",
+    "LibraryTracksText": "Треки",
+    "LibraryAlbumsText": "Альбоми",
+    "LibraryPlaylistsText": "Плейлисти",
+
+    "MusicListTracks": "Трек",
+    "MusicListTracksPlural": "Треки",
+    "MusicListFollowers": "Підписник",
+    "MusicListFollowersPlural": "Підписників",
+    "DescriptionText": "Опис",
+
+    "PlayingText": "Грає",
+    "PausedText": "Призупинено",
+    "NextText": "Наступний трек",
+    "PreviousText": "Попередній трек",
+    "ShuffleOnText": "Увімкнено режим перемішування",
+    "ShuffleOffText": "Вимкнено режим перемішування",
+
+    "ExitText": "Вийти",
+    "FollowersText": "Підписник",
+    "FollowersTextPlural": "Підписників",
+    "ProfileText": "Профіль",
+    "SettingsText": "Налаштування",
+
+    "SearchArtists": "Виконавці",
+
+    "KaraokeNotFoundText": "Текстів немає, натомість можеш спробувати знайти їх вручну, використовуючи кнопку нижче.",
+    "KaraokeSearchText": "Пошук",
+
+    "SettingsPageTitle": "Налаштування",
+    "SettingsImageText": "Завантажувати зображення (альбом, виконавець, плейлисти...)",
+
+    "MenuPodcastText": "Подкасти",
+    "PodcastsShowsText": "Шоу",
+    "PodcastsEpisodesText": "Епізоди"
+}
