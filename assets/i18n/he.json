@@ -41,7 +41,8 @@
     "ShuffleOffText": "מצב ערבוב כבוי",
 
     "ExitText": "יציאה",
-    "FollowersText": "עוקבים",
+    "FollowersText": "עוקב",
+    "FollowersTextPlural": "עוקבים",
     "ProfileText": "פרופיל",
     "SettingsText": "הגדרות",
 

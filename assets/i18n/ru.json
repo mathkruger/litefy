@@ -29,7 +29,7 @@
 
 	"MusicListTracks": "трек",
 	"MusicListTracksPlural": "Треки",
-    "MusicListFollowers": "толкатель",
+    "MusicListFollowers": "Читает",
 	"MusicListFollowersPlural": "Читают",
     "DescriptionText": "Описание",
 
@@ -41,7 +41,8 @@
 	"ShuffleOffText": "Режим воспроизведения в случайном порядке ВЫКЛ.",
 
     "ExitText": "Выход",
-    "FollowersText": "Читают",
+    "FollowersText": "Читает",
+    "FollowersTextPlural": "Читают",
     "ProfileText": "профиль",
     "SettingsText": "настройки",
 

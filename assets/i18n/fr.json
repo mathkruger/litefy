@@ -41,7 +41,8 @@
     "ShuffleOffText": "Mode aléatoire OFF",
 
     "ExitText": "Exit",
-    "FollowersText": "Followers",
+    "FollowersText": "Abonné",
+    "FollowersTextPlural": "Abonnés",
     "ProfileText": "Profile",
     "SettingsText": "Settings",
 

@@ -41,7 +41,8 @@
     "ShuffleOffText": "إيقاف تشغيل الوضع العشوائي",
 
     "ExitText": "ىخرج",
-	"FollowersText": "متابعون",
+	"FollowersText": "تابع",
+    "FollowersTextPlural": "متابعون",
 	"ProfileText": "الملف الشخصي",
 	"SettingsText": "الإعدادات",
 
