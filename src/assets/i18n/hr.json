@@ -41,7 +41,8 @@
     "ShuffleOffText": "Sviraj nasumično isključeno",
 
     "ExitText": "Izlaz",
-    "FollowersText": "Pratioci",
+    "FollowersText": "Pratilac",
+    "FollowersTextPlural": "Pratioci",
     "ProfileText": "Profil",
     "SettingsText": "Podešavanja",
 

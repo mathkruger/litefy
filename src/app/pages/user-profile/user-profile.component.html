@@ -13,7 +13,10 @@
         <div class = "username"> {{ activeUser.display_name }} </div>
         <div class="list-group">
           <span> {{ activeUser.id }} </span>
-          <span> {{ activeUser.followers.total | numberLocale:this.translateService.currentLang }} {{ 'FollowersText' | translate | lowercase }} </span>
+          <span> {{ activeUser.followers.total | numberLocale:this.translateService.currentLang }}
+              {{ activeUser.followers.total > 1 || activeUser.followers.total == 0
+                  ? ('FollowersTextPlural'| translate | lowercase)
+                  : ('FollowersText' | translate | lowercase)}} </span>
           <span> {{ activeUser.email }} </span>
           <span> {{ activeUser.country }} </span>
           <span> {{ activeUser.product }} </span> <!--Should this word be translated?-->

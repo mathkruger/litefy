@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     defaultSettings = [new Settings(1, "SettingsImageText", true)];
 
     ngOnInit(): void {
-        const languages = ["pt-BR", "en", "es", "he", "fr", "ru", "ar", "hr", "hi"].sort();
+        const languages = ["pt-BR", "en", "es", "he", "fr", "ru", "ar", "hr", "hi", "ua"].sort();
         this.translate.addLangs(languages);
         this.translate.setDefaultLang(languages.includes(navigator.language) ? navigator.language : "en");
 
