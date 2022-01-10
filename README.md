@@ -4,6 +4,8 @@
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
 [![Open Source Helpers](https://www.codetriage.com/mathkruger/litefy/badges/users.svg)](https://www.codetriage.com/mathkruger/litefy)
 
+Wanna support me? <a href="https://www.buymeacoffee.com/mathkruger">Buy me a coffee!</a>
+
 # Litefy
 
 A lightweight Spotify client for low-end smartphones (KaiOS included [not yet]) and computers.
