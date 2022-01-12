@@ -1,7 +1,7 @@
 {
     "direction": "ltr",
     "FlagCode": "RU",
-    "LanguageName": "русский",
+    "LanguageName": "Русский",
 
     "LoginDescriptionText": "Litefy. Клиент Spotify для бюджетных устройств",
 	"LoginText": "Мы считаем, что для прослушивания музыки не требуется суперустройство. Мы считаем, что вам не нужно быть в курсе всех новых технологий, чтобы развлекаться. Вот почему существует Litefy.",
@@ -10,51 +10,51 @@
     "SearchPlaceholderText": "Треки, альбом, исполнитель, плейлист, шоу, эпизоды ...",
 
 	"MenuSearchText": "Поиск",
-    "MenuLibraryText": "библиотека",
+    "MenuLibraryText": "Библиотека",
     "MenuKaraokeText": "Режим караоке",
 
-    "HomeArtistsText": "Ваши любимые артисты",
+    "HomeArtistsText": "Ваши любимые исполнители",
 	"HomeMusicsText": "Ваши любимые песни",
     "HomeAlbumsText": "Новые альбомы",
 	"HomePlaylistsText": "Рекомендуемые плейлисты",
 
     "ArtistTracksText": "Самые популярные треки",
-	"ArtistAlbumsText": "альбомы",
-	"ArtistRelatedText": "Связанные художники",
+	"ArtistAlbumsText": "Альбомы",
+	"ArtistRelatedText": "Связанные исполнители",
 
     "Hello": "Привет",
     "LibraryTracksText": "Треки",
-    "LibraryAlbumsText": "альбомы",
+    "LibraryAlbumsText": "Альбомы",
 	"LibraryPlaylistsText": "Плейлисты",
 
-	"MusicListTracks": "трек",
+	"MusicListTracks": "Трек",
 	"MusicListTracksPlural": "Треки",
-    "MusicListFollowers": "Читает",
-	"MusicListFollowersPlural": "Читают",
+    "MusicListFollowers": "Подписчик",
+	"MusicListFollowersPlural": "Подписчиков",
     "DescriptionText": "Описание",
 
-	"PlayingText": "ВОСПРОИЗВЕДЕНИЕ",
-    "PausedText": "Приостановлена",
+	"PlayingText": "Воспроизведение возобновлено",
+    "PausedText": "Воспроизведение приостановлено",
     "NextText": "Следующий трек",
-	"PreviousText": "",
+	"PreviousText": "Предыдущий трек",
     "ShuffleOnText": "Включен режим воспроизведения в случайном порядке",
-	"ShuffleOffText": "Режим воспроизведения в случайном порядке ВЫКЛ.",
+	"ShuffleOffText": "Режим воспроизведения в случайном порядке отключён",
 
     "ExitText": "Выход",
-    "FollowersText": "Читает",
-    "FollowersTextPlural": "Читают",
-    "ProfileText": "профиль",
-    "SettingsText": "настройки",
+    "FollowersText": "Подписчик",
+    "FollowersTextPlural": "Подписчиков",
+    "ProfileText": "Профиль",
+    "SettingsText": "Настройки",
 
-    "SearchArtists": "ХУДОЖНИКИ",
+    "SearchArtists": "Исполнители",
 
-    "KaraokeNotFoundText": "Тексты не найдены, но вы можете попробовать выполнить поиск вручную, используя кнопку ниже.",
+    "KaraokeNotFoundText": "Текст песни не найден, но вы можете попробовать выполнить поиск вручную, используя кнопку ниже.",
 	"KaraokeSearchText": "Поиск",
 
-	"SettingsPageTitle": "настройки",
-    "SettingsImageText": "Загружать изображения (альбом, исполнители, плейлисты и т. Д.)",
+	"SettingsPageTitle": "Настройки",
+    "SettingsImageText": "Загружать изображения (альбом, исполнители, плейлисты и т.д.)",
 
     "MenuPodcastText": "Подкасты",
-    "PodcastsShowsText": "Показывает",
-    "PodcastsEpisodesText": "эпизоды"
+    "PodcastsShowsText": "Шоу",
+    "PodcastsEpisodesText": "Эпизоды"
 }

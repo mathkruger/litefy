@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1641855040821,
+  "timestamp": 1642009169092,
   "index": "/litefy/index.html",
   "assetGroups": [
     {
@@ -77,7 +77,7 @@
     "/litefy/assets/i18n/hi.json": "2031001fa684faa34c83bcb8f4127bff76386167",
     "/litefy/assets/i18n/hr.json": "1553a5711c2c1baf9e9ffcf5f49a3eb61de6236c",
     "/litefy/assets/i18n/pt-BR.json": "84bb89301dd1434edb9ef19db2a6f1c1b7ff73ee",
-    "/litefy/assets/i18n/ru.json": "b6bceb2af6dad503b9d13ee56f6db14f371b9f4f",
+    "/litefy/assets/i18n/ru.json": "112eb5dda8a27a0bb4c5f6d9fc64dfb0fb547f63",
     "/litefy/assets/i18n/ua.json": "977c5c1298018cb6639e7474ca8fb1c0e9d9527d",
     "/litefy/assets/icons/android/android-launchericon-144-144.png": "e25ad29ca4ba26001abd12db5b02851f68ddab3a",
     "/litefy/assets/icons/android/android-launchericon-192-192.png": "7b54bed54f32d432aec04bc29605cf326080dab7",
