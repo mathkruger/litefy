@@ -1,0 +1,60 @@
+{
+    "direction": "ltr",
+    "FlagCode": "SE",
+    "LanguageName": "Svenska",
+
+    "LoginDescriptionText": "Litefy. En spotify-klient för enkla enheter",
+    "LoginText": "Vi tror att du inte behöver en superenhet för att njuta av din musik. Vi tror att du inte behöver hålla jämna steg med all ny teknik för att bli underhållen. Det är därför Litefy existerar.",
+    "LoginButtonText": "Logga in med Spotify",
+
+    "SearchPlaceholderText": "spår, album, artist, spellista, shows, avsnitt ...",
+
+    "MenuSearchText": "Sök",
+    "MenuLibraryText": "Bibliotek",
+    "MenuKaraokeText": "Karaokeläge",
+
+    "HomeArtistsText": "Dina favoritartister",
+    "HomeMusicsText": "Dina favoritlåtar",
+    "HomeAlbumsText": "Nya album",
+    "HomePlaylistsText": "Rekommenderade spellistor",
+
+    "ArtistTracksText": "Mest spelade låtar",
+    "ArtistAlbumsText": "Album",
+    "ArtistRelatedText": "Relaterade artist",
+
+    "Hello": "Hej",
+    "LibraryTracksText": "Spår",
+    "LibraryAlbumsText": "Album",
+    "LibraryPlaylistsText": "Spellistor",
+
+    "MusicListTracks": "Spår",
+    "MusicListTracksPlural": "Spår",
+    "MusicListFollowers": "Följare",
+    "MusicListFollowersPlural": "Följare",
+    "DescriptionText": "Beskrivning",
+
+    "PlayingText": "Spelar",
+    "PausedText": "Pausad",
+    "NextText": "Nästa spår",
+    "PreviousText": "Föregående spår",
+    "ShuffleOnText": "Blandningsläge PÅ",
+    "ShuffleOffText": "Blandningsläge AV",
+
+    "ExitText": "Avsluta",
+    "FollowersText": "Följare",
+    "FollowersTextPlural": "Följare",
+    "ProfileText": "Profil",
+    "SettingsText": "Inställningar",
+
+    "SearchArtists": "artister",
+
+    "KaraokeNotFoundText": "Inga lyrik hittades, men du kan försöka söka manuellt med knappen nedan.",
+    "KaraokeSearchText": "Sök",
+
+    "SettingsPageTitle": "Inställningar",
+    "SettingsImageText": "Ladda bilder (album, artister, spellista, osv.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Shows",
+    "PodcastsEpisodesText": "Avsnitt"
+}
