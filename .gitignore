@@ -43,3 +43,5 @@ testem.log
 Thumbs.db
 
 /.scannerwork
+package-lock.json
+yarn.lock
