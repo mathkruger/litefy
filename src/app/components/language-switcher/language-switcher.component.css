@@ -33,6 +33,12 @@
     color: white;
 }
 
+.dropdown-menu{
+    height: 900%;
+    overflow : scroll;
+    overflow-x : hidden;
+}
+
 .language .dropdown-menu .dropdown-item span {
     width: 100%;
 }

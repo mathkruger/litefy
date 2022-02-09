@@ -1,6 +1,7 @@
 <div class="language" *ngIf="currentLang">
   <button (click)="hidden = !hidden" type="button" class="btn btn-dark dropdown-toggle" aria-expanded="false">
     <img src="https://www.countryflagicons.com/FLAT/32/{{ currentLang.flag }}.png">
+    <strong>{{ currentLang.name }}</strong>
   </button>
   <div class="dropdown-menu bg-dark {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [hidden]="hidden">
     <p *ngFor="let language of languages" class="dropdown-item"

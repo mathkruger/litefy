@@ -1,0 +1,60 @@
+{
+    "direction": "ltr",
+    "FlagCode": "DE",
+    "LanguageName": "Deutsch",
+
+    "LoginDescriptionText": "Litefy. Ein Spotify-Client für Low-End-Geräte.",
+    "LoginText": "Wir glauben, dass Sie kein Supergerät brauchen, um Ihre Musik zu genießen. Wir glauben, dass Sie nicht mit allen neuen Technologien Schritt halten müssen, um sich unterhalten zu lassen. Deshalb gibt es Litefy.",
+    "LoginButtonText": "Melden Sie sich mit Spotify an",
+
+    "SearchPlaceholderText": "Spuren, Alben, Künstler, Wiedergabeliste, Zeigt an, Episoden ...",
+
+    "MenuSearchText": "Suche",
+    "MenuLibraryText": "Bücherei",
+    "MenuKaraokeText": "Karaoke-Modus",
+
+    "HomeArtistsText": "Ihre Lieblingskünstler",
+    "HomeMusicsText": "Ihre Lieblingslieder",
+    "HomeAlbumsText": "Neue Alben",
+    "HomePlaylistsText": "Empfohlene Wiedergabelisten",
+
+    "ArtistTracksText": "Die meisten gespielten Titel",
+    "ArtistAlbumsText": "Alben",
+    "ArtistRelatedText": "Verwandte Künstler",
+
+    "Hello": "Hallo",
+    "LibraryTracksText": "Spuren",
+    "LibraryAlbumsText": "Alben",
+    "LibraryPlaylistsText": "Wiedergabelisten",
+
+    "MusicListTracks": "Spur",
+    "MusicListTracksPlural": "Spuren",
+    "MusicListFollowers": "Anhängerin",
+    "MusicListFollowersPlural": "Anhänger",
+    "DescriptionText": "Beschreibung",
+
+    "PlayingText": "Spielen",
+    "PausedText": "Angehalten",
+    "NextText": "Nächster Titel",
+    "PreviousText": "Vorheriges Lied",
+    "ShuffleOnText": "Zufallsmodus EIN",
+    "ShuffleOffText": "Zufallsmodus AUS",
+
+    "ExitText": "Ausgang",
+    "FollowersText": "Anhängerin",
+    "FollowersTextPlural": "Anhänger",
+    "ProfileText": "Profil",
+    "SettingsText": "Einstellungen",
+
+    "SearchArtists": "Künstler",
+
+    "KaraokeNotFoundText": "Keine Liedtexte gefunden, aber Sie können versuchen, manuell zu suchen, indem Sie die Schaltfläche unten verwenden.",
+    "KaraokeSearchText": "Suche",
+
+    "SettingsPageTitle": "Einstellungen",
+    "SettingsImageText": "Bilder laden (Album, Interpreten, Playlists etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Zeigt an",
+    "PodcastsEpisodesText": "Episoden"
+}
