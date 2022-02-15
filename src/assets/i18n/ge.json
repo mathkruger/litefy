@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "US",
+    "LanguageName": "ქართული",
+
+    "LoginDescriptionText": "Litefy. Spotify-ს კლიენტი სუსტი მოწყობილობებისთვის",
+    "LoginText": "ჩვენ გვჯერა, რომ არ არის საჭირო გქონდეს ძლიერი მოწყობილობა იმისთვის რომ მუსიკით ისიამოვნო. ჩვენი აზრით გართობისთვის არ უნდა გჭირდებოდეს მოწინავე ტექნოლოგიები. ამიტომ არსებობს Litefy.",
+    
+    "LoginButtonText": "Spotify-თ შესვლა",
+
+    "SearchPlaceholderText": "ტრეკები, ალბომები, არტისტები, პლეილისტები, შოუები, ეპიზოდები ...",
+
+    "MenuSearchText": "ძებნა",
+    "MenuLibraryText": "ბიბლიოთეკა",
+    "MenuKaraokeText": "კარაოკეს რეჟიმი",
+
+    "HomeArtistsText": "შენი საყვარელი არტისტები",
+    "HomeMusicsText": "შენი საყვარელი სიმღერები",
+    "HomeAlbumsText": "ახალი ალბომები",
+    "HomePlaylistsText": "რეკომენდებული პლეილისტები",
+
+    "ArtistTracksText": "ხშირად დაკრული ტრეკები",
+    "ArtistAlbumsText": "ალბომები",
+    "ArtistRelatedText": "დაკავშირებული არტისტები",
+
+    "Hello": "სალამი",
+    "LibraryTracksText": "ტრეკები",
+    "LibraryAlbumsText": "ალბომები",
+    "LibraryPlaylistsText": "პლეილისტი",
+
+    "MusicListTracks": "ტრეკი",
+    "MusicListTracksPlural": "ტრეკები",
+    "MusicListFollowers": "გამომწერი",
+    "MusicListFollowersPlural": "გამომწერები",
+    "DescriptionText": "აღწერა",
+
+    "PlayingText": "უკრავს ახლა",
+    "PausedText": "პაუზა",
+    "NextText": "მომდევნო ტრეკი",
+    "PreviousText": "წინა ტრეკი",
+    "ShuffleOnText": "Shuffle რეჟიმის ჩართვა",
+    "ShuffleOffText": "Shuffle რეჟიმის გამორთვა",
+
+    "ExitText": "გამოსვლა",
+    "FollowersText": "გამომწერი",
+    "FollowersTextPlural": "გამომწერები",
+    "ProfileText": "პროფილი",
+    "SettingsText": "პარამეტრები",
+
+    "SearchArtists": "არტისტები",
+
+    "KaraokeNotFoundText": "ტექსტი არ მოიძებნა, მაგრამ შეგიძლია ხელით მოძებნო ქვედა ღილაკის გამოყენებით.",
+    "KaraokeSearchText": "ძებნა",
+
+    "SettingsPageTitle": "პარამეტრები",
+    "SettingsImageText": "ჩატვირთე ფოტოები (ალბომი, არტისტი, პლეილისტი, ა.შ)",
+
+    "MenuPodcastText": "პოდკასტები",
+    "PodcastsShowsText": "შოუები",
+    "PodcastsEpisodesText": "ეპიზოდები"
+}
