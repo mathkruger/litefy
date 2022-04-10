@@ -1,29 +1,95 @@
+.Home__container {
+    height: calc(100% - 70px);
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Home__content {
+    display: flex;
+    height: 90%;
+    width: 620px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Home__Bob {
+    width: 40%;
+}
+
+.Home__top {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.Home__AppName {
+    all: unset;
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.Home__ShortAppDescription {
+    all: unset;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.Home__AppDescription {
+    all: unset;
+    font-size: 17px;
+}
+
+.Home__LoginLogo {
+    height: 95%;
+}
+
 .btn-login {
     border: 0;
+    height: 60px;
     background: var(--spt-green);
-    color: white;
+    color: #000000;
     font-size: 1.5em;
-    font-weight: 700;
-    padding: .5em 1em;
-    border-radius: 15px;
-    transition: .2s all;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+    width: 260px;
+    display: flex;
+    transition: 0.2s all;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--spt-green);
 }
 
 .btn-login:hover {
-    opacity: .7;
+    /* opacity: 0.7; */
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
 }
 
 #soundbars {
-    margin: 0 auto;
-    max-width: 240px;
+    /* margin: 0 auto;
+    max-width: 240px; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     height: 95px;
+    width: 260px;
     overflow: hidden;
 }
 
 #soundbars span {
     width: 1.25em;
     height: 1.875em;
-    margin-inline-start: 1px;
+    /* margin-inline-start: 1px; */
     background-color: #00c36f;
     display: inline-block;
     transform-style: preserve-3d;
@@ -35,15 +101,15 @@
 }
 
 #soundbars span:nth-of-type(3) {
-    animation-delay: .4s;
+    animation-delay: 0.4s;
 }
 
 #soundbars span:nth-of-type(4) {
-    animation-delay: .6s;
+    animation-delay: 0.6s;
 }
 
 #soundbars span:nth-of-type(5) {
-    animation-delay: .8s;
+    animation-delay: 0.8s;
 }
 
 #soundbars span:nth-of-type(6) {

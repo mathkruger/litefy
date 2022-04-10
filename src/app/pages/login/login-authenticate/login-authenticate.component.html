@@ -1,22 +1,37 @@
-<div class="container {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-  <div class="mt-4 text-center d-flex align-items-center justify-content-center flex-column">
-    <h1>{{ 'LoginDescriptionText' | translate }}</h1>
-    <p class="my-4">
-      {{ 'LoginText' | translate }}
-    </p>
-    <div id="soundbars">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+<div
+    class="Home__container {{
+        ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''
+    }}"
+>
+    <div class="Home__content">
+        <div class="Home__top">
+            <h1 class="Home__AppName">{{ "AppName" | translate }}</h1>
+            <h1 class="Home__ShortAppDescription">
+                {{ "LoginDescriptionText" | translate }}
+            </h1>
+            <p class="Home__AppDescription">
+                {{ "LoginText" | translate }}
+            </p>
+        </div>
+        <div class="Home__bottom">
+            <div id="soundbars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <button (click)="login()" class="btn-login">{{ 'LoginButtonText' | translate }}</button>
-  </div>
+            <button (click)="login()" class="btn-login">
+                <img class="Home__LoginLogo" src="assets/spotifyLogo.png" />
+                {{ "LoginButtonText" | translate }}
+            </button>
+        </div>
+    </div>
+    <img class="Home__Bob" src="assets/bob.svg" />
 </div>
