@@ -9,7 +9,7 @@ import {SettingsBase} from 'src/app/models/base/settings-base';
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.css']
-})
+}) 
 export class HeaderComponent extends SettingsBase implements OnInit {
     constructor(
         private userService: UserService,
