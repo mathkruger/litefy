@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 50px;
+    overflow-y: auto;
 }
 
 .Home__content {
@@ -12,11 +14,13 @@
     height: 90%;
     width: 620px;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 60px;
 }
 
 .Home__Bob {
     width: 40%;
+    min-width: 480px;
 }
 
 .Home__top {
@@ -24,6 +28,7 @@
     width: 100%;
     gap: 20px;
     flex-direction: column;
+    gap: 30px;
 }
 
 .Home__AppName {
@@ -48,6 +53,38 @@
 
 .Home__LoginLogo {
     height: 95%;
+}
+
+@media screen and (max-width: 1220px) {
+    .Home__Bob {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .Home__bottom {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Home__container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .Home__content {
+        justify-content: start;
+    }
+    .Home__container {
+        height: auto;
+        padding-bottom: 50px;
+    }
 }
 
 .btn-login {
