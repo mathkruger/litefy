@@ -1,3 +1,12 @@
+.header {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 8px 0 15px;
+}
+/*
 .custom-bg {
     background: var(--spt-black);
 }
@@ -29,7 +38,7 @@
     padding: 1rem;
     max-width: 240px;
     width: 100%;
-    transition: .2s all;
+    transition: 0.2s all;
     inset-inline-end: 0;
     z-index: 100;
 }
@@ -41,7 +50,7 @@
 
 .user-area .user-menu li {
     list-style: none;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
 .user-area .user-menu li a {
@@ -50,7 +59,7 @@
 }
 
 .user-area .user-menu li:hover {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .user-area .user-menu li svg {
@@ -73,7 +82,7 @@
         z-index: 99;
         width: 100%;
         left: 0;
-        padding: .5rem;
+        padding: 0.5rem;
     }
     .menu.open {
         display: flex;
@@ -93,4 +102,4 @@
     background-position: center;
     margin-right: 1rem;
     border-radius: 50%;
-}
+} */
