@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1645115627652,
+  "timestamp": 1649943459791,
   "index": "/litefy/index.html",
   "assetGroups": [
     {
@@ -13,14 +13,14 @@
       "urls": [
         "/litefy/favicon.ico",
         "/litefy/index.html",
-        "/litefy/main-es2015.ec8dec2cdb8817c34ab5.js",
-        "/litefy/main-es5.ec8dec2cdb8817c34ab5.js",
+        "/litefy/main-es2015.c9803e4a122f9acaa4a2.js",
+        "/litefy/main-es5.c9803e4a122f9acaa4a2.js",
         "/litefy/manifest.webmanifest",
         "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js",
         "/litefy/polyfills-es5.13fd59473aceee12cf77.js",
         "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js",
         "/litefy/runtime-es5.66c79b9d36e7169e27b0.js",
-        "/litefy/styles.509c3b39f1b058ea210a.css"
+        "/litefy/styles.bbdb0db6d34300793cb0.css"
       ],
       "patterns": []
     },
@@ -32,6 +32,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/litefy/assets/bob.svg",
         "/litefy/assets/i18n/ar.json",
         "/litefy/assets/i18n/en.json",
         "/litefy/assets/i18n/es.json",
@@ -64,6 +65,7 @@
         "/litefy/assets/icons/firefox/firefox-marketplace-128-128.png",
         "/litefy/assets/icons/firefox/firefox-marketplace-512-512.png",
         "/litefy/assets/logo.png",
+        "/litefy/assets/spotifyLogo.png",
         "/litefy/assets/standart-album-icon.png",
         "/litefy/assets/standart-artist-icon.png"
       ],
@@ -72,8 +74,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/litefy/assets/bob.svg": "e8d3b698039558da1b3d1482c301826c52c7685f",
     "/litefy/assets/i18n/ar.json": "beb2a963b295098ec757f29dbda2a5c8218cde71",
-    "/litefy/assets/i18n/en.json": "f892cbfc61297f610fb3909e1ed3167c00b999a4",
+    "/litefy/assets/i18n/en.json": "dd4871e239967e4bc16658c36354472e2ddfa302",
     "/litefy/assets/i18n/es.json": "3fcdfd692b29dd2da293c1feac806dd799ad2c6c",
     "/litefy/assets/i18n/fr.json": "f1a167808b02e3e2a85187a0e7b4deac380ab7f4",
     "/litefy/assets/i18n/ge.json": "4b04a6e8d14d5bf39644b0c76eedccfc4074c153",
@@ -104,18 +107,19 @@
     "/litefy/assets/icons/firefox/firefox-marketplace-128-128.png": "0e260d3d9a5c5ed68a3e498a20b801596acf3059",
     "/litefy/assets/icons/firefox/firefox-marketplace-512-512.png": "91cd12ab553f23f8af6ab7a5917923dd187ee573",
     "/litefy/assets/logo.png": "03b243be1741d5bfb39eb31f6aa0cfca265add97",
+    "/litefy/assets/spotifyLogo.png": "91cfd561ce4d7c1b1f3b10310579323be29d302f",
     "/litefy/assets/standart-album-icon.png": "51d1a571b46808e79cdf5d777f517940e8561ec0",
     "/litefy/assets/standart-artist-icon.png": "c91919dcdad26585be29be0a74a6ff4e018e1b26",
     "/litefy/favicon.ico": "3fb827672b7b297c539bd27bab391669e46e0c67",
-    "/litefy/index.html": "de4a996554f1d04c65c9a111ff68b870578f61c2",
-    "/litefy/main-es2015.ec8dec2cdb8817c34ab5.js": "ee70ba9a5dc1db211befe1dcc89267a2f8867974",
-    "/litefy/main-es5.ec8dec2cdb8817c34ab5.js": "fb88cab19effd44301a174aed484c9a665202fa5",
+    "/litefy/index.html": "f4bf433f8d10a1c7729bdeb2259c9eac221aa067",
+    "/litefy/main-es2015.c9803e4a122f9acaa4a2.js": "483658d4bc82cd52aff71484ae5663dcd8a76103",
+    "/litefy/main-es5.c9803e4a122f9acaa4a2.js": "5487e98391fefa6f60e7913582f86258966c8645",
     "/litefy/manifest.webmanifest": "416515aff15e6eca3a0fcc9efb94b2fbd4650e83",
     "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/litefy/polyfills-es5.13fd59473aceee12cf77.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
     "/litefy/runtime-es2015.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/litefy/runtime-es5.66c79b9d36e7169e27b0.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/litefy/styles.509c3b39f1b058ea210a.css": "c154d7f415de718e01d0f0e89274b49fa2045a72"
+    "/litefy/styles.bbdb0db6d34300793cb0.css": "dc0e7eee231209e9c0bfc8dcedb251ce36f82047"
   },
   "navigationUrls": [
     {
