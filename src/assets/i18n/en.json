@@ -10,9 +10,10 @@
 
     "SearchPlaceholderText": "Tracks, album, artist, playlist, shows, episodes ...",
 
+    "MenuHome": "Home",
     "MenuSearchText": "Search",
     "MenuLibraryText": "Library",
-    "MenuKaraokeText": "Karaoke Mode",
+    "MenuKaraokeText": "Karaoke",
 
     "HomeArtistsText": "Your favorite artists",
     "HomeMusicsText": "Your favorite songs",

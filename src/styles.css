@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
 
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --spt-black: #191414;
     --spt-grey: #1d1a1a;
@@ -31,6 +35,7 @@ body {
 
 .app {
     padding-bottom: 170px;
+    margin-top: 80px !important;
 }
 
 a {
