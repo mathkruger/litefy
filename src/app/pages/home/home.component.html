@@ -1,23 +1,35 @@
-<div *ngIf="requisicoesCompletas" class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <app-content-list [title]="'HomeArtistsText' | translate" type="artist" [list]="topArtists"></app-content-list>
-    </div>
+<div
+    *ngIf="requisicoesCompletas"
+    class="app homeContainer  {{
+        ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''
+    }}"
+>
+    <div class="homeSubContainer">
+        <div class="home-sidebar-left">
+            <app-content-list
+                [title]="'HomeMusicsText' | translate"
+                type="track"
+                [list]="topTracks"
+            ></app-content-list>
 
-    <div class="col-md-6">
-      <app-content-list [title]="'HomeMusicsText' | translate" type="track" [list]="topTracks"></app-content-list>
-    </div>
-  </div>
+            <app-content-list
+                [title]="'HomeAlbumsText' | translate"
+                type="album"
+                [list]="newAlbuns"
+            ></app-content-list>
 
-  <div class="row mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-    <div class="col-md-12">
-      <app-content-list [title]="'HomeAlbumsText' | translate" type="album" [list]="newAlbuns"></app-content-list>
+            <app-content-list
+                [title]="'HomePlaylistsText' | translate"
+                type="playlist"
+                [list]="featuredPlaylists"
+            ></app-content-list>
+        </div>
+        <div class="home-sidebar-right">
+            <app-content-list
+                [title]="'HomeArtistsText' | translate"
+                type="artist"
+                [list]="topArtists"
+            ></app-content-list>
+        </div>
     </div>
-  </div>
-
-  <div class="row mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
-    <div class="col-md-12">
-      <app-content-list [title]="'HomePlaylistsText' | translate" type="playlist" [list]="featuredPlaylists"></app-content-list>
-    </div>
-  </div>
 </div>

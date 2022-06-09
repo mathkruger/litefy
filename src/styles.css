@@ -3,7 +3,7 @@
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
     --spt-black: #191414;
@@ -28,15 +28,15 @@ html {
 }
 
 body {
-    background: var(--spt-grey);
-    height: 100%;
+    background-color: var(--spt-grey);
     width: 100%;
+    margin-top: 70px;
+    padding-bottom: 130px;
 }
 
-.app {
-    padding-bottom: 170px;
-    margin-top: 80px !important;
-}
+/* .app {
+    margin-top: 120px !important;
+} */
 
 a {
     text-decoration: none !important;
