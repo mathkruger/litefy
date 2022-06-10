@@ -65,6 +65,10 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         });
     }
 
+    homeRoute(){
+        return this.router.url === "/";
+    }
+
     getPlayerStatus() {
         this.playerService.getPlayerStatus().subscribe((item) => {
             this.playerState = item;
