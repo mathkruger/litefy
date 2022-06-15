@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IT",
+    "LanguageName": "Italiano",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Un client di Spotify per dispositivi di fascia bassa",
+    "LoginText": "Noi crediamo che non sia necessario avere un dispositivo molto potente per godersi la musica. Noi crediamo che non sia necessario essere al passo con le nuove tecnologie per divertirsi. Ecco perché Litefy esiste.",
+    "LoginButtonText": "Esegui il login con Spotify",
+
+    "SearchPlaceholderText": "Tracce, album, artisti, playlist, spettacoli, episodi...",
+
+    "MenuHome": "Home",
+    "MenuSearchText": "Cerca",
+    "MenuLibraryText": "La tua libreria",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "I tuoi artisti preferiti",
+    "HomeMusicsText": "Le tue canzoni preferite",
+    "HomeAlbumsText": "Nuovi album",
+    "HomePlaylistsText": "Playlist consigliate",
+
+    "ArtistTracksText": "Tracce più ascoltate",
+    "ArtistAlbumsText": "Album",
+    "ArtistRelatedText": "Artisti simili",
+
+    "Hello": "Ciao",
+    "LibraryTracksText": "Tracce",
+    "LibraryAlbumsText": "Album",
+    "LibraryPlaylistsText": "Playlist",
+
+    "MusicListTracks": "Traccia",
+    "MusicListTracksPlural": "Tracce",
+    "MusicListFollowers": "Follower",
+    "MusicListFollowersPlural": "Followers",
+    "DescriptionText": "Descrizione",
+
+    "PlayingText": "In riproduzione",
+    "PausedText": "In pausa",
+    "NextText": "Prossima traccia",
+    "PreviousText": "Traccia precedente",
+    "ShuffleOnText": "Modalità shuffle ON",
+    "ShuffleOffText": "Modalità shuffle OFF",
+
+    "ExitText": "Esci",
+    "FollowersText": "Follower",
+    "FollowersTextPlural": "Followers",
+    "ProfileText": "Profilo",
+    "SettingsText": "Impostazioni",
+
+    "SearchArtists": "Artisti",
+
+    "KaraokeNotFoundText": "Non ho trovato il testo, ma puoi provare a cercarlo manualmente con il tasto qui sotto.",
+    "KaraokeSearchText": "Cerca",
+
+    "SettingsPageTitle": "Impostazioni",
+    "SettingsImageText": "Carica le immagini (album, artisti, playlist, ecc.)",
+
+    "MenuPodcastText": "Podcast",
+    "PodcastsShowsText": "Spettacoli",
+    "PodcastsEpisodesText": "Episodi"
+}
