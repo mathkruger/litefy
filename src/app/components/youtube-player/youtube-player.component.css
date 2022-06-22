@@ -3,7 +3,7 @@
     bottom: 0;
     width: 100%;
     left: 0;
-    padding: .5rem;
+    padding: .2rem .5rem;
     background: var(--spt-black);
     z-index: 9999;
 }
@@ -14,9 +14,29 @@
     pointer-events: none;
 }
 
+.control-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+svg{
+    height: fit-content;
+}
+svg, path{
+    transform: scale(0.7);
+}
+
+path{
+    transform: translate(5px, -5px)
+}
+
 
 @media screen and (max-width: 507px) {
     .player-wrapper {
         flex-direction: column-reverse;
     }
+
+    
 }
