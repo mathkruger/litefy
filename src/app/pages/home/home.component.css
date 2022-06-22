@@ -8,7 +8,7 @@
 
 .homeSubContainer {
     max-width: 1478px;
-    padding: 0 20px 0 20px;
+    padding: 0 15px;
 
     display: flex;
     flex-direction: row;
@@ -26,6 +26,22 @@
 .home-sidebar-right {
     width: 300px;
     height: 100%;
+}
+
+@media screen and (min-width: 800px){
+    .homeContainer {
+        padding: 0 10px;
+    }
+    
+    .homeSubContainer {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    
+    .home-sidebar-right {
+        height: 100%;
+        overflow-y: hidden; 
+    }
 }
 
 @media screen and (max-width: 1500px) {
