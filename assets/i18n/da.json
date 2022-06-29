@@ -1,0 +1,60 @@
+{
+    "direction": "ltr",
+    "FlagCode": "DA",
+    "LanguageName": "Dansk",
+
+    "LoginDescriptionText": "Litefy. En spotify-klient til simple enheder",
+    "LoginText": "Vi mener, at du ikke behøver en super enhed for at nyde din musik. Vi mener, at du ikke behøver at følge med i helt nye teknologi for at blive underholdt. Det er derfor Litefy eksisterer",
+    "LoginButtonText": "Log in med Spotify",
+
+    "SearchPlaceholderText": "numre, album, kunstner, playlister, programmer, episoder ...",
+
+    "MenuSearchText": "Søg",
+    "MenuLibraryText": "Bibliotek",
+    "MenuKaraokeText": "Karaoke-tilstand",
+
+    "HomeArtistsText": "Dine yndlingskunstnere",
+    "HomeMusicsText": "Dine yndlingssange",
+    "HomeAlbumsText": "Nyt album",
+    "HomePlaylistsText": "Anbefalede playlister",
+
+    "ArtistTracksText": "Mest spillede sange",
+    "ArtistAlbumsText": "Album",
+    "ArtistRelatedText": "Relateret kunstner",
+
+    "Hello": "Hej",
+    "LibraryTracksText": "Numre",
+    "LibraryAlbumsText": "Album",
+    "LibraryPlaylistsText": "Playlister",
+
+    "MusicListTracks": "Nummer",
+    "MusicListTracksPlural": "Numre",
+    "MusicListFollowers": "Følger",
+    "MusicListFollowersPlural": "Følgere",
+    "DescriptionText": "Beskrivelse",
+
+    "PlayingText": "Spiller",
+    "PausedText": "Pauset",
+    "NextText": "Næste nummer",
+    "PreviousText": "Forrige nummer",
+    "ShuffleOnText": "Shuffle TIL",
+    "ShuffleOffText": "Shuffle FRA",
+
+    "ExitText": "Ende",
+    "FollowersText": "Følger",
+    "FollowersTextPlural": "Følgere",
+    "ProfileText": "Profil",
+    "SettingsText": "Indstillinger",
+
+    "SearchArtists": "Kunstnere",
+
+    "KaraokeNotFoundText": "Ingen sangtekster fundet, men du kan prøve at søge manuelt ved at bruge knappen nedenfor.",
+    "KaraokeSearchText": "Søg",
+
+    "SettingsPageTitle": "Indstillinger",
+    "SettingsImageText": "Upload billeder (album, kunstnere, playlister osv.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Programmer",
+    "PodcastsEpisodesText": "Episode"
+}
