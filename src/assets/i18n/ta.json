@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IN",
+    "LanguageName": "தமிழ்",
+
+    "LoginDescriptionText": "குறைந்த விலை சாதனங்களுக்கான Spotify கிளையன்ட்",
+    "LoginText": "உங்கள் இசையை ரசிக்க சூப்பர் சாதனம் தேவையில்லை என்று நாங்கள் நம்புகிறோம். பொழுதுபோக்கிற்காக அனைத்து புதிய தொழில்நுட்பங்களையும் நீங்கள் தொடர வேண்டியதில்லை என்று நாங்கள் நம்புகிறோம். அதனால்தான் Litefy உள்ளது.",
+    "LoginButtonText": "Spotify மூலம் உள்நுழைக",
+
+    "SearchPlaceholderText": "ட்ராக்குகள், ஆல்பம், கலைஞர், பிளேலிஸ்ட், நிகழ்ச்சிகள், எபிசோடுகள் ...",
+
+    "MenuHome": "முகப்பு",
+    "MenuSearchText": "தேடு",
+    "MenuLibraryText": "நூலகம்",
+    "MenuKaraokeText": "கரோக்கி",
+
+    "HomeArtistsText": "உங்களுக்கு பிடித்த கலைஞர்கள்",
+    "HomeMusicsText": "உங்களுக்கு பிடித்த பாடல்கள்",
+    "HomeAlbumsText": "புதிய ஆல்பங்கள்",
+    "HomePlaylistsText": "பரிந்துரைக்கப்பட்ட பிளேலிஸ்ட்கள்",
+
+    "ArtistTracksText": "அதிகம் விளையாடிய டிராக்குகள்",
+    "ArtistAlbumsText": "ஆல்பங்கள்",
+    "ArtistRelatedText": "தொடர்புடைய கலைஞர்கள்",
+
+    "Hello": "வணக்கம்",
+    "LibraryTracksText": "பாடல்கள்",
+    "LibraryAlbumsText": "ஆல்பங்கள்",
+    "LibraryPlaylistsText": "பிளேலிஸ்ட்கள்",
+
+    "MusicListTracks": "பாடல்",
+    "MusicListTracksPlural": "பாடல்கள்",
+    "MusicListFollowers": "பின்தொடர்பவர்",
+    "MusicListFollowersPlural": "பின்தொடர்பவர்கள்",
+    "DescriptionText": "விளக்கம்",
+
+    "PlayingText": "ஒலிக்கிறது",
+    "PausedText": "இடைநிறுத்தப்பட்டது",
+    "NextText": "அடுத்த பாடல்",
+    "PreviousText": "முந்தைய பாடல்",
+    "ShuffleOnText": "ஷஃபிள் பயன்முறை இயக்கப்பட்டது",
+    "ShuffleOffText": "ஷஃபிள் பயன்முறை ஆஃப்",
+
+    "ExitText": "வெளியேறு",
+    "FollowersText": "பின்தொடர்பவர்",
+    "FollowersTextPlural": "பின்தொடர்பவர்கள்",
+    "ProfileText": "சுயவிவரம்",
+    "SettingsText": "அமைப்புகள்",
+
+    "SearchArtists": "கலைஞர்கள்",
+
+    "KaraokeNotFoundText": "பாடல் வரிகள் எதுவும் கிடைக்கவில்லை, ஆனால் கீழே உள்ள பொத்தானைப் பயன்படுத்தி கைமுறையாகத் தேட முயற்சி செய்யலாம்.",
+    "KaraokeSearchText": "தேடு",
+
+    "SettingsPageTitle": "அமைப்புகள்",
+    "SettingsImageText": "படங்களை ஏற்றவும் (ஆல்பம், கலைஞர்கள், பிளேலிஸ்ட்கள் போன்றவை)",
+
+    "MenuPodcastText": "பாட்காஸ்ட்கள்",
+    "PodcastsShowsText": "நிகழ்ச்சிகள்",
+    "PodcastsEpisodesText": "அத்தியாயங்கள்"
+}
