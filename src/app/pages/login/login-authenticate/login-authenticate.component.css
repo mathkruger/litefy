@@ -52,7 +52,7 @@
 }
 
 .Home__LoginLogo {
-    height: 95%;
+    height: 40px;
 }
 
 .Home__bottom {
@@ -87,7 +87,6 @@
 
 .btn-login {
     border: 0;
-    height: 60px;
     background: var(--spt-green);
     color: #000000;
     font-size: 1.5em;
