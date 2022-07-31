@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "ID",
+    "LanguageName": "Indonesian",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Klien Spotify untuk perangkat kelas bawah",
+    "LoginText": "Kami percaya kamu tidak perlu perangkat yang super untuk menikmati musik. Kami percaya kamu tidak perlu teknologi terbaru untuk mendapatkan hiburan. Itu sebabnya Litefy hadir.",
+    "LoginButtonText": "Masuk dengan Spotify",
+
+    "SearchPlaceholderText": "Trek, album, artis, daftar putar, pertunjukkan, episode ...",
+
+    "MenuHome": "Beranda",
+    "MenuSearchText": "Pencarian",
+    "MenuLibraryText": "Koleksi",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Artis Favoritmu",
+    "HomeMusicsText": "Lagu Favoritmu",
+    "HomeAlbumsText": "Album Baru",
+    "HomePlaylistsText": "Rekomendasi Daftar Putar",
+
+    "ArtistTracksText": "Paling sering diputar",
+    "ArtistAlbumsText": "Semua Album",
+    "ArtistRelatedText": "Artis Terkait",
+
+    "Hello": "Halo",
+    "LibraryTracksText": "Semua Trek",
+    "LibraryAlbumsText": "Semua Album",
+    "LibraryPlaylistsText": "Daftar Putar",
+
+    "MusicListTracks": "Trek",
+    "MusicListTracksPlural": "Semua Trek",
+    "MusicListFollowers": "Pengikut",
+    "MusicListFollowersPlural": "Semua Pengikut",
+    "DescriptionText": "Deskripsi",
+
+    "PlayingText": "Memainkan",
+    "PausedText": "Dijeda",
+    "NextText": "Trek selanjutnya",
+    "PreviousText": "Trek sebelumnya",
+    "ShuffleOnText": "Mode acak aktif",
+    "ShuffleOffText": "Modal acak non-aktif",
+
+    "ExitText": "Keluar",
+    "FollowersText": "Pengikut",
+    "FollowersTextPlural": "Semua Pengikut",
+    "ProfileText": "Profil",
+    "SettingsText": "Pengaturan",
+
+    "SearchArtists": "Semua Artis",
+
+    "KaraokeNotFoundText": "Lirik tidak ditemukan, tapi kamu bisa mencarinya secara manual dengan menekan tombol dibawah ini.",
+    "KaraokeSearchText": "Cari",
+
+    "SettingsPageTitle": "Pengaturan",
+    "SettingsImageText": "Muat gambar (album, artis, daftar putar dll.)",
+
+    "MenuPodcastText": "Siniar",
+    "PodcastsShowsText": "Pertunjukan",
+    "PodcastsEpisodesText": "Semua Episode"
+}
