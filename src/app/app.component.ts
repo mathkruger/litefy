@@ -25,9 +25,30 @@ export class AppComponent implements OnInit {
     defaultSettings = [new Settings(1, "SettingsImageText", true)];
 
     ngOnInit(): void {
-        const languages = ["pt-BR", "es", "he", "fr", "ge", "gm", "ru", "ar", "hr", "hi", "it", "ua", "se", "da", "ta", "pl", "en"];  // always keep the "en" at the end, it's the default language for the website
+        const languages = [
+            "pt-BR",
+            "es",
+            "he",
+            "fr",
+            "ge",
+            "gm",
+            "ru",
+            "ar",
+            "hr",
+            "hi",
+            "it",
+            "ua",
+            "se",
+            "da",
+            "ta",
+            "pl",
+            "id",
+            "en",
+        ]; // always keep the "en" at the end, it's the default language for the website
         this.translate.addLangs(languages);
-        this.translate.setDefaultLang(languages.includes(navigator.language) ? navigator.language : "en");
+        this.translate.setDefaultLang(
+            languages.includes(navigator.language) ? navigator.language : "en"
+        );
 
         this.auth.setUser(JSON.parse(window.localStorage.getItem("user")));
 
