@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
             "hi",
             "it",
             "ua",
+            "cr",
             "se",
             "da",
             "ta",
