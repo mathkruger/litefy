@@ -2,6 +2,7 @@
     "direction": "ltr",
     "FlagCode": "SE",
     "LanguageName": "Svenska",
+    "AppName": "Litefy",
 
     "LoginDescriptionText": "Litefy. En spotify-klient för enkla enheter",
     "LoginText": "Vi tror att du inte behöver en superenhet för att njuta av din musik. Vi tror att du inte behöver hålla jämna steg med all ny teknik för att bli underhållen. Det är därför Litefy existerar.",
