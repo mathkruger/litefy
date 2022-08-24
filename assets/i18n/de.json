@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "DE",
+    "LanguageName": "Deutsch",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Ein Spotify-Client für Low-End Geräte",
+    "LoginText": "Wir glauben, dass du kein High-End-Gerät brauchst, um deine Musik zu genießen. Wir glauben, dass man nicht jeden neuen Tech-Trend verfolgen muss, um unterhalten zu werden. Das ist der Grund, warum Litefy existiert.",
+    "LoginButtonText": "Melde dich mit Spotify an",
+
+    "SearchPlaceholderText": "Songs, Alben, Künstler, Playlists, Shows, Episoden ...",
+
+    "MenuHome": "Home",
+    "MenuSearchText": "Suchen",
+    "MenuLibraryText": "Bibliothek",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Deine Lieblingskünstler",
+    "HomeMusicsText": "Deine Lieblingssongs",
+    "HomeAlbumsText": "Neue Alben",
+    "HomePlaylistsText": "Vorgeschlagene Playlists",
+
+    "ArtistTracksText": "Meistgespielte Songs",
+    "ArtistAlbumsText": "Alben",
+    "ArtistRelatedText": "Ähnliche Künstler",
+
+    "Hello": "Hi",
+    "LibraryTracksText": "Songs",
+    "LibraryAlbumsText": "Alben",
+    "LibraryPlaylistsText": "Playlists",
+
+    "MusicListTracks": "Song",
+    "MusicListTracksPlural": "Songs",
+    "MusicListFollowers": "Follower",
+    "MusicListFollowersPlural": "Follower",
+    "DescriptionText": "Beschreibung",
+
+    "PlayingText": "Wiedergabe läuft",
+    "PausedText": "Pausiert",
+    "NextText": "Nächster Song",
+    "PreviousText": "Vorheriger Song",
+    "ShuffleOnText": "Shuffle-Modus An",
+    "ShuffleOffText": "Shuffle-Modus Aus",
+
+    "ExitText": "Verlassen",
+    "FollowersText": "Follower",
+    "FollowersTextPlural": "Follower",
+    "ProfileText": "Profil",
+    "SettingsText": "Einstellungen",
+
+    "SearchArtists": "Künstler",
+
+    "KaraokeNotFoundText": "Keine Lyrics gefunden. Du kannst mit dem Button unten versuchen, manuell zu suchen.",
+    "KaraokeSearchText": "Suchen",
+
+    "SettingsPageTitle": "Einstellungen",
+    "SettingsImageText": "Bilder laden (Alben, Künstler, Playlists, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Shows",
+    "PodcastsEpisodesText": "Episoden"
+}
