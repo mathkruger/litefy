@@ -13,7 +13,7 @@
         </a>
         <div
             class="menu-button"
-            *ngIf="auth.Autenticado()"
+            *ngIf="auth.isAuthenticated()"
             (click)="openMenu = !openMenu"
         >
             <svg
@@ -37,7 +37,7 @@
     </div>
 
     <ul
-        *ngIf="auth.Autenticado()"
+        *ngIf="auth.isAuthenticated()"
         class="menu navbar-nav"
         [ngClass]="{ open: openMenu }"
     >
@@ -179,7 +179,7 @@
     </ul>
 
     <div class="d-flex justify-content-between align-items-center">
-        <div class="user-area" *ngIf="auth.Autenticado()">
+        <div class="user-area" *ngIf="auth.isAuthenticated()">
             <div class="header" (click)="userOpenMenu = !userOpenMenu">
                 <div
                     *ngIf="canLoadImage()"

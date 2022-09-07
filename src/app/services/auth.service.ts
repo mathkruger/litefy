@@ -1,4 +1,4 @@
-import { User } from './../models/user';
+import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
 
@@ -13,12 +13,12 @@ export class AuthService {
 
   constructor(private userService: UserService) {}
 
-  Autenticar(token: string, token_expiration: number) {
+  Authenticate(token: string, token_expiration: number) {
     let d = new Date();
     d = new Date(d.getTime() + token_expiration * 1000);
 
     localStorage.setItem(keyAuth, token);
-    localStorage.setItem(keyExpiration, JSON.stringify(d));
+    localStorage.setItem(keyExpiration, d.getTime().toString());
   }
 
   setUser(user: User) {
@@ -26,7 +26,7 @@ export class AuthService {
     localStorage.setItem(keyUser, JSON.stringify(user));
   }
 
-  Autenticado(): boolean {
+  isAuthenticated(): boolean {
     return this.getAuth() != null;
   }
 
@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   getExpiration(): Date {
-    return new Date(localStorage.getItem(keyExpiration));
+      return new Date(+localStorage.getItem(keyExpiration));
   }
 
   logout() {
