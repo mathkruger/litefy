@@ -11,7 +11,7 @@ export class NaoLoginGuardService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
     boolean | Observable<boolean> | Promise<boolean> {
-    const autenticado = !this.authService.Autenticado();
+    const autenticado = !this.authService.isAuthenticated();
 
     if (autenticado === false) {
       this.router.navigate(['']);

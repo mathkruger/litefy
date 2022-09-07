@@ -58,7 +58,7 @@ export class ServiceBase {
     }
 
     private checkExpiration() {
-        if (this.auth.getExpiration() < new Date()) {
+        if (this.auth.getExpiration().getTime() < new Date().getTime()) {
             this.auth.logout();
             this.router.navigate(['login']);
             return false;
