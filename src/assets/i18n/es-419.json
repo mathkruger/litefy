@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "ES",
+    "LanguageName": "Español Latinoamericano",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Un cliente de Spotify para dispositivos de gama baja",
+    "LoginText": "Creemos que no necesitas un súper dispositivo para disfrutar de tu música. Creemos que no necesitas estar al día con todas las nuevas tecnologías para entretenerte. Por eso existe Litefy.",
+    "LoginButtonText": "Iniciar sesión con Spotify",
+
+    "SearchPlaceholderText": "Pistas, álbum, artista, lista de reproducción, programas, episodios...",
+
+    "MenuHome": "Inicio",
+    "MenuSearchText": "Buscar",
+    "MenuLibraryText": "Biblioteca",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Tus artistas favoritos",
+    "HomeMusicsText": "Tus canciones favoritas",
+    "HomeAlbumsText": "Nuevos Álbumes",
+    "HomePlaylistsText": "Listas de reproducción recomendadas",
+
+    "ArtistTracksText": "Pistas más reproducidas",
+    "ArtistAlbumsText": "Álbumes",
+    "ArtistRelatedText": "Artistas relacionados",
+
+    "Hello": "Hola",
+    "LibraryTracksText": "Pistas",
+    "LibraryAlbumsText": "Álbumes",
+    "LibraryPlaylistsText": "Listas de reproducción",
+
+    "MusicListTracks": "Pista",
+    "MusicListTracksPlural": "Pistas",
+    "MusicListFollowers": "Seguidor",
+    "MusicListFollowersPlural": "Seguidores",
+    "DescriptionText": "Descripción",
+
+    "PlayingText": "Reproduciendo",
+    "PausedText": "En pausa",
+    "NextText": "Pista siguiente",
+    "PreviousText": "Pista anterior",
+    "ShuffleOnText": "Modo aleatorio activado",
+    "ShuffleOffText": "Modo aleatorio desactivado",
+
+    "ExitText": "Salir",
+    "FollowersText": "Seguidor",
+    "FollowersTextPlural": "Seguidores",
+    "ProfileText": "Perfil",
+    "SettingsText": "Configuración",
+
+    "SearchArtists": "Artistas",
+
+    "KaraokeNotFoundText": "No se encontraron letras, pero puedes intentar buscar manualmente usando el botón de abajo.",
+    "KaraokeSearchText": "Buscar",
+
+    "SettingsPageTitle": "Configuración",
+    "SettingsImageText": "Cargar imágenes (álbum, artistas, listas de reproducción, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Programas",
+    "PodcastsEpisodesText": "Episodios"
+}
