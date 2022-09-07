@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "PY",
+    "LanguageName": "Guarani",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy. Peteĩ Spotify ñemuhára umi dispositivo ijyvate’ỹvape g̃uarã",
+    "LoginText": "Roguerovia natekotevẽiha peteĩ súper dispositivo revy’a hag̃ua ne purahéi rehe. Roguerovia natekotevẽiha reime al día opa umi tecnología pyahúre reñembosarái hag̃ua. Upévare oî Litefy.",
+    "LoginButtonText": "Eike Spotify ndive",
+
+    "SearchPlaceholderText": "Purahéi, álvun, temiporãhára ...",
+
+    "MenuHome": "Oga",
+    "MenuSearchText": "Heka",
+    "MenuLibraryText": "Arandukaenda",
+    "MenuKaraokeText": "Karaóke",
+
+    "HomeArtistsText": "Umi temiporãhára nde rehayhuvéva",
+    "HomeMusicsText": "Umi purahéi nde rehayhuvéva",
+    "HomeAlbumsText": "Umi álvun pyahu",
+    "HomePlaylistsText": "Umi lísta oñembopuva ojeroviaha",
+
+    "ArtistTracksText": "Umi purahéi oñembopuvéva",
+    "ArtistAlbumsText": "Álvun kuéra",
+    "ArtistRelatedText": "Temiporãhára heseguaite",
+
+    "Hello": "Maitei",
+    "LibraryTracksText": "Purahéi kuéra",
+    "LibraryAlbumsText": "Álvun kuéra",
+    "LibraryPlaylistsText": "Lísta oñembopuva",
+
+    "MusicListTracks": "Purahéi",
+    "MusicListTracksPlural": "Purahéi kuéra",
+    "MusicListFollowers": "Omoirũva",
+    "MusicListFollowersPlural": "Umi omoirũva",
+    "DescriptionText": "Techaukaha",
+
+    "PlayingText": "Oñembopu hína",
+    "PausedText": "Ojeputu'u",
+    "NextText": "Pista oúva",
+    "PreviousText": "Pista mboyveguar",
+    "ShuffleOnText": "Hendy ijykegua",
+    "ShuffleOffText": "Embogue ijykegua",
+
+    "ExitText": "Esẽ",
+    "FollowersText": "Hopytyre",
+    "FollowersTextPlural": "Hopytyrekuéra",
+    "ProfileText": "Perfil",
+    "SettingsText": "Myatyrõha",
+
+    "SearchArtists": "Temiporãhára kuéra",
+
+    "KaraokeNotFoundText": "Ndojejuhúi létra. Ikatu reñeha’ã reheka manualmente reiporúvo pe botón oĩva iguýpe.",
+    "KaraokeSearchText": "Eheka",
+
+    "SettingsPageTitle": "Myatyrõha",
+    "SettingsImageText": "Emboguejy ta'angamýi (álvun, temiporãhára ha mba'e)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Ohechauka",
+    "PodcastsEpisodesText": "Umi ñemombe'u ohasávaekue"
+}
