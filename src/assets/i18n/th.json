@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "TH",
+    "LanguageName": "Thai",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "A Spotify client for low-end devices",
+    "LoginText": "เราเชื่อว่าคุณไม่จำเป็นต้องมีอุปกรณ์ขั้นสูงเพื่อเพลิดเพลินกับเสียงเพลงของคุณ เราเชื่อว่าคุณไม่จำเป็นต้องติดตามเทคโนโลยีใหม่ทั้งหมดเพื่อรับความบันเทิง นั่นเป็นเหตุผลที่ Litefy มีอยู่",
+    "LoginButtonText": "เข้าใช้งาน Spotify",
+
+    "SearchPlaceholderText": "เพลง อัลบั้ม ศิลปิน รายการเล่น รายการ ตอน ...",
+
+    "MenuHome": "หน้าแรก",
+    "MenuSearchText": "ค้นหา",
+    "MenuLibraryText": "ห้องสมุด",
+    "MenuKaraokeText": "คาราโอเกะ",
+
+    "HomeArtistsText": "ศิลปินที่คุณชื่นชอบ",
+    "HomeMusicsText": "เพลงโปรดของคุณ",
+    "HomeAlbumsText": "อัลบั้มใหม่",
+    "HomePlaylistsText": "รายการแนะนำ",
+
+    "ArtistTracksText": "เพลงที่เล่นมากที่สุด",
+    "ArtistAlbumsText": "อัลบั้ม",
+    "ArtistRelatedText": "ศิลปินที่เกี่ยวข้อง",
+
+    "Hello": "สวัสดี",
+    "LibraryTracksText": "เพลง",
+    "LibraryAlbumsText": "อัลบั้ม",
+    "LibraryPlaylistsText": "รายการ",
+
+    "MusicListTracks": "เพลง",
+    "MusicListTracksPlural": "เพลง",
+    "MusicListFollowers": "ผู้ติดตาม",
+    "MusicListFollowersPlural": "ผู้ติดตาม",
+    "DescriptionText": "รายละเอียด",
+
+    "PlayingText": "เล่น",
+    "PausedText": "หยุด",
+    "NextText": "เพลงถัดไป",
+    "PreviousText": "เพลงก่อนหน้า",
+    "ShuffleOnText": "เปิดโหมดสุ่ม",
+    "ShuffleOffText": "ปิดโหมดสุ่ม",
+
+    "ExitText": "ออก",
+    "FollowersText": "ผู้ติดตาม",
+    "FollowersTextPlural": "ผู้ติดตาม",
+    "ProfileText": "ข้อมูลส่วนตัว",
+    "SettingsText": "ตั้งค่า",
+
+    "SearchArtists": "ศิลปิน",
+
+    "KaraokeNotFoundText": "ไม่พบเนื้อเพลง แต่คุณสามารถลองค้นหาด้วยตนเองโดยใช้ปุ่มด้านล่าง",
+    "KaraokeSearchText": "ค้นหา",
+
+    "SettingsPageTitle": "ตั้งค่า",
+    "SettingsImageText": "โหลดรูปภาพ (อัลบั้ม ศิลปิน เพลย์ลิสต์ ฯลฯ)",
+
+    "MenuPodcastText": "พอดแคสต์",
+    "PodcastsShowsText": "โชว์",
+    "PodcastsEpisodesText": "ตอน"
+}
