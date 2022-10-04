@@ -51,7 +51,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     ngOnInit() {
         this.userService.getUser().subscribe((item) => {
             this.user = item;
-            this.premium = this.user.product === "premium";
+            this.premium = this.user?.product === "premium";
 
             if (this.premium) {
                 this.playerService.getDeviceId().subscribe((deviceId) => {

@@ -97,6 +97,13 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         };
     }
 
+    addScript() {
+        const script = document.createElement('script')
+        script.async = true
+        script.src = "https://sdk.scdn.co/spotify-player.js"
+        document.head.appendChild(script)
+    }
+
     initPlayer() {
         (<any>window).onSpotifyWebPlaybackSDKReady = () => {
             this.showPlayer = true;
@@ -106,6 +113,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
                 name: "Litefy Player",
                 getOAuthToken: (cb) => {
                     cb(token);
+                    this.addScript()
                 },
             });
 
