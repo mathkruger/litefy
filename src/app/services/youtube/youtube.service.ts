@@ -47,17 +47,19 @@ export class YoutubeService {
                         doc.querySelectorAll(".links_main")
                     );
 
-                    let videoId = decodeURIComponent(
-                        resultArray[0]
-                            .querySelector(".result__snippet")
-                            .getAttribute("href")
-                    ).split("?v=")[1];
+                    if (resultArray?.length > 1) {
+                        let videoId = decodeURIComponent(
+                            resultArray[0]
+                                .querySelector(".result__snippet")
+                                .getAttribute("href")
+                        ).split("?v=")[1];
 
-                    if (videoId.includes("&")) {
-                        videoId = videoId.split("&")[0]
+                        if (videoId.includes("&")) {
+                            videoId = videoId.split("&")[0];
+                        }
+
+                        return videoId;
                     }
-
-                    return videoId;
                 })
             );
     }
