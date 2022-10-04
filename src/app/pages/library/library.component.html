@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <ng-container *ngIf="userPlaylists.length > 0 || userAlbums.length > 0 || userTracks.length > 0">
+    <ng-container *ngIf="userPlaylists?.length > 0 || userAlbums?.length > 0 || userTracks?.length > 0">
         <div class="row mt-4">
             <div class="col-md-6">
                 <app-content-list [title]="'LibraryPlaylistsText' | translate" type="playlist" [list]="userPlaylists">
