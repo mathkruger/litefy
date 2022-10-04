@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <ng-container *ngIf="userShows.length > 0 || userEpisodes.length > 0">
+    <ng-container *ngIf="userShows?.length > 0 || userEpisodes?.length > 0">
         <div class="row mt-4">
             <div class="col-md-6">
                 <app-content-list [title]="'PodcastsShowsText' | translate" type="show" [list]="userShows">
