@@ -12,6 +12,7 @@ import { forkJoin } from "rxjs";
 import { YoutubePlayerStatus } from "src/app/models/youtube-player-status";
 import { TranslateService } from "@ngx-translate/core";
 
+
 @Component({
     selector: "app-content-list",
     templateUrl: "./content-list.component.html",
@@ -71,9 +72,9 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     getPlayerStatus() {
         this.playerService.getPlayerStatus().subscribe((item) => {
             this.playerState = item;
-            if (this.playerState?.item.type === "track") {
+            if (this.playerState?.item.type == "track") {
                 this.currentAlbum = this.playerState?.item.album.id
-            } else if (this.playerState?.item.type === "episode") {
+            } else if (this.playerState?.item.type == "episode") {
                 this.currentAlbum = this.playerState?.item.show.id
             } else {
                 this.currentAlbum = "";
