@@ -18,6 +18,7 @@ export class LanguageSwitcherComponent implements OnInit {
     const defaultLanguage = window.localStorage.getItem("languageSelected") || this.translate.getDefaultLang();
 
     this.translate.getLangs().forEach(lang => {
+      console.log(lang)
       this.languages.push({
         code: lang,
         flag: '',

@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "TR",
+    "LanguageName": "Turkish",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Düşük kaliteli cihazlar için bir Spotify istemcisi",
+    "LoginText": "Müziğinizin keyfini çıkarmak için süper bir cihaza ihtiyacınız olmadığına inanıyoruz. Eğlenmek için tüm yeni teknolojilere ayak uydurmanız gerekmediğine inanıyoruz. Bu yüzden Litefy var.",
+    "LoginButtonText": "Spotify ile giriş yap",
+
+    "SearchPlaceholderText": "Parçalar, albümler, sanatçılar, çalma listeleri, şovlar, bölümler...",
+
+    "MenuHome": "Anasayfa",
+    "MenuSearchText": "Arama",
+    "MenuLibraryText": "Kütüphane",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "En favori sanatçıların",
+    "HomeMusicsText": "En favori şarkıların",
+    "HomeAlbumsText": "Yeni Albümler",
+    "HomePlaylistsText": "Önerilen oynatma listeleri",
+
+    "ArtistTracksText": "En çok çalınan parçalar",
+    "ArtistAlbumsText": "Albümler",
+    "ArtistRelatedText": "İlgili Sanatçılar",
+
+    "Hello": "Merhaba",
+    "LibraryTracksText": "Parçalar",
+    "LibraryAlbumsText": "Albümler",
+    "LibraryPlaylistsText": "Çalma Listeleri",
+
+    "MusicListTracks": "Parça",
+    "MusicListTracksPlural": "Parçalar",
+    "MusicListFollowers": "Takipçi",
+    "MusicListFollowersPlural": "Takipçiler",
+    "DescriptionText": "Tanım",
+
+    "PlayingText": "Çalıyor",
+    "PausedText": "Durduruldu",
+    "NextText": "Sonraki parça",
+    "PreviousText": "Önceki parça",
+    "ShuffleOnText": "Karışık çalma modu AÇIK",
+    "ShuffleOffText": "Karışık çalma modu KAPALI",
+
+    "ExitText": "Çıkış",
+    "FollowersText": "Takipçi",
+    "FollowersTextPlural": "Takipçiler",
+    "ProfileText": "Profil",
+    "SettingsText": "Ayarlar",
+
+    "SearchArtists": "Sanatçılar",
+
+    "KaraokeNotFoundText": "Şarkı sözü bulunamadı, ancak aşağıdaki düğmeyi kullanarak manuel olarak arama yapmayı deneyebilirsiniz.",
+    "KaraokeSearchText": "Ara",
+
+    "SettingsPageTitle": "Ayarlar",
+    "SettingsImageText": "Görüntüleri yükleyin (albüm, sanatçılar, çalma listeleri vb.)",
+
+    "MenuPodcastText": "Podcast'ler",
+    "PodcastsShowsText": "Gösteriler",
+    "PodcastsEpisodesText": "Bölümler"
+}

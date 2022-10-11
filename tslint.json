@@ -89,7 +89,7 @@
     ],
     "radix": false,
     "semicolon": [
-      true,
+      false,
       "always"
     ],
     "triple-equals": [
