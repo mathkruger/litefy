@@ -5,7 +5,7 @@
     "AppName": "Litefy",
 
     "LoginDescriptionText": "Litefy. Un client Spotify pour les appareils bas de gamme.",
-    "LoginText": "Nous pensons que vous n'avez pas besoin d'un super appareil pour profiter de votre musique. Nous pensons que vous n'avez pas besoin de rester à jour de toutes les technologies pour vous détendre. C'est pour ça que Litefy existe.",
+    "LoginText": "Nous pensons que vous n'avez pas besoin d'un appareil super puissant pour profiter de votre musique. Nous pensons que vous n'avez pas besoin de rester à jour sur toutes les technologies pour vous détendre. C'est pour ça que Litefy existe.",
     "LoginButtonText": "Se connecter avec Spotify",
 
     "SearchPlaceholderText": "Morceaux, albums, artistes, playlists ...",
@@ -41,18 +41,18 @@
     "ShuffleOnText": "Mode aléatoire ON",
     "ShuffleOffText": "Mode aléatoire OFF",
 
-    "ExitText": "Exit",
+    "ExitText": "Sortie",
     "FollowersText": "Abonné",
     "FollowersTextPlural": "Abonnés",
     "ProfileText": "Profile",
-    "SettingsText": "Settings",
+    "SettingsText": "Paramètres",
 
     "SearchArtists": "Artistes",
 
     "KaraokeNotFoundText": "Pas de paroles trouvées, mais vous pouvez chercher manuellement avec le bouton ci-dessus.",
     "KaraokeSearchText": "Rechercher",
 
-    "SettingsPageTitle": "Parametres",
+    "SettingsPageTitle": "Paramètres",
     "SettingsImageText": "Charger des images (albums, artistes, playlists, etc.)",
 
     "MenuPodcastText": "Podcasts",
