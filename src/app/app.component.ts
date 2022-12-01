@@ -43,6 +43,7 @@ export class AppComponent implements OnInit {
             "se",
             "da",
             "ta",
+            "lt",
             "pl",
             "id",
             "de",
