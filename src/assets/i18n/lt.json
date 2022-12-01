@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "LT",
+    "LanguageName": "Lithuanian",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Spotify klientas biudžetiniams įrenginiams",
+    "LoginText": "Manome, kad norint mėgautis muzika nereikia aukščiausios klasės įrenginio. Tikime, kad Jums nereikia žengti koja kojon su visomis naujomis technologijomis, jog galėtumėte pramogauti. Štai kodėl egzistuoja Litefy.",
+    "LoginButtonText": "Prisijunkite per Spotify",
+
+    "SearchPlaceholderText": "Dainos, albumai, atlikėjai, grojaraščiai, laidos, epizodai ...",
+
+    "MenuHome": "Pagrindinis",
+    "MenuSearchText": "Paieška",
+    "MenuLibraryText": "Biblioteka",
+    "MenuKaraokeText": "Karaokė",
+
+    "HomeArtistsText": "Tavo mėgstamiausi atlikėjai",
+    "HomeMusicsText": "Tavo mėgstamiausios dainos",
+    "HomeAlbumsText": "Nauji albumai",
+    "HomePlaylistsText": "Siūlomi grojaraščiai",
+
+    "ArtistTracksText": "Dažniausiai grojami kūriniai",
+    "ArtistAlbumsText": "Albumai",
+    "ArtistRelatedText": "Panašūs atlikėjai",
+
+    "Hello": "Sveiki",
+    "LibraryTracksText": "Dainos",
+    "LibraryAlbumsText": "Albumai",
+    "LibraryPlaylistsText": "Grojaraščiai",
+
+    "MusicListTracks": "Daina",
+    "MusicListTracksPlural": "Dainos",
+    "MusicListFollowers": "Sekėjas",
+    "MusicListFollowersPlural": "Sekėjai",
+    "DescriptionText": "Aprašymas",
+
+    "PlayingText": "Grojama",
+    "PausedText": "Sustabdyta",
+    "NextText": "Sekanti daina",
+    "PreviousText": "Ankstesnė daina",
+    "ShuffleOnText": "Įjungtas maišymo režimas",
+    "ShuffleOffText": "Išjungtas maišymo režimas",
+
+    "ExitText": "Išeiti",
+    "FollowersText": "Sekėjas",
+    "FollowersTextPlural": "Sekėjai",
+    "ProfileText": "Profilis",
+    "SettingsText": "Nustatymai",
+
+    "SearchArtists": "Atlikėjai",
+
+    "KaraokeNotFoundText": "Dainos tekstas nerastas. Galite bandyti ieškoti rankiniu būdu naudodami toliau esantį mygtuką.",
+    "KaraokeSearchText": "Paieška",
+
+    "SettingsPageTitle": "Nustatymai",
+    "SettingsImageText": "Įkelti vaizdus (albumus, atlikėjus, grojaraščius ir kt.)",
+
+    "MenuPodcastText": "Tinklalaidės",
+    "PodcastsShowsText": "Laidos",
+    "PodcastsEpisodesText": "Epizodai"
+}
