@@ -148,10 +148,8 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     }
 
     add(selectItem) {
-        console.log(selectItem.uri);
-        // Add to specific playlist, this is currently hard coded to a playlist id of mine
-        this.playlistAddTo = "4gZayV5XRm76t3cKy6RM7a";
-        console.log(this.playlistService.addTrack(this.playlistAddTo, selectItem.uri))
+        // console.log(selectItem.uri);
+        // this.playlistService.addTrack(this.playlistAddTo, selectItem.uri)
 
     }
 
