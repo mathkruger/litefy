@@ -1,7 +1,28 @@
 <div *ngIf="usuarioLogado" class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
     <div class="row">
         <div class="col-12">
-            <h2>{{ 'Hello' | translate }}, {{ usuarioLogado.display_name }}. 😁</h2>
+            <h2>{{ 'Hello' | translate }}, {{ usuarioLogado.display_name }}. 😁 </h2>
+        </div>
+         <div id = "innerbox">
+                    <form>
+                        <h4>Create a New Playlist</h4>
+                        <input type="text" id="playlist_name" name="playlist_name" placeholder="Name" #playlist_name="ngModel" ngModel><br>
+                        <input type="text" id="description" name="description" placeholder="Description" #description="ngModel" ngModel><br>
+                        <input type="checkbox" id="collaboritive" name="collaboritive" [(ngModel)]="collaboritive">
+                        <label for="vehicle1"> Collaborative</label><br>
+                        <input type="checkbox" id="public" name="public" [(ngModel)]="public">
+                        <label for="vehicle1"> Public</label><br>
+                        <!-- <div class="text-center">
+                            <input class="form-control" type="file" 
+                                    (change)="onChange($event)">
+                        
+                            <button (click)="onUpload()" 
+                                class="btn btn-success">
+                                Upload Playlist Cover
+                            </button>
+                        </div> -->
+                        <input type="submit" value="Create" (click)="createPlaylist(playlist_name, description, collaboritive, public)">
+                      </form>
         </div>
     </div>
 

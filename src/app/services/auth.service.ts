@@ -31,6 +31,7 @@ export class AuthService {
   }
 
   getAuth(): string {
+    // return "BQAu_kFrO_uSk7k1JrQc1tkqp7cuG_voBLStmq"
     return localStorage.getItem(keyAuth);
   }
 

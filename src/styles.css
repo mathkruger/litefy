@@ -147,3 +147,47 @@ a:hover {
 .me-5 {
     margin-inline-end: 3rem !important;
 }
+#addPlaylist {
+    color: black;
+    background: white;
+    border-radius: 10px;
+    border-color: black; 
+}
+
+
+#innerbox
+{
+   width:400px; /* or whatever width you want. */
+   max-width:400px; /* or whatever width you want. */
+   display: inline-block;
+   padding: 20px 20px;
+   color: black;
+   background: #1DB954;
+   /* border-color: #1DB954;  */
+   border-radius: 10px;
+   margin:1%;
+}
+
+input[type=submit] {
+    background-color: white;
+    border: white;
+    color: black;
+    width: 90%;
+    padding: 2px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px
+  }
+
+input[type=text] {
+    width: 89%;
+    padding: 2px 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-color: #1DB954;
+}
+
+#innerbox input
+{
+  margin: 5px 11px;
+}
