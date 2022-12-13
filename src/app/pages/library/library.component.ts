@@ -8,7 +8,6 @@ import { UserService } from 'src/app/services/user.service';
 import { SpotifyPlaylistService } from 'src/app/services/spotify-playlist.service';
 import { FileUploadService } from 'src/app/file-upload.service';
 
-
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',
@@ -58,6 +57,8 @@ export class LibraryComponent implements OnInit {
 
 
 
+
+
   createPlaylist(name, description, collaborative, publicOrPriv) {
     //console.log("create");
 
@@ -90,35 +91,6 @@ export class LibraryComponent implements OnInit {
     //  }
      
   }
-
-  // onChange(event) {
-  //   this.file = event.target.files[0];
-  //   this.convertFile(this.file).subscribe(base64 => {
-  //     this.base64Output = base64;
-  //   });
-  // }
-  // convertFile(file : File)  {
-  //   const result = new ReplaySubject<string>(1);
-  //   const reader = new FileReader();
-  //   reader.readAsBinaryString(file);
-  //   reader.onload = (event) => result.next(btoa(event.target.result.toString()));
-  //   return result;
-  // }
-
-// OnClick of button Upload
-  // onUpload() {
-  //     console.log(this.file);
-  //     console.log(this.base64Output);
-  //     this.fileUploadService.upload(this.file).subscribe(
-  //         (event: any) => {
-  //             if (typeof (event) === 'object') {
-  //                 // Short link via api response
-  //                 this.shortLink = event.link;
-
-  //             }
-  //         }
-  //     );
-  // }
 
 }
 }
