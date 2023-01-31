@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         const languages = [
             "pt-BR",
+			"bn",
             "es",
             "he",
             "fr",
@@ -50,6 +51,7 @@ export class AppComponent implements OnInit {
             "gn",
             "es-419",
             "tr",
+			"gr",
             "en",
         ]; // always keep the "en" at the end, it's the default language for the website
         this.translate.addLangs(languages);
