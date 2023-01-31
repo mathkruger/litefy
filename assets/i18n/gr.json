@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "GR",
+    "LanguageName": "Ελληνικά",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy. Ένας πελάτης του Spotify για χαμηλού επιπέδου συσκευές",
+	"LoginText": "Θεωρούμε ότι δε χρειάζεται να διαθέτετε μία φοβερή συσκευή για να απολαμβάνετε τη μουσική σας. Πιστεύουμε πως δε χρειάζεται να συμβαδίζετε με την νέα τεχνολογία για να ψυχαγωγηθείτε. Γι' αυτό υπάρχει το Litefy.",
+    "LoginButtonText": "Σύνδεση μέσω Spotify",
+
+    "SearchPlaceholderText": "Κομμάτια, Άλμπουμ, Καλλιτέχνης, Λίστα αναπαραγωγής, Σόου, επεισόδια ...",
+
+	"MenuHome": "Αρχική",
+	"MenuSearchText": "Αναζήτηση",
+    "MenuLibraryText": "Βιβλιοθήκη",
+    "MenuKaraokeText": "Καραόκε",
+
+    "HomeArtistsText": "Αγαπημένοι καλλιτέχνες",
+	"HomeMusicsText": "Τα αγαπημένα σου κομμάτια",
+	"HomeAlbumssText": "Νέα άλμπουμ",
+	"HomePlaylistsText": "Προτεινόμενες λίστες αναπαραγωγής",
+
+    "ArtistTracksText": "Τα περισσότερο παιγμένα σας κομμάτια",
+	"ArtistAlbumsText": "Άλμπουμ",
+	"ArtistRelatedText": "Συναφείς καλλιτέχνες",
+
+    "Hello": "Γειά χαρά",
+	"LibraryTracksText": "Κομμάτια",
+    "LibraryTracksText": "Άλμπουμ",
+	"LibraryPlaylistsText": "Λίστες αναπαραγωγής",
+
+	"MusicListTracks": "Κομμάτι",
+	"MusicListTracksPlural": "Κομμάτια",
+    "MusicListFollowers": "Ακόλουθοι",
+	"MusicListFollowersPlural": "Ακόλουθοι",
+    "DescriptionText": "Περιγραφή",
+
+	"PlayingText": "Παίζει τώρα",
+    "PausedText": "Παύση",
+    "NextText": "Επόμενο",
+	"PreviousText": "Προηγούμενο",
+    "ShuffleOnText": "Τυχαία αναπαραγωγή",
+	"ShuffleOffText": "Παύση τυχαίας αναπαραγωγής",
+
+    "ExitText": "Έξοδος",
+    "FollowersText": "Ακόλουθος",
+    "FollowersTextPlural": "Ακόλουθοι",
+    "ProfileText": "Προφίλ",
+    "SettingsText": "Ρυθμίσεις",
+
+    "SearchArtists": "Καλλιτέχνες",
+
+    "KaraokeNotFoundText": "Οι στίχοι δε βρέθηκαν, μπορείς όμως να ψάξεις χρησιμοποιώντας το πλήκτρο κάτω.",
+	"KaraokeSearchText": "Αναζήτηση",
+
+	"SettingsPageTitle": "Ρυθμίσεις",
+    "SettingsImageText": "Φόρτωση εικόνων (άλμπουμ, καλλιτέχνες, λίστες αναπαραγωγής κλπ)",
+
+    "MenuPodcastText": "Μετάδοση",
+    "PodcastsShowsText": "Σόου",
+    "PodcastsEpisodesText": "Επεισόδια"
+}
