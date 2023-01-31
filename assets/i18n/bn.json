@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "BD",
+    "LanguageName": "বাংলা",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy! লো-এন্ড ডিভাইসের জন্য একটি Spotify ক্লায়েন্ট",
+    "LoginText": "আমরা বিশ্বাস করি যে আপনার সঙ্গীত উপভোগ করার জন্য আপনার কোন সুপার ডিভাইসের প্রয়োজন নেই। আমরা বিশ্বাস করি বিনোদন পেতে আপনাকে নতুন প্রযুক্তির সাথে তাল মিলিয়ে চলতে হবে না। এজন্য Litefy বিদ্যমান।",
+    "LoginButtonText": "Spotify দিয়ে লগইন করুন",
+
+    "SearchPlaceholderText": "ট্র্যাক, অ্যালবাম, শিল্পী, প্লেলিস্ট, শো, পর্ব...",
+
+    "MenuHome": "Home",
+    "MenuSearchText": "অনুসন্ধান করুন",
+    "MenuLibraryText": "লাইব্রেরি",
+    "MenuKaraokeText": "কারাওকে",
+
+    "HomeArtistsText": "আপনার প্রিয় শিল্পী",
+    "HomeMusicsText": "আপনার প্রিয় গান",
+    "HomeAlbumsText": "নতুন অ্যালবাম",
+    "HomePlaylistsText": "প্রস্তাবিত প্লেলিস্ট",
+
+    "ArtistTracksText": "সর্বাধিক বাজানো ট্র্যাক",
+    "ArtistAlbumsText": "অ্যালবাম",
+    "ArtistRelatedText": "সংশ্লিষ্ট শিল্পী",
+
+    "Hello": "নমস্কার",
+    "LibraryTracksText": "ট্র্যাক",
+    "LibraryAlbumsText": "অ্যালবাম",
+    "LibraryPlaylistsText": "প্লেলিস্ট",
+
+    "MusicListTracks": "ট্র্যাক",
+    "MusicListTracksPlural": "ট্র্যাক",
+    "MusicListFollowers": "অনুগামী",
+    "MusicListFollowersPlural": "অনুসারী",
+    "DescriptionText": "বর্ণনা",
+    "PlayingText": "চলছে",
+    "PausedText": "বন্ধ করুন",
+    "NextText": "পরবর্তী ট্র্যাক",
+    "PreviousText": "পূর্ববর্তী ট্র্যাক",
+    "ShuffleOnText": "শাফেল মোড চালু",
+    "ShuffleOffText": "শাফেল মোড বন্ধ",
+
+    "ExitText": "প্রস্থান করুন",
+    "FollowersText": "Follower",
+    "FollowersTextPlural": "Follower",
+    "ProfileText": "প্রোফাইল",
+    "SettingsText": "সেটিংস",
+
+    "SearchArtists": "শিল্পী",
+
+    "KaraokeNotFoundText": "কোন লিরিক্স পাওয়া যায়নি, তবে আপনি নীচের বোতামটি ব্যবহার করে ম্যানুয়ালি অনুসন্ধান করার চেষ্টা করতে পারেন।",
+    "KaraokeSearchText": "অনুসন্ধান করুন",
+
+    "SettingsPageTitle": "সেটিংস",
+    "SettingsImageText": "ছবি লোড করুন (অ্যালবাম, শিল্পী, প্লেলিস্ট, ইত্যাদি)",
+
+    "MenuPodcastText": "পডকাস্ট",
+    "PodcastsShowsText": "দেখায়",
+    "PodcastsEpisodesText": "এপিসোড"
+}
