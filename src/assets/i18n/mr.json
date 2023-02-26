@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IN",
+    "LanguageName": "मराठी",
+    "AppName": "Litefy",
+
+	"LoginDescriptionText": "Litefy निम्नस्तरीय उपकरणांसाठी Spotify क्लाइंट",
+	"LoginText": "आम्हाला विश्वास आहे की तुम्हाला तुमच्या संगीताचा आनंद घेण्यासाठी  कोणत्याही अत्याधुनिक उपकरणांची गरज नाही‌ .आमचा विश्वास आहे की तुम्हाला मनोरंजनासाठी सर्व नवीन तंत्रज्ञान स्वीकारण्याची गरज नाही. म्हणूनच  आम्ही  Litefy घेउन आलो आहोत.",
+    "LoginButtonText": "Spotify के साथ लॉगिन करें",
+
+    "SearchPlaceholderText": "नजर ठेवा अल्बम, कलाकार ,प्ले-लिस्ट शो, एपिसोड  वर.... ",
+
+	"MenuSearchText": "शोधा",
+    "MenuLibraryText": "लाइब्रेरी",
+    "MenuKaraokeText": "कराओके मोड",
+
+    "HomeArtistsText": "तुमच्या आवडीचे कलाकार",
+    "HomeMusicsText": "तुमच्या आवडीचे संगीत",
+    "HomeAlbumsText": "नवीन अल्बम्स",
+	"HomePlaylistsText": "शिफारस केलेल्या प्ले-लिस्ट",
+
+    "ArtistTracksText": "सर्वाधिक वाजणारे गाणे",
+	"ArtistAlbumsText": "एल्बम",
+	"ArtistRelatedText": "संबंधित कलाकार",
+
+    "Hello": "नमस्कार",
+    "LibraryTracksText": "गाणी",
+    "LibraryAlbumsText": "एल्बम",
+	"LibraryPlaylistsText": "आवडते संग्रह",
+
+    "MusicListTracks": "गाणे",
+	"MusicListTracksPlural": "गाने",
+    "MusicListFollowers": "समर्थक",
+	"MusicListFollowersPlural": "समर्थक",
+	"DescriptionText": "विवरण",
+
+    "PlayingText": "वाजत आहे",
+    "PausedText": "थांबवत आहे",
+    "NextText": "पुढील गाणे",
+    "PreviousText": "मागील गाणे",
+    "ShuffleOnText": "मिश्रण मोड चालू",
+    "ShuffleOffText": "मिश्रण मोड बंद",
+
+    "ExitText": "बाहेर पडा",
+	"FollowersText": "समर्थक",
+    "FollowersTextPlural": "समर्थक",
+	"ProfileText": "प्रोफ़ाइल",
+	"SettingsText": "सेटिंग्स",
+
+    "SearchArtists": "कलाकार",
+
+    "KaraokeNotFoundText": "गाणे सापडत नाही , तुम्ही खाली दिलेल्या बटनाचा वापर करून मॅन्युअल मध्ये गाणे शोधण्याचा प्रयत्न करू शकता.",
+	"KaraokeSearchText": "शोधा",
+
+    "SettingsPageTitle": "सेटिंग्स",
+    "SettingsImageText": "छायाचित्र लोड करा (अल्बम,कलाकार,प्ले लिस्ट इत्यादी)",
+
+    "MenuPodcastText": "पॉडकास्ट",
+    "PodcastsShowsText": "दर्शवितें",
+    "PodcastsEpisodesText": "एपिसोड"
+}

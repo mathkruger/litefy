@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
             "ar",
             "hr",
             "hi",
+            "mr",
             "it",
             "ua",
             "cr",
