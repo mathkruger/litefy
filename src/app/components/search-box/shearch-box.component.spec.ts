@@ -1,4 +1,4 @@
-import { AppModule } from './../../app.module';
+import { AppModule } from '../../app.module';
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShearchBoxComponent } from './shearch-box.component';
 
