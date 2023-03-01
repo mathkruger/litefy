@@ -1,5 +1,5 @@
-import { SpotifyPlayerService } from './../../services/spotify-player.service';
-import { ServiceBase } from './../../services/service.base';
+import { SpotifyPlayerService } from '../../services/spotify-player.service';
+import { ServiceBase } from '../../services/service.base';
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({

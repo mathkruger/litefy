@@ -1,6 +1,6 @@
 import { KaraokeComponent } from './pages/karaoke/karaoke.component';
 import { PlayerComponent } from './components/player/player.component';
-import { ShearchBoxComponent } from './components/shearch-box/shearch-box.component';
+import { ShearchBoxComponent } from './components/search-box/shearch-box.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginCallbackComponent } from './pages/login/login-callback/login-callback.component';
