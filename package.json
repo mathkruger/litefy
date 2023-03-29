@@ -19,15 +19,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^14.3.0",
-    "@angular/common": "^14.3.0",
-    "@angular/compiler": "^14.3.0",
-    "@angular/core": "^14.3.0",
-    "@angular/forms": "^14.3.0",
-    "@angular/platform-browser": "^14.3.0",
-    "@angular/platform-browser-dynamic": "^14.3.0",
-    "@angular/router": "^14.3.0",
-    "@angular/service-worker": "^14.3.0",
+    "@angular/animations": "^15.2.4",
+    "@angular/common": "^15.2.4",
+    "@angular/compiler": "^15.2.4",
+    "@angular/core": "^15.2.4",
+    "@angular/forms": "^15.2.4",
+    "@angular/platform-browser": "^15.2.4",
+    "@angular/platform-browser-dynamic": "^15.2.4",
+    "@angular/router": "^15.2.4",
+    "@angular/service-worker": "^15.2.4",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "@types/spotify-api": "0.0.7",
@@ -41,10 +41,10 @@
     "zone.js": "~0.11.8"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.2.11",
-    "@angular/cli": "^14.2.11",
-    "@angular/compiler-cli": "^14.3.0",
-    "@angular/language-service": "^14.3.0",
+    "@angular-devkit/build-angular": "^15.2.4",
+    "@angular/cli": "^15.2.4",
+    "@angular/compiler-cli": "^15.2.4",
+    "@angular/language-service": "^15.2.4",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -61,6 +61,6 @@
     "sonar-scanner": "^3.1.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.6.4"
+    "typescript": "~4.9.5"
   }
 }
