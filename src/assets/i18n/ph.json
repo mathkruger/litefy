@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "PH",
+    "LanguageName": "Filipino",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Spotify client para sa mga low-end na devices",
+    "LoginText": "Naniniwala kami na hindi mo kailangan ng sobrang device para ma-enjoy ang iyong musika. Naniniwala kami na hindi mo kailangang makipagsabayan sa lahat ng bagong teknolohiya para maaliw. Iyon ang dahilan kung bakit umiiral ang Litefy.",
+    "LoginButtonText": "Mag-login gamit ang Spotify",
+
+    "SearchPlaceholderText": "Mga kanta, album, artist, playlist, palabas, episode ...",
+
+    "MenuHome": "Home",
+    "MenuSearchText": "Maghanap",
+    "MenuLibraryText": "Library",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Mga paborito mong artists",
+    "HomeMusicsText": "Mga paborito mong kanta",
+    "HomeAlbumsText": "Mga bagong album",
+    "HomePlaylistsText": "Mga inirerekomendang playlist",
+
+    "ArtistTracksText": "Karamihan sa mga na-play na track",
+    "ArtistAlbumsText": "Mga Album",
+    "ArtistRelatedText": "Mga Kaugnay na Artist",
+
+    "Hello": "Kumusta",
+    "LibraryTracksText": "Mga Kanta",
+    "LibraryAlbumsText": "Mga Album",
+    "LibraryPlaylistsText": "Mga Playlist",
+
+    "MusicListTracks": "Kanta",
+    "MusicListTracksPlural": "Mga Kanta",
+    "MusicListFollowers": "Tagasubaybay",
+    "MusicListFollowersPlural": "Mga Tagasubaybay",
+    "DescriptionText": "Paglalarawan",
+
+    "PlayingText": "Tumutugtog",
+    "PausedText": "Naka-pause",
+    "NextText": "Sunod na kanta",
+    "PreviousText": "Nauuna na kanta",
+    "ShuffleOnText": "Shuffle mode ON",
+    "ShuffleOffText": "Shuffle mode OFF",
+
+    "ExitText": "Lumabas",
+    "FollowersText": "Tagasubaybay",
+    "FollowersTextPlural": "Mga Tagasubaybay",
+    "ProfileText": "Profile",
+    "SettingsText": "Settings",
+
+    "SearchArtists": "Artists",
+
+    "KaraokeNotFoundText": "Walang nakitang lyrics, ngunit maaari mong subukang maghanap nang manual gamit ang button sa ibaba.",
+    "KaraokeSearchText": "Maghanap",
+
+    "SettingsPageTitle": "Settings",
+    "SettingsImageText": "Load images (album, artists, playlists, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Palabas",
+    "PodcastsEpisodesText": "Episodes"
+}
