@@ -6,6 +6,10 @@
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
 [![Open Source Helpers](https://www.codetriage.com/mathkruger/litefy/badges/users.svg)](https://www.codetriage.com/mathkruger/litefy)
 
+## Support <a name="support"></a>
+
+If you wish to support the me (mathkruger), <a href="https://www.buymeacoffee.com/mathkruger">buy me a coffee!</a>
+
 ## Table of Contents
 1. [Project Description](#description)
 2. [Project Technologies](#technologies)
@@ -18,8 +22,7 @@
         1. [Generating Code Scaffolding](#contribution2.1)
     3. [Submitting Your Changes](#contribution3)
 5. [Current Issues](#issues)
-6. [Support](#support)
-7. [License](#license)
+6. [License](#license)
 
 ## Project Description <a name="description"></a>
 Litefy is a lightweight version of the Spotify client that is made for memory and processing restricted smartphone and computer users.        
@@ -95,10 +98,6 @@ More information on the `ng generate` command can be found [here](https://angula
 ## Current Issues <a name="issues"></a>
 
 [Click here](https://github.com/mathkruger/litefy/issues) to see Litefy's issues that need fixing.
-
-## Support <a name="support"></a>
-
-If you wish to support the project's creator, <a href="https://www.buymeacoffee.com/mathkruger">buy him a coffee!</a>
 
 ## License <a name="license"></a>
 
