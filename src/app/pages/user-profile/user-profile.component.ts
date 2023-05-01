@@ -1,7 +1,7 @@
 import { Component, Injector, OnInit } from '@angular/core';
-import { SettingsBase } from 'src/app/models/base/settings-base';
-import { UserService } from 'src/app/services/user.service';
-import { User } from 'src/app/models/user';
+import { SettingsBase } from '@models/base/settings-base';
+import { UserService } from '@services/user.service';
+import { User } from '@models/user';
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({

@@ -2,9 +2,9 @@
 
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
-import { User } from 'src/app/models/user';
-import { SpotifyUserService } from 'src/app/services/spotify-user.service';
-import { UserService } from 'src/app/services/user.service';
+import { User } from '@models/user';
+import { SpotifyUserService } from '@services/spotify-user.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-podcasts',

@@ -4,9 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import {SpotifyShowService} from './../../services/spotify-show.service';
 import { Component, Injector, OnInit } from '@angular/core';
-import { SettingsService } from 'src/app/services/settings.service';
-import { Settings } from 'src/app/models/settings';
-import { SettingsBase } from 'src/app/models/base/settings-base';
+import { Settings } from '@models/settings';
+import { SettingsBase } from '@models/base/settings-base';
 
 @Component({
   selector: 'app-show',

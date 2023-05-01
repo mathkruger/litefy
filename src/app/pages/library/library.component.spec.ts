@@ -3,8 +3,8 @@ import { AppModule } from './../../app.module';
 import { waitForAsync, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { LibraryComponent } from './library.component';
-import { SpotifyUserService } from 'src/app/services/spotify-user.service';
-import { UserService } from 'src/app/services/user.service';
+import { SpotifyUserService } from '@services/spotify-user.service';
+import { UserService } from '@services/user.service';
 import { of } from 'rxjs';
 
 describe('LibraryComponent', () => {
