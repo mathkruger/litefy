@@ -5,6 +5,8 @@ import { forkJoin } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { SpotifyUserService } from 'src/app/services/spotify-user.service';
 import { UserService } from 'src/app/services/user.service';
+import { SpotifyPlaylistService } from 'src/app/services/spotify-playlist.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-library',
@@ -12,8 +14,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./library.component.css']
 })
 export class LibraryComponent implements OnInit {
-
-  constructor(private serviceUsuario: SpotifyUserService, private usuario: UserService) { }
+  constructor(private serviceUsuario: SpotifyUserService,
+              private usuario: UserService,
+              private playlistService: SpotifyPlaylistService,
+              private router: Router
+  ) { }
 
   userPlaylists: SpotifyApi.PagingObject<SpotifyApi.PlaylistObjectSimplified>;
   userAlbums: SpotifyApi.PagingObject<SpotifyApi.SavedAlbumObject>;
@@ -31,6 +36,11 @@ export class LibraryComponent implements OnInit {
       .subscribe(item => {
         this.usuarioLogado = item;
       });
+  }
+
+
+  userActiveTabCreatePlaylist() {
+      return this.router.url === "/create_playlist";
   }
 
   getUserLibrary() {

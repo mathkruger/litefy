@@ -1,4 +1,4 @@
-<div *ngIf="usuarioLogado" class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}">
+<div *ngIf="usuarioLogado" class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" [ngClass]="{ activeTab: userActiveTabCreatePlaylist() }">
     <div class="row">
         <div class="col-12">
             <h2>{{ 'Hello' | translate }}, {{ usuarioLogado.display_name }}. 😁</h2>
@@ -10,6 +10,28 @@
             <div class="col-md-6">
                 <app-content-list [title]="'LibraryPlaylistsText' | translate" type="playlist" [list]="userPlaylists">
                 </app-content-list>
+                <button [routerLink]="['/create_playlist']" class="button-create-playlist">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-plus"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="1"
+                        stroke="#ffffff"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                        />
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                </button>
             </div>
 
             <div class="col-md-6">

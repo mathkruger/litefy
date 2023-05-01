@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms/';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms/';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
@@ -30,6 +30,8 @@ import { PipesModule } from './pipes/pipes.module';
 import { AlbumComponent } from './pages/album/album.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { CreatePlaylistComponent } from "./pages/create-playlist/create-playlist.component";
+import { SelectPlaylistComponent } from "./pages/select-playlist/select-playlist.component";
 import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -38,6 +40,9 @@ import { VolumeBoxComponent } from './components/volume-box/volume-box.component
 import { SettingsComponent } from './pages/settings/settings.component';
 import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,8 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     AlbumComponent,
     PlaylistComponent,
     LibraryComponent,
+    CreatePlaylistComponent,
+    SelectPlaylistComponent,
     PodcastsComponent,
     LanguageSwitcherComponent,
     KaraokeComponent,
@@ -63,28 +70,31 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
     YoutubePlayerComponent,
     UserProfileComponent
   ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule,
-    AppRoutingModule,
-    PipesModule,
-    NgProgressModule,
-    NgProgressHttpModule,
-    NgProgressRouterModule,
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
-        deps: [HttpClient]
-      }
-    })
-  ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        RouterModule,
+        AppRoutingModule,
+        PipesModule,
+        NgProgressModule,
+        NgProgressHttpModule,
+        NgProgressRouterModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot(),
+        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        MatDialogModule,
+        MatFormFieldModule,
+        ReactiveFormsModule
+    ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true },
     PipesModule
