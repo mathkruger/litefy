@@ -341,6 +341,8 @@ export class ContentListComponent extends SettingsBase implements OnInit {
 
         dialogConfig.disableClose = true;
         dialogConfig.autoFocus = true;
+        dialogConfig.height = '400px';
+        dialogConfig.width = '400px';
         dialogConfig.data = {
             trackId: trackId
         };
