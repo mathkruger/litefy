@@ -146,8 +146,5 @@
       }
     }
   },
-  "defaultProject": "spotify-client",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "spotify-client"
 }
