@@ -1,0 +1,62 @@
+{
+  "direction": "ltr",
+  "FlagCode": "HU",
+  "LanguageName": "Magyar",
+  "AppName": "Litefy",
+
+  "LoginDescriptionText": "Egy Spotify kliens alsó-kategóriás eszközökre",
+  "LoginText": "Nem szükséges a modern kütyük használata ahhoz, hogy élvezd a zenét. Így nem kell mindig lépést tartanod az új technológiákkal azért, hogy jól érezd magad. Ezért hoztuk létre a Litefy-t",
+  "LoginButtonText": "Bejelentkezés Spotify-val",
+
+  "SearchPlaceholderText": "dalok, albumok, előadók, lejátszási listák, műsorok, epizódok ...",
+
+  "MenuHome": "Kezdőlap",
+  "MenuSearchText": "Keresés",
+  "MenuLibraryText": "Könyvtár",
+  "MenuKaraokeText": "Karaoke",
+
+  "HomeArtistsText": "Kedvenc előadóid",
+  "HomeMusicsText": "Kedvenc dalaid",
+  "HomeAlbumsText": "Új Albumok",
+  "HomePlaylistsText": "Ajánlott lejátszási listák",
+
+  "ArtistTracksText": "Legnépszerűbb dalaid",
+  "ArtistAlbumsText": "Albumok",
+  "ArtistRelatedText": "Kapcsolódó előadók",
+
+  "Hello": "Üdv",
+  "LibraryTracksText": "Dalok",
+  "LibraryAlbumsText": "Albumok",
+  "LibraryPlaylistsText": "Lejátszási listák",
+
+  "MusicListTracks": "Dal",
+  "MusicListTracksPlural": "Dalok",
+  "MusicListFollowers": "Követő",
+  "MusicListFollowersPlural": "Követők",
+  "DescriptionText": "Leírás",
+
+  "PlayingText": "Lejátszás",
+  "PausedText": "Szünet",
+  "NextText": "Következő",
+  "PreviousText": "Előző",
+  "ShuffleOnText": "Véletlen sorrend engedélyezése",
+  "ShuffleOffText": "Véletlen sorrend kikapcsolása",
+
+  "ExitText": "Kilépés",
+  "FollowersText": "Követő",
+  "FollowersTextPlural": "Követők",
+  "ProfileText": "Profil",
+  "SettingsText": "Beállítások",
+
+  "SearchArtists": "Előadók",
+
+  "KaraokeNotFoundText": "Nem találtunk dalszöveget, de a gombra kattintva megkeresheted.",
+  "KaraokeSearchText": "Keresés",
+
+  "SettingsPageTitle": "Beállítások",
+  "SettingsImageText": "Fénykép választás (album, előadó, lejátszási lista, stb.)",
+
+  "MenuPodcastText": "Podcasts",
+  "PodcastsShowsText": "Műsor",
+  "PodcastsEpisodesText": "Epizódok"
+}
