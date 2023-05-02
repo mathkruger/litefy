@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "PT",
+    "LanguageName": "Português",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy. Um cliente spotify para dispositivos mais modestos",
+    "LoginText": "Acreditamos que você não precisa de um super dispositivo para curtir sua música. Acreditamos que você não precisa se manter atualizado com todas as novas tecnologias para se divertir. É por isso que existe o Litefy.",
+    "LoginButtonText": "Login com Spotify",
+
+    "SearchPlaceholderText": "Música, álbum, artista, playlist ...",
+
+    "MenuSearchText": "Pesquisar",
+    "MenuLibraryText": "Biblioteca",
+    "MenuKaraokeText": "Modo Karaoke",
+
+    "HomeArtistsText": "Seus artistas preferidos",
+    "HomeMusicsText": "Suas músicas preferidas",
+    "HomeAlbumsText": "Novos álbuns",
+    "HomePlaylistsText": "Playlists recomendadas",
+
+    "ArtistTracksText": "Músicas mais tocadas",
+    "ArtistAlbumsText": "Álbuns",
+    "ArtistRelatedText": "Artistas relacionados",
+
+    "Hello": "Oi",
+    "LibraryTracksText": "Músicas",
+    "LibraryAlbumsText": "Álbuns",
+    "LibraryPlaylistsText": "Playlists",
+
+    "MusicListTracks": "Faixa",
+    "MusicListTracksPlural": "Faixas",
+    "MusicListFollowers": "Seguidor",
+    "MusicListFollowersPlural": "Seguidores",
+    "DescriptionText": "Descrição",
+
+    "PlayingText": "A tocar",
+    "PausedText": "Pausado",
+    "NextText": "Próxima faixa",
+    "PreviousText": "Faixa anterior",
+    "ShuffleOnText": "Modo aleatório ligado",
+    "ShuffleOffText": "Modo aleatório desligado",
+
+    "ExitText": "Sair",
+    "FollowersText": "Seguidor",
+    "FollowersTextPlural": "Seguidores",
+    "ProfileText": "Perfil",
+    "SettingsText": "Configurações",
+
+    "SearchArtists": "Artistas",
+
+    "KaraokeNotFoundText": "Nenhuma letra encontrada, mas você pode tentar buscar manualmente através do botão abaixo.",
+    "KaraokeSearchText": "Buscar",
+
+    "SettingsPageTitle": "Configurações",
+    "SettingsImageText": "A carregar imagens (album, artistas, playlists, etc.)",
+
+    "MenuPodcastText": "Podcasts",
+    "PodcastsShowsText": "Shows",
+    "PodcastsEpisodesText": "Episódios"
+}
