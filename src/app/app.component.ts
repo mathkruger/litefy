@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         const languages = [
             "pt-BR",
+            "pt",
             "bn",
             "es",
             "he",
