@@ -5,6 +5,7 @@ import { SpotifyUserService } from 'src/app/services/spotify-user.service';
 import { UserService } from 'src/app/services/user.service';
 import { SpotifyPlaylistService } from 'src/app/services/spotify-playlist.service';
 import {FormControl, FormGroup} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-create-playlist',
@@ -15,7 +16,8 @@ export class CreatePlaylistComponent implements OnInit {
     constructor(
         private spotifyUserService: SpotifyUserService,
         private userService: UserService,
-        private playlistService: SpotifyPlaylistService
+        private playlistService: SpotifyPlaylistService,
+        private router: Router
     ) { }
 
     userPlaylists: SpotifyApi.PagingObject<SpotifyApi.PlaylistObjectSimplified>;
@@ -71,6 +73,7 @@ export class CreatePlaylistComponent implements OnInit {
                 publicOrPrivate);
             createdPlaylist.subscribe(val => console.log(val));
         }
+        this.router.navigate(["/library"]);
     }
 
     getUserLibrary() {

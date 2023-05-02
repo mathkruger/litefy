@@ -43,7 +43,6 @@ export class SelectPlaylistComponent implements OnInit {
                 this.playerService.getDeviceId().subscribe((deviceId) => {
                     this.device_id = deviceId;
                 });
-                // this.getPlayerStatus();
             }
         });
     }
