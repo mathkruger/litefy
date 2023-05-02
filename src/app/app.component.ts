@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         const languages = [
             "pt-BR",
+            "pt",
             "bn",
             "es",
             "he",
@@ -37,6 +38,7 @@ export class AppComponent implements OnInit {
             "ar",
             "hr",
             "hi",
+            "hu",
             "mr",
             "it",
             "ua",

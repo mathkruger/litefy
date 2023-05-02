@@ -1,5 +1,5 @@
 import { Injector } from "@angular/core";
-import { SettingsService } from "src/app/services/settings.service";
+import { SettingsService } from "@services/settings.service";
 import { Settings } from "../settings";
 
 export class SettingsBase {

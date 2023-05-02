@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { SpotifyPlayerService } from 'src/app/services/spotify-player.service';
+import { SpotifyPlayerService } from '@services/spotify-player.service';
 
 @Component({
   selector: 'app-volume-box',
