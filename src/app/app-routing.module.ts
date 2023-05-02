@@ -1,5 +1,7 @@
 import { KaraokeComponent } from './pages/karaoke/karaoke.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { CreatePlaylistComponent } from "./pages/create-playlist/create-playlist.component";
+import { SelectPlaylistComponent } from "./pages/select-playlist/select-playlist.component";
 import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { AlbumComponent } from './pages/album/album.component';
@@ -30,6 +32,16 @@ const routes: Routes = [
   {
     path: 'library',
     component: LibraryComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'create_playlist',
+    component: CreatePlaylistComponent,
+    canActivate: [LoginGuardService]
+  },
+  {
+    path: 'select_playlist',
+    component: SelectPlaylistComponent,
     canActivate: [LoginGuardService]
   },
   {

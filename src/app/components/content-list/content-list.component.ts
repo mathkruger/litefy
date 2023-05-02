@@ -11,7 +11,9 @@ import { User } from "src/app/models/user";
 import { forkJoin } from "rxjs";
 import { YoutubePlayerStatus } from "src/app/models/youtube-player-status";
 import { TranslateService } from "@ngx-translate/core";
-
+import { SpotifyPlaylistService } from 'src/app/services/spotify-playlist.service';
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { SelectPlaylistComponent } from "../../pages/select-playlist/select-playlist.component";
 
 @Component({
     selector: "app-content-list",
@@ -27,6 +29,8 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         private youtubePlayerService: YoutubePlayerService,
         private userService: UserService,
         public translateService: TranslateService,
+        private playlistService: SpotifyPlaylistService,
+        private dialog: MatDialog,
         injector: Injector
     ) {
         super(injector);
@@ -330,5 +334,19 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         if (scrollOffset === scrollMax && this.lastItem < (this.list.length - 1)) {
             this.lastItem += 10;
         }
+    }
+
+    getPlaylistList(trackId: string) {
+        const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+        dialogConfig.autoFocus = true;
+        dialogConfig.height = '400px';
+        dialogConfig.width = '400px';
+        dialogConfig.data = {
+            trackId: trackId
+        };
+
+        this.dialog.open(SelectPlaylistComponent, dialogConfig);
     }
 }

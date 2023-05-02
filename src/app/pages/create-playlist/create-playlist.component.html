@@ -1,0 +1,15 @@
+<div *ngIf="loggedUser" class="app container mt-4  {{ ('direction' | translate) === 'rtl' ? 'rtl-custom' : ''}}" >
+    <div id="innerbox">
+        <form [formGroup]="playlistForm">
+            <h4 class="">Create a New Playlist</h4>
+            <input type="text" id="playlist_name" name="playlist_name" placeholder="Name" formControlName="name"><br>
+            <input type="text" id="description" name="description" placeholder="Description" formControlName="description"><br>
+            <input type="checkbox" id="collaboritive" name="collaboritive" formControlName="collaborative">
+            <label for="vehicle1">Collaborative </label><br>
+            <input type="checkbox" id="public" name="public" formControlName="public">
+            <label for="vehicle1"> Public</label><br>
+            <input type="submit" value="Create" (click)="createPlaylist()">
+            <input type="cancel" value="Cancel" routerLink="../library">
+        </form>
+    </div>
+</div>

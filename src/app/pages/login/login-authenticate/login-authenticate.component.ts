@@ -21,7 +21,7 @@ export class LoginAuthenticateComponent {
     const client_id = environment.client_id; // Your client id
     const redirect_uri = environment.redirect_uri; // Your redirect uri
 
-    const scope = 'user-top-read user-read-currently-playing user-read-playback-state user-read-recently-played user-modify-playback-state streaming user-read-private user-read-email user-library-read';
+    const scope = 'user-top-read user-read-currently-playing user-read-playback-state user-read-recently-played user-modify-playback-state streaming user-read-private user-read-email user-library-read playlist-modify-public playlist-modify-private';
     const state = this.generateRandomString(16);
 
     let url = 'https://accounts.spotify.com/authorize';

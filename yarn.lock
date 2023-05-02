@@ -128,6 +128,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@^10.2.7", "@angular/cdk@10.2.7":
+  "integrity" "sha512-ZQjDfTRTn7JuAKsf3jiIdU2XBaxxGBi/ZWYv5Pb3HCl6B4PISsIE5VWRhkoUogoAB0MiFHpjnWeIqknJEm11YQ=="
+  "resolved" "https://registry.npmjs.org/@angular/cdk/-/cdk-10.2.7.tgz"
+  "version" "10.2.7"
+  dependencies:
+    "tslib" "^2.0.0"
+  optionalDependencies:
+    "parse5" "^5.0.0"
+
 "@angular/cli@~10.2.1":
   version "10.2.1"
   resolved "https://registry.npmjs.org/@angular/cli/-/cli-10.2.1.tgz"
@@ -205,6 +214,13 @@
   version "10.2.4"
   resolved "https://registry.npmjs.org/@angular/language-service/-/language-service-10.2.4.tgz"
   integrity sha512-WmaX2lst7LOPVdCLdgR2Yddvy+DrQ5fhaXexZ1mYFnWBwW8gDXcRP+sHAkvTu752mF5c0C4OEMR9UJdwrHntrg==
+
+"@angular/material@^10.2.7":
+  "integrity" "sha512-uk6JkRrKHaM9VFMzX7pWC83YNLVgXPB3D8U1yjSOafCdWwrRZgUHGr8MPlSILCr3o2nxgg5SsKdWcWwHuXXUZA=="
+  "resolved" "https://registry.npmjs.org/@angular/material/-/material-10.2.7.tgz"
+  "version" "10.2.7"
+  dependencies:
+    "tslib" "^2.0.0"
 
 "@angular/platform-browser-dynamic@~10.2.4":
   version "10.2.4"
@@ -6845,6 +6861,7 @@ parse-json@^5.0.0:
   integrity sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
+
     error-ex "^1.3.1"
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"

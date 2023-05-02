@@ -77,7 +77,7 @@ a:hover {
 }
 
 .button-custom[disabled] {
-    background: var(--grey);
+    background: var(--spt-grey);
 }
 
 .button-custom:hover {
@@ -147,3 +147,76 @@ a:hover {
 .me-5 {
     margin-inline-end: 3rem !important;
 }
+
+.button-create-playlist {
+    border: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spt-light-grey);
+
+    transition: 0.2s all;
+    font-size: 130%;
+}
+
+#selectPlaylist {
+    color: white;
+    background: black;
+    border-radius: 10px;
+    border-color: black;
+}
+
+#innerbox
+{
+    width:400px;
+    max-width:400px;
+    display: inline-block;
+    padding: 50px 10px;
+    color: white;
+    background: var(--spt-grey);
+    border-radius: 10px;
+    margin:1%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+input[type=submit] {
+    background-color: var(--spt-green);
+    border: var(--spt-green);
+    color: white;
+    width: 90%;
+    padding: 2px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+input[type=cancel] {
+    background-color: white;
+    border: white;
+    color: black;
+    width: 90%;
+    padding: 2px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 89%;
+    padding: 2px 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#innerbox input
+{
+    margin: 5px 11px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

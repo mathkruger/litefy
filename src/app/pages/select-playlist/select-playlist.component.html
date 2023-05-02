@@ -1,0 +1,15 @@
+<div>
+    <h2 mat-dialog-title>Select Playlist</h2>
+    <mat-dialog-content>
+        <div *ngFor="let playlist of userPlaylists" class="playlist-item">
+            <button type="button" (click)="playlistSelected(playlist)">
+                <span class="name">{{playlist.name}}</span>
+            </button>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button cancel" (click)="close()">Cancel</button>
+    </mat-dialog-actions>
+</div>
+
