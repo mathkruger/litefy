@@ -1,5 +1,5 @@
 import { SpotifyBrowseService } from './../../services/spotify-browse.service';
-import { SpotifyUserService } from 'src/app/services/spotify-user.service';
+import { SpotifyUserService } from '@services/spotify-user.service';
 import { AppModule } from './../../app.module';
 import { ComponentFixture, inject, TestBed, waitForAsync } from '@angular/core/testing';
 

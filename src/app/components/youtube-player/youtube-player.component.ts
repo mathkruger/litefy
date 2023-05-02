@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { YoutubePlayerStatus } from 'src/app/models/youtube-player-status';
-import { YoutubePlayerService } from 'src/app/services/youtube/youtube-player.service';
+import { YoutubePlayerStatus } from '@models/youtube-player-status';
+import { YoutubePlayerService } from '@services/youtube/youtube-player.service';
 
 @Component({
   selector: 'app-youtube-player',

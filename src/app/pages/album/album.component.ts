@@ -1,9 +1,9 @@
 /// <reference path="../../../../node_modules/@types/spotify-api/index.d.ts" />
 
 import { ActivatedRoute } from '@angular/router';
-import { SpotifyAlbumService } from './../../services/spotify-album.service';
+import { SpotifyAlbumService } from '@services/spotify-album.service';
 import { Component, Injector, OnInit } from '@angular/core';
-import { SettingsBase } from 'src/app/models/base/settings-base';
+import { SettingsBase } from '@models/base/settings-base';
 
 @Component({
   selector: 'app-album',

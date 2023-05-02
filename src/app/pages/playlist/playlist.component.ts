@@ -3,7 +3,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { SpotifyPlaylistService } from './../../services/spotify-playlist.service';
 import { Component, Injector, OnInit } from '@angular/core';
-import { SettingsBase } from 'src/app/models/base/settings-base';
+import { SettingsBase } from '@models/base/settings-base';
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
