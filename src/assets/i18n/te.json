@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IN",
+    "LanguageName": "తెలుగు",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "తక్కువ-ముగింపు పరికరాల కోసం Spotify క్లయింట్",
+    "LoginText": "మీ సంగీతాన్ని ఆస్వాదించడానికి మీకు సూపర్ పరికరం అవసరం లేదని మేము నమ్ముతున్నాము. వినోదం పొందడానికి మీరు అన్ని కొత్త సాంకేతికతలను కొనసాగించాల్సిన అవసరం లేదని మేము నమ్ముతున్నాము. అందుకే Litefy ఉంది.",
+    "LoginButtonText": "Spotify తో లాగిన్ చేయండి",
+
+    "SearchPlaceholderText": "ట్రాక్‌లు, ఆల్బమ్, ఆర్టిస్ట్, ప్లేజాబితా, షోలు, ఎపిసోడ్‌లు ...",
+
+    "MenuHome": "హోమ్",
+    "MenuSearchText": "శోధన",
+    "MenuLibraryText": "లైబ్రరీ",
+    "MenuKaraokeText": "కరోకే",
+
+    "HomeArtistsText": "మీకు ఇష్టమైన కళాకారులు",
+    "HomeMusicsText": "మీకు ఇష్టమైన పాటలు",
+    "HomeAlbumsText": "కొత్త ఆల్బమ్‌లు",
+    "HomePlaylistsText": "సిఫార్సు చేయబడిన ప్లేజాబితాలు",
+
+    "ArtistTracksText": "ఎక్కువగా ప్లే చేయబడిన ట్రాక్‌లు",
+    "ArtistAlbumsText": "ఆల్బమ్‌లు",
+    "ArtistRelatedText": "సంబంధిత కళాకారులు",
+
+    "Hello": "హలో",
+    "LibraryTracksText": "ట్రాక్స్",
+    "LibraryAlbumsText": "ఆల్బమ్‌లు",
+    "LibraryPlaylistsText": "ప్లేజాబితాలు",
+
+    "MusicListTracks": "ట్రాక్",
+    "MusicListTracksPlural": "ట్రాక్స్",
+    "MusicListFollowers": "అనుచరుడు",
+    "MusicListFollowersPlural": "అనుచరులు",
+    "DescriptionText": "వివరణ",
+
+    "PlayingText": "ప్లే అవుతోంది",
+    "PausedText": "పాజ్ చేయబడింది",
+    "NextText": "తదుపరి ట్రాక్",
+    "PreviousText": "మునుపటి ట్రాక్",
+    "ShuffleOnText": "షఫుల్ మోడ్ ఆన్‌లో ఉంది",
+    "ShuffleOffText": "షఫుల్ మోడ్ ఆఫ్లో ఉంది",
+
+    "ExitText": "బయటకి దారి",
+    "FollowersText": "అనుచరుడు",
+    "FollowersTextPlural": "అనుచరులు",
+    "ProfileText": "ప్రొఫైల్",
+    "SettingsText": "సెట్టింగ్‌లు",
+
+    "SearchArtists": "కళాకారులు",
+
+    "KaraokeNotFoundText": "సాహిత్యం కనుగొనబడలేదు, కానీ మీరు దిగువ బటన్‌ను ఉపయోగించి మాన్యువల్‌గా శోధించడానికి ప్రయత్నించవచ్చు.",
+    "KaraokeSearchText": "శోధన",
+
+    "SettingsPageTitle": "సెట్టింగ్‌లు",
+    "SettingsImageText": "చిత్రాలను లోడ్ చేయండి (ఆల్బమ్, కళాకారులు, ప్లేజాబితాలు మొదలైనవి)",
+
+    "MenuPodcastText": "పాడ్‌కాస్ట్‌లు",
+    "PodcastsShowsText": "ప్రదర్శనలు",
+    "PodcastsEpisodesText": "ఎపిసోడ్‌లు"
+}
