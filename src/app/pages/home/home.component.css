@@ -7,10 +7,10 @@
 }
 
 .homeSubContainer {
-    max-width: 1478px;
-    padding: 0 15px;
-
-    display: flex;
+    margin: 2% 5% 5% 5%;
+    /* max-width: 1478px; */
+    /* padding: 0 15px; */
+    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
@@ -19,23 +19,67 @@
     width: 100%;
 }
 
+
+.username{
+    font-size: 2.5em;
+    margin-left: 1.5%;
+}
+
+
+.home-profile{
+    width: 100%;
+    margin: 0% 0% 2% 0%;
+    text-align: left;
+}
+
+
 .home-sidebar-left {
-    width: calc(100% - 300px);
+    float: left;
+    width: 48%;
+    background-color: #322d2d;
+    border-radius: 5px;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.teste{
+    margin: 2%;
+    background-color: red;
 }
 
 .home-sidebar-right {
-    width: 300px;
-    height: 100%;
+    float: right;
+	width: 48%;
+    text-align: center;
+    background-color: #322d2d;
+    border-radius: 5px;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
-@media screen and (min-width: 800px){
+@media screen and (max-width: 510px){
+    .home-sidebar-left {
+        float: none;
+        width: 99%;
+    }
+    
+    .home-sidebar-right {
+        float: none;
+        width: 99%;
+    }
+} 
+
+
+
+/* @media screen and (min-width: 800px){
     .homeContainer {
         padding: 0 10px;
     }
     
     .homeSubContainer {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 100%;
     }
     
     .home-sidebar-right {
@@ -59,4 +103,50 @@
         width: 100%;
         height: 100%;
     }
+}
+ */
+
+.timeline{
+    text-align: center;
+}
+
+
+.button-timeline {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1%;
+}
+
+.button-timeline:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+.activeButt {
+    background-color: #0e512a;
+}
+
+
+
+@media (min-width: 768px) {
+  .button-timeline {
+    padding: 10px 30px;
+  }
 }
