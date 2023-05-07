@@ -23,12 +23,14 @@ export class SpotifyUserService {
         return this.service.Get('https://api.spotify.com/v1/me/tracks?limit=50');
     }
 
-    getUserTopArtists(): Observable<SpotifyApi.UsersTopArtistsResponse> {
-        return this.service.Get('https://api.spotify.com/v1/me/top/artists');
+    getUserTopArtists(range: any): Observable<SpotifyApi.UsersTopArtistsResponse> {
+        range = (range !== '') ? range : "medium_term"
+        return this.service.Get('https://api.spotify.com/v1/me/top/artists?limit=24&time_range=' + range);
     }
 
-    getUserTopTracks(): Observable<SpotifyApi.UsersTopTracksResponse> {
-        return this.service.Get('https://api.spotify.com/v1/me/top/tracks');
+    getUserTopTracks(range: any): Observable<SpotifyApi.UsersTopTracksResponse> {
+        range = (range !== '') ? range : "medium_term"
+        return this.service.Get('https://api.spotify.com/v1/me/top/tracks?time_range=' + range);
     }
 
     getUserShows(): Observable<SpotifyApi.ShowObjectFull> {
