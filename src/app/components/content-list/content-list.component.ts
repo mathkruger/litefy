@@ -50,7 +50,7 @@ export class ContentListComponent extends SettingsBase implements OnInit {
     playerState: any;
     premium = true;
     currentAlbum = "";
-    lastItem = 9;
+    lastItem = 24;
 
     ngOnInit() {
         this.userService.getUser().subscribe((item) => {

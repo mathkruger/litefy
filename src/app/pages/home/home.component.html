@@ -5,23 +5,54 @@
     }}"
 >
     <div class="homeSubContainer">
-        <div class="home-sidebar-left">
-            <app-content-list
-                [title]="'HomeMusicsText' | translate"
-                type="track"
-                [list]="topTracks"
-            ></app-content-list>
-
-            <app-content-list
-                [title]="'HomeAlbumsText' | translate"
-                type="album"
-                [list]="newAlbuns"
-            ></app-content-list>
+        <div class="home-profile">
+            <div class="username">
+                {{ 'Hello' | translate }} <b>{{ activeUser.display_name }}</b> 👋
+            </div>
 
             <app-content-list
                 [title]="'HomePlaylistsText' | translate"
                 type="playlist"
                 [list]="featuredPlaylists"
+            ></app-content-list>
+        </div>
+
+        <div class="timeline">
+            <h2>Your Stats</h2>
+            <button
+                class="button-timeline"
+                id="short_term"
+                type="button"
+                (click)="this.changeRange('short_term')"
+                clickable
+            >
+                last 4 weeks
+            </button>
+            <button
+                class="button-timeline activeButt"
+                id="medium_term"
+                type="button"
+                (click)="this.changeRange('medium_term')"
+                clickable
+                
+            >
+                last 6 months
+            </button>
+            <button
+                class="button-timeline"
+                id="long_term"
+                type="button"
+                (click)="this.changeRange('long_term')"
+                clickable
+            >
+                all time
+            </button>
+        </div>
+        <div class="home-sidebar-left">
+            <app-content-list
+                [title]="'HomeMusicsText' | translate"
+                type="track"
+                [list]="topTracks"
             ></app-content-list>
         </div>
         <div class="home-sidebar-right">
@@ -31,5 +62,19 @@
                 [list]="topArtists"
             ></app-content-list>
         </div>
+        <!-- <div class="home-sidebar-right">
+            <app-content-list
+                [title]="'HomeAlbumsText' | translate"
+                type="album"
+                [list]="newAlbuns"
+            ></app-content-list>
+        </div> -->
+
+        <!-- <div class="column-left">
+            <p>This is the content for the left column.</p>
+        </div>
+        <div class="column-right">
+            <p>This is the content for the right column.</p>
+        </div> -->
     </div>
 </div>
