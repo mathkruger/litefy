@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IN",
+    "LanguageName": "Kannada",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "ಕಡಿಮೆ-ಮಟ್ಟದ ಸಾಧನಗಳಿಗಾಗಿ Spotify ಕ್ಲೈಂಟ್",
+    "LoginText": "ನಿಮ್ಮ ಸಂಗೀತವನ್ನು ಆನಂದಿಸಲು ನಿಮಗೆ ಸೂಪರ್ ಸಾಧನದ ಅಗತ್ಯವಿಲ್ಲ ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ. ಮನರಂಜನೆಯನ್ನು ಪಡೆಯಲು ನೀವು ಎಲ್ಲಾ ಹೊಸ ತಂತ್ರಜ್ಞಾನವನ್ನು ಮುಂದುವರಿಸುವ ಅಗತ್ಯವಿಲ್ಲ ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ. ಅದಕ್ಕಾಗಿಯೇ Litefy ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.",
+    "LoginButtonText": "Spotify ನೊಂದಿಗೆ ಲಾಗಿನ್ ಮಾಡಿ",
+
+    "SearchPlaceholderText": "ಟ್ರ್ಯಾಕ್‌ಗಳು, ಆಲ್ಬಮ್, ಕಲಾವಿದ, ಪ್ಲೇಪಟ್ಟಿ, ಪ್ರದರ್ಶನಗಳು, ಸಂಚಿಕೆಗಳು ...",
+
+    "MenuHome": "ಮನೆ",
+    "MenuSearchText": "ಹುಡುಕಿ",
+    "MenuLibraryText": "ಗ್ರಂಥಾಲಯ",
+    "MenuKaraokeText": "ಕರೋಕೆ",
+
+    "HomeArtistsText": "ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಕಲಾವಿದರು",
+    "HomeMusicsText": "ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಹಾಡುಗಳು",
+    "HomeAlbumsText": "ಹೊಸ ಆಲ್ಬಂಗಳು",
+    "HomePlaylistsText": "ಶಿಫಾರಸು ಮಾಡಿದ ಪ್ಲೇಪಟ್ಟಿಗಳು",
+
+    "ArtistTracksText": "ಹೆಚ್ಚು ಪ್ಲೇ ಮಾಡಿದ ಟ್ರ್ಯಾಕ್‌ಗಳು",
+    "ArtistAlbumsText": "ಆಲ್ಬಮ್‌ಗಳು",
+    "ArtistRelatedText": "ಸಂಬಂಧಿತ ಕಲಾವಿದರು",
+
+    "Hello": "ನಮಸ್ಕಾರ",
+    "LibraryTracksText": "ಟ್ರ್ಯಾಕ್‌ಗಳು",
+    "LibraryAlbumsText": "ಆಲ್ಬಮ್‌ಗಳು",
+    "LibraryPlaylistsText": "ಪ್ಲೇಪಟ್ಟಿಗಳು",
+
+    "MusicListTracks": "ಟ್ರ್ಯಾಕ್",
+    "MusicListTracksPlural": "ಟ್ರ್ಯಾಕ್‌ಗಳು",
+    "MusicListFollowers": "ಅನುಯಾಯಿ",
+    "MusicListFollowersPlural": "ಅನುಯಾಯಿಗಳು",
+    "DescriptionText": "ವಿವರಣೆ",
+
+    "PlayingText": "ನುಡಿಸುತ್ತಿದ್ದೇನೆ",
+    "PausedText": "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ",
+    "NextText": "ಮುಂದಿನ ಟ್ರ್ಯಾಕ್",
+    "PreviousText": "ಹಿಂದಿನ ಟ್ರ್ಯಾಕ್",
+    "ShuffleOnText": "ಷಫಲ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ",
+    "ShuffleOffText": "ಷಫಲ್ ಮೋಡ್ ಆಫ್ ಆಗಿದೆ",
+
+    "ExitText": "ಹೊರಗೆ",
+    "FollowersText": "ಅನುಯಾಯಿ",
+    "FollowersTextPlural": "ಅನುಯಾಯಿಗಳು",
+    "ProfileText": "ಪ್ರೊಫೈಲ್",
+    "SettingsText": "ಸಂಯೋಜನೆಗಳು",
+
+    "SearchArtists": "ಕಲಾವಿದರು",
+
+    "KaraokeNotFoundText": "ಯಾವುದೇ ಸಾಹಿತ್ಯ ಕಂಡುಬಂದಿಲ್ಲ, ಆದರೆ ಕೆಳಗಿನ ಬಟನ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ನೀವು ಹಸ್ತಚಾಲಿತವಾಗಿ ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಬಹುದು.",
+    "KaraokeSearchText": "ಹುಡುಕಿ",
+
+    "SettingsPageTitle": "ಸಂಯೋಜನೆಗಳು",
+    "SettingsImageText": "ಚಿತ್ರಗಳನ್ನು ಲೋಡ್ ಮಾಡಿ (ಆಲ್ಬಮ್, ಕಲಾವಿದರು, ಪ್ಲೇಪಟ್ಟಿಗಳು, ಇತ್ಯಾದಿ)",
+
+    "MenuPodcastText": "ಪಾಡ್‌ಕಾಸ್ಟ್‌ಗಳು",
+    "PodcastsShowsText": "ಪ್ರದರ್ಶನಗಳು",
+    "PodcastsEpisodesText": "ಸಂಚಿಕೆಗಳು"
+}
