@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1683549029262,
+  "timestamp": 1683670627744,
   "index": "/litefy/index.html",
   "assetGroups": [
     {
@@ -108,7 +108,7 @@
     "/litefy/assets/i18n/gm.json": "c462cc2e6e5abef2d39c2f8f98a223b121bdd63e",
     "/litefy/assets/i18n/gn.json": "7219584e12bf50aa60ad70a9db740df7a481edf4",
     "/litefy/assets/i18n/gr.json": "ce4ddb83a21e32db821777282aedd18d4a1419cf",
-    "/litefy/assets/i18n/he.json": "50f79972f8c32420c472b7374dad0269636f1e28",
+    "/litefy/assets/i18n/he.json": "b2fc99c8b5afa84b09bb620fbdd9146750539e84",
     "/litefy/assets/i18n/hi.json": "6202ea87c90e227ffb74298a9dafd108f7508e58",
     "/litefy/assets/i18n/hr.json": "91d59e4522c1fde81169498aa64f0a5bf7881046",
     "/litefy/assets/i18n/hu.json": "ee7be96093d2d153a0c5af2be5b892707247cea4",
