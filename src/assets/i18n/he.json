@@ -4,11 +4,11 @@
     "LanguageName": "עִברִית",
     "AppName": "Litefy",
 
-    "LoginDescriptionText": "לייטפיי. לקוח ספוטיפיי להתקני קצה חלשים",
-    "LoginText": "אנו מאמינים שאינך צריך מכשיר סופר-חזק על מנת להנות מהמוזיקה שלך. אנו מאמינים שאינך צריך לעמוד בקצב של כל הטכנולוגיות החדשות כדי להתבדר. זו סיבת הקיום של לייטפי.",
+    "LoginDescriptionText": "ספוטיפיי למכשירים עם ביצועים נמוכים",
+    "LoginText": "אנחנו מאמינים שאתה לא צריך מכשיר מתקדם מדי כדי ליהנות מהמוזיקה שלך. אנחנו מאמינים שאתה לא חייב לעקוב אחר כל טכנולוגיה חדשה כדי ליהנות מבידור. זו הסיבה שלייטפי קיימת.",
     "LoginButtonText": "התחבר עם ספוטיפיי",
 
-    "SearchPlaceholderText": "רצועות, אלבום, אמן, פלייליסט ...",
+    "SearchPlaceholderText": "שירים, אלבום, אמן, פלייליסט ...",
 
     "MenuSearchText": "חיפוש",
     "MenuLibraryText": "ספרייה",
@@ -19,27 +19,27 @@
     "HomeAlbumsText": "אלבומים חדשים",
     "HomePlaylistsText": "פלייליסטים מומלצים",
 
-    "ArtistTracksText": "הרצועות המושמעות ביותר",
+    "ArtistTracksText": "השירים המושמעים ביותר",
     "ArtistAlbumsText": "אלבומים",
     "ArtistRelatedText": "אמנים קשורים",
 
     "Hello": "שלום",
-    "LibraryTracksText": "רצועות",
+    "LibraryTracksText": "שירים",
     "LibraryAlbumsText": "אלבומים",
     "LibraryPlaylistsText": "פלייליסטים",
 
-    "MusicListTracks": "רצועה",
-    "MusicListTracksPlural": "רצועות",
+    "MusicListTracks": "שיר",
+    "MusicListTracksPlural": "שירים",
     "MusicListFollowers": "עוקב",
     "MusicListFollowersPlural": "עוקבים",
     "DescriptionText": "תיאור",
 
     "PlayingText": "מנגן",
     "PausedText": "מושהה",
-    "NextText": "רצועה באה",
-    "PreviousText": "רצועה קודמת",
-    "ShuffleOnText": "מצב ערבוב פעיל",
-    "ShuffleOffText": "מצב ערבוב כבוי",
+    "NextText": "שיר הבא",
+    "PreviousText": "שיר קודם",
+    "ShuffleOnText": "מצב השמעה אקראית פעיל",
+    "ShuffleOffText": "מצב השמעה אקראית כבוי",
 
     "ExitText": "יציאה",
     "FollowersText": "עוקב",
