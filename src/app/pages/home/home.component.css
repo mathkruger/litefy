@@ -23,6 +23,11 @@
 .username{
     font-size: 2.5em;
     margin-left: 1.5%;
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 730px) {
+        font-size: 20px;
+    }
 }
 
 
@@ -63,12 +68,12 @@
         float: none;
         width: 99%;
     }
-    
+
     .home-sidebar-right {
         float: none;
         width: 99%;
     }
-} 
+}
 
 
 
@@ -76,15 +81,15 @@
     .homeContainer {
         padding: 0 10px;
     }
-    
+
     .homeSubContainer {
         display: grid;
         grid-template-columns: 100%;
     }
-    
+
     .home-sidebar-right {
         height: 100%;
-        overflow-y: hidden; 
+        overflow-y: hidden;
     }
 }
 
