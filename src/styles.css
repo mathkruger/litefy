@@ -34,9 +34,13 @@ body {
     padding-bottom: 130px;
 }
 
-/* .app {
-    margin-top: 120px !important;
-} */
+.app {
+    /*
+        70px is the header width which we must take into
+        consideration when rendering the main content.
+    */
+    margin-top: 70px !important;
+}
 
 a {
     text-decoration: none !important;
