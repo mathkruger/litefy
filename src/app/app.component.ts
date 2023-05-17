@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
             "ua",
             "cr",
             "cn",
+            "zh-tw",
             "se",
             "da",
             "ta",
