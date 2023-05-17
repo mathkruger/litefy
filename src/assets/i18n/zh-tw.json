@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "TW",
+    "LanguageName": "中文（繁體）",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "適用於低端設備的Spotify客戶端",
+    "LoginText": "我們相信您不需要超級設備來欣賞音樂。我們相信您不需要跟上所有新技術的步伐來獲得娛樂。這就是Litefy存在的原因。",
+    "LoginButtonText": "登錄 Spotify",
+
+    "SearchPlaceholderText": "歌曲、專輯、歌手、歌單、節目、劇目 ...",
+
+    "MenuHome": "首頁",
+    "MenuSearchText": "搜索",
+    "MenuLibraryText": "曲庫",
+    "MenuKaraokeText": "卡拉OK",
+
+    "HomeArtistsText": "喜歡的歌手",
+    "HomeMusicsText": "喜歡的歌",
+    "HomeAlbumsText": "新專輯",
+    "HomePlaylistsText": "推薦歌單",
+
+    "ArtistTracksText": "播放最多歌曲",
+    "ArtistAlbumsText": "專輯",
+    "ArtistRelatedText": "關聯歌手",
+
+    "Hello": "你好",
+    "LibraryTracksText": "歌曲",
+    "LibraryAlbumsText": "專輯",
+    "LibraryPlaylistsText": "歌手",
+
+    "MusicListTracks": "歌曲",
+    "MusicListTracksPlural": "歌曲",
+    "MusicListFollowers": "關注",
+    "MusicListFollowersPlural": "關注",
+    "DescriptionText": "詳情",
+
+    "PlayingText": "播放",
+    "PausedText": "暫停",
+    "NextText": "下一首",
+    "PreviousText": "上一首",
+    "ShuffleOnText": "隨機播放 開啓",
+    "ShuffleOffText": "隨機播放 關閉",
+
+    "ExitText": "推出",
+    "FollowersText": "關注",
+    "FollowersTextPlural": "關注",
+    "ProfileText": "我的",
+    "SettingsText": "設置",
+
+    "SearchArtists": "歌手",
+
+    "KaraokeNotFoundText": "沒有找到歌詞, 請使用下面的按鈕手動搜索",
+    "KaraokeSearchText": "搜索",
+
+    "SettingsPageTitle": "設置",
+    "SettingsImageText": "下載圖片 (專輯、歌手、歌單、等)",
+
+    "MenuPodcastText": "播客",
+    "PodcastsShowsText": "節目",
+    "PodcastsEpisodesText": "劇目"
+}
