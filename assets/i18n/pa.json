@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "IN",
+    "LanguageName": "ਪੰਜਾਬੀ",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "ਲੋਅ-ਐਂਡ ਡਿਵਾਈਸਾਂ ਲਈ ਇੱਕ Spotify ਕਲਾਇੰਟ",
+    "LoginText": "ਸਾਡਾ ਮੰਨਣਾ ਹੈ ਕਿ ਤੁਹਾਨੂੰ ਆਪਣੇ ਸੰਗੀਤ ਦਾ ਆਨੰਦ ਲੈਣ ਲਈ ਕਿਸੇ ਸੁਪਰ ਡਿਵਾਈਸ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ। ਸਾਡਾ ਮੰਨਣਾ ਹੈ ਕਿ ਤੁਹਾਨੂੰ ਮਨੋਰੰਜਨ ਕਰਨ ਲਈ ਸਾਰੀਆਂ ਨਵੀਆਂ ਤਕਨੀਕਾਂ ਨਾਲ ਜੁੜੇ ਰਹਿਣ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ। ਇਸੇ ਲਈ Litefy ਮੌਜੂਦ ਹੈ।",
+    "LoginButtonText": "Spotify ਨਾਲ ਲੌਗਇਨ ਕਰੋ",
+
+    "SearchPlaceholderText": "ਟਰੈਕ, ਐਲਬਮ, ਕਲਾਕਾਰ, ਪਲੇਲਿਸਟ, ਸ਼ੋ, ਐਪੀਸੋਡ...",
+
+    "MenuHome": "ਦਾਖਲਾ ਪੰਨਾ",
+    "MenuSearchText": "ਖੋਜ",
+    "MenuLibraryText": "ਲਾਇਬ੍ਰੇਰੀ",
+    "MenuKaraokeText": "ਕਰਾਓਕੇ",
+
+    "HomeArtistsText": "ਤੁਹਾਡੇ ਮਨਪਸੰਦ ਕਲਾਕਾਰ",
+    "HomeMusicsText": "ਤੁਹਾਡੇ ਮਨਪਸੰਦ ਗੀਤ",
+    "HomeAlbumsText": "ਨਵੀਆਂ ਐਲਬਮਾਂ",
+    "HomePlaylistsText": "ਸਿਫ਼ਾਰਸ਼ੀ ਪਲੇਲਿਸਟਸ",
+
+    "ArtistTracksText": "ਸਭ ਤੋਂ ਵੱਧ ਚਲਾਏ ਗਏ ਟਰੈਕ",
+    "ArtistAlbumsText": "ਐਲਬਮਾਂ",
+    "ArtistRelatedText": "ਸਬੰਧਤ ਕਲਾਕਾਰ",
+
+    "Hello": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+    "LibraryTracksText": "ਸੰਗੀਤ ਟਰੈਕ",
+    "LibraryAlbumsText": "ਐਲਬਮਾਂ",
+    "LibraryPlaylistsText": "ਪਲੇਲਿਸਟਸ",
+
+    "MusicListTracks": "ਟਰੈਕ",
+    "MusicListTracksPlural": "ਟਰੈਕ",
+    "MusicListFollowers": "ਅਨੁਯਾਈ",
+    "MusicListFollowersPlural": "ਅਨੁਯਾਈ",
+    "DescriptionText": "ਵਰਣਨ",
+
+    "PlayingText": "ਖੇਡਣਾ",
+    "PausedText": "ਰੋਕਿਆ",
+    "NextText": "ਅਗਲਾ ਟਰੈਕ",
+    "PreviousText": "ਪਿਛਲਾ ਟਰੈਕ",
+    "ShuffleOnText": "ਸ਼ਫਲ ਮੋਡ ਚਾਲੂ ਹੈ",
+    "ShuffleOffText": "ਸ਼ਫਲ ਮੋਡ ਬੰਦ ਹੈ",
+
+    "ExitText": "ਨਿਕਾਸ",
+    "FollowersText": "ਅਨੁਯਾਈ",
+    "FollowersTextPlural": "ਅਨੁਯਾਈ",
+    "ProfileText": "ਪ੍ਰੋਫਾਈਲ",
+    "SettingsText": "ਸੈਟਿੰਗਾਂ",
+
+    "SearchArtists": "ਕਲਾਕਾਰ",
+
+    "KaraokeNotFoundText": "ਕੋਈ ਬੋਲ ਨਹੀਂ ਮਿਲੇ, ਪਰ ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਹੱਥੀਂ ਖੋਜ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹੋ।",
+    "KaraokeSearchText": "ਖੋਜ",
+
+    "SettingsPageTitle": "ਸੈਟਿੰਗਾਂ",
+    "SettingsImageText": "ਚਿੱਤਰ ਲੋਡ ਕਰੋ (ਐਲਬਮ, ਕਲਾਕਾਰ, ਪਲੇਲਿਸਟ, ਆਦਿ)",
+
+    "MenuPodcastText": "ਪੋਡਕਾਸਟ",
+    "PodcastsShowsText": "ਦਿਖਾਉਂਦਾ ਹੈ",
+    "PodcastsEpisodesText": "ਐਪੀਸੋਡ"
+}
