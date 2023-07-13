@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Injectable, Inject } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-language-switcher',
@@ -8,14 +11,16 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageSwitcherComponent implements OnInit {
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, @Inject('WINDOW') private window: Window) { }
 
   currentLang: any;
   languages: any[] = [];
   hidden: boolean = true;
 
   ngOnInit() {
-    const defaultLanguage = window.localStorage.getItem("languageSelected") || this.translate.getDefaultLang();
+    const defaultLanguage = window.localStorage.getItem("languageSelected") || this.window.navigator.language.slice(0,2);
+
+
 
     this.translate.getLangs().forEach(lang => {
       this.languages.push({
@@ -48,4 +53,10 @@ export class LanguageSwitcherComponent implements OnInit {
     this.translate.use(lang.code);
     window.localStorage.setItem('languageSelected', lang.code);
   }
+}
+
+export const WindowProvider = [{ provide: "WINDOW", useFactory: getWindow }];
+
+export function getWindow(): Window {
+    return window;
 }

@@ -35,7 +35,7 @@ import { SelectPlaylistComponent } from "./pages/select-playlist/select-playlist
 import { PodcastsComponent } from './pages/podcasts/podcasts.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
+import { LanguageSwitcherComponent,WindowProvider } from './components/language-switcher/language-switcher.component';
 import { VolumeBoxComponent } from './components/volume-box/volume-box.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
@@ -97,7 +97,7 @@ import { MatInputModule } from '@angular/material/input';
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenVerificationInterceptorService, multi: true },
-    PipesModule
+    PipesModule,WindowProvider
   ],
   bootstrap: [AppComponent]
 })
