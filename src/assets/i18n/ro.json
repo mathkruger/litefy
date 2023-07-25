@@ -1,0 +1,62 @@
+{
+    "direction": "ltr",
+    "FlagCode": "RO",
+    "LanguageName": "Română",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Un client Spotify pentru dispozitivele mai puţin performante",
+    "LoginText": "Credem că nu ai nevoie de un super dispozitiv pentru a te bucura de muzică. Credem că nu ai nevoie să ţii pasul cu tehnologia pentru a te distra. De asta există Litefy.",
+    "LoginButtonText": "Loghează-te cu Spotify",
+
+    "SearchPlaceholderText": "Piese, albume, artişti, playlisturi, showuri, episoade ...",
+
+    "MenuHome": "Acasă",
+    "MenuSearchText": "Caută",
+    "MenuLibraryText": "Librărie",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Artiştii tăi favoriţi",
+    "HomeMusicsText": "Piesele tale favorite",
+    "HomeAlbumsText": "Albume noi",
+    "HomePlaylistsText": "Playlisturi recomandate",
+
+    "ArtistTracksText": "Cele mai ascultate piese",
+    "ArtistAlbumsText": "Albume",
+    "ArtistRelatedText": "Artişti asemănători",
+
+    "Hello": "Salut",
+    "LibraryTracksText": "Piese",
+    "LibraryAlbumsText": "Albume",
+    "LibraryPlaylistsText": "Playlisturi",
+
+    "MusicListTracks": "Piesă",
+    "MusicListTracksPlural": "Piese",
+    "MusicListFollowers": "Urmăritor",
+    "MusicListFollowersPlural": "Urmăritori",
+    "DescriptionText": "Descriere",
+
+    "PlayingText": "Redat acum",
+    "PausedText": "Întrerupt",
+    "NextText": "Piesa următoare",
+    "PreviousText": "Piesa anterioară",
+    "ShuffleOnText": "Mod alteator activat",
+    "ShuffleOffText": "Mod alteator dezactivat",
+
+    "ExitText": "Ieşire",
+    "FollowersText": "Urmăritor",
+    "FollowersTextPlural": "Urmăritori",
+    "ProfileText": "Profil",
+    "SettingsText": "Setări",
+
+    "SearchArtists": "Artişti",
+
+    "KaraokeNotFoundText": "Nu am găsit versurile, dar poţi incerca să le cauţi manual folosind butonul de mai jos.",
+    "KaraokeSearchText": "Caută",
+
+    "SettingsPageTitle": "Setări",
+    "SettingsImageText": "Incarcă imagini (albume, artişti, playlisturi, etc.)",
+
+    "MenuPodcastText": "Podcasturi",
+    "PodcastsShowsText": "Showuri",
+    "PodcastsEpisodesText": "Episoade"
+}
