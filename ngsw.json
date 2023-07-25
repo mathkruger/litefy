@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1689252480717,
+  "timestamp": 1690309793305,
   "index": "/litefy/index.html",
   "assetGroups": [
     {
@@ -13,8 +13,8 @@
       "urls": [
         "/litefy/favicon.ico",
         "/litefy/index.html",
-        "/litefy/main-es2015.d7676f65e8278a8ca5bb.js",
-        "/litefy/main-es5.d7676f65e8278a8ca5bb.js",
+        "/litefy/main-es2015.6b8195aa77d88ef415af.js",
+        "/litefy/main-es5.6b8195aa77d88ef415af.js",
         "/litefy/manifest.webmanifest",
         "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js",
         "/litefy/polyfills-es5.13fd59473aceee12cf77.js",
@@ -60,6 +60,7 @@
         "/litefy/assets/i18n/pl.json",
         "/litefy/assets/i18n/pt-BR.json",
         "/litefy/assets/i18n/pt.json",
+        "/litefy/assets/i18n/ro.json",
         "/litefy/assets/i18n/ru.json",
         "/litefy/assets/i18n/se.json",
         "/litefy/assets/i18n/ta.json",
@@ -123,6 +124,7 @@
     "/litefy/assets/i18n/pl.json": "9dc25973e22a46da8b05f0f32d214d51dfc163e1",
     "/litefy/assets/i18n/pt-BR.json": "065d9e53b09d021acba682f0ba68163df53425b7",
     "/litefy/assets/i18n/pt.json": "78d927e660e2814e26d028995914b3f28203df6c",
+    "/litefy/assets/i18n/ro.json": "8ff697b93186a7960ebb34efa173b6d8b3db2867",
     "/litefy/assets/i18n/ru.json": "a896969b797b5f51ef7c2eb30ca2a0d5f2278a89",
     "/litefy/assets/i18n/se.json": "1266bdfa38425c8386093b75dfba374c8dea5e36",
     "/litefy/assets/i18n/ta.json": "1d677d0970d9db4a51ea462fb17fa6cba5ebde10",
@@ -153,9 +155,9 @@
     "/litefy/assets/standart-album-icon.png": "51d1a571b46808e79cdf5d777f517940e8561ec0",
     "/litefy/assets/standart-artist-icon.png": "c91919dcdad26585be29be0a74a6ff4e018e1b26",
     "/litefy/favicon.ico": "3fb827672b7b297c539bd27bab391669e46e0c67",
-    "/litefy/index.html": "9d2c273cf5b5c77520e6957374a8fdcfe481f4ee",
-    "/litefy/main-es2015.d7676f65e8278a8ca5bb.js": "3f0fa231121e83395278f8af525f78002cf23235",
-    "/litefy/main-es5.d7676f65e8278a8ca5bb.js": "7d855ceebb3a5d367c35b44f232269962f820d68",
+    "/litefy/index.html": "e54ea06b1b7acb377dbb3219f7acc1e06f6aa3e7",
+    "/litefy/main-es2015.6b8195aa77d88ef415af.js": "5b9b4468e80f8f3d2267debf5b3cbf5a262dfa80",
+    "/litefy/main-es5.6b8195aa77d88ef415af.js": "6d85a92ea291e3bf2cdefcdb32c51bcafdc36fe8",
     "/litefy/manifest.webmanifest": "416515aff15e6eca3a0fcc9efb94b2fbd4650e83",
     "/litefy/polyfills-es2015.c62df5b2ba6e7a4a77d3.js": "cad3129c71535baaab25ac06d8429734959b0b3f",
     "/litefy/polyfills-es5.13fd59473aceee12cf77.js": "1974493d678a8c51d1f770563c285f06b7c4e7df",
