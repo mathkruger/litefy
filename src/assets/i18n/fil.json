@@ -1,0 +1,62 @@
+ {
+    "direction": "ltr",
+    "FlagCode": "PH",
+    "LanguageName": "Filipino",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Isang Spotify client para sa mga low-end na device",
+    "LoginText": "Naniniwala kami na hindi mo kailangan ng sobrang device para ma-enjoy ang iyong musika. Naniniwala kami na hindi mo kailangang makipagsabayan sa lahat ng bagong teknolohiya para maaliw. Iyon ang dahilan kung bakit umiiral ang Litefy.",
+    "LoginButtonText": "Mag-login gamit ang Spotify",
+
+    "SearchPlaceholderText": "Mga track, album, artist, playlist, palabas, episode ...",
+
+    "MenuHome": "Home",
+    "MenuSearchText": "Maghanap",
+    "MenuLibraryText": "Librerya",
+    "MenuKaraokeText": "Karaoke",
+
+    "HomeArtistsText": "Mga paborito mong artista",
+    "HomeMusicsText": "Mga paborito mong kanta",
+    "HomeAlbumsText": "Mga Bagong Album",
+    "HomePlaylistsText": "Mga inirerekomendang playlist",
+
+    "ArtistTracksText": "Karamihan sa mga na-play na track",
+    "ArtistAlbumsText": "Mga album",
+    "ArtistRelatedText": "Mga Kaugnay na Artist",
+
+    "Hello": "Kamusta",
+    "LibraryTracksText": "Mga track",
+    "LibraryAlbumsText": "Mga album",
+    "LibraryPlaylistsText": "Mga playlist",
+
+    "MusicListTracks": "Track",
+    "MusicListTracksPlural": "Mga track",
+    "MusicListFollowers": "Tagasunod",
+    "MusicListFollowersPlural": "Mga tagasunod",
+    "DescriptionText": "Deskripsyon",
+
+    "PlayingText": "Tumutugtog",
+    "PausedText": "Naka-pause",
+    "NextText": "Susunod na track",
+    "PreviousText": "Nakaraang track",
+    "ShuffleOnText": "NAKA-ON ang shuffle mode",
+    "ShuffleOffText": "NAKA-OFF ang shuffle mode",
+
+    "ExitText": "Exit",
+    "FollowersText": "Tagasunod",
+    "FollowersTextPlural": "Mga tagasunod",
+    "ProfileText": "Profile",
+    "SettingsText": "Settings",
+
+    "SearchArtists": "Artista",
+
+    "KaraokeNotFoundText": "Walang nakitang lyrics, ngunit maaari mong subukang manual na maghanap gamit ang button sa ibaba.",
+    "KaraokeSearchText": "Maghanap",
+
+    "SettingsPageTitle": "Settings",
+    "SettingsImageText": "Mag-load ng mga larawan (album, artist, playlist, atbp.)",
+
+    "MenuPodcastText": "Mga podcast",
+    "PodcastsShowsText": "Mga palabas",
+    "PodcastsEpisodesText": "Mga episode"
+}
