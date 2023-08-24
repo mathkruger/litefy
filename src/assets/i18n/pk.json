@@ -1,0 +1,61 @@
+{
+    "direction": "rtl", 
+    "FlagCode": "PK", 
+    "LanguageName": "اردو", 
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy. بجٹ کی دستیابی کے لئے Spotify کلائنٹ",
+    "LoginText": "ہم معتقد ہیں کہ موسیقی کا لطف اُس کریں جس کی قیمتی طرف دار سیخ بلکل نہیں ہونی چاہیے۔ ہم معتقد ہیں کہ آپ کو ہر وقت ٹیکنالوجی میں ماہر ہونے کی ضرورت نہیں ہے تاکہ آپ خود کو تفریح دینے کے لئے آزاد رہ سکیں۔ اسی لئے Litefy موجود ہے۔",
+    "LoginButtonText": "Spotify کے ذریعہ لاگ ان کریں",
+
+    "SearchPlaceholderText": "ٹریک، البم، کلام گائے، پلی لسٹ، شو، ایپیسوڈز ...",
+
+    "MenuSearchText": "تلاش",
+    "MenuLibraryText": "کتابخانہ",
+    "MenuKaraokeText": "کیراؤکی موڈ",
+
+    "HomeArtistsText": "آپ کے پسندیدہ گائے گئے کلام",
+    "HomeMusicsText": "آپ کے پسندیدہ گانے",
+    "HomeAlbumsText": "نئے البم",
+    "HomePlaylistsText": "موصوف پلی لسٹ",
+
+    "ArtistTracksText": "سب سے زیادہ چلاہی گئی ٹریکس",
+    "ArtistAlbumsText": "البم",
+    "ArtistRelatedText": "متعلقہ گائے گئے کلام",
+
+    "Hello": "ہیلو",
+    "LibraryTracksText": "ٹریکس",
+    "LibraryAlbumsText": "البم",
+    "LibraryPlaylistsText": "پلی لسٹس",
+
+    "MusicListTracks": "ٹریک",
+    "MusicListTracksPlural": "ٹریکس",
+    "MusicListFollowers": "پیروکار",
+    "MusicListFollowersPlural": "پیروکاروں",
+    "DescriptionText": "تفصیل",
+
+    "PlayingText": "چل رہا ہے",
+    "PausedText": "رکا ہوا ہے",
+    "NextText": "اگلا ٹریک",
+    "PreviousText": "پچھلا ٹریک",
+    "ShuffleOnText": "شفل کی موقع پر ہے",
+    "ShuffleOffText": "شفل کی موقع پر نہیں ہے",
+
+    "ExitText": "باہر نکلیں",
+    "FollowersText": "پیروکار",
+    "FollowersTextPlural": "پیروکاروں",
+    "ProfileText": "پروفائل",
+    "SettingsText": "ترتیبات",
+
+    "SearchArtists": "گائے گئے کلام",
+
+    "KaraokeNotFoundText": "متن نہیں ملا، بجائے اسے دستیاب کرنے کی کوشش کر سکتے ہیں جس کے لئے نیچے دیئے گئے بٹن کا استعمال کریں۔",
+    "KaraokeSearchText": "تلاش",
+
+    "SettingsPageTitle": "ترتیبات",
+    "SettingsImageText": "تصویریں (البم، گائے گئے کلام، پلی لسٹس...) اپلوڈ کریں",
+
+    "MenuPodcastText": "پوڈ کاسٹ",
+    "PodcastsShowsText": "شوز",
+    "PodcastsEpisodesText": "ایپیسوڈز"
+}

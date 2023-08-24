@@ -62,6 +62,10 @@ export class AppComponent implements OnInit {
             "te",
             "ka",
             "en",
+            "kr",
+            "jp",
+            "pk",
+
         ]; // always keep the "en" at the end, it's the default language for the website
         this.translate.addLangs(languages);
         this.translate.setDefaultLang(
