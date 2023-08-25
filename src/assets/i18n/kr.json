@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "KR",
+    "LanguageName": "한국어",
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy. 저가 장치를 위한 Spotify 클라이언트",
+    "LoginText": "음악을 즐기기 위해 비싼 장치를 사용할 필요가 없다고 믿습니다. 항상 최신 기술에 뒤쳐지지 않아도 즐길 수 있다고 생각합니다. 그래서 Litefy가 존재합니다.",
+    "LoginButtonText": "Spotify를 통해 로그인",
+
+    "SearchPlaceholderText": "트랙, 앨범, 아티스트, 플레이리스트, 쇼, 에피소드 ...",
+
+    "MenuSearchText": "검색",
+    "MenuLibraryText": "라이브러리",
+    "MenuKaraokeText": "노래방 모드",
+
+    "HomeArtistsText": "좋아하는 아티스트",
+    "HomeMusicsText": "좋아하는 노래",
+    "HomeAlbumsText": "새 앨범",
+    "HomePlaylistsText": "추천 플레이리스트",
+
+    "ArtistTracksText": "가장 잘 듣는 트랙",
+    "ArtistAlbumsText": "앨범",
+    "ArtistRelatedText": "관련 아티스트",
+
+    "Hello": "안녕하세요",
+    "LibraryTracksText": "트랙",
+    "LibraryAlbumsText": "앨범",
+    "LibraryPlaylistsText": "플레이리스트",
+
+    "MusicListTracks": "트랙",
+    "MusicListTracksPlural": "트랙",
+    "MusicListFollowers": "팔로워",
+    "MusicListFollowersPlural": "팔로워",
+    "DescriptionText": "설명",
+
+    "PlayingText": "재생 중",
+    "PausedText": "일시 정지됨",
+    "NextText": "다음 트랙",
+    "PreviousText": "이전 트랙",
+    "ShuffleOnText": "셔플 켜짐",
+    "ShuffleOffText": "셔플 꺼짐",
+
+    "ExitText": "나가기",
+    "FollowersText": "팔로워",
+    "FollowersTextPlural": "팔로워",
+    "ProfileText": "프로필",
+    "SettingsText": "설정",
+
+    "SearchArtists": "아티스트",
+
+    "KaraokeNotFoundText": "가사를 찾을 수 없습니다. 대신 아래 버튼을 사용하여 수동으로 찾아보실 수 있습니다.",
+    "KaraokeSearchText": "검색",
+
+    "SettingsPageTitle": "설정",
+    "SettingsImageText": "이미지 업로드 (앨범, 아티스트, 플레이리스트...)",
+
+    "MenuPodcastText": "팟캐스트",
+    "PodcastsShowsText": "쇼",
+    "PodcastsEpisodesText": "에피소드"
+}

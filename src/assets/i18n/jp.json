@@ -1,0 +1,61 @@
+{
+    "direction": "ltr",
+    "FlagCode": "JP",
+    "LanguageName": "日本語", 
+    "AppName": "Litefy",
+
+    "LoginDescriptionText": "Litefy。予算対応のSpotifyクライアント",
+    "LoginText": "音楽を楽しむために高価なデバイスを使う必要はありませんと考えています。常に最新技術に追いつく必要はなく、それでも楽しむことができると考えています。それがLitefyの存在理由です。",
+    "LoginButtonText": "Spotifyを介してログイン",
+
+    "SearchPlaceholderText": "トラック、アルバム、アーティスト、プレイリスト、ショー、エピソード ...",
+
+    "MenuSearchText": "検索",
+    "MenuLibraryText": "ライブラリ",
+    "MenuKaraokeText": "カラオケモード",
+
+    "HomeArtistsText": "お気に入りのアーティスト",
+    "HomeMusicsText": "お気に入りの曲",
+    "HomeAlbumsText": "新しいアルバム",
+    "HomePlaylistsText": "おすすめプレイリスト",
+
+    "ArtistTracksText": "最も再生されたトラック",
+    "ArtistAlbumsText": "アルバム",
+    "ArtistRelatedText": "関連アーティスト",
+
+    "Hello": "こんにちは",
+    "LibraryTracksText": "トラック",
+    "LibraryAlbumsText": "アルバム",
+    "LibraryPlaylistsText": "プレイリスト",
+
+    "MusicListTracks": "トラック",
+    "MusicListTracksPlural": "トラック",
+    "MusicListFollowers": "フォロワー",
+    "MusicListFollowersPlural": "フォロワー",
+    "DescriptionText": "説明",
+
+    "PlayingText": "再生中",
+    "PausedText": "一時停止中",
+    "NextText": "次のトラック",
+    "PreviousText": "前のトラック",
+    "ShuffleOnText": "シャッフルオン",
+    "ShuffleOffText": "シャッフルオフ",
+
+    "ExitText": "終了",
+    "FollowersText": "フォロワー",
+    "FollowersTextPlural": "フォロワー",
+    "ProfileText": "プロフィール",
+    "SettingsText": "設定",
+
+    "SearchArtists": "アーティスト",
+
+    "KaraokeNotFoundText": "歌詞が見つかりません。代わりに、下のボタンを使用して手動で検索できます。",
+    "KaraokeSearchText": "検索",
+
+    "SettingsPageTitle": "設定",
+    "SettingsImageText": "画像をアップロード (アルバム、アーティスト、プレイリスト...)",
+
+    "MenuPodcastText": "ポッドキャスト",
+    "PodcastsShowsText": "ショー",
+    "PodcastsEpisodesText": "エピソード"
+}
