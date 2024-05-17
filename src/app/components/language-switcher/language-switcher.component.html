@@ -6,9 +6,7 @@
         aria-expanded="false"
     >
         <img
-            src="https://www.countryflagicons.com/FLAT/32/{{
-                currentLang.flag
-            }}.png"
+            src="https://flagsapi.com/{{currentLang.flag}}/flat/32.png"
         />
         <strong>{{ currentLang.name }}</strong>
     </button>
@@ -25,9 +23,7 @@
             [ngClass]="{ active: language.code === currentLang.code }"
         >
             <img
-                src="https://www.countryflagicons.com/FLAT/16/{{
-                    language.flag
-                }}.png"
+                src="https://flagsapi.com/{{language.flag}}/flat/16.png"
             />
             <span [ngClass]="{ 'rtl-custom': language.direction === 'rtl' }">
                 <strong>{{ language.name }}</strong>
