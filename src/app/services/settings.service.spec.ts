@@ -23,7 +23,7 @@ describe("SettingsService", () => {
 
     it("#setSettings should save settings to Local Storage", () => {
         service.setSettings([settingsObj]);
-        
+
         const result = window.localStorage.getItem(keySettings);
 
         expect(result).toBe(JSON.stringify([settingsObj]));
@@ -34,7 +34,7 @@ describe("SettingsService", () => {
 
         result.subscribe(res => {
             expect(res).toBeNull();
-        })
+        });
     }));
 
     it("#getSettings should return settings object from observable if there are settings stored", waitForAsync(() => {
@@ -44,7 +44,7 @@ describe("SettingsService", () => {
 
         result.subscribe(res => {
             expect(res).toEqual([settingsObj]);
-        })
+        });
     }));
 
     it("#hasLocalstorageData should return true if there is settings data in Local Storage", () => {

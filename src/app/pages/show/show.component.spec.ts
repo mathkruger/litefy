@@ -1,3 +1,5 @@
+// tslint:disable:max-line-length
+
 import { SpotifyShowService } from '@services/spotify-show.service';
 import { AppModule } from './../../app.module';
 import { waitForAsync, ComponentFixture, inject, TestBed } from '@angular/core/testing';
