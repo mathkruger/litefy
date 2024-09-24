@@ -1,4 +1,4 @@
-<div class="language" *ngIf="currentLang">
+<div class="language" *ngIf="currentLang && currentLang.name && currentLang.flag">
     <button
         (click)="hidden = !hidden"
         type="button"
