@@ -24,12 +24,12 @@ export class SpotifyUserService {
     }
 
     getUserTopArtists(range: any): Observable<SpotifyApi.UsersTopArtistsResponse> {
-        range = (range !== '') ? range : "medium_term"
+        range = (range !== '') ? range : "medium_term";
         return this.service.Get('https://api.spotify.com/v1/me/top/artists?limit=24&time_range=' + range);
     }
 
     getUserTopTracks(range: any): Observable<SpotifyApi.UsersTopTracksResponse> {
-        range = (range !== '') ? range : "medium_term"
+        range = (range !== '') ? range : "medium_term";
         return this.service.Get('https://api.spotify.com/v1/me/top/tracks?time_range=' + range);
     }
 

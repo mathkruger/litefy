@@ -93,15 +93,15 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
                 (this.playerStatus?.item?.duration_ms || 0)) *
             100;
         this.seekStyle = {
-            background: `linear-gradient(to ${this.defaultLanguage != 'he' ? 'right' : 'left'}, var(--spt-green) 0%, var(--spt-green) ${progressPercentage}%, #343a40 ${progressPercentage}%, #343a40 100%)`,
+            background: `linear-gradient(to ${this.defaultLanguage !== 'he' ? 'right' : 'left'}, var(--spt-green) 0%, var(--spt-green) ${progressPercentage}%, #343a40 ${progressPercentage}%, #343a40 100%)`,
         };
     }
 
     addScript() {
-        const script = document.createElement('script')
-        script.async = true
-        script.src = "https://sdk.scdn.co/spotify-player.js"
-        document.head.appendChild(script)
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = "https://sdk.scdn.co/spotify-player.js";
+        document.head.appendChild(script);
     }
 
     initPlayer() {
@@ -113,7 +113,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
                 name: "Litefy Player",
                 getOAuthToken: (cb) => {
                     cb(token);
-                    this.addScript()
+                    this.addScript();
                 },
             });
 
@@ -207,7 +207,7 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
         this.playerService.getCurrentState().subscribe((item) => {
             this.playerStatus = item;
 
-            if (this.playerStatus?.item.type == "track") {
+            if (this.playerStatus?.item.type === "track") {
                 this.trackTitle = this.playerStatus?.item.name;
                 this.trackAlbum = this.playerStatus?.item.album.name;
                 this.trackAuthor = this.playerStatus?.item.album.artists[0]?.name;
@@ -215,10 +215,10 @@ export class PlayerComponent extends SettingsBase implements OnInit, OnChanges {
                 this.trackId = this.playerStatus?.item.id;
                 this.albumId = 'album/' + this.playerStatus?.item.album.id;
                 this.artistId = 'artist/' + this.playerStatus?.item.album.artists[0]?.id;
-            } else if (this.playerStatus?.item.type == "episode") {
+            } else if (this.playerStatus?.item.type === "episode") {
                 this.trackTitle = this.playerStatus?.item.name;
                 this.trackAlbum = this.playerStatus?.item.show.name;
-                this.trackAuthor = this.playerStatus?.item.show.publisher;;
+                this.trackAuthor = this.playerStatus?.item.show.publisher;
                 this.trackImage = this.playerStatus?.item.images[2].url;
                 this.trackId = this.playerStatus?.item.id;
                 this.albumId = 'show/' + this.playerStatus?.item.show.id;

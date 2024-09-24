@@ -69,17 +69,17 @@ export class ContentListComponent extends SettingsBase implements OnInit {
         });
     }
 
-    homeRoute(){
+    homeRoute() {
         return this.router.url === "/";
     }
 
     getPlayerStatus() {
         this.playerService.getPlayerStatus().subscribe((item) => {
             this.playerState = item;
-            if (this.playerState?.item.type == "track") {
-                this.currentAlbum = this.playerState?.item.album.id
-            } else if (this.playerState?.item.type == "episode") {
-                this.currentAlbum = this.playerState?.item.show.id
+            if (this.playerState?.item.type === "track") {
+                this.currentAlbum = this.playerState?.item.album.id;
+            } else if (this.playerState?.item.type === "episode") {
+                this.currentAlbum = this.playerState?.item.show.id;
             } else {
                 this.currentAlbum = "";
             }

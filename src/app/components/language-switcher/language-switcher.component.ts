@@ -12,7 +12,7 @@ export class LanguageSwitcherComponent implements OnInit {
 
   currentLang: any;
   languages: any[] = [];
-  hidden: boolean = true;
+  hidden = true;
 
   ngOnInit() {
     const defaultLanguage = window.localStorage.getItem("languageSelected") || this.translate.getDefaultLang();
@@ -37,7 +37,7 @@ export class LanguageSwitcherComponent implements OnInit {
       this.translate.getTranslation(x.code).subscribe(t => {
         x.flag = t.FlagCode,
         x.name = t.LanguageName,
-        x.direction = t.direction
+        x.direction = t.direction;
       });
     });
   }

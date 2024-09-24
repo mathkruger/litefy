@@ -12,7 +12,7 @@ export class NumberLocale implements PipeTransform {
 
     }
 
-    transform(value: number | string, locale: string = 'pt') : string {
+    transform(value: number | string, locale: string = 'pt'): string {
         return new Intl.NumberFormat(locale, {
             minimumFractionDigits: 0
           }).format(Number(value));

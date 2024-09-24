@@ -24,12 +24,12 @@ export class HomeComponent implements OnInit {
     topArtists: SpotifyApi.PagingObject<SpotifyApi.ArtistObjectFull>;
     topTracks: SpotifyApi.PagingObject<SpotifyApi.TrackObjectFull>;
     featuredPlaylists: SpotifyApi.PagingObject<SpotifyApi.PlaylistObjectSimplified>;
-    
+
     requisicoesCompletas = false;
 
     activeUser: User;
 
-    range = "medium_term"
+    range = "medium_term";
 
     ngOnInit() {
         this.getAllHomeData();
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    changeRange(recievedRange: any){
+    changeRange(recievedRange: any) {
         this.range = recievedRange;
         this.getAllHomeData();
         const shortButt = document.getElementById("short_term");
@@ -68,5 +68,5 @@ export class HomeComponent implements OnInit {
         clickedButt.style.backgroundColor = "#0e512a";
     }
 
-    
+
 }

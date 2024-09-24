@@ -13,7 +13,12 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class PlaylistComponent extends SettingsBase implements OnInit {
 
-  constructor(private playlistService: SpotifyPlaylistService, private activatedRoute: ActivatedRoute, injector: Injector, public translateService: TranslateService,) {
+  constructor(
+    private playlistService: SpotifyPlaylistService,
+    private activatedRoute: ActivatedRoute,
+    injector: Injector,
+    public translateService: TranslateService
+  ) {
     super(injector);
   }
 
