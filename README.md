@@ -8,7 +8,7 @@
 
 ## Support <a name="support"></a>
 
-If you wish to support the me (mathkruger), <a href="https://www.buymeacoffee.com/mathkruger">buy me a coffee!</a>
+If you wish to support me (mathkruger), <a href="https://www.buymeacoffee.com/mathkruger">buy me a coffee!</a>
 
 ## Table of Contents
 1. [Project Description](#description)
@@ -44,7 +44,7 @@ The project is being designed with the following technologies:
 After you've completed the [initial project setup](#contribution1), use the following commands to start the application.
 
 1. Install [Node.js](https://nodejs.org/en/)
-2. Within the litefly directory, run the command `npm install` to install the appropriate node modules
+2. Within the litefy directory, run the command `npm install` to install the appropriate node modules
 
 ### Starting a Development Server <a name="application1"></a>
 
@@ -67,16 +67,16 @@ For a production build, use the command `ng build --prod` instead.
 1. Create a [fork](https://github.com/mathkruger/litefy/fork) of the main repo to your GitHub account       
 2. Create a new folder somewhere on your device
 3. Launch a command terminal and change your directory to the newly created folder
-4. Run the command `https://github.com/yourGitHubName/litefy.git`       
+4. Run the command `git clone https://github.com/yourGitHubName/litefy.git`       
     &emsp;(NOTE: Replace yourGitHubName with your GitHub username (e.g. mathkruger))
-5. Open the newly created litefly folder with your IDE of choice (such as [Visual Studio Code](https://code.visualstudio.com/))     
+5. Open the newly created litefy folder with your IDE of choice (such as [Visual Studio Code](https://code.visualstudio.com/))     
 6. From the IDE's terminal, run the command `git checkout -b your-new-branch-name` to create and switch to your new branch
 
 ### Making Changes to the Application <a name="contribution2"></a>
 
 For a beginner's guide to Angular, visit Angular's [tutorial](https://angular.io/tutorial/tour-of-heroes) page or its [getting started](https://angular.io/start) page.      
 To find out more about other Angular command line instructions, visit [this link](https://angular.io/cli).         
-To find out more about the Spotify API and Web Playback SDK, see their respecitve pages under the [project technologies](#technologies) tab.     
+To find out more about the Spotify API and Web Playback SDK, see their respective pages under the [project technologies](#technologies) tab.     
 
 #### Generating Code Scaffolding <a name="contribution2.1"></a>
 
