@@ -1,5 +1,7 @@
 # ATTENTION - THIS PROJECT IS DISCONTINUED, THIS MEANS I DON'T HAVE ANY TIME OR WILLING TO CONTINUE DEVELOPING IT. FEEL FREE TO FORK IT AND MAKE YOUR FIXES/CHANGES.
 
+I'm not archiving it because maybe in the future I can start working on it again. But, for now, I really can't work on it. I know, the app is broken and I know the reason (Spotify API limiting the usage). Please, **do not open any issues about it**. 
+
 # Litefy
 
 <img src="src/assets/logo.png" alt="drawing" width="200"/>
